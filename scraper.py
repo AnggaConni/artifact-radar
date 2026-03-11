@@ -29,18 +29,77 @@ HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
 DATA_FILE    = os.path.join(BASE_DIR, "data.json")
 SCRIPT_FILE  = os.path.abspath(__file__)
 
-# ======================================================================
-# DATABASE KATA KUNCI (Lebih Luas & Indonesia-Friendly)
-# ======================================================================
 KEYWORDS = [
-    "jual artefak asli majapahit",
-    "jual arca kuno temuan galian",
-    "ancient artifacts listing for sale",
-    "stolen artifacts news BBC Al-Jazeera",
-    "repatriation of stolen cultural heritage news",
-    "illegal antiquity trafficking 2024",
-    "jual benda purbakala asli bersertifikat",
-    "discussion on looted artifacts forums"
+
+    # ── Direct Artifact Sale ─────────────────────────────
+    "ancient artifact for sale",
+    "authentic antiquities for sale",
+    "buy ancient artifact online",
+    "antique archaeological artifact sale",
+    "genuine ancient relic for collectors",
+    "museum quality artifact for sale",
+    "rare antiquities private collection sale",
+    "ancient relic dealer listing",
+
+    # ── Looted / Suspicious Signals ──────────────────────
+    "looted artifact for sale",
+    "illegal antiquities trafficking",
+    "stolen archaeological artifact",
+    "ancient relic no provenance",
+    "artifact found metal detector sale",
+    "burial artifact excavation find",
+    "ancient relic found in field",
+    "artifact discovered during excavation",
+
+    # ── Civilization Specific ────────────────────────────
+    "majapahit artifact for sale",
+    "khmer statue ancient for sale",
+    "angkor artifact dealer",
+    "roman artifact authentic sale",
+    "greek antiquities dealer",
+    "egyptian antiquities original",
+    "mesopotamian cuneiform tablet sale",
+    "persian ancient artifact dealer",
+    "han dynasty artifact for sale",
+    "ming dynasty porcelain antique sale",
+    "song dynasty celadon bowl sale",
+    "jomon pottery artifact",
+    "kofun haniwa figure sale",
+    "mongol empire artifact",
+    "scythian gold artifact",
+    "steppe nomad bronze artifact",
+
+    # ── Object Type Signals ──────────────────────────────
+    "ancient bronze statue authentic",
+    "ancient jade artifact for sale",
+    "ritual bronze vessel ancient",
+    "ancient burial figurine",
+    "temple stone fragment ancient",
+    "ancient coin hoard sale",
+    "ancient pottery shard archaeological",
+    "ancient ritual object antique",
+    "ancient religious statue original",
+
+    # ── Marketplace Discovery ────────────────────────────
+    "ancient artifact site:ebay.com",
+    "ancient relic site:etsy.com",
+    "antiquities sale site:facebook.com",
+    "ancient artifact site:auction house",
+    "ancient artifact collector forum",
+
+    # ── News & Monitoring ─────────────────────────────────
+    "illegal antiquities trafficking news",
+    "artifact smuggling investigation",
+    "museum artifact repatriation case",
+    "looted antiquities returned to museum",
+    "archaeological theft investigation",
+
+    # ── Indonesian / Local Search Terms ──────────────────
+    "jual arca kuno asli",
+    "benda purbakala asli dijual",
+    "temuan arkeologi dijual",
+    "artefak candi dijual",
+    "keris kuno asli dijual",
 ]
 
 # ======================================================================
@@ -106,18 +165,29 @@ def run_ai_search(model, existing_links):
     """
     
     try:
-        # Gunakan response_mime_type untuk memaksa output JSON murni
+        # 1. Hapus strict JSON mime-type karena sering bentrok dengan Search Tool
+        # 2. Matikan Filter Keamanan karena keyword kita sangat sensitif (stolen, illegal)
         response = model.generate_content(
             prompt,
-            generation_config={"response_mime_type": "application/json"}
+            safety_settings={
+                genai.types.HarmCategory.HARM_CATEGORY_HATE_SPEECH: genai.types.HarmBlockThreshold.BLOCK_NONE,
+                genai.types.HarmCategory.HARM_CATEGORY_HARASSMENT: genai.types.HarmBlockThreshold.BLOCK_NONE,
+                genai.types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: genai.types.HarmBlockThreshold.BLOCK_NONE,
+                genai.types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: genai.types.HarmBlockThreshold.BLOCK_NONE,
+            }
         )
         
-        if not response.text:
-            log.warning("AI memberikan respon kosong.")
+        # Log jawaban mentah AI agar bisa kita debug di tab Actions jika masih kosong
+        log.info(f"Raw AI Response: {response.text[:300]}...")
+        
+        # Ekstrak JSON menggunakan regex (lebih tahan banting)
+        json_match = re.search(r'\[.*\]', response.text, re.DOTALL)
+        if json_match:
+            return json.loads(json_match.group())
+        else:
+            log.warning("AI tidak memberikan JSON yang valid.")
             return []
             
-        return json.loads(response.text)
-        
     except Exception as e:
         log.error(f"Pencarian AI Gagal: {e}")
         return []
