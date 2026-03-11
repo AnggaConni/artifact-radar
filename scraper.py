@@ -1,8 +1,8 @@
 """
 =======================================================================
-  ARTIFACT RADAR v3.5 — Ultra-Robust Intelligence Crawler
-  AI Engine : Google Gemini 1.5 Flash
-  Fixes     : Bulletproof JSON Extractor & Always-On Debug Mode
+  ARTIFACT RADAR v4.0 — Advanced Global Intelligence
+  AI Engine : Google Gemini 1.5 Flash (Google Search Grounding)
+  Fixes     : Tool Parsing Error & Expanded Structured JSON Format
 =======================================================================
 """
 
@@ -31,104 +31,31 @@ SCRIPT_FILE  = os.path.abspath(__file__)
 
 KEYWORDS = [
     # ── English Keywords ──
-    "ancient artifact for sale",
-    "authentic antiquities for sale",
-    "buy ancient artifact online",
-    "illegal antiquities trafficking",
-    "stolen archaeological artifact",
-    "majapahit artifact for sale",
-    "khmer statue ancient for sale",
-    "roman artifact authentic sale",
-    "egyptian antiquities original",
-    "ancient bronze statue authentic",
-    "ancient artifact site:ebay.com",
-    "ancient relic site:etsy.com",
-    "antiquities sale site:facebook.com",
-    "illegal antiquities trafficking news",
-    "artifact smuggling investigation",
+    "ancient artifact for sale", "authentic antiquities for sale", "buy ancient artifact online",
+    "illegal antiquities trafficking", "stolen archaeological artifact", "majapahit artifact for sale",
+    "khmer statue ancient for sale", "roman artifact authentic sale", "egyptian antiquities original",
+    "ancient bronze statue authentic", "ancient artifact site:ebay.com", "ancient relic site:etsy.com",
+    "antiquities sale site:facebook.com", "illegal antiquities trafficking news", "artifact smuggling investigation",
+    "antique archaeological artifact sale", "genuine ancient relic for collectors", "museum quality artifact for sale",
+    "rare antiquities private collection sale", "ancient relic dealer listing", "looted artifact for sale",
+    "ancient relic no provenance", "artifact found metal detector sale", "burial artifact excavation find",
+    "ancient relic found in field", "artifact discovered during excavation", "angkor artifact dealer",
+    "greek antiquities dealer", "mesopotamian cuneiform tablet sale", "persian ancient artifact dealer",
+    "han dynasty artifact for sale", "ming dynasty porcelain antique sale", "song dynasty celadon bowl sale",
+    "jomon pottery artifact", "kofun haniwa figure sale", "mongol empire artifact", "scythian gold artifact",
+    "steppe nomad bronze artifact", "ancient jade artifact for sale", "ritual bronze vessel ancient",
+    "ancient burial figurine", "temple stone fragment ancient", "ancient coin hoard sale",
+    "ancient pottery shard archaeological", "ancient ritual object antique", "ancient religious statue original",
+    "ancient artifact site:auction house", "ancient artifact collector forum", "museum artifact repatriation case",
+    "looted antiquities returned to museum", "archaeological theft investigation",
 
     # ── Indonesian Keywords (Lokal) ──
-    "jual arca kuno asli",
-    "benda purbakala asli dijual",
-    "temuan arkeologi dijual",
-    "artefak candi dijual",
-    "keris kuno asli dijual",
-    "jual artefak kuno majapahit"
-
-        # ── Direct Artifact Sale ─────────────────────────────
-    "ancient artifact for sale",
-    "authentic antiquities for sale",
-    "buy ancient artifact online",
-    "antique archaeological artifact sale",
-    "genuine ancient relic for collectors",
-    "museum quality artifact for sale",
-    "rare antiquities private collection sale",
-    "ancient relic dealer listing",
-
-    # ── Looted / Suspicious Signals ──────────────────────
-    "looted artifact for sale",
-    "illegal antiquities trafficking",
-    "stolen archaeological artifact",
-    "ancient relic no provenance",
-    "artifact found metal detector sale",
-    "burial artifact excavation find",
-    "ancient relic found in field",
-    "artifact discovered during excavation",
-
-    # ── Civilization Specific ────────────────────────────
-    "majapahit artifact for sale",
-    "khmer statue ancient for sale",
-    "angkor artifact dealer",
-    "roman artifact authentic sale",
-    "greek antiquities dealer",
-    "egyptian antiquities original",
-    "mesopotamian cuneiform tablet sale",
-    "persian ancient artifact dealer",
-    "han dynasty artifact for sale",
-    "ming dynasty porcelain antique sale",
-    "song dynasty celadon bowl sale",
-    "jomon pottery artifact",
-    "kofun haniwa figure sale",
-    "mongol empire artifact",
-    "scythian gold artifact",
-    "steppe nomad bronze artifact",
-
-    # ── Object Type Signals ──────────────────────────────
-    "ancient bronze statue authentic",
-    "ancient jade artifact for sale",
-    "ritual bronze vessel ancient",
-    "ancient burial figurine",
-    "temple stone fragment ancient",
-    "ancient coin hoard sale",
-    "ancient pottery shard archaeological",
-    "ancient ritual object antique",
-    "ancient religious statue original",
-
-    # ── Marketplace Discovery ────────────────────────────
-    "ancient artifact site:ebay.com",
-    "ancient relic site:etsy.com",
-    "antiquities sale site:facebook.com",
-    "ancient artifact site:auction house",
-    "ancient artifact collector forum",
-
-    # ── News & Monitoring ─────────────────────────────────
-    "illegal antiquities trafficking news",
-    "artifact smuggling investigation",
-    "museum artifact repatriation case",
-    "looted antiquities returned to museum",
-    "archaeological theft investigation",
-
-    # ── Indonesian / Local Search Terms ──────────────────
-    "jual arca kuno asli",
-    "benda purbakala asli dijual",
-    "temuan arkeologi dijual",
-    "artefak candi dijual",
-    "keris kuno asli dijual",
-
+    "jual arca kuno asli", "benda purbakala asli dijual", "temuan arkeologi dijual",
+    "artefak candi dijual", "keris kuno asli dijual", "jual artefak kuno majapahit"
 ]
 
 # ======================================================================
-# DATA PERSISTENCE
+# DATA PERSISTENCE & MIGRATION
 # ======================================================================
 
 def load_db():
@@ -136,11 +63,16 @@ def load_db():
         try:
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                return data if isinstance(data, list) else []
+                # Migrasi otomatis jika data lama masih berupa list biasa
+                if isinstance(data, list):
+                    log.info("Migrating old list data to new structured JSON...")
+                    return {"summary": {}, "listings": data}
+                return data
         except Exception as e:
             log.warning(f"Old database corrupted, starting fresh: {e}")
-            return []
-    return []
+            
+    # Format JSON Baru sesuai permintaan
+    return {"summary": {}, "listings": []}
 
 def get_hash(path):
     try:
@@ -150,37 +82,65 @@ def get_hash(path):
     except: return "none"
 
 def check_schedule():
-    # SELALU JALAN: Diaktifkan sementara agar Anda tidak perlu menunggu jadwal
+    # SELALU JALAN: Diaktifkan sementara untuk testing
     return True 
 
+def calculate_summary(listings):
+    """Menghitung ulang ringkasan (summary) berdasarkan data listings."""
+    high_risk = [x for x in listings if x.get("risk_score", 0) >= 8]
+    medium_risk = [x for x in listings if 4 <= x.get("risk_score", 0) <= 7]
+    
+    platforms = {}
+    for item in listings:
+        plat = item.get("platform", "Unknown")
+        platforms[plat] = platforms.get(plat, 0) + 1
+        
+    # Mengambil 5 kasus risiko tertinggi untuk ditampilkan di summary
+    top_high_risk = sorted(high_risk, key=lambda x: x.get("risk_score", 0), reverse=True)[:5]
+    
+    return {
+        "generated_at": datetime.now().isoformat() + "Z",
+        "total_listings": len(listings),
+        "high_risk_count": len(high_risk),
+        "medium_risk_count": len(medium_risk),
+        "alerts_by_platform": platforms,
+        "top_high_risk": top_high_risk
+    }
+
 # ======================================================================
-# CORE: AI ANALYZER WITH FALLBACK
+# CORE: AI ANALYZER
 # ======================================================================
 
-def run_ai_search(model, existing_links, target):
+def run_ai_search(model, existing_urls, target):
     log.info(f"Targeting: {target}")
     
     prompt = f"""
-    Use Google Search to find real information and listings regarding: "{target}".
-    Identify marketplace listings (FB, Tokopedia, eBay, etc.), theft news, or discussion forums.
+    Gunakan Google Search untuk mencari listing penjualan atau berita nyata mengenai: "{target}".
+    Identifikasi marketplace (eBay, FB, Tokopedia), berita pencurian, atau forum kolektor.
     
-    Output the result ONLY in a JSON Array format.
-    JSON Output Structure:
+    Output hasil pencarian HANYA dalam format JSON Array objects.
+    Abaikan URL yang sudah ada ini: {list(existing_urls)[:5]}
+    
+    Struktur JSON Wajib:
     [
       {{
-        "item_name": "Item/News Title",
-        "source_name": "Website (e.g., eBay, Tokopedia, BBC)",
-        "source_type": "Marketplace | News | Forum",
-        "status": "Suspected Illicit | News | Discussion",
-        "risk_score": 1-10,
-        "reason": "Brief reason",
-        "source_link": "Full URL",
-        "price_info": "Price or N/A"
+        "original_title": "Judul asli barang atau artikel berita",
+        "platform": "Nama Website (contoh: eBay, BBC, Facebook)",
+        "url": "URL Lengkap",
+        "price_usd": 0,
+        "status": "HIGH RISK", 
+        "risk_score": 9,
+        "origin_region": "Wilayah asal artefak (contoh: Southeast Asia, Middle East)",
+        "provenance_flag": false,
+        "keyword_trigger": "{target}",
+        "reason": "Alasan detail terkait asal usul atau harga",
+        "scraped_at": "{datetime.now().isoformat()}Z"
       }}
     ]
     """
     
     try:
+        # Filter keamanan dimatikan agar kata kunci 'illegal'/'stolen' tidak diblokir
         response = model.generate_content(
             prompt,
             safety_settings={
@@ -192,17 +152,12 @@ def run_ai_search(model, existing_links, target):
         )
         
         text = response.text
-        
-        # LOG RAW TEXT: Menampilkan jawaban mentah AI di GitHub Actions Log
-        log.info(f"--- RAW AI RESPONSE ---\n{text[:500]}\n-----------------------")
+        log.info(f"Raw AI Output: {text[:150]}...")
         
         # BULLETPROOF JSON EXTRACTOR
-        # 1. Bersihkan format markdown (```json dan ```)
         clean_text = text.replace('```json', '').replace('```', '')
-        # 2. Bersihkan sitasi angka dari Google Search seperti [1], [2]
         clean_text = re.sub(r'\[\d+\]', '', clean_text)
         
-        # 3. Ambil teks hanya dari kurung siku pembuka pertama hingga penutup terakhir
         start_idx = clean_text.find('[')
         end_idx = clean_text.rfind(']')
         
@@ -215,7 +170,7 @@ def run_ai_search(model, existing_links, target):
                 log.error(f"JSON Parse Error: {e}")
                 return []
         else:
-            log.warning("AI did not provide a valid JSON Array structure.")
+            log.warning("AI did not provide valid JSON Array.")
             return []
             
     except Exception as e:
@@ -234,16 +189,18 @@ def main():
     try:
         genai.configure(api_key=api_key)
         
-        # Menggunakan google_search tool untuk live web grounding
+        # PERBAIKAN FATAL ERROR: Menggunakan format string untuk Python SDK Tools
         model = genai.GenerativeModel(
             model_name='gemini-1.5-flash',
-            tools=[{'google_search': {}}]
+            tools='google_search' 
         )
 
         db = load_db()
-        links = {i.get('source_link') for i in db if i.get('source_link')}
+        listings = db.get("listings", [])
+        
+        # Mengambil URL lama agar tidak duplikat. (Mendukung properti lama source_link atau baru url)
+        existing_urls = {i.get('url') or i.get('source_link') for i in listings if i.get('url') or i.get('source_link')}
 
-        # Memilih 1 keyword lokal dan 2 keyword internasional secara paksa
         local_kws = [k for k in KEYWORDS if "jual" in k or "dijual" in k]
         intl_kws = [k for k in KEYWORDS if k not in local_kws]
         
@@ -251,35 +208,38 @@ def main():
         
         count = 0
         for target in targets:
-            new_items = run_ai_search(model, links, target)
+            new_items = run_ai_search(model, existing_urls, target)
             
             if isinstance(new_items, list):
                 for item in new_items:
-                    link = item.get('source_link')
-                    # Hanya tambahkan jika link belum ada di database
-                    if link and link not in links:
-                        item['timestamp'] = datetime.now().isoformat()
-                        item['keyword_matched'] = target
-                        db.append(item)
-                        links.add(link)
+                    link = item.get('url')
+                    if link and link not in existing_urls:
+                        # Menjamin parameter standar selalu ada
+                        item['scraped_at'] = datetime.now().isoformat() + "Z"
+                        item['keyword_trigger'] = target
+                        listings.append(item)
+                        existing_urls.add(link)
                         count += 1
 
+        # Kalkulasi ulang summary
+        db["listings"] = listings
+        db["summary"] = calculate_summary(listings)
+
         # Simpan database & history
-        if count > 0:
+        if count > 0 or not db["summary"].get("generated_at"):
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(db, f, indent=2, ensure_ascii=False)
 
-        # Selalu update history agar kita tahu script berjalan lancar
         with open(HISTORY_FILE, "w") as f:
             json.dump({
                 "last_crawl_date": datetime.now().isoformat(),
                 "script_hash": get_hash(SCRIPT_FILE)
             }, f, indent=2)
             
-        log.info(f"✅ Done. Added {count} new items. Total: {len(db)} items.")
+        log.info(f"✅ Selesai. Ditambahkan {count} data baru. Total Listing: {len(listings)}.")
 
     except Exception as e:
-        log.error(f"Fatal Error: {e}")
+        log.error(f"Fatal Error pada proses utama: {e}")
 
 if __name__ == "__main__":
     main()
