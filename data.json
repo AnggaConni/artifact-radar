@@ -1,8 +1,8 @@
 {
   "summary": {
-    "generated_at": "2026-03-11T22:24:51.991634Z",
-    "total_listings": 7,
-    "high_risk_count": 5,
+    "generated_at": "2026-03-11T22:36:45.149654Z",
+    "total_listings": 16,
+    "high_risk_count": 7,
     "medium_risk_count": 1,
     "alerts_by_platform": {
       "Asumsi": 1,
@@ -10,7 +10,16 @@
       "Shopee": 1,
       "Tokopedia": 2,
       "Hops ID": 1,
-      "YouTube": 1
+      "YouTube": 1,
+      "Apollo Art Auctions": 1,
+      "Etsy": 1,
+      "Reddit": 1,
+      "Sotheby's": 1,
+      "Christie's": 1,
+      "Art Investment Platform": 1,
+      "YouTube (Timeline Auctions)": 1,
+      "Academia.edu": 1,
+      "Cleveland Museum of Art": 1
     },
     "top_high_risk": [
       {
@@ -53,30 +62,30 @@
         "scraped_at": "2026-03-11T22:24:51.991619Z"
       },
       {
-        "original_title": "Liontin Bandul Kalung Makoro Buto Ijo Dewa Temuan Peninggalan Kerajaan Hindu Budha Majapahit Kuno Antik Langka Sepuh",
-        "platform": "Tokopedia",
-        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa4mPrTWTLHBJHKe85jt3jiLiNgxPI6MFRPYde3x6b4js_TfXxBXdbXNR3ppxozw57gans77V-T82V5eHSMzJJPgelNdoVchrDy3FpXLsYWyBNq0au7j3IAt9RqEh-fmbuSmX0FaSmEqMxlvsVTizADXCSPm2Q35JPapy6pyrGmrsBxmzhqron_ZRnJMGFzIRflKxjsoTZF6_Ls7BXStypZw==",
-        "price_usd": 68.1,
-        "status": "HIGH RISK",
-        "risk_score": 8,
-        "origin_region": "Southeast Asia (Indonesia)",
-        "provenance_flag": false,
-        "keyword_trigger": "jual artefak kuno majapahit",
-        "reason": "Barang diklaim sebagai 'temuan peninggalan' Majapahit. Penjualan artefak kuno tanpa bukti asal-usul yang jelas di marketplace umum berisiko tinggi. Harga dikonversi dari Rp1.055.500 dengan kurs perkiraan 1 USD = 15.500 IDR.",
-        "scraped_at": "2026-03-11T22:24:51.991618Z"
-      },
-      {
-        "original_title": "Pemaharan&Lelang Pusaka Warung Antik",
-        "platform": "YouTube",
-        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLHU5wgzci1DYT08s4aqW1IeIxrfK_tnwqNwA4SgpjuB95fko9GumooJCcO-vqtpkGe7gZQdFFwjiYnUSiTA45jzyDbB2KEcp8zevJ1dZpF3wtVzLWUwzrkVq_QSI0s79zaSKBzIg=",
+        "original_title": "ANCIENT ROMAN IRON GLADIUS SWORD",
+        "platform": "Apollo Art Auctions",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBm272yYirphIbabmRewY90Kjr6a09b_xVYQ4WcwCKYR_0VMvisjCaV0HfY2k60ygNdrzDHc7ET1tg55i3HnfMBqSfqyqRO8G0kOpYT2NRPNnCC3Zwl9QHy_OplTgtVy3XrU-Du_eWg1A44w7djUYJIFeaFzHj8_KUlFNBUZiU6p9vOirSb2JDlhX1bnhYH0=",
         "price_usd": 0,
         "status": "HIGH RISK",
-        "risk_score": 8,
-        "origin_region": "Southeast Asia (Indonesia)",
+        "risk_score": 9,
+        "origin_region": "Roman Empire (Europe/Mediterranean), collected in UK",
+        "provenance_flag": true,
+        "keyword_trigger": "roman legionary gladius authentic",
+        "reason": "Auction listing for an ancient Roman iron gladius sword. While a private UK collection and formation in the 1990s is stated as provenance, the antiquities market inherently carries risks regarding the ultimate legal and ethical origin of artifacts.",
+        "scraped_at": "2026-03-11T22:36:19.269130Z"
+      },
+      {
+        "original_title": "Collectable Authentic Ancient Roman Legionary Bronze Sword with Dragon Handle",
+        "platform": "Etsy",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnqet4cd0Jiz63O1BctQQaw37dXN0sVseNErT98ccSF5R49cH9kw-m3puNf-CTdBmXH0hJbse7GkGWacHq77O4RvZhoyZPv6DVrBNBmPVSvcroGigVKXHF3wKqJ5SPB7i39DI88s51aXe3y6k=",
+        "price_usd": 262.5,
+        "status": "HIGH RISK",
+        "risk_score": 9,
+        "origin_region": "Unknown",
         "provenance_flag": false,
-        "keyword_trigger": "jual artefak kuno majapahit",
-        "reason": "Saluran YouTube yang mempromosikan 'pemaharan' dan lelang pusaka yang diklaim sebagai peninggalan Majapahit, yang berpotensi melibatkan perdagangan artefak tanpa izin. Konten video tidak tersedia, sehingga detail harga tidak dapat diverifikasi.",
-        "scraped_at": "2026-03-11T22:24:51.991622Z"
+        "keyword_trigger": "roman legionary gladius authentic",
+        "reason": "Listing on a general marketplace (Etsy) claiming an 'authentic ancient Roman' artifact at a sale price of $262.50. This price is highly suspicious for a verified authentic ancient artifact, raising significant concerns about its true authenticity and potential misrepresentation, especially without detailed provenance.",
+        "scraped_at": "2026-03-11T22:36:19.269140Z"
       }
     ]
   },
@@ -171,6 +180,123 @@
       "keyword_trigger": "jual artefak kuno majapahit",
       "reason": "Saluran YouTube yang mempromosikan 'pemaharan' dan lelang pusaka yang diklaim sebagai peninggalan Majapahit, yang berpotensi melibatkan perdagangan artefak tanpa izin. Konten video tidak tersedia, sehingga detail harga tidak dapat diverifikasi.",
       "scraped_at": "2026-03-11T22:24:51.991622Z"
+    },
+    {
+      "original_title": "ANCIENT ROMAN IRON GLADIUS SWORD",
+      "platform": "Apollo Art Auctions",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBm272yYirphIbabmRewY90Kjr6a09b_xVYQ4WcwCKYR_0VMvisjCaV0HfY2k60ygNdrzDHc7ET1tg55i3HnfMBqSfqyqRO8G0kOpYT2NRPNnCC3Zwl9QHy_OplTgtVy3XrU-Du_eWg1A44w7djUYJIFeaFzHj8_KUlFNBUZiU6p9vOirSb2JDlhX1bnhYH0=",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Roman Empire (Europe/Mediterranean), collected in UK",
+      "provenance_flag": true,
+      "keyword_trigger": "roman legionary gladius authentic",
+      "reason": "Auction listing for an ancient Roman iron gladius sword. While a private UK collection and formation in the 1990s is stated as provenance, the antiquities market inherently carries risks regarding the ultimate legal and ethical origin of artifacts.",
+      "scraped_at": "2026-03-11T22:36:19.269130Z"
+    },
+    {
+      "original_title": "Collectable Authentic Ancient Roman Legionary Bronze Sword with Dragon Handle",
+      "platform": "Etsy",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnqet4cd0Jiz63O1BctQQaw37dXN0sVseNErT98ccSF5R49cH9kw-m3puNf-CTdBmXH0hJbse7GkGWacHq77O4RvZhoyZPv6DVrBNBmPVSvcroGigVKXHF3wKqJ5SPB7i39DI88s51aXe3y6k=",
+      "price_usd": 262.5,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Unknown",
+      "provenance_flag": false,
+      "keyword_trigger": "roman legionary gladius authentic",
+      "reason": "Listing on a general marketplace (Etsy) claiming an 'authentic ancient Roman' artifact at a sale price of $262.50. This price is highly suspicious for a verified authentic ancient artifact, raising significant concerns about its true authenticity and potential misrepresentation, especially without detailed provenance.",
+      "scraped_at": "2026-03-11T22:36:19.269140Z"
+    },
+    {
+      "original_title": "Purchasing a Roman Gladius: : r/SWORDS",
+      "platform": "Reddit",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEA5fyMEEpvnEGaeRKIWt5qNYF04gmi31qpEYK07Ujr-8uKoMeXiMkBtQk9zVo4OXkiJh7sdAQcUSNP59ocvYMJAzjmfoWWGL4Ii99GrGUck0fXsHYMXxxj85MQLdVEddJh5FRRJpHB2nRCv-cIeoEBFh3ioc5tpOuQiiIfIa1pFYVtrZNStw==",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 0,
+      "origin_region": "Unknown",
+      "provenance_flag": false,
+      "keyword_trigger": "roman legionary gladius authentic",
+      "reason": "Collector forum discussion where a user seeks advice on authenticating Roman gladius swords for sale on marketplaces like eBay. This highlights the inherent difficulties and risks associated with verifying the authenticity of such artifacts and the absence of a standardized authentication body for ancient swords.",
+      "scraped_at": "2026-03-11T22:36:19.269143Z"
+    },
+    {
+      "original_title": "An important parcel-gilt silver Sogdian saddle cup, Central Asia, 7th/8th century",
+      "platform": "Sotheby's",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWJFp6wN4bV1CGm5JZqs_ENC0x5bFy4G1GkfuErGXezKeoXC8kuxzR_neayXXwfJYM0TaE6drTZogSP658dCsiwBqLh2rdVfu2ETqG6Ll85_AwaPwat0yQoppsD734IlATZXz6czpYR_obrVaQGnahgBMgvyeTrGzVXbqLPUvscg2yIh6QUhfvyQmOU5z-t4DnflO0CweaSCry8SYl7BPkGh3kBZ2bW0AUse4kYSJzoAGv_CclL8WGl384mCt6ewroVtSWeO3IPbmzswvzzjIFjsSkuNdRvagCwQ==",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 1,
+      "origin_region": "Central Asia (Sogdiana)",
+      "provenance_flag": true,
+      "keyword_trigger": "sogdian silver vessel sale",
+      "reason": "Legitimate auction listing from a major auction house. Detailed description and historical context are provided, mentioning connections to Hellenistic and Sassanian worlds, Central Asian motifs, and scholarly references. The auction is closed, and the final price is not available in the snippet.",
+      "scraped_at": "2026-03-11T22:36:45.149621Z"
+    },
+    {
+      "original_title": "AN EARLY ISLAMIC SILVER DISH , PROBABLY SOGDIAN, CENTRAL ASIA, CIRCA 8TH CENTURY",
+      "platform": "Christie's",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgLWTN5G5rwZho90wkY_QMhZNjH2kiw8-X4JIrbmllGws7ho-N4Ra4_e5lOKWNJ0b_2ijO-W38330h6hJD51tMyJp1zLPOk7YPSOC-n3az4leVPEDT_KN2n3oJwjjQEpS5cicTG-8=",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 1,
+      "origin_region": "Central Asia (Probably Sogdian)",
+      "provenance_flag": true,
+      "keyword_trigger": "sogdian silver vessel sale",
+      "reason": "Legitimate auction listing from a major auction house. A detailed lot essay with historical and artistic context is provided. The final hammer price is not available in the snippet, only estimates are mentioned.",
+      "scraped_at": "2026-03-11T22:36:45.149629Z"
+    },
+    {
+      "original_title": "Western Asiatic Sogdian Silver Bowl with Animals",
+      "platform": "Art Investment Platform",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBfy0yfiw38-6yFSweYaKMfmbgX5R12ZbWVuvFaE7QdD2J6-2opJRhkqjcuOfkarRucrBxnqju46rgFB-Lc9Vg4Say6gvqnaLp-FwUAdEFXCQ7BTagKYUd49HfxEVI76586UF_XauKGIvn1kMcL88Bl2MvbvX9eSZ0tvO5m9tudLGOWfJGWbYclDDu2SaNHOoYDb2RdGX2ncmJPCBVWZx4ZpteqeCc5y0nTwdkwG-lgpOHuepIRg==",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 2,
+      "origin_region": "Western Asiatic / Sogdian",
+      "provenance_flag": true,
+      "keyword_trigger": "sogdian silver vessel sale",
+      "reason": "Information about a past auction of a Sogdian silver bowl in the United Kingdom. Provenance is stated as 'Property of a London collector, acquired early 1990s.' Price is not available.",
+      "scraped_at": "2026-03-11T22:36:45.149631Z"
+    },
+    {
+      "original_title": "Lot 237 Large Sogdian Silver-Gilt Wild Boar Rhyton With Tim Wonnacott",
+      "platform": "YouTube (Timeline Auctions)",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8qu2vp2M-EjHEHl6R8NR2e_wyva7DhABtYOfFX6QTHScZwbLFMcDk4yw4QGaagBDtxyXGdQFySyIob1KcPSVH-ekbRJe1olqFX4h7fT6fWF3avX-fZ293JMovQy-NKZWnBQ6ATw==",
+      "price_usd": 75000,
+      "status": "INFO ONLY",
+      "risk_score": 2,
+      "origin_region": "Sogdian / Central Asia",
+      "provenance_flag": true,
+      "keyword_trigger": "sogdian silver vessel sale",
+      "reason": "Promotional video for an upcoming auction of a Sogdian silver-gilt wild boar rhyton by Timeline Auctions. The estimated price is between £60,000 and £80,000 (approximately $75,000 - $100,000 USD). Provenance includes mentions of black and white photographs of the vessel from the 1970s.",
+      "scraped_at": "2026-03-11T22:36:45.149632Z"
+    },
+    {
+      "original_title": "A Sogdian Silver Vessel Mahabharatha",
+      "platform": "Academia.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFk22AErycvzRWAGsY_tvzd8GdlkvtRT521YjDsCe6DilpX0Biq0ueyoeFZgFGQ5AyNI9J0ZBuAm1Cve0acg9nmMHBQ4kEy7j0bpggyJk_iAhCGS077MtquxSh1SHa4jnWu5McGAO6iOioT5WjsqeOQLL--cXcQSbBzwcrrnGfX0g==",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 0,
+      "origin_region": "Sogdian colonies in West China (East Turkestan)",
+      "provenance_flag": true,
+      "keyword_trigger": "sogdian silver vessel sale",
+      "reason": "Academic paper detailing a specific Sogdian silver vessel with a scene from the Mahabharata. It discusses its suggested origin and provenance through various collections, including Paul Pelliot, Louis Hambis, and Melle Gobard. It is not a current listing or news of a sale.",
+      "scraped_at": "2026-03-11T22:36:45.149634Z"
+    },
+    {
+      "original_title": "Silver Vessels",
+      "platform": "Cleveland Museum of Art",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGc8U8Sw0EdU3G0IL_8lBKHrb19WHirZkBQcJpaHZNyy9qWvqbDPkqKGXu9F0X6tLLFXeyIPraKg5zKSPRCZx7GIbo-i1XzrjAo2gMQdVDKcZVmrhgovVResh5rx-4Cz56OSg==",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 0,
+      "origin_region": "Central Asia (Sogdiana) or Tibet",
+      "provenance_flag": true,
+      "keyword_trigger": "sogdian silver vessel sale",
+      "reason": "Description of Sogdian silver vessels held in the Cleveland Museum of Art's collection. Provides information about their style and origin, but not a sale or marketplace listing.",
+      "scraped_at": "2026-03-11T22:36:45.149635Z"
     }
   ]
 }
