@@ -1,8 +1,8 @@
 """
 =======================================================================
-  ARTIFACT RADAR v3.3 — Robust Intelligence Crawler
+  ARTIFACT RADAR v3.4 — Robust Intelligence Crawler
   AI Engine : Google Gemini 1.5 Flash
-  Fixes     : Exit Code 1, Empty JSON, & Google Search Tool Handling
+  Fixes     : Citation Cleaner & Multi-Keyword Scan (English Version)
 =======================================================================
 """
 
@@ -15,7 +15,7 @@ import re
 from datetime import datetime, timedelta
 import google.generativeai as genai
 
-# ── Konfigurasi Logging ──
+# ── Logging Configuration ──
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -23,7 +23,7 @@ logging.basicConfig(
 )
 log = logging.getLogger("ArtifactRadar")
 
-# ── Jalur File ──
+# ── File Paths ──
 BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
 DATA_FILE    = os.path.join(BASE_DIR, "data.json")
@@ -94,7 +94,7 @@ KEYWORDS = [
     "looted antiquities returned to museum",
     "archaeological theft investigation",
 
-    # ── Indonesian / Local Search Terms ──────────────────
+    # ── Indonesian / Local Search Terms (Kept in ID for local context) ──
     "jual arca kuno asli",
     "benda purbakala asli dijual",
     "temuan arkeologi dijual",
@@ -113,7 +113,7 @@ def load_db():
                 data = json.load(f)
                 return data if isinstance(data, list) else []
         except Exception as e:
-            log.warning(f"Database lama rusak, memulai baru: {e}")
+            log.warning(f"Old database corrupted, starting fresh: {e}")
             return []
     return []
 
@@ -131,42 +131,40 @@ def check_schedule():
         with open(HISTORY_FILE) as f:
             h = json.load(f)
         last = datetime.fromisoformat(h.get("last_crawl_date"))
-        return datetime.now() - last >= timedelta(hours=12) # Cek tiap 12 jam
+        return datetime.now() - last >= timedelta(hours=12) # Check every 12 hours
     except: return True
 
 # ======================================================================
 # CORE: AI ANALYZER WITH FALLBACK
 # ======================================================================
 
-def run_ai_search(model, existing_links):
-    target = random.choice(KEYWORDS)
+def run_ai_search(model, existing_links, target):
     log.info(f"Targeting: {target}")
     
     prompt = f"""
-    Cari informasi terbaru menggunakan Google Search tentang: "{target}".
-    Identifikasi listing marketplace (FB, eBay, dll), berita pencurian, atau forum kolektor.
+    Use Google Search to find real information and listings regarding: "{target}".
+    Identify marketplace listings (FB, eBay, etc.), theft news, or discussion forums.
     
-    Tampilkan hasil hanya dalam format JSON Array.
-    Jangan masukkan URL yang sudah ada ini: {list(existing_links)[:5]}
+    Output the result ONLY in a JSON Array format.
+    DO NOT add reference citations like [1] inside or outside the JSON.
+    Ignore these existing URLs: {list(existing_links)[:5]}
     
-    Output JSON:
+    JSON Output:
     [
       {{
-        "item_name": "Judul Barang/Berita",
-        "source_name": "Website (BBC, Tokopedia, dll)",
+        "item_name": "Item/News Title",
+        "source_name": "Website (e.g., eBay, Tokopedia, BBC)",
         "source_type": "Marketplace | News | Forum",
         "status": "Suspected Illicit | News | Discussion",
         "risk_score": 1-10,
-        "reason": "Alasan singkat",
-        "source_link": "URL Lengkap",
-        "price_info": "Harga atau N/A"
+        "reason": "Brief reason",
+        "source_link": "Full URL",
+        "price_info": "Price or N/A"
       }}
     ]
     """
     
     try:
-        # 1. Hapus strict JSON mime-type karena sering bentrok dengan Search Tool
-        # 2. Matikan Filter Keamanan karena keyword kita sangat sensitif (stolen, illegal)
         response = model.generate_content(
             prompt,
             safety_settings={
@@ -177,35 +175,41 @@ def run_ai_search(model, existing_links):
             }
         )
         
-        # Log jawaban mentah AI agar bisa kita debug di tab Actions jika masih kosong
-        log.info(f"Raw AI Response: {response.text[:300]}...")
+        text = response.text
+        log.info(f"Raw AI Response snippet: {text[:150]}...")
         
-        # Ekstrak JSON menggunakan regex (lebih tahan banting)
-        json_match = re.search(r'\[.*\]', response.text, re.DOTALL)
-        if json_match:
-            return json.loads(json_match.group())
+        # FIX: Remove Google Search grounding citations (e.g., [1], [2]) that break JSON parsing
+        text = re.sub(r'\[\d+\]', '', text)
+        
+        # FIX: Find the first and last square brackets safely
+        start_idx = text.find('[')
+        end_idx = text.rfind(']')
+        
+        if start_idx != -1 and end_idx != -1 and start_idx < end_idx:
+            json_str = text[start_idx:end_idx+1]
+            return json.loads(json_str)
         else:
-            log.warning("AI tidak memberikan JSON yang valid.")
+            log.warning("AI did not provide a valid JSON Array structure.")
             return []
             
     except Exception as e:
-        log.error(f"Pencarian AI Gagal: {e}")
+        log.error(f"AI Search Failed for '{target}': {e}")
         return []
 
 def main():
     if not check_schedule():
-        log.info("Sistem istirahat.")
+        log.info("System resting.")
         return
     
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        log.error("GEMINI_API_KEY tidak ditemukan!")
-        return # Keluar tanpa error code agar tidak membingungkan GitHub
+        log.error("GEMINI_API_KEY not found!")
+        return 
 
     try:
         genai.configure(api_key=api_key)
         
-        # Inisialisasi model dengan tool search
+        # Initialize the model with the search tool
         model = genai.GenerativeModel(
             model_name='gemini-1.5-flash',
             tools=[{'google_search': {}}]
@@ -214,22 +218,27 @@ def main():
         db = load_db()
         links = {i.get('source_link') for i in db if i.get('source_link')}
 
-        # Jalankan pencarian
-        new_items = run_ai_search(model, links)
+        # Pick 3 keywords at a time to increase the chances of getting data
+        targets = random.sample(KEYWORDS, min(len(KEYWORDS), 3))
         
         count = 0
-        if isinstance(new_items, list):
-            for item in new_items:
-                link = item.get('source_link')
-                if link and link not in links:
-                    item['timestamp'] = datetime.now().isoformat()
-                    db.append(item)
-                    links.add(link)
-                    count += 1
+        for target in targets:
+            new_items = run_ai_search(model, links, target)
+            
+            if isinstance(new_items, list):
+                for item in new_items:
+                    link = item.get('source_link')
+                    if link and link not in links:
+                        item['timestamp'] = datetime.now().isoformat()
+                        item['keyword_matched'] = target
+                        db.append(item)
+                        links.add(link)
+                        count += 1
 
-        # Simpan database & history
-        with open(DATA_FILE, "w", encoding="utf-8") as f:
-            json.dump(db, f, indent=2, ensure_ascii=False)
+        # Save database & history
+        if count > 0:
+            with open(DATA_FILE, "w", encoding="utf-8") as f:
+                json.dump(db, f, indent=2, ensure_ascii=False)
 
         with open(HISTORY_FILE, "w") as f:
             json.dump({
@@ -237,7 +246,7 @@ def main():
                 "script_hash": get_hash(SCRIPT_FILE)
             }, f, indent=2)
             
-        log.info(f"✅ Selesai. Ditambahkan {count} data baru. Total: {len(db)} item.")
+        log.info(f"✅ Done. Added {count} new items. Total: {len(db)} items.")
 
     except Exception as e:
         log.error(f"Fatal Error: {e}")
