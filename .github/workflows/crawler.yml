@@ -2,11 +2,12 @@ name: Artifact Radar Auto-Crawler
 
 on:
   schedule:
+    # Berjalan tiap hari, tapi Python script akan menahannya jika belum 8 hari
     - cron: "0 0 * * *"
   workflow_dispatch: 
     inputs:
       force_crawl:
-        description: 'Paksa crawl sekarang (abaikan jadwal)?'
+        description: 'Force crawl now (bypass 8-day schedule)?'
         required: true
         default: 'false'
         type: choice
@@ -38,7 +39,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install google-generativeai==0.8.3 requests beautifulsoup4
+          pip install requests
 
       - name: Run Scraper & Gemini AI
         env:
@@ -54,8 +55,8 @@ jobs:
           git add data.json history.json || true
           
           if git diff --staged --quiet; then
-            echo "Tidak ada perubahan data."
+            echo "No new data to commit."
           else
-            git commit -m "Auto-update artifact intelligence [skip ci]"
+            git commit -m "Incremental update: Added new artifact intelligence [skip ci]"
             git push origin main
           fi
