@@ -1,247 +1,160 @@
 """
 =======================================================================
-  ARTIFACT RADAR — Multi-Platform Illegal Antiquity Detector
-  Platforms : eBay · Etsy · Tokopedia · Shopee · Amazon · Craigslist
-              + Google Shopping snippets (fallback for FB Marketplace)
-  AI Engine : Google Gemini 2.5 Flash
-  Schedule  : Every 2 weeks via GitHub Actions (also supports manual)
+  ARTIFACT RADAR v3 — Global Intelligence (Market, News, & Forums)
+  AI Engine : Google Gemini 2.5 Flash (with Google Search Tool)
+  Method    : Incremental Append + Multi-Source Monitoring
 =======================================================================
 """
 
-import os, json, re, time, hashlib, logging, random
+import os, json, hashlib, logging, random, re
 from datetime import datetime, timedelta
-from urllib.parse import quote_plus
-import requests
-from bs4 import BeautifulSoup
 import google.generativeai as genai
 
 # ── Jalur File ────────────────────────────────────────────────────────
 BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
 DATA_FILE    = os.path.join(BASE_DIR, "data.json")
-LOG_FILE     = os.path.join(BASE_DIR, "radar.log")
 SCRIPT_FILE  = os.path.abspath(__file__)
 
-# ── Log Sistem ───────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[logging.FileHandler(LOG_FILE), logging.StreamHandler()]
+    handlers=[logging.StreamHandler()]
 )
 log = logging.getLogger("ArtifactRadar")
 
-# ── Interval Crawling ─────────────────────────────────────────────────
-CRAWL_INTERVAL_DAYS = int(os.environ.get("CRAWL_INTERVAL_DAYS", 14))
-
 # ======================================================================
-# DATABASE KATA KUNCI GLOBAL (Expanded Global Database)
+# DATABASE KATA KUNCI GLOBAL (Diverse Sources)
 # ======================================================================
-ARTIFACT_KEYWORDS = {
-    # ── Southeast Asia (SEA) ────────────────────────────────────────
-    "SEA_Maritime": [
-        "majapahit terracotta artifact", "srivijaya gold artifact", "ancient khmer statue",
-        "angkor wat style sculpture", "ayutthaya buddha bronze", "champa stone carving",
-        "dong son bronze drum", "ban chiang pottery", "ancient javanese kris antique",
-        "archaic dayak carving", "prehistoric indonesian artifact",
-    ],
-    # ── East Asia ───────────────────────────────────────────────────
-    "CN_Dynastic": [
-        "han dynasty artifact", "tang dynasty ceramic", "song dynasty porcelain",
-        "ming dynasty porcelain antique", "qing dynasty jade carving", "shanxi tomb artifact",
-        "ancient chinese bronze vessel", "ritual bronze ding vessel", "oracle bone inscription",
-    ],
-    "JP_Ancient": [
-        "jomon pottery ancient", "yayoi bronze bell dotaku", "kofun haniwa figure",
-        "samurai armor antique authentic", "edo period katana antique",
-        "ancient japanese buddhist statue",
-    ],
-    # ── Middle East & Egypt ─────────────────────────────────────────
-    "ME_Egypt": [
-        "ancient egyptian ushabti", "pharaonic sarcophagus fragment", "hieroglyphic papyrus scroll",
-        "ptolemaic period artifact", "egyptian faience amulet", "predynastic egyptian pottery",
-    ],
-    "ME_Mesopotamia": [
-        "sumerian cuneiform tablet", "babylonian cylinder seal", "akkadian bronze artifact",
-        "luristan bronze antique", "elamite pottery fragment", "ancient persian rhyton",
-    ],
-    # ── Mediterranean (Greco-Roman) ──────────────────────────────────
-    "Mediterranean_Classic": [
-        "ancient greek amphora", "roman marble bust fragment", "etruscan bronze mirror",
-        "attic red figure pottery", "roman legionary gladius antique", "byzantine icon antique",
-        "mycenaean artifact", "minoan pottery fragment",
-    ],
-    # ── The Americas (Pre-Columbian) ────────────────────────────────
-    "Americas_PreColumbian": [
-        "mayan jade artifact", "aztec stone sculpture", "inca gold mask",
-        "moche ceramic vessel", "nazca textile fragment", "pre-columbian pottery authentic",
-        "chavin stone carving", "tairona gold ornament",
-    ],
-    # ── South Asia ──────────────────────────────────────────────────
-    "South_Asia": [
-        "indus valley seal", "harappan pottery fragment", "gandhara buddha sculpture",
-        "chola bronze statue", "pala empire sculpture", "ancient indian stone carving",
-    ],
-    # ── Central Asia & Silk Road ────────────────────────────────────
-    "Silk_Road": [
-        "scythian gold ornament", "bactrian camel artifact", "sogdian silver vessel",
-        "kushan coin hoard", "ancient gandharan artifact", "mongol empire burial gear",
-    ],
-    # ── Africa ──────────────────────────────────────────────────────
-    "Africa_Ancient": [
-        "nok terracotta head", "benin bronze plaque", "ancient ife sculpture",
-        "ethiopian orthodox cross antique", "dogon ancestor statue", "mali terracotta figure",
-    ]
-}
-
-ALL_KEYWORDS = [kw for kws in ARTIFACT_KEYWORDS.values() for kw in kws]
-
-# ======================================================================
-# PEMBANTU HTTP
-# ======================================================================
-USER_AGENTS = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
+KEYWORDS = [
+    # Marketplace Focus
+    "rare majapahit artifact for sale", "authentic egyptian ushabti auction", 
+    "ancient roman sword private listing", "pre-columbian pottery authentic for sale",
+    # News & Reports Focus
+    "stolen artifacts news BBC CNN", "illegal antiquity trafficking report 2024",
+    "looted cultural heritage news", "repatriation of stolen artifacts news",
+    # Forum & Community Focus
+    "ancient coin identification forum reddit", "artifact collecting discussion illicit",
+    "identifying looted antiquities forum"
 ]
 
-def get_headers(referer: str = "https://www.google.com/") -> dict:
-    return {
-        "User-Agent": random.choice(USER_AGENTS),
-        "Accept-Language": "en-US,en;q=0.9,id;q=0.8",
-        "Referer": referer,
-    }
+# ======================================================================
+# FUNGSI DATA PERSISTENCE
+# ======================================================================
 
-def safe_get(url: str, referer: str = "", timeout: int = 15, retries: int = 2) -> requests.Response or None:
-    for attempt in range(retries):
+def load_existing_data():
+    if os.path.exists(DATA_FILE):
         try:
-            time.sleep(random.uniform(2.0, 5.0))
-            r = requests.get(url, headers=get_headers(referer or url), timeout=timeout)
-            if r.status_code == 200: return r
-        except Exception as e:
-            log.warning(f"Percobaan {attempt+1} gagal untuk {url}: {e}")
-    return None
+            with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                return data if isinstance(data, list) else []
+        except:
+            return []
+    return []
 
-def scrape_ebay(keyword: str) -> list:
-    url = f"https://www.ebay.com/sch/i.html?_nkw={quote_plus(keyword)}&_sacat=0&LH_ItemCondition=3000"
-    r = safe_get(url)
-    if not r: return []
-    soup = BeautifulSoup(r.text, "html.parser")
-    results = []
-    for item in soup.select("li.s-item")[:8]:
-        title_el = item.select_one(".s-item__title")
-        link_el = item.select_one("a.s-item__link")
-        if not title_el or not link_el or "Shop on eBay" in title_el.text: continue
-        results.append({
-            "platform": "eBay",
-            "title": title_el.get_text(strip=True),
-            "url": link_el.get("href", "").split("?")[0],
-            "keyword": keyword
-        })
-    return results
-
-def scrape_google_shopping(keyword: str) -> list:
-    url = f"https://www.google.com/search?q={quote_plus(keyword)}&tbm=shop"
-    r = safe_get(url)
-    if not r: return []
-    soup = BeautifulSoup(r.text, "html.parser")
-    results = []
-    for item in soup.select("div.sh-dgr__grid-result, div.g")[:8]:
-        title_el = item.select_one("h3, h4")
-        link_el = item.select_one("a")
-        if not title_el or not link_el: continue
-        href = link_el.get("href", "")
-        if "/url?q=" in href: href = href.split("/url?q=")[1].split("&")[0]
-        results.append({
-            "platform": "Google Shopping",
-            "title": title_el.get_text(strip=True),
-            "url": href,
-            "keyword": keyword
-        })
-    return results
-
-# ======================================================================
-# ANALISIS AI
-# ======================================================================
-
-def analyze_with_gemini(listings: list, model) -> list:
-    if not listings: return []
-    prompt = f"""
-    Analyze these marketplace listings for potential illegal artifact trafficking.
-    Listings: {json.dumps(listings[:40], indent=2)}
-    
-    Output ONLY a JSON array:
-    [
-      {{
-        "item_name": "string",
-        "platform": "string",
-        "status": "Suspected Illicit | Replica/Fake | Irrelevant",
-        "risk_score": 1-10,
-        "reason": "string",
-        "source_link": "string"
-      }}
-    ]
-    """
-    try:
-        response = model.generate_content(prompt, generation_config={"response_mime_type": "application/json"})
-        return json.loads(response.text)
-    except Exception as e:
-        log.error(f"Analisis AI gagal: {e}")
-        return []
-
-# ======================================================================
-# LOGIKA INTI
-# ======================================================================
-
-def get_file_hash(filepath: str) -> str:
+def get_file_hash(filepath):
     hasher = hashlib.md5()
     with open(filepath, "rb") as f: hasher.update(f.read())
     return hasher.hexdigest()
 
-def should_crawl() -> bool:
-    # Cek apakah ada perintah paksa dari GitHub Actions
-    if os.environ.get("FORCE_CRAWL") == "true":
-        log.info("Mode Paksa Crawl aktif (Abaikan jadwal).")
-        return True
-
+def should_crawl():
+    if os.environ.get("FORCE_CRAWL") == "true": return True
     if not os.path.exists(HISTORY_FILE): return True
     with open(HISTORY_FILE) as f: history = json.load(f)
-    if history.get("script_hash") != get_file_hash(SCRIPT_FILE): return True
     last = datetime.fromisoformat(history.get("last_crawl_date"))
-    return datetime.now() - last >= timedelta(days=CRAWL_INTERVAL_DAYS)
+    return datetime.now() - last >= timedelta(days=1) # Diubah ke 1 hari agar lebih update
+
+# ======================================================================
+# CORE: GEMINI INTELLIGENCE WITH SEARCH
+# ======================================================================
+
+def fetch_and_analyze(model, existing_links):
+    """
+    Menggunakan Gemini untuk mencari di Marketplace, Berita, dan Forum.
+    """
+    target = random.choice(KEYWORDS)
+    log.info(f"Targeting: {target}")
+    
+    prompt = f"""
+    Using Google Search, find the latest information about: "{target}".
+    
+    I want to monitor three types of data:
+    1. MARKETPLACE: Listings of potentially illicit/stolen artifacts.
+    2. NEWS: Recent articles about looting, artifact smuggling, or seizures (e.g., from BBC, Al Jazeera).
+    3. FORUMS: Discussions about suspicious or unidentified ancient objects.
+
+    For each find, provide a JSON array. 
+    EXCLUDE these existing links: {list(existing_links)[:10]}
+    
+    JSON Structure:
+    [
+      {{
+        "item_name": "Title of listing or News headline",
+        "source_name": "Name of the website (e.g., BBC News, eBay, Reddit)",
+        "source_type": "Marketplace | News | Forum",
+        "status": "Suspected Illicit | Looting Report | Discussion",
+        "risk_score": 1-10,
+        "reason": "Brief analysis of why this is relevant",
+        "source_link": "Full URL",
+        "price_info": "Price if applicable, or 'N/A'"
+      }}
+    ]
+    """
+    
+    try:
+        response = model.generate_content(prompt)
+        text_output = response.text
+        # Bersihkan output agar hanya JSON yang diambil
+        json_match = re.search(r'\[.*\]', text_output, re.DOTALL)
+        if json_match:
+            return json.loads(json_match.group())
+        return []
+    except Exception as e:
+        log.error(f"Pencarian Gagal: {e}")
+        return []
 
 def main():
     if not should_crawl():
-        log.info("Sistem istirahat. Belum waktunya crawl ulang (Gunakan opsi 'Force Crawl' jika ingin mendesak).")
+        log.info("Sistem istirahat.")
         return
     
     api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        log.error("API Key Gemini tidak ditemukan!")
-        return
-        
+    if not api_key: return
+
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-2.5-flash")
+    model = genai.GenerativeModel(
+        model_name='gemini-1.5-flash',
+        tools=[{'google_search': {}}]
+    )
 
-    all_listings = []
-    # Memilih 15 kata kunci secara acak setiap sesi untuk cakupan global yang lebih luas
-    sample_keywords = random.sample(ALL_KEYWORDS, min(len(ALL_KEYWORDS), 15))
-    
-    log.info(f"Memulai pemindaian global untuk {len(sample_keywords)} kata kunci...")
-    for kw in sample_keywords:
-        all_listings.extend(scrape_ebay(kw))
-        all_listings.extend(scrape_google_shopping(kw))
+    # 1. Load data lama
+    db = load_existing_data()
+    existing_links = {item.get('source_link') for item in db if item.get('source_link')}
 
-    log.info(f"Ditemukan {len(all_listings)} listing. Menganalisis dengan AI...")
-    analyzed = analyze_with_gemini(all_listings, model)
+    # 2. Cari data baru
+    new_findings = fetch_and_analyze(model, existing_links)
     
+    # 3. Gabungkan (Incremental)
+    added_count = 0
+    for item in new_findings:
+        link = item.get('source_link')
+        if link and link not in existing_links:
+            item['timestamp'] = datetime.now().isoformat()
+            db.append(item)
+            existing_links.add(link)
+            added_count += 1
+
+    # 4. Simpan
     with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(analyzed, f, indent=2, ensure_ascii=False)
+        json.dump(db, f, indent=2, ensure_ascii=False)
 
     with open(HISTORY_FILE, "w") as f:
         json.dump({
             "last_crawl_date": datetime.now().isoformat(),
             "script_hash": get_file_hash(SCRIPT_FILE)
         }, f, indent=2)
-    log.info("✅ Pemindaian global selesai.")
+        
+    log.info(f"✅ Selesai. Menambahkan {added_count} data baru. Total: {len(db)}")
 
 if __name__ == "__main__":
     main()
