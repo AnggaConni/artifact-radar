@@ -1,0 +1,37 @@
+[
+    {
+        "item_name": "Authentic Egyptian Ushabti figure",
+        "price_usd": 15000,
+        "status": "Authentic (Suspected)",
+        "risk_score": 10,
+        "reason": "Explicitly states 'authentic' and 'recently unearthed in Luxor,' indicating potential looting and lack of legal provenance. 'Discreet shipping' further suggests illicit activity."
+    },
+    {
+        "item_name": "Souvenir Greek Parthenon statue",
+        "price_usd": 25,
+        "status": "Replica",
+        "risk_score": 1,
+        "reason": "Clearly identified as a 'souvenir' and 'made of lightweight resin,' indicating a modern, non-authentic item."
+    },
+    {
+        "item_name": "Vintage graphic T-shirt with Mayan calendar print",
+        "price_usd": 18,
+        "status": "Irrelevant",
+        "risk_score": 1,
+        "reason": "This is a modern clothing item with a cultural print, not an artifact or a replica of an artifact."
+    },
+    {
+        "item_name": "Ancient Roman bronze Gladius sword",
+        "price_usd": 31250,
+        "status": "Authentic (Suspected)",
+        "risk_score": 10,
+        "reason": "Claims to be an 'Ancient Roman' artifact of high value. The phrase 'Location secret' is a significant red flag for illicit trafficking, indicating an attempt to conceal provenance and seller identity."
+    },
+    {
+        "item_name": "Hand-carved replica of Aztec calendar stone",
+        "price_usd": 1200,
+        "status": "Replica",
+        "risk_score": 2,
+        "reason": "Clearly stated as a 'hand-carved replica' and 'newly made last month,' indicating it is a modern reproduction."
+    }
+]
