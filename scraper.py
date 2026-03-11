@@ -111,7 +111,8 @@ def run_ai_search(api_key, existing_urls, target):
     log.info(f"Targeting: {target}")
     
     # URL dijamin bersih karena api_key sudah di-strip() di fungsi main
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    # FIX: Menggunakan endpoint gemini-2.5-flash sesuai dengan akses API Anda
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
     
     prompt = f"""
     Gunakan Google Search untuk mencari listing penjualan atau berita nyata mengenai: "{target}".
@@ -139,9 +140,14 @@ def run_ai_search(api_key, existing_urls, target):
     """
     
     # FIX: Tool Grounding di REST API harus 'googleSearch' (S Kapital)
+    # Ditambahkan generationConfig persis seperti script JS Anda yang berhasil
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "tools": [{"googleSearch": {}}],
+        "generationConfig": {
+            "temperature": 0.7,
+            "maxOutputTokens": 8192
+        },
         "safetySettings": [
             {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
             {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
