@@ -9,9 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   
-  <!-- Tailwind & Chart.js -->
+  <!-- Tailwind, Chart.js, & Leaflet -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   
   <style>
     /* ── Variables ── */
@@ -47,20 +49,24 @@
     .badge-medium { background: var(--amber-lt); color: var(--amber); }
     .badge-info { background: #e0f2fe; color: #0284c7; }
     
-    /* Scrollbar minimalis */
+    /* Scrollbar */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+    /* Custom Leaflet Popup */
+    .leaflet-popup-content-wrapper {
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .leaflet-popup-content { margin: 16px; font-family: 'Instrument Sans', sans-serif; }
   </style>
 </head>
 <body class="flex h-screen overflow-hidden">
 
   <!-- ── SIDEBAR ── -->
-  <!-- Lebar sidebar ditambah jadi w-80 agar grafik terlihat jelas -->
   <aside class="w-80 bg-white border-r border-[#e4dfd4] flex flex-col justify-between hidden lg:flex z-20 shrink-0">
-    
-    <!-- Sidebar Header -->
     <div class="h-20 flex items-center px-6 border-b border-[#e4dfd4] shrink-0">
       <div class="bg-[#1c1814] text-[#f5f3ee] p-1.5 px-2.5 rounded-md syne-font font-bold text-lg mr-3">AR</div>
       <div>
@@ -69,53 +75,38 @@
       </div>
     </div>
     
-    <!-- Sidebar Scrollable Content (Nav & Charts) -->
     <div class="flex-1 overflow-y-auto p-6">
-      
       <p class="text-[10px] mono-font font-bold text-[#8a7f72] uppercase tracking-widest mb-4">Navigation</p>
+      
+      <!-- Nav Tabs -->
       <nav class="space-y-2 mb-8">
-        <a href="#" class="flex items-center gap-3 px-3 py-2.5 bg-[#f5f3ee] text-[#1c1814] rounded-lg font-semibold text-sm">
+        <a href="#" id="tab-dashboard" onclick="switchTab('dashboard')" class="flex items-center gap-3 px-3 py-2.5 bg-[#f5f3ee] text-[#1c1814] rounded-lg font-semibold text-sm transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
           Global Monitor
         </a>
-        <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-[#8a7f72] hover:bg-[#f5f3ee] hover:text-[#1c1814] rounded-lg font-semibold text-sm transition-colors">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-          High Risk Alerts
-          <span id="nav-alert-badge" class="ml-auto bg-[#dc2626] text-white text-[10px] px-2 py-0.5 rounded-full font-bold">0</span>
+        <a href="#" id="tab-map" onclick="switchTab('map')" class="flex items-center gap-3 px-3 py-2.5 text-[#8a7f72] hover:bg-[#f5f3ee] hover:text-[#1c1814] rounded-lg font-semibold text-sm transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+          Map Source <span class="text-[10px] ml-1 opacity-50">(Geo-Intel)</span>
         </a>
       </nav>
 
       <div class="border-t border-[#e4dfd4] pt-6">
         <p class="text-[10px] mono-font font-bold text-[#8a7f72] uppercase tracking-widest mb-4">Live Analytics</p>
-        
-        <!-- Radar Chart: Status Data -->
         <div class="mb-8">
           <p class="text-xs font-semibold text-[#1c1814] mb-2">Market Risk Profile</p>
-          <div class="relative h-40 w-full">
-            <canvas id="radarChart"></canvas>
-          </div>
+          <div class="relative h-40 w-full"><canvas id="radarChart"></canvas></div>
         </div>
-
-        <!-- Bar Chart: Platform Breakdown -->
         <div class="mb-8">
           <p class="text-xs font-semibold text-[#1c1814] mb-2">Platform Breakdown</p>
-          <div class="relative h-36 w-full">
-            <canvas id="barChart"></canvas>
-          </div>
+          <div class="relative h-36 w-full"><canvas id="barChart"></canvas></div>
         </div>
-
-        <!-- Doughnut Chart: Provenance -->
         <div class="mb-4">
           <p class="text-xs font-semibold text-[#1c1814] mb-2">Provenance Tracking</p>
-          <div class="relative h-36 w-full flex justify-center">
-            <canvas id="provChart"></canvas>
-          </div>
+          <div class="relative h-36 w-full flex justify-center"><canvas id="provChart"></canvas></div>
         </div>
       </div>
-
     </div>
 
-    <!-- Sidebar Footer -->
     <div class="p-6 border-t border-[#e4dfd4] bg-[#fcfbf9] shrink-0">
       <p class="text-[10px] mono-font font-bold text-[#8a7f72] uppercase tracking-widest mb-2">System Status</p>
       <div class="flex items-center gap-2">
@@ -129,19 +120,18 @@
   <!-- ── MAIN CONTENT ── -->
   <main class="flex-1 flex flex-col h-screen overflow-hidden relative">
     
-    <!-- Mobile Header -->
     <header class="h-16 bg-white border-b border-[#e4dfd4] flex items-center justify-between px-4 lg:hidden shrink-0 z-10">
       <div class="flex items-center">
         <div class="bg-[#1c1814] text-[#f5f3ee] p-1 px-2 rounded syne-font font-bold text-sm mr-2">AR</div>
         <h1 class="text-lg font-bold syne-font">Artifact Radar</h1>
       </div>
+      <button onclick="switchTab('dashboard')" class="text-xs font-bold mr-2">Grid</button>
+      <button onclick="switchTab('map')" class="text-xs font-bold">Map</button>
     </header>
 
-    <!-- Scrollable Content -->
-    <div class="flex-1 overflow-y-auto p-4 md:p-8">
+    <!-- SECTION: DASHBOARD (Default) -->
+    <div id="section-dashboard" class="flex-1 overflow-y-auto p-4 md:p-8">
       <div class="max-w-6xl mx-auto">
-        
-        <!-- Header Section -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
           <div>
             <h2 class="text-3xl font-extrabold syne-font tracking-tight">Intelligence Feed</h2>
@@ -152,7 +142,7 @@
           </div>
         </div>
 
-        <!-- Summary Stats -->
+        <!-- Stats -->
         <div class="grid grid-cols-2 xl:grid-cols-4 gap-4 mb-10">
           <div class="card p-5 rounded-2xl">
             <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font">Total Listings</p>
@@ -172,28 +162,143 @@
           </div>
         </div>
 
-        <!-- Cards Grid -->
+        <!-- Grid Cards -->
         <div id="cards-grid" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 pb-10">
-          <!-- Loading State -->
           <div class="col-span-full py-20 text-center">
             <div class="inline-block w-8 h-8 border-4 border-[#e4dfd4] border-t-[#1c1814] rounded-full animate-spin mb-4"></div>
             <p class="text-[#8a7f72] mono-font animate-pulse">Fetching global intelligence database...</p>
           </div>
         </div>
-
       </div>
     </div>
+
+    <!-- SECTION: MAP SOURCE -->
+    <div id="section-map" class="hidden flex-1 flex-col relative bg-[#e5e3df]">
+      <div class="absolute top-6 left-6 z-[1000] bg-white/90 backdrop-blur px-6 py-4 rounded-2xl border border-white/20 shadow-lg pointer-events-none">
+        <h2 class="text-xl font-extrabold syne-font tracking-tight text-[#1c1814]">Geospatial Origin Intel</h2>
+        <p class="text-xs text-[#8a7f72] mt-1 font-medium">Tracking suspected origins of intercepted artifacts</p>
+      </div>
+      <!-- Map Container -->
+      <div id="map" class="w-full h-full z-0"></div>
+    </div>
+
   </main>
 
   <script>
-    // Konfigurasi Default Chart.js agar matching dengan desain UI
     Chart.defaults.font.family = "'DM Mono', monospace";
     Chart.defaults.color = '#8a7f72';
     Chart.defaults.scale.grid.color = '#f5f3ee';
     
-    // Simpan instance chart agar bisa di-destroy (mencegah bug jika load ulang)
     let radarChartObj, barChartObj, provChartObj;
+    let globalListings = [];
+    let map;
 
+    // --- TAB SWITCH LOGIC ---
+    function switchTab(tabName) {
+      const secDash = document.getElementById('section-dashboard');
+      const secMap = document.getElementById('section-map');
+      const tabDash = document.getElementById('tab-dashboard');
+      const tabMap = document.getElementById('tab-map');
+
+      const activeClasses = ['bg-[#f5f3ee]', 'text-[#1c1814]'];
+      const inactiveClasses = ['text-[#8a7f72]', 'hover:bg-[#f5f3ee]', 'hover:text-[#1c1814]'];
+
+      if (tabName === 'dashboard') {
+        secDash.classList.remove('hidden');
+        secMap.classList.add('hidden');
+        tabDash.classList.add(...activeClasses);
+        tabDash.classList.remove(...inactiveClasses);
+        tabMap.classList.remove(...activeClasses);
+        tabMap.classList.add(...inactiveClasses);
+      } else {
+        secDash.classList.add('hidden');
+        secMap.classList.remove('hidden');
+        tabMap.classList.add(...activeClasses);
+        tabMap.classList.remove(...inactiveClasses);
+        tabDash.classList.remove(...activeClasses);
+        tabDash.classList.add(...inactiveClasses);
+        
+        // Fix Leaflet rendering issue when unhiding
+        if(map) { setTimeout(() => { map.invalidateSize(); }, 200); }
+      }
+    }
+
+    // --- GEOCODER (AI String -> Lat/Lng) ---
+    function getApproximateCoordinates(regionStr) {
+      if(!regionStr) return null;
+      const r = regionStr.toLowerCase();
+      // Memberikan koordinat tengah peradaban berdasarkan keyword AI
+      if (r.includes('java') || r.includes('majapahit') || r.includes('indonesia')) return [-7.25, 112.75]; // Jawa Timur
+      if (r.includes('khmer') || r.includes('cambodia') || r.includes('angkor')) return [13.41, 103.86]; // Siem Reap
+      if (r.includes('egypt') || r.includes('pharao')) return [26.82, 30.80]; // Mesir
+      if (r.includes('mesopotamia') || r.includes('iraq') || r.includes('sumerian') || r.includes('babylon')) return [33.22, 43.67]; // Iraq
+      if (r.includes('roman') || r.includes('italy') || r.includes('etruscan')) return [41.90, 12.49]; // Roma
+      if (r.includes('greek') || r.includes('greece') || r.includes('mycenae')) return [37.98, 23.72]; // Athena
+      if (r.includes('china') || r.includes('han ') || r.includes('ming ') || r.includes('qing ')) return [34.34, 108.93]; // Xi'an
+      if (r.includes('japan') || r.includes('jomon') || r.includes('edo ')) return [35.01, 135.76]; // Kyoto
+      if (r.includes('india') || r.includes('chola') || r.includes('gandhara')) return [20.59, 78.96]; // Central India
+      if (r.includes('maya') || r.includes('mexico') || r.includes('aztec')) return [19.43, -99.13]; // Mexico
+      if (r.includes('inca') || r.includes('peru') || r.includes('moche')) return [-9.19, -75.01]; // Peru
+      if (r.includes('southeast asia')) return [15.87, 100.99]; // Umum SEA
+      if (r.includes('middle east')) return [33.88, 35.86]; // Lebanon/Syria area
+      if (r.includes('africa')) return [9.08, 8.67]; // Afrika Tengah
+      if (r.includes('europe')) return [48.85, 2.35]; // Eropa
+      return null;
+    }
+
+    function initMap(listings) {
+      if(map) return; // Prevent re-init
+      
+      // Menggunakan base layer warna terang agar senada dengan UI Dashboard
+      map = L.map('map', { zoomControl: false }).setView([20, 0], 2);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO',
+        subdomains: 'abcd',
+        maxZoom: 10
+      }).addTo(map);
+
+      // Add Zoom Control di kanan bawah
+      L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+      listings.forEach(item => {
+        const coords = getApproximateCoordinates(item.origin_region || item.keyword_trigger);
+        if (coords) {
+          // Tambahkan sedikit jitter/acak posisi agar pin dari region yang sama tidak numpuk 100%
+          const jitterLat = coords[0] + (Math.random() - 0.5) * 2.0; 
+          const jitterLng = coords[1] + (Math.random() - 0.5) * 2.0;
+          
+          const isHigh = item.risk_score >= 8;
+          const markerColor = isHigh ? '#dc2626' : (item.risk_score >= 4 ? '#d97706' : '#16a34a');
+
+          // Buat lingkaran marker custom
+          const circleMarker = L.circleMarker([jitterLat, jitterLng], {
+            radius: isHigh ? 8 : 6,
+            fillColor: markerColor,
+            color: '#ffffff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.8
+          }).addTo(map);
+
+          const priceStr = item.price_usd ? `$${item.price_usd.toLocaleString()}` : 'TBA';
+          
+          // Template Popup
+          const popupContent = `
+            <div class="p-1 min-w-[200px]">
+              <div class="text-[9px] font-bold text-white bg-[${markerColor}] inline-block px-1.5 py-0.5 rounded uppercase tracking-widest mb-2 mono-font" style="background-color: ${markerColor}">
+                RISK: ${item.risk_score}/10
+              </div>
+              <h4 class="font-bold text-[#1c1814] text-sm leading-tight mb-1">${item.original_title || 'Unknown Artifact'}</h4>
+              <p class="text-[10px] text-[#8a7f72] mono-font mb-3">${item.platform} · <b>${priceStr}</b></p>
+              <a href="${item.url}" target="_blank" class="block text-center w-full bg-[#1c1814] text-white text-[10px] py-1.5 rounded uppercase mono-font font-bold hover:bg-[#dc2626]">Open Source</a>
+            </div>
+          `;
+          circleMarker.bindPopup(popupContent);
+        }
+      });
+    }
+
+    // --- DATA LOADING ---
     function normalise(raw) {
       if (Array.isArray(raw)) return { listings: raw, summary: {} };
       return raw;
@@ -208,40 +313,30 @@
 
         const raw = await dataResp.json();
         const { listings, summary } = normalise(raw);
+        globalListings = listings;
 
-        // --- MENGHITUNG STATISTIK UNTUK GRAFIK ---
+        // --- STATS ---
         let highCount = 0, medCount = 0, lowCount = 0;
         let provYes = 0, provNo = 0;
         const platformCounts = {};
 
         listings.forEach(item => {
-          // Status Risk
           const score = item.risk_score || 0;
-          if (score >= 8) highCount++;
-          else if (score >= 4) medCount++;
-          else lowCount++;
+          if (score >= 8) highCount++; else if (score >= 4) medCount++; else lowCount++;
+          if (item.provenance_flag) provYes++; else provNo++;
 
-          // Provenance
-          if (item.provenance_flag) provYes++;
-          else provNo++;
-
-          // Platforms
           let plat = item.platform || item.source_name || 'Unknown';
-          // Clean up nama platform jika terlalu panjang (misal ada .com)
           plat = plat.split('.')[0].substring(0, 15); 
           platformCounts[plat] = (platformCounts[plat] || 0) + 1;
         });
 
-        // Update Text Stats
         document.getElementById('stat-total').textContent = summary.total_listings || listings.length || 0;
         document.getElementById('stat-risk').textContent = summary.high_risk_count || highCount || 0;
         document.getElementById('stat-medium').textContent = summary.medium_risk_count || medCount || 0;
         
         const sortedPlatforms = Object.entries(platformCounts).sort((a, b) => b[1] - a[1]);
         document.getElementById('stat-platforms').textContent = sortedPlatforms.length;
-        document.getElementById('nav-alert-badge').textContent = summary.high_risk_count || highCount || 0;
 
-        // History Timestamp Update
         if (histResp) {
           try {
             const hist = await histResp.json();
@@ -252,167 +347,100 @@
           } catch(e) {}
         }
 
-        // --- RENDER GRAFIK CHART.JS ---
-        
-        // 1. Radar Chart (Market Risk Profile)
+        // --- RENDER CHARTS ---
         if (radarChartObj) radarChartObj.destroy();
         radarChartObj = new Chart(document.getElementById('radarChart'), {
           type: 'radar',
           data: {
             labels: ['High Risk', 'Medium Risk', 'Low/Info', 'No Prov.', 'Verified'],
             datasets: [{
-              label: 'Listings',
-              data: [highCount, medCount, lowCount, provNo, provYes],
-              backgroundColor: 'rgba(220, 38, 38, 0.15)', // Light Crimson
-              borderColor: '#dc2626',
-              pointBackgroundColor: '#dc2626',
-              borderWidth: 1.5,
-              pointRadius: 2
+              label: 'Listings', data: [highCount, medCount, lowCount, provNo, provYes],
+              backgroundColor: 'rgba(220, 38, 38, 0.15)', borderColor: '#dc2626',
+              pointBackgroundColor: '#dc2626', borderWidth: 1.5, pointRadius: 2
             }]
           },
           options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: {
-              r: {
-                angleLines: { color: '#e4dfd4' },
-                grid: { color: '#e4dfd4' },
-                pointLabels: { font: { size: 9 }, color: '#1c1814' },
-                ticks: { display: false } // Hide numbers
-              }
-            }
+            responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+            scales: { r: { angleLines: { color: '#e4dfd4' }, grid: { color: '#e4dfd4' }, pointLabels: { font: { size: 9 }, color: '#1c1814' }, ticks: { display: false } } }
           }
         });
 
-        // 2. Bar Chart (Top 4 Platforms)
         const topPlatforms = sortedPlatforms.slice(0, 4);
         if (barChartObj) barChartObj.destroy();
         barChartObj = new Chart(document.getElementById('barChart'), {
           type: 'bar',
           data: {
             labels: topPlatforms.map(p => p[0]),
-            datasets: [{
-              data: topPlatforms.map(p => p[1]),
-              backgroundColor: '#1c1814',
-              borderRadius: 4,
-              barThickness: 12
-            }]
+            datasets: [{ data: topPlatforms.map(p => p[1]), backgroundColor: '#1c1814', borderRadius: 4, barThickness: 12 }]
           },
           options: {
-            indexAxis: 'y', // Horizontal bar
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: {
-              x: { display: false, grid: { display: false } },
-              y: { 
-                grid: { display: false },
-                border: { display: false },
-                ticks: { font: { size: 10 }, color: '#1c1814' }
-              }
-            }
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+            scales: { x: { display: false, grid: { display: false } }, y: { grid: { display: false }, border: { display: false }, ticks: { font: { size: 10 }, color: '#1c1814' } } }
           }
         });
 
-        // 3. Doughnut Chart (Provenance)
         if (provChartObj) provChartObj.destroy();
         provChartObj = new Chart(document.getElementById('provChart'), {
           type: 'doughnut',
           data: {
             labels: ['No Prov.', 'Provenanced'],
-            datasets: [{
-              data: [provNo, provYes],
-              backgroundColor: ['#dc2626', '#16a34a'], // Red & Green
-              borderWidth: 0,
-              hoverOffset: 4
-            }]
+            datasets: [{ data: [provNo, provYes], backgroundColor: ['#dc2626', '#16a34a'], borderWidth: 0, hoverOffset: 4 }]
           },
           options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            cutout: '70%',
-            plugins: {
-              legend: { 
-                position: 'right', 
-                labels: { boxWidth: 10, font: { size: 10 }, padding: 10 } 
-              }
-            }
+            responsive: true, maintainAspectRatio: false, cutout: '70%',
+            plugins: { legend: { position: 'right', labels: { boxWidth: 10, font: { size: 10 }, padding: 10 } } }
           }
         });
 
-        // --- RENDER GRID LISTINGS ---
+        // --- RENDER GRID ---
         const grid = document.getElementById('cards-grid');
         grid.innerHTML = '';
 
         if (listings.length === 0) {
             grid.innerHTML = `<div class="col-span-full text-center py-20 text-[#8a7f72] mono-font">No data recorded yet.</div>`;
-            return;
+        } else {
+            listings.sort((a, b) => new Date(b.scraped_at) - new Date(a.scraped_at));
+            listings.forEach(item => {
+              const score = item.risk_score || 0;
+              let badgeClass = 'badge-info';
+              if (score >= 8) badgeClass = 'badge-high'; else if (score >= 4) badgeClass = 'badge-medium';
+
+              const price = item.price_usd ? `$${item.price_usd.toLocaleString()}` : 'TBA';
+              const title = item.original_title || item.item_name || 'Unknown Artifact';
+              const platform = item.platform || item.source_name || 'Unknown Source';
+              const region = item.origin_region || 'Unknown Origin';
+              const provFlag = item.provenance_flag ? '<span class="text-[#16a34a]">✓ Provenance</span>' : '<span class="text-[#dc2626]">⚠ No Provenance</span>';
+
+              grid.innerHTML += `
+                <div class="card rounded-2xl flex flex-col justify-between overflow-hidden bg-white">
+                  <div class="p-6">
+                    <div class="flex justify-between items-center mb-5">
+                      <span class="text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-widest mono-font ${badgeClass}">${item.status || 'INFO'}</span>
+                      <span class="text-[11px] font-bold text-[#1c1814] mono-font">RISK: ${score}/10</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-4 leading-snug text-[#1c1814]">${title}</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-5 border-t border-b border-[#e4dfd4] py-4">
+                      <div><p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Platform</p><p class="text-sm font-semibold truncate" title="${platform}">${platform}</p></div>
+                      <div class="text-right"><p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Est. Value</p><p class="text-lg font-extrabold syne-font">${price}</p></div>
+                    </div>
+                    <div class="bg-[#f5f3ee] p-4 rounded-xl border border-[#e4dfd4]">
+                      <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Origin & Provenance</p>
+                      <p class="text-xs font-semibold mb-3">${region} — ${provFlag}</p>
+                      <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-1">AI Analysis</p>
+                      <p class="text-xs leading-relaxed text-[#1c1814]">"${item.reason}"</p>
+                    </div>
+                  </div>
+                  <a href="${item.url || '#'}" target="_blank" class="w-full text-center bg-[#1c1814] text-[#f5f3ee] text-xs font-bold py-4 uppercase tracking-widest mono-font hover:bg-[#dc2626] transition-colors">Inspect Source →</a>
+                </div>
+              `;
+            });
         }
 
-        listings.sort((a, b) => new Date(b.scraped_at) - new Date(a.scraped_at));
-
-        listings.forEach(item => {
-          const score = item.risk_score || 0;
-          let badgeClass = 'badge-info';
-          if (score >= 8) badgeClass = 'badge-high';
-          else if (score >= 4) badgeClass = 'badge-medium';
-
-          const price = item.price_usd ? `$${item.price_usd.toLocaleString()}` : 'TBA';
-          const title = item.original_title || item.item_name || 'Unknown Artifact';
-          const platform = item.platform || item.source_name || 'Unknown Source';
-          const region = item.origin_region || 'Unknown Origin';
-          const provFlag = item.provenance_flag ? '<span class="text-[#16a34a]">✓ Provenance</span>' : '<span class="text-[#dc2626]">⚠ No Provenance</span>';
-
-          const cardHTML = `
-            <div class="card rounded-2xl flex flex-col justify-between overflow-hidden bg-white">
-              <div class="p-6">
-                <div class="flex justify-between items-center mb-5">
-                  <span class="text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-widest mono-font ${badgeClass}">
-                    ${item.status || 'INFO'}
-                  </span>
-                  <span class="text-[11px] font-bold text-[#1c1814] mono-font">RISK: ${score}/10</span>
-                </div>
-                
-                <h3 class="font-bold text-lg mb-4 leading-snug text-[#1c1814]">${title}</h3>
-                
-                <div class="grid grid-cols-2 gap-4 mb-5 border-t border-b border-[#e4dfd4] py-4">
-                  <div>
-                    <p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Platform</p>
-                    <p class="text-sm font-semibold truncate" title="${platform}">${platform}</p>
-                  </div>
-                  <div class="text-right">
-                    <p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Est. Value</p>
-                    <p class="text-lg font-extrabold syne-font">${price}</p>
-                  </div>
-                </div>
-                
-                <div class="bg-[#f5f3ee] p-4 rounded-xl border border-[#e4dfd4]">
-                  <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Origin & Provenance</p>
-                  <p class="text-xs font-semibold mb-3">${region} — ${provFlag}</p>
-                  
-                  <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-1">AI Analysis</p>
-                  <p class="text-xs leading-relaxed text-[#1c1814]">"${item.reason}"</p>
-                </div>
-              </div>
-              
-              <a href="${item.url || item.source_link || '#'}" target="_blank" class="w-full text-center bg-[#1c1814] text-[#f5f3ee] text-xs font-bold py-4 uppercase tracking-widest mono-font hover:bg-[#dc2626] transition-colors">
-                Inspect Source →
-              </a>
-            </div>
-          `;
-          grid.innerHTML += cardHTML;
-        });
+        // --- INIT MAP ---
+        initMap(listings);
 
       } catch (err) {
         console.error(err);
-        document.getElementById('cards-grid').innerHTML = `
-          <div class="col-span-full text-center py-20 text-[#dc2626] mono-font bg-[#fee2e2] rounded-xl border border-[#dc2626] mx-auto max-w-lg">
-            <p class="text-2xl mb-2">⚠️</p>
-            <p class="font-bold">Failed to load database.</p>
-            <p class="text-xs mt-1 opacity-80">Ensure GitHub Actions has completed successfully and data.json exists.</p>
-          </div>
-        `;
       }
     }
 
