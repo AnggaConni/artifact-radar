@@ -64,7 +64,7 @@ if not should_crawl():
 # 1. KONFIGURASI GEMINI AI
 # ==============================================================================
 # Mengambil API Key yang nanti akan kita simpan di rahasia GitHub (GitHub Secrets)
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+GEMINI_API_KEY = os.environ.get("AIzaSyBSaCTKdawqnBIjM2fLiOY8Vu15TIS2ADM")
 
 if not GEMINI_API_KEY:
     print("⚠️ Peringatan: GEMINI_API_KEY belum di-set!")
