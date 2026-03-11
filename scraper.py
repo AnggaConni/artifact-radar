@@ -1,8 +1,8 @@
 """
 =======================================================================
-  ARTIFACT RADAR v4.0 — Advanced Global Intelligence
+  ARTIFACT RADAR v4.1 — Advanced Global Intelligence
   AI Engine : Google Gemini 1.5 Flash (Google Search Grounding)
-  Fixes     : Tool Parsing Error & Expanded Structured JSON Format
+  Fixes     : Bypassing SDK Bugs with Direct REST API Calls
 =======================================================================
 """
 
@@ -13,7 +13,7 @@ import logging
 import random
 import re
 from datetime import datetime
-import google.generativeai as genai
+import requests
 
 # ── Logging Configuration ──
 logging.basicConfig(
@@ -63,7 +63,6 @@ def load_db():
         try:
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                # Migrasi otomatis jika data lama masih berupa list biasa
                 if isinstance(data, list):
                     log.info("Migrating old list data to new structured JSON...")
                     return {"summary": {}, "listings": data}
@@ -71,7 +70,6 @@ def load_db():
         except Exception as e:
             log.warning(f"Old database corrupted, starting fresh: {e}")
             
-    # Format JSON Baru sesuai permintaan
     return {"summary": {}, "listings": []}
 
 def get_hash(path):
@@ -86,7 +84,6 @@ def check_schedule():
     return True 
 
 def calculate_summary(listings):
-    """Menghitung ulang ringkasan (summary) berdasarkan data listings."""
     high_risk = [x for x in listings if x.get("risk_score", 0) >= 8]
     medium_risk = [x for x in listings if 4 <= x.get("risk_score", 0) <= 7]
     
@@ -95,7 +92,6 @@ def calculate_summary(listings):
         plat = item.get("platform", "Unknown")
         platforms[plat] = platforms.get(plat, 0) + 1
         
-    # Mengambil 5 kasus risiko tertinggi untuk ditampilkan di summary
     top_high_risk = sorted(high_risk, key=lambda x: x.get("risk_score", 0), reverse=True)[:5]
     
     return {
@@ -108,11 +104,16 @@ def calculate_summary(listings):
     }
 
 # ======================================================================
-# CORE: AI ANALYZER
+# CORE: DIRECT REST API AI ANALYZER
 # ======================================================================
 
-def run_ai_search(model, existing_urls, target):
+def run_ai_search(api_key, existing_urls, target):
+    """
+    Menggunakan API request langsung untuk menghindari bug pada library Python SDK.
+    """
     log.info(f"Targeting: {target}")
+    
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     
     prompt = f"""
     Gunakan Google Search untuk mencari listing penjualan atau berita nyata mengenai: "{target}".
@@ -139,19 +140,30 @@ def run_ai_search(model, existing_urls, target):
     ]
     """
     
+    # Payload langsung menembak server Google Gemini dengan Grounding Search Tool
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "tools": [{"google_search": {}}],
+        "safetySettings": [
+            {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+        ]
+    }
+    
     try:
-        # Filter keamanan dimatikan agar kata kunci 'illegal'/'stolen' tidak diblokir
-        response = model.generate_content(
-            prompt,
-            safety_settings={
-                genai.types.HarmCategory.HARM_CATEGORY_HATE_SPEECH: genai.types.HarmBlockThreshold.BLOCK_NONE,
-                genai.types.HarmCategory.HARM_CATEGORY_HARASSMENT: genai.types.HarmBlockThreshold.BLOCK_NONE,
-                genai.types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: genai.types.HarmBlockThreshold.BLOCK_NONE,
-                genai.types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: genai.types.HarmBlockThreshold.BLOCK_NONE,
-            }
-        )
+        response = requests.post(url, json=payload)
+        response.raise_for_status() # Akan memunculkan error jika HTTP status bukan 200 OK
+        data = response.json()
         
-        text = response.text
+        # Ekstrak text dari struktur JSON Google
+        try:
+            text = data['candidates'][0]['content']['parts'][0]['text']
+        except (KeyError, IndexError):
+            log.error(f"Format respon API tidak terduga: {json.dumps(data)[:200]}")
+            return []
+            
         log.info(f"Raw AI Output: {text[:150]}...")
         
         # BULLETPROOF JSON EXTRACTOR
@@ -187,18 +199,9 @@ def main():
         return 
 
     try:
-        genai.configure(api_key=api_key)
-        
-        # PERBAIKAN FATAL ERROR: Menggunakan format string untuk Python SDK Tools
-        model = genai.GenerativeModel(
-            model_name='gemini-1.5-flash',
-            tools='google_search' 
-        )
-
         db = load_db()
         listings = db.get("listings", [])
         
-        # Mengambil URL lama agar tidak duplikat. (Mendukung properti lama source_link atau baru url)
         existing_urls = {i.get('url') or i.get('source_link') for i in listings if i.get('url') or i.get('source_link')}
 
         local_kws = [k for k in KEYWORDS if "jual" in k or "dijual" in k]
@@ -208,24 +211,22 @@ def main():
         
         count = 0
         for target in targets:
-            new_items = run_ai_search(model, existing_urls, target)
+            # Langsung mengoper api_key ke fungsi kita (tanpa library bawaan google)
+            new_items = run_ai_search(api_key, existing_urls, target)
             
             if isinstance(new_items, list):
                 for item in new_items:
                     link = item.get('url')
                     if link and link not in existing_urls:
-                        # Menjamin parameter standar selalu ada
                         item['scraped_at'] = datetime.now().isoformat() + "Z"
                         item['keyword_trigger'] = target
                         listings.append(item)
                         existing_urls.add(link)
                         count += 1
 
-        # Kalkulasi ulang summary
         db["listings"] = listings
         db["summary"] = calculate_summary(listings)
 
-        # Simpan database & history
         if count > 0 or not db["summary"].get("generated_at"):
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(db, f, indent=2, ensure_ascii=False)
