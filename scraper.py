@@ -1,8 +1,8 @@
 """
 =======================================================================
-  ARTIFACT RADAR v4.1 — Advanced Global Intelligence
+  ARTIFACT RADAR v4.2 — Advanced Global Intelligence
   AI Engine : Google Gemini 1.5 Flash (Google Search Grounding)
-  Fixes     : Bypassing SDK Bugs with Direct REST API Calls
+  Fixes     : Clean API Key Strip & Correct REST Parameter
 =======================================================================
 """
 
@@ -108,11 +108,9 @@ def calculate_summary(listings):
 # ======================================================================
 
 def run_ai_search(api_key, existing_urls, target):
-    """
-    Menggunakan API request langsung untuk menghindari bug pada library Python SDK.
-    """
     log.info(f"Targeting: {target}")
     
+    # URL dijamin bersih karena api_key sudah di-strip() di fungsi main
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     
     prompt = f"""
@@ -140,10 +138,10 @@ def run_ai_search(api_key, existing_urls, target):
     ]
     """
     
-    # Payload langsung menembak server Google Gemini dengan Grounding Search Tool
+    # FIX: Tool Grounding di REST API harus 'googleSearch' (S Kapital)
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "tools": [{"google_search": {}}],
+        "tools": [{"googleSearch": {}}],
         "safetySettings": [
             {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
             {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
@@ -153,15 +151,19 @@ def run_ai_search(api_key, existing_urls, target):
     }
     
     try:
-        response = requests.post(url, json=payload)
-        response.raise_for_status() # Akan memunculkan error jika HTTP status bukan 200 OK
+        response = requests.post(url, json=payload, headers={'Content-Type': 'application/json'})
+        
+        # FIX: Laporan log yang jauh lebih jelas jika gagal
+        if response.status_code != 200:
+            log.error(f"Google API Error ({response.status_code}): {response.text}")
+            return []
+
         data = response.json()
         
-        # Ekstrak text dari struktur JSON Google
         try:
             text = data['candidates'][0]['content']['parts'][0]['text']
         except (KeyError, IndexError):
-            log.error(f"Format respon API tidak terduga: {json.dumps(data)[:200]}")
+            log.error(f"Format respon API kosong/ditolak: {json.dumps(data)[:300]}")
             return []
             
         log.info(f"Raw AI Output: {text[:150]}...")
@@ -193,9 +195,10 @@ def main():
     if not check_schedule():
         return
     
-    api_key = os.environ.get("GEMINI_API_KEY")
+    # FIX: .strip() menghapus spasi dan enter yang tidak sengaja terbawa dari GitHub Secrets
+    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key:
-        log.error("GEMINI_API_KEY not found!")
+        log.error("GEMINI_API_KEY not found or empty!")
         return 
 
     try:
@@ -211,7 +214,6 @@ def main():
         
         count = 0
         for target in targets:
-            # Langsung mengoper api_key ke fungsi kita (tanpa library bawaan google)
             new_items = run_ai_search(api_key, existing_urls, target)
             
             if isinstance(new_items, list):
