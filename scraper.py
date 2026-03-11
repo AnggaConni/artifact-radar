@@ -1,8 +1,8 @@
 """
 =======================================================================
-  ARTIFACT RADAR v4.2 — Advanced Global Intelligence
-  AI Engine : Google Gemini 1.5 Flash (Google Search Grounding)
-  Fixes     : Clean API Key Strip & Correct REST Parameter
+  ARTIFACT RADAR v5.0 — Global Intelligence Engine
+  AI Engine : Google Gemini 2.5 Flash (Google Search Grounding)
+  Mode      : Full English, Global Scope, 8-Day Interval
 =======================================================================
 """
 
@@ -12,7 +12,7 @@ import hashlib
 import logging
 import random
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 import requests
 
 # ── Logging Configuration ──
@@ -29,29 +29,56 @@ HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
 DATA_FILE    = os.path.join(BASE_DIR, "data.json")
 SCRIPT_FILE  = os.path.abspath(__file__)
 
+# ======================================================================
+# GLOBAL KEYWORD DATABASE (Full English)
+# ======================================================================
 KEYWORDS = [
-    # ── English Keywords ──
-    "ancient artifact for sale", "authentic antiquities for sale", "buy ancient artifact online",
-    "illegal antiquities trafficking", "stolen archaeological artifact", "majapahit artifact for sale",
-    "khmer statue ancient for sale", "roman artifact authentic sale", "egyptian antiquities original",
-    "ancient bronze statue authentic", "ancient artifact site:ebay.com", "ancient relic site:etsy.com",
-    "antiquities sale site:facebook.com", "illegal antiquities trafficking news", "artifact smuggling investigation",
-    "antique archaeological artifact sale", "genuine ancient relic for collectors", "museum quality artifact for sale",
-    "rare antiquities private collection sale", "ancient relic dealer listing", "looted artifact for sale",
-    "ancient relic no provenance", "artifact found metal detector sale", "burial artifact excavation find",
-    "ancient relic found in field", "artifact discovered during excavation", "angkor artifact dealer",
-    "greek antiquities dealer", "mesopotamian cuneiform tablet sale", "persian ancient artifact dealer",
-    "han dynasty artifact for sale", "ming dynasty porcelain antique sale", "song dynasty celadon bowl sale",
-    "jomon pottery artifact", "kofun haniwa figure sale", "mongol empire artifact", "scythian gold artifact",
-    "steppe nomad bronze artifact", "ancient jade artifact for sale", "ritual bronze vessel ancient",
-    "ancient burial figurine", "temple stone fragment ancient", "ancient coin hoard sale",
-    "ancient pottery shard archaeological", "ancient ritual object antique", "ancient religious statue original",
-    "ancient artifact site:auction house", "ancient artifact collector forum", "museum artifact repatriation case",
-    "looted antiquities returned to museum", "archaeological theft investigation",
+    # ── Southeast Asia ──
+    "majapahit artifact for sale", "khmer ancient statue sale", "srivijaya gold artifact",
+    "angkor wat style antiquity", "ayutthaya bronze buddha sale", "champa stone carving authentic",
+    "dong son bronze drum auction", "ban chiang pottery for sale", "prehistoric indonesian artifact",
+    "borobudur temple stone fragment", "prambanan relief fragment sale", "khmer temple sculpture fragment",
 
-    # ── Indonesian Keywords (Lokal) ──
-    "jual arca kuno asli", "benda purbakala asli dijual", "temuan arkeologi dijual",
-    "artefak candi dijual", "keris kuno asli dijual", "jual artefak kuno majapahit"
+    # ── East Asia ──
+    "han dynasty artifact sale", "tang dynasty ceramic authentic", "song dynasty porcelain auction",
+    "ming dynasty porcelain antique", "qing dynasty jade carving", "ancient chinese bronze vessel",
+    "jomon pottery authentic", "yayoi bronze bell dotaku", "kofun haniwa figure",
+    "ancient chinese burial figurine", "tang sancai pottery authentic", "song celadon bowl sale",
+
+    # ── Middle East & Egypt ──
+    "ancient egyptian ushabti for sale", "pharaonic sarcophagus fragment", "egyptian faience amulet authentic",
+    "sumerian cuneiform tablet private sale", "babylonian cylinder seal authentic",
+    "akkadian bronze artifact", "luristan bronze antiquity", "ancient persian rhyton",
+    "mesopotamian clay tablet cuneiform", "palmyra relief fragment sale",
+
+    # ── Mediterranean (Greco-Roman) ──
+    "ancient greek amphora sale", "roman marble bust fragment authentic", "etruscan bronze antiquity",
+    "attic red figure pottery", "roman legionary gladius authentic", "byzantine icon antique",
+    "mycenaean artifact for sale", "minoan pottery fragment",
+    "roman bronze figurine authentic", "ancient greek kylix pottery",
+
+    # ── The Americas (Pre-Columbian) ──
+    "mayan jade artifact sale", "aztec stone sculpture authentic", "inca gold antiquity",
+    "moche ceramic vessel", "nazca textile fragment", "pre-columbian pottery authentic",
+    "chavin stone carving", "tairona gold ornament sale",
+    "olmec jade mask authentic", "pre columbian artifact auction",
+
+    # ── South Asia & Silk Road ──
+    "indus valley seal authentic", "gandhara buddha sculpture sale", "chola bronze statue",
+    "pala empire sculpture", "scythian gold ornament", "bactrian camel artifact authentic",
+    "sogdian silver vessel sale", "kushan coin hoard",
+    "ancient silk road artifact", "central asian burial artifact",
+
+    # ── Looting & Trafficking Intelligence ──
+    "illegal antiquities trafficking news", "artifact smuggling investigation report",
+    "stolen archaeological artifact alert", "looted antiquity returned to museum",
+    "artifact found metal detector sale", "ancient relic no provenance sale",
+    "repatriation of stolen cultural heritage", "black market antiquities discussion",
+
+    # ── Seller Camouflage Terms ──
+    "ancient object found in field", "metal detector ancient find sale",
+    "old stone statue unknown origin", "burial artifact excavation find",
+    "ancient relic estate sale", "unknown ancient artifact identification"
 ]
 
 # ======================================================================
@@ -64,7 +91,7 @@ def load_db():
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 if isinstance(data, list):
-                    log.info("Migrating old list data to new structured JSON...")
+                    log.info("Migrating old list format to structured JSON...")
                     return {"summary": {}, "listings": data}
                 return data
         except Exception as e:
@@ -80,8 +107,26 @@ def get_hash(path):
     except: return "none"
 
 def check_schedule():
-    # SELALU JALAN: Diaktifkan sementara untuk testing
-    return True 
+    """Run automatically every 8 days, or immediately if FORCE_CRAWL is true."""
+    if os.environ.get("FORCE_CRAWL") == "true": 
+        log.info("FORCE_CRAWL is active. Bypassing schedule.")
+        return True
+        
+    if not os.path.exists(HISTORY_FILE): return True
+    try:
+        with open(HISTORY_FILE) as f:
+            h = json.load(f)
+        last = datetime.fromisoformat(h.get("last_crawl_date"))
+        
+        # 8-DAY INTERVAL CHECK
+        days_passed = (datetime.now() - last).days
+        if days_passed >= 8:
+            log.info(f"{days_passed} days have passed. Executing scheduled crawl.")
+            return True
+        else:
+            log.info(f"Only {days_passed} days passed since last crawl. Waiting for 8-day mark.")
+            return False
+    except: return True
 
 def calculate_summary(listings):
     high_risk = [x for x in listings if x.get("risk_score", 0) >= 8]
@@ -108,39 +153,35 @@ def calculate_summary(listings):
 # ======================================================================
 
 def run_ai_search(api_key, existing_urls, target):
-    log.info(f"Targeting: {target}")
+    log.info(f"Targeting keyword: {target}")
     
-    # URL dijamin bersih karena api_key sudah di-strip() di fungsi main
-    # FIX: Menggunakan endpoint gemini-2.5-flash sesuai dengan akses API Anda
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
     
     prompt = f"""
-    Gunakan Google Search untuk mencari listing penjualan atau berita nyata mengenai: "{target}".
-    Identifikasi marketplace (eBay, FB, Tokopedia), berita pencurian, atau forum kolektor.
+    Use Google Search to find real marketplace listings, auctions, or news regarding: "{target}".
+    Identify marketplace listings (eBay, Facebook, auction houses), theft news, or collector forums.
     
-    Output hasil pencarian HANYA dalam format JSON Array objects.
-    Abaikan URL yang sudah ada ini: {list(existing_urls)[:5]}
+    Output the result STRICTLY as a JSON Array of objects.
+    Ignore these already captured URLs: {list(existing_urls)[:5]}
     
-    Struktur JSON Wajib:
+    Mandatory JSON Structure:
     [
       {{
-        "original_title": "Judul asli barang atau artikel berita",
-        "platform": "Nama Website (contoh: eBay, BBC, Facebook)",
-        "url": "URL Lengkap",
+        "original_title": "Original title of the item or news article",
+        "platform": "Website Name (e.g., eBay, BBC, Facebook, Sotheby's)",
+        "url": "Full URL",
         "price_usd": 0,
-        "status": "HIGH RISK", 
+        "status": "HIGH RISK | MEDIUM RISK | INFO ONLY", 
         "risk_score": 9,
-        "origin_region": "Wilayah asal artefak (contoh: Southeast Asia, Middle East)",
+        "origin_region": "Origin of the artifact (e.g., Southeast Asia, Middle East, Unknown)",
         "provenance_flag": false,
         "keyword_trigger": "{target}",
-        "reason": "Alasan detail terkait asal usul atau harga",
+        "reason": "Detailed reasoning regarding its provenance, risk, or price",
         "scraped_at": "{datetime.now().isoformat()}Z"
       }}
     ]
     """
     
-    # FIX: Tool Grounding di REST API harus 'googleSearch' (S Kapital)
-    # Ditambahkan generationConfig persis seperti script JS Anda yang berhasil
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "tools": [{"googleSearch": {}}],
@@ -159,7 +200,6 @@ def run_ai_search(api_key, existing_urls, target):
     try:
         response = requests.post(url, json=payload, headers={'Content-Type': 'application/json'})
         
-        # FIX: Laporan log yang jauh lebih jelas jika gagal
         if response.status_code != 200:
             log.error(f"Google API Error ({response.status_code}): {response.text}")
             return []
@@ -169,7 +209,7 @@ def run_ai_search(api_key, existing_urls, target):
         try:
             text = data['candidates'][0]['content']['parts'][0]['text']
         except (KeyError, IndexError):
-            log.error(f"Format respon API kosong/ditolak: {json.dumps(data)[:300]}")
+            log.error("Empty or rejected API response.")
             return []
             
         log.info(f"Raw AI Output: {text[:150]}...")
@@ -190,7 +230,7 @@ def run_ai_search(api_key, existing_urls, target):
                 log.error(f"JSON Parse Error: {e}")
                 return []
         else:
-            log.warning("AI did not provide valid JSON Array.")
+            log.warning("AI did not provide a valid JSON Array.")
             return []
             
     except Exception as e:
@@ -201,7 +241,6 @@ def main():
     if not check_schedule():
         return
     
-    # FIX: .strip() menghapus spasi dan enter yang tidak sengaja terbawa dari GitHub Secrets
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key:
         log.error("GEMINI_API_KEY not found or empty!")
@@ -211,12 +250,10 @@ def main():
         db = load_db()
         listings = db.get("listings", [])
         
-        existing_urls = {i.get('url') or i.get('source_link') for i in listings if i.get('url') or i.get('source_link')}
-
-        local_kws = [k for k in KEYWORDS if "jual" in k or "dijual" in k]
-        intl_kws = [k for k in KEYWORDS if k not in local_kws]
+        existing_urls = {i.get('url') for i in listings if i.get('url')}
         
-        targets = random.sample(intl_kws, 2) + random.sample(local_kws, 1)
+        # Pick 3 random global keywords per run
+        targets = random.sample(KEYWORDS, min(len(KEYWORDS), 3))
         
         count = 0
         for target in targets:
@@ -245,10 +282,10 @@ def main():
                 "script_hash": get_hash(SCRIPT_FILE)
             }, f, indent=2)
             
-        log.info(f"✅ Selesai. Ditambahkan {count} data baru. Total Listing: {len(listings)}.")
+        log.info(f"✅ Run Complete. Added {count} new items. Total Database: {len(listings)} items.")
 
     except Exception as e:
-        log.error(f"Fatal Error pada proses utama: {e}")
+        log.error(f"Fatal Error during main execution: {e}")
 
 if __name__ == "__main__":
     main()
