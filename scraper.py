@@ -1,8 +1,8 @@
 """
 =======================================================================
-  ARTIFACT RADAR v3.1 — Global Intelligence (Market, News, & Forums)
+  ARTIFACT RADAR v3.2 — Global Intelligence (Market, News, & Forums)
   AI Engine : Google Gemini 1.5 Flash (Google Search Grounding)
-  Method    : Robust Incremental Update
+  Method    : Incremental Update with Strict JSON Output
 =======================================================================
 """
 
@@ -29,16 +29,18 @@ logging.basicConfig(
 log = logging.getLogger("ArtifactRadar")
 
 # ======================================================================
-# DATABASE KATA KUNCI GLOBAL
+# DATABASE KATA KUNCI GLOBAL (Diperluas untuk Marketplace lokal & luar)
 # ======================================================================
 KEYWORDS = [
-    "illegal antiquity trafficking news BBC",
-    "looted artifacts for sale auction",
-    "stolen khmer statues news 2024",
-    "Egyptian artifact repatriation news",
-    "illicit cultural property marketplace",
-    "identifying looted antiquities forum discussion",
-    "stolen majapahit gold news"
+    "jual artefak asli majapahit",
+    "jual arca kuno galian",
+    "ancient artifacts for sale on Facebook Marketplace",
+    "illegal antiquity trafficking news BBC 2024",
+    "looted artifacts for sale auction houses",
+    "Egyptian artifact repatriation news today",
+    "identifying looted antiquities forum",
+    "buy ancient coins legal vs illegal",
+    "jual benda purbakala asli"
 ]
 
 # ======================================================================
@@ -70,7 +72,8 @@ def should_crawl():
         with open(HISTORY_FILE) as f:
             history = json.load(f)
         last = datetime.fromisoformat(history.get("last_crawl_date"))
-        return datetime.now() - last >= timedelta(days=1)
+        # Diatur ke 1 jam agar Anda bisa tes lebih sering
+        return datetime.now() - last >= timedelta(hours=1)
     except: return True
 
 # ======================================================================
@@ -78,19 +81,20 @@ def should_crawl():
 # ======================================================================
 
 def fetch_and_analyze(model, existing_links):
-    target = random.choice(KEYWORDS)
-    log.info(f"Targeting: {target}")
+    # Mengambil 2 keyword acak sekaligus agar pencarian lebih luas
+    targets = random.sample(KEYWORDS, 2)
+    log.info(f"Targeting: {targets}")
     
     prompt = f"""
-    Using Google Search, find the latest information about: "{target}".
+    Using Google Search, find the latest information about: "{', '.join(targets)}".
     
     Identify:
-    1. MARKETPLACE: Listings of potentially illicit/stolen artifacts.
+    1. MARKETPLACE: Listings of potentially illicit/stolen artifacts (Facebook, eBay, Local sites).
     2. NEWS: Recent articles about looting, smuggled artifacts, or repatriations.
     3. FORUMS: Online discussions about suspicious ancient objects.
 
     Output format: STRICT JSON ARRAY only.
-    Exclude these URLs: {list(existing_links)[:5]}
+    Exclude these URLs already in my database: {list(existing_links)[:10]}
     
     JSON Structure:
     [
@@ -100,7 +104,7 @@ def fetch_and_analyze(model, existing_links):
         "source_type": "Marketplace | News | Forum",
         "status": "Suspected Illicit | Looting Report | Discussion",
         "risk_score": 1-10,
-        "reason": "Analysis of relevance",
+        "reason": "Analysis of relevance and risk",
         "source_link": "Full URL",
         "price_info": "Price or N/A"
       }}
@@ -108,40 +112,36 @@ def fetch_and_analyze(model, existing_links):
     """
     
     try:
-        # Menjalankan AI dengan Grounding
-        response = model.generate_content(prompt)
-        text_output = response.text
+        # Menjalankan AI dengan Grounding dan Mime Type JSON
+        response = model.generate_content(
+            prompt,
+            generation_config={"response_mime_type": "application/json"}
+        )
         
-        # Bersihkan output (terkadang AI memberikan backticks ```json)
-        # Mencari teks di antara kurung siku [ ... ]
-        json_match = re.search(r'\[.*\]', text_output, re.DOTALL)
-        if json_match:
-            json_str = json_match.group()
-            return json.loads(json_str)
+        # Ekstrak data langsung karena kita sudah set mime_type ke JSON
+        return json.loads(response.text)
         
-        log.warning("AI tidak memberikan format JSON yang valid.")
-        return []
     except Exception as e:
-        log.error(f"Pencarian Gagal: {e}")
+        log.error(f"Pencarian AI Gagal: {e}")
         return []
 
 def main():
     if not should_crawl():
-        log.info("Sistem dalam masa istirahat sesuai jadwal.")
+        log.info("Sistem dalam masa istirahat. Gunakan FORCE_CRAWL untuk memicu.")
         return
     
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        log.error("GEMINI_API_KEY tidak ditemukan di GitHub Secrets!")
-        exit(1) # Keluar dengan error agar user tahu API Key bermasalah
+        log.error("GEMINI_API_KEY tidak ditemukan!")
+        exit(1)
 
     try:
         genai.configure(api_key=api_key)
         
-        # Perbaikan Nama Tool: google_search_retrieval adalah yang paling akurat saat ini
+        # Nama tool 'google_search' adalah yang paling stabil untuk model grounding
         model = genai.GenerativeModel(
             model_name='gemini-1.5-flash',
-            tools=[{'google_search_retrieval': {}}]
+            tools=[{'google_search': {}}]
         )
 
         # 1. Load data lama
@@ -162,7 +162,7 @@ def main():
                     existing_links.add(link)
                     added_count += 1
 
-        # 4. Simpan kembali ke file
+        # 4. Simpan kembali
         with open(DATA_FILE, "w", encoding="utf-8") as f:
             json.dump(db, f, indent=2, ensure_ascii=False)
 
@@ -173,10 +173,10 @@ def main():
                 "script_hash": get_file_hash(SCRIPT_FILE)
             }, f, indent=2)
             
-        log.info(f"✅ Sukses. Ditambahkan {added_count} data baru. Total database: {len(db)}")
+        log.info(f"✅ Berhasil. Menambahkan {added_count} data baru. Total database: {len(db)} item.")
 
     except Exception as e:
-        log.error(f"Terjadi kesalahan fatal pada main: {e}")
+        log.error(f"Terjadi kesalahan fatal: {e}")
         exit(1)
 
 if __name__ == "__main__":
