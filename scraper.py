@@ -1,8 +1,8 @@
 """
 =======================================================================
-  ARTIFACT RADAR v3.4 — Robust Intelligence Crawler
+  ARTIFACT RADAR v3.5 — Ultra-Robust Intelligence Crawler
   AI Engine : Google Gemini 1.5 Flash
-  Fixes     : Citation Cleaner & Multi-Keyword Scan (English Version)
+  Fixes     : Bulletproof JSON Extractor & Always-On Debug Mode
 =======================================================================
 """
 
@@ -12,7 +12,7 @@ import hashlib
 import logging
 import random
 import re
-from datetime import datetime, timedelta
+from datetime import datetime
 import google.generativeai as genai
 
 # ── Logging Configuration ──
@@ -30,8 +30,32 @@ DATA_FILE    = os.path.join(BASE_DIR, "data.json")
 SCRIPT_FILE  = os.path.abspath(__file__)
 
 KEYWORDS = [
+    # ── English Keywords ──
+    "ancient artifact for sale",
+    "authentic antiquities for sale",
+    "buy ancient artifact online",
+    "illegal antiquities trafficking",
+    "stolen archaeological artifact",
+    "majapahit artifact for sale",
+    "khmer statue ancient for sale",
+    "roman artifact authentic sale",
+    "egyptian antiquities original",
+    "ancient bronze statue authentic",
+    "ancient artifact site:ebay.com",
+    "ancient relic site:etsy.com",
+    "antiquities sale site:facebook.com",
+    "illegal antiquities trafficking news",
+    "artifact smuggling investigation",
 
-    # ── Direct Artifact Sale ─────────────────────────────
+    # ── Indonesian Keywords (Lokal) ──
+    "jual arca kuno asli",
+    "benda purbakala asli dijual",
+    "temuan arkeologi dijual",
+    "artefak candi dijual",
+    "keris kuno asli dijual",
+    "jual artefak kuno majapahit"
+
+        # ── Direct Artifact Sale ─────────────────────────────
     "ancient artifact for sale",
     "authentic antiquities for sale",
     "buy ancient artifact online",
@@ -94,12 +118,13 @@ KEYWORDS = [
     "looted antiquities returned to museum",
     "archaeological theft investigation",
 
-    # ── Indonesian / Local Search Terms (Kept in ID for local context) ──
+    # ── Indonesian / Local Search Terms ──────────────────
     "jual arca kuno asli",
     "benda purbakala asli dijual",
     "temuan arkeologi dijual",
     "artefak candi dijual",
     "keris kuno asli dijual",
+
 ]
 
 # ======================================================================
@@ -125,14 +150,8 @@ def get_hash(path):
     except: return "none"
 
 def check_schedule():
-    if os.environ.get("FORCE_CRAWL") == "true": return True
-    if not os.path.exists(HISTORY_FILE): return True
-    try:
-        with open(HISTORY_FILE) as f:
-            h = json.load(f)
-        last = datetime.fromisoformat(h.get("last_crawl_date"))
-        return datetime.now() - last >= timedelta(hours=12) # Check every 12 hours
-    except: return True
+    # SELALU JALAN: Diaktifkan sementara agar Anda tidak perlu menunggu jadwal
+    return True 
 
 # ======================================================================
 # CORE: AI ANALYZER WITH FALLBACK
@@ -143,13 +162,10 @@ def run_ai_search(model, existing_links, target):
     
     prompt = f"""
     Use Google Search to find real information and listings regarding: "{target}".
-    Identify marketplace listings (FB, eBay, etc.), theft news, or discussion forums.
+    Identify marketplace listings (FB, Tokopedia, eBay, etc.), theft news, or discussion forums.
     
     Output the result ONLY in a JSON Array format.
-    DO NOT add reference citations like [1] inside or outside the JSON.
-    Ignore these existing URLs: {list(existing_links)[:5]}
-    
-    JSON Output:
+    JSON Output Structure:
     [
       {{
         "item_name": "Item/News Title",
@@ -176,18 +192,28 @@ def run_ai_search(model, existing_links, target):
         )
         
         text = response.text
-        log.info(f"Raw AI Response snippet: {text[:150]}...")
         
-        # FIX: Remove Google Search grounding citations (e.g., [1], [2]) that break JSON parsing
-        text = re.sub(r'\[\d+\]', '', text)
+        # LOG RAW TEXT: Menampilkan jawaban mentah AI di GitHub Actions Log
+        log.info(f"--- RAW AI RESPONSE ---\n{text[:500]}\n-----------------------")
         
-        # FIX: Find the first and last square brackets safely
-        start_idx = text.find('[')
-        end_idx = text.rfind(']')
+        # BULLETPROOF JSON EXTRACTOR
+        # 1. Bersihkan format markdown (```json dan ```)
+        clean_text = text.replace('```json', '').replace('```', '')
+        # 2. Bersihkan sitasi angka dari Google Search seperti [1], [2]
+        clean_text = re.sub(r'\[\d+\]', '', clean_text)
+        
+        # 3. Ambil teks hanya dari kurung siku pembuka pertama hingga penutup terakhir
+        start_idx = clean_text.find('[')
+        end_idx = clean_text.rfind(']')
         
         if start_idx != -1 and end_idx != -1 and start_idx < end_idx:
-            json_str = text[start_idx:end_idx+1]
-            return json.loads(json_str)
+            json_str = clean_text[start_idx:end_idx+1]
+            try:
+                data = json.loads(json_str)
+                return data
+            except json.JSONDecodeError as e:
+                log.error(f"JSON Parse Error: {e}")
+                return []
         else:
             log.warning("AI did not provide a valid JSON Array structure.")
             return []
@@ -198,7 +224,6 @@ def run_ai_search(model, existing_links, target):
 
 def main():
     if not check_schedule():
-        log.info("System resting.")
         return
     
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -209,7 +234,7 @@ def main():
     try:
         genai.configure(api_key=api_key)
         
-        # Initialize the model with the search tool
+        # Menggunakan google_search tool untuk live web grounding
         model = genai.GenerativeModel(
             model_name='gemini-1.5-flash',
             tools=[{'google_search': {}}]
@@ -218,8 +243,11 @@ def main():
         db = load_db()
         links = {i.get('source_link') for i in db if i.get('source_link')}
 
-        # Pick 3 keywords at a time to increase the chances of getting data
-        targets = random.sample(KEYWORDS, min(len(KEYWORDS), 3))
+        # Memilih 1 keyword lokal dan 2 keyword internasional secara paksa
+        local_kws = [k for k in KEYWORDS if "jual" in k or "dijual" in k]
+        intl_kws = [k for k in KEYWORDS if k not in local_kws]
+        
+        targets = random.sample(intl_kws, 2) + random.sample(local_kws, 1)
         
         count = 0
         for target in targets:
@@ -228,6 +256,7 @@ def main():
             if isinstance(new_items, list):
                 for item in new_items:
                     link = item.get('source_link')
+                    # Hanya tambahkan jika link belum ada di database
                     if link and link not in links:
                         item['timestamp'] = datetime.now().isoformat()
                         item['keyword_matched'] = target
@@ -235,11 +264,12 @@ def main():
                         links.add(link)
                         count += 1
 
-        # Save database & history
+        # Simpan database & history
         if count > 0:
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(db, f, indent=2, ensure_ascii=False)
 
+        # Selalu update history agar kita tahu script berjalan lancar
         with open(HISTORY_FILE, "w") as f:
             json.dump({
                 "last_crawl_date": datetime.now().isoformat(),
