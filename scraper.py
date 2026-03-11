@@ -31,103 +31,76 @@ logging.basicConfig(
 log = logging.getLogger("ArtifactRadar")
 
 # ── Interval Crawling ─────────────────────────────────────────────────
-CRAWL_INTERVAL_DAYS = int(os.environ.get("CRAWL_INTERVAL_DAYS", 14))   # default = 14 hari
+CRAWL_INTERVAL_DAYS = int(os.environ.get("CRAWL_INTERVAL_DAYS", 14))
 
 # ======================================================================
-# DATABASE KATA KUNCI (Keyword Database)
+# DATABASE KATA KUNCI GLOBAL (Expanded Global Database)
 # ======================================================================
-# Inisialisasi dictionary sebelum diisi data
-ARTIFACT_KEYWORDS = {}
-
-ARTIFACT_KEYWORDS.update({
-    # ── Artefak Tiongkok (Chinese Antiquities) ───────────────────────
+ARTIFACT_KEYWORDS = {
+    # ── Southeast Asia (SEA) ────────────────────────────────────────
+    "SEA_Maritime": [
+        "majapahit terracotta artifact", "srivijaya gold artifact", "ancient khmer statue",
+        "angkor wat style sculpture", "ayutthaya buddha bronze", "champa stone carving",
+        "dong son bronze drum", "ban chiang pottery", "ancient javanese kris antique",
+        "archaic dayak carving", "prehistoric indonesian artifact",
+    ],
+    # ── East Asia ───────────────────────────────────────────────────
     "CN_Dynastic": [
-        "han dynasty artifact",
-        "tang dynasty ceramic",
-        "song dynasty porcelain",
-        "ming dynasty porcelain antique",
-        "qing dynasty jade carving",
-        "shanxi tomb artifact",
-        "ancient chinese bronze vessel",
-        "ritual bronze ding vessel",
-        "oracle bone inscription",
-        "ancient chinese burial artifact",
+        "han dynasty artifact", "tang dynasty ceramic", "song dynasty porcelain",
+        "ming dynasty porcelain antique", "qing dynasty jade carving", "shanxi tomb artifact",
+        "ancient chinese bronze vessel", "ritual bronze ding vessel", "oracle bone inscription",
     ],
-
-    "CN_Objects": [
-        "ancient chinese jade pendant",
-        "chinese ritual bronze",
-        "ancient chinese burial figurine",
-        "terracotta tomb figure",
-        "ming burial pottery",
-        "ancient chinese coin string",
-        "song dynasty celadon bowl",
-        "tang sancai pottery",
-        "ancient chinese lacquerware",
-    ],
-
-    # ── Artefak Jepang (Japanese Antiquities) ────────────────────────
     "JP_Ancient": [
-        "jomon pottery ancient",
-        "yayoi bronze bell dotaku",
-        "kofun haniwa figure",
-        "samurai armor antique authentic",
-        "edo period katana antique",
-        "ancient japanese temple artifact",
-        "shinto ritual object antique",
-        "japanese burial artifact kofun",
-    ],
-
-    "JP_Cultural": [
-        "ancient netsuke original",
-        "samurai tsuba antique",
-        "edo period artifact",
+        "jomon pottery ancient", "yayoi bronze bell dotaku", "kofun haniwa figure",
+        "samurai armor antique authentic", "edo period katana antique",
         "ancient japanese buddhist statue",
-        "temple bell japan antique",
     ],
-
-    # ── Peradaban Mongol & Stepa ────────────────────────────────────
-    "Steppe_Mongol": [
-        "mongol empire artifact",
-        "mongolian burial artifact",
-        "steppe nomad bronze ornament",
-        "ancient steppe horse gear",
-        "mongol warrior artifact",
-        "scythian gold artifact",
-        "xiongnu bronze artifact",
-        "steppe burial treasure",
+    # ── Middle East & Egypt ─────────────────────────────────────────
+    "ME_Egypt": [
+        "ancient egyptian ushabti", "pharaonic sarcophagus fragment", "hieroglyphic papyrus scroll",
+        "ptolemaic period artifact", "egyptian faience amulet", "predynastic egyptian pottery",
     ],
-
-    # ── Tibet & Himalaya ─────────────────────────────────────────────
-    "Tibet_Himalaya": [
-        "tibetan ritual artifact",
-        "ancient tibetan buddhist statue",
-        "himalayan bronze buddha",
-        "vajrayana ritual object",
-        "ancient thangka painting",
-        "ritual vajra antique",
+    "ME_Mesopotamia": [
+        "sumerian cuneiform tablet", "babylonian cylinder seal", "akkadian bronze artifact",
+        "luristan bronze antique", "elamite pottery fragment", "ancient persian rhyton",
     ],
-
-    # ── Jalur Sutra (Silk Road Artifacts) ─────────────────────────────
+    # ── Mediterranean (Greco-Roman) ──────────────────────────────────
+    "Mediterranean_Classic": [
+        "ancient greek amphora", "roman marble bust fragment", "etruscan bronze mirror",
+        "attic red figure pottery", "roman legionary gladius antique", "byzantine icon antique",
+        "mycenaean artifact", "minoan pottery fragment",
+    ],
+    # ── The Americas (Pre-Columbian) ────────────────────────────────
+    "Americas_PreColumbian": [
+        "mayan jade artifact", "aztec stone sculpture", "inca gold mask",
+        "moche ceramic vessel", "nazca textile fragment", "pre-columbian pottery authentic",
+        "chavin stone carving", "tairona gold ornament",
+    ],
+    # ── South Asia ──────────────────────────────────────────────────
+    "South_Asia": [
+        "indus valley seal", "harappan pottery fragment", "gandhara buddha sculpture",
+        "chola bronze statue", "pala empire sculpture", "ancient indian stone carving",
+    ],
+    # ── Central Asia & Silk Road ────────────────────────────────────
     "Silk_Road": [
-        "silk road artifact",
-        "central asian burial artifact",
-        "ancient sogdian artifact",
-        "bactrian bronze artifact",
-        "kushan empire artifact",
+        "scythian gold ornament", "bactrian camel artifact", "sogdian silver vessel",
+        "kushan coin hoard", "ancient gandharan artifact", "mongol empire burial gear",
+    ],
+    # ── Africa ──────────────────────────────────────────────────────
+    "Africa_Ancient": [
+        "nok terracotta head", "benin bronze plaque", "ancient ife sculpture",
+        "ethiopian orthodox cross antique", "dogon ancestor statue", "mali terracotta figure",
     ]
-})
+}
 
-# Menggabungkan semua kata kunci menjadi satu daftar
 ALL_KEYWORDS = [kw for kws in ARTIFACT_KEYWORDS.values() for kw in kws]
 
 # ======================================================================
-# PEMBANTU HTTP (HTTP Helper)
+# PEMBANTU HTTP
 # ======================================================================
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
 ]
 
 def get_headers(referer: str = "https://www.google.com/") -> dict:
@@ -140,7 +113,6 @@ def get_headers(referer: str = "https://www.google.com/") -> dict:
 def safe_get(url: str, referer: str = "", timeout: int = 15, retries: int = 2) -> requests.Response or None:
     for attempt in range(retries):
         try:
-            # Jeda sopan agar tidak dianggap serangan DDoS
             time.sleep(random.uniform(2.0, 5.0))
             r = requests.get(url, headers=get_headers(referer or url), timeout=timeout)
             if r.status_code == 200: return r
@@ -148,12 +120,7 @@ def safe_get(url: str, referer: str = "", timeout: int = 15, retries: int = 2) -
             log.warning(f"Percobaan {attempt+1} gagal untuk {url}: {e}")
     return None
 
-# ======================================================================
-# SCRAPER PLATFORM
-# ======================================================================
-
 def scrape_ebay(keyword: str) -> list:
-    """Scrape hasil pencarian eBay."""
     url = f"https://www.ebay.com/sch/i.html?_nkw={quote_plus(keyword)}&_sacat=0&LH_ItemCondition=3000"
     r = safe_get(url)
     if not r: return []
@@ -172,7 +139,6 @@ def scrape_ebay(keyword: str) -> list:
     return results
 
 def scrape_google_shopping(keyword: str) -> list:
-    """Scrape cuplikan Google Shopping."""
     url = f"https://www.google.com/search?q={quote_plus(keyword)}&tbm=shop"
     r = safe_get(url)
     if not r: return []
@@ -197,7 +163,6 @@ def scrape_google_shopping(keyword: str) -> list:
 # ======================================================================
 
 def analyze_with_gemini(listings: list, model) -> list:
-    """Mengirimkan data ke Gemini untuk analisis risiko."""
     if not listings: return []
     prompt = f"""
     Analyze these marketplace listings for potential illegal artifact trafficking.
@@ -223,7 +188,7 @@ def analyze_with_gemini(listings: list, model) -> list:
         return []
 
 # ======================================================================
-# LOGIKA INTI (Core Logic)
+# LOGIKA INTI
 # ======================================================================
 
 def get_file_hash(filepath: str) -> str:
@@ -232,7 +197,11 @@ def get_file_hash(filepath: str) -> str:
     return hasher.hexdigest()
 
 def should_crawl() -> bool:
-    """Mengecek apakah sudah waktunya menjalankan crawler."""
+    # Cek apakah ada perintah paksa dari GitHub Actions
+    if os.environ.get("FORCE_CRAWL") == "true":
+        log.info("Mode Paksa Crawl aktif (Abaikan jadwal).")
+        return True
+
     if not os.path.exists(HISTORY_FILE): return True
     with open(HISTORY_FILE) as f: history = json.load(f)
     if history.get("script_hash") != get_file_hash(SCRIPT_FILE): return True
@@ -241,7 +210,7 @@ def should_crawl() -> bool:
 
 def main():
     if not should_crawl():
-        log.info("Sistem istirahat. Belum waktunya crawl ulang.")
+        log.info("Sistem istirahat. Belum waktunya crawl ulang (Gunakan opsi 'Force Crawl' jika ingin mendesak).")
         return
     
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -253,28 +222,26 @@ def main():
     model = genai.GenerativeModel("gemini-2.5-flash")
 
     all_listings = []
-    # Membatasi jumlah keyword agar tidak terkena limitasi GitHub Actions
-    sample_keywords = random.sample(ALL_KEYWORDS, min(len(ALL_KEYWORDS), 10))
+    # Memilih 15 kata kunci secara acak setiap sesi untuk cakupan global yang lebih luas
+    sample_keywords = random.sample(ALL_KEYWORDS, min(len(ALL_KEYWORDS), 15))
     
-    log.info(f"Memulai pemindaian untuk {len(sample_keywords)} kata kunci acak...")
+    log.info(f"Memulai pemindaian global untuk {len(sample_keywords)} kata kunci...")
     for kw in sample_keywords:
         all_listings.extend(scrape_ebay(kw))
         all_listings.extend(scrape_google_shopping(kw))
 
-    log.info(f"Ditemukan {len(all_listings)} listing mentah. Memulai analisis AI...")
+    log.info(f"Ditemukan {len(all_listings)} listing. Menganalisis dengan AI...")
     analyzed = analyze_with_gemini(all_listings, model)
     
-    # Simpan hasil analisis
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(analyzed, f, indent=2, ensure_ascii=False)
 
-    # Perbarui history
     with open(HISTORY_FILE, "w") as f:
         json.dump({
             "last_crawl_date": datetime.now().isoformat(),
             "script_hash": get_file_hash(SCRIPT_FILE)
         }, f, indent=2)
-    log.info("✅ Pemindaian dan analisis selesai.")
+    log.info("✅ Pemindaian global selesai.")
 
 if __name__ == "__main__":
     main()
