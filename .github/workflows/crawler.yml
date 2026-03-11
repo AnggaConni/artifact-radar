@@ -1,53 +1,155 @@
-name: Artifact Radar Auto-Crawler
+name: 🏺 Artifact Radar — Auto Crawler
 
+# ─────────────────────────────────────────────────────────────
+#  Schedule: every 2 weeks (1st and 15th of each month, 01:00 UTC)
+#  Also triggered manually via workflow_dispatch (with options)
+# ─────────────────────────────────────────────────────────────
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch: 
+    - cron: "0 1 1,15 * *"   # bi-weekly: 1st & 15th @ 01:00 UTC
+  workflow_dispatch:
+    inputs:
+      force_crawl:
+        description: "Force crawl even if interval hasn't elapsed"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+      max_keywords:
+        description: "Limit number of keywords (blank = all)"
+        required: false
+        default: ""
+      skip_platforms:
+        description: "Comma-separated platforms to skip (e.g. amazon,shopee)"
+        required: false
+        default: ""
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  PYTHON_VERSION: "3.11"
 
 jobs:
-  run-scraper-and-ai:
+  # ═══════════════════════════════════════════════════════════
+  #  JOB 1 — Scrape + AI Analysis
+  # ═══════════════════════════════════════════════════════════
+  crawl-and-analyze:
+    name: Crawl Marketplaces & Analyze with Gemini
     runs-on: ubuntu-latest
-    
-    # Memberikan izin explisit untuk menulis ke repository
+
     permissions:
       contents: write
 
+    outputs:
+      high_risk_count: ${{ steps.parse.outputs.high_risk_count }}
+      total_records:   ${{ steps.parse.outputs.total_records }}
+      data_changed:    ${{ steps.commit.outputs.data_changed }}
+
     steps:
+      # ── 1. Checkout ─────────────────────────────────────────
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Sangat penting: memastikan token digunakan untuk push nanti
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
-      - name: Setup Python
+      # ── 2. Python ────────────────────────────────────────────
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
 
-      - name: Install dependencies
-        run: pip install google-generativeai
+      # ── 3. Install dependencies ───────────────────────────────
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install \
+            requests \
+            beautifulsoup4 \
+            lxml \
+            google-generativeai
 
-      - name: Run Scraper & Gemini AI
+      # ── 4. Run scraper ────────────────────────────────────────
+      - name: Run Artifact Radar Scraper
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
+          FORCE_CRAWL:       ${{ github.event.inputs.force_crawl || 'false' }}
+          MAX_KEYWORDS:      ${{ github.event.inputs.max_keywords || '' }}
+          SKIP_PLATFORMS:    ${{ github.event.inputs.skip_platforms || '' }}
+          CRAWL_INTERVAL_DAYS: "14"       # change to 7 for weekly
         run: python scraper.py
 
-      - name: Commit and Push changes
+      # ── 5. Parse outputs for summary ──────────────────────────
+      - name: Parse results summary
+        id: parse
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Gunakan status untuk mengecek perubahan secara lebih aman
-          git add data.json history.json
-          
-          # Jika tidak ada perubahan, tidak akan error
-          if git diff --staged --quiet; then
-            echo "Tidak ada perubahan data untuk di-commit."
+          if [ -f history.json ]; then
+            HIGH=$(python3 -c "import json; d=json.load(open('history.json')); print(d.get('high_risk_total', 0))")
+            TOTAL=$(python3 -c "import json; d=json.load(open('history.json')); print(d.get('total_records', 0))")
           else
-            git commit -m "Auto-update artifact data & history [skip ci]"
-            git push origin main
+            HIGH=0; TOTAL=0
           fi
+          echo "high_risk_count=$HIGH" >> $GITHUB_OUTPUT
+          echo "total_records=$TOTAL"  >> $GITHUB_OUTPUT
+          echo "High-risk items: $HIGH / Total records: $TOTAL"
+
+      # ── 6. Upload artifacts ───────────────────────────────────
+      - name: Upload data artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact-radar-data-${{ github.run_number }}
+          path: |
+            data.json
+            history.json
+            radar.log
+          retention-days: 90
+
+      # ── 7. Commit & push changes ──────────────────────────────
+      - name: Commit and push updated data
+        id: commit
+        run: |
+          git config --global user.name  "artifact-radar[bot]"
+          git config --global user.email "artifact-radar[bot]@users.noreply.github.com"
+
+          git add data.json history.json radar.log 2>/dev/null || true
+
+          if git diff --staged --quiet; then
+            echo "No data changes to commit."
+            echo "data_changed=false" >> $GITHUB_OUTPUT
+          else
+            COUNT=$(git diff --staged --stat | tail -1)
+            git commit -m "🏺 Auto-update artifact data [$COUNT] [skip ci]"
+            git push origin HEAD
+            echo "data_changed=true" >> $GITHUB_OUTPUT
+          fi
+
+  # ═══════════════════════════════════════════════════════════
+  #  JOB 2 — Summary notification (runs only when data changed)
+  # ═══════════════════════════════════════════════════════════
+  notify:
+    name: Post run summary
+    runs-on: ubuntu-latest
+    needs: crawl-and-analyze
+    if: needs.crawl-and-analyze.outputs.data_changed == 'true'
+
+    steps:
+      - name: Write Job Summary
+        run: |
+          cat >> $GITHUB_STEP_SUMMARY << 'EOF'
+          ## 🏺 Artifact Radar — Run Complete
+
+          | Metric | Value |
+          |--------|-------|
+          | ⚠️ High-risk detections (score ≥ 7) | ${{ needs.crawl-and-analyze.outputs.high_risk_count }} |
+          | 📦 Total records in database | ${{ needs.crawl-and-analyze.outputs.total_records }} |
+          | 🕒 Next scheduled run | bi-weekly (1st & 15th of month) |
+
+          ### Platforms Monitored
+          eBay · Etsy · Tokopedia · Shopee · Amazon · Google Shopping · Craigslist
+
+          ### Heritage Categories Scanned
+          Indonesian Maritime · Eastern Indonesia · Malaysian Heritage ·  
+          SE Asian Regional · Persian/Iraqi · Greco-Roman · Generic High-Risk
+
+          > Results saved to `data.json`. Download the full dataset from **Artifacts** above.
+          EOF
