@@ -1,0 +1,49 @@
+name: Artifact Radar Auto-Crawler
+
+on:
+  schedule:
+    # Menjalankan script setiap hari pada jam 00:00 UTC
+    # Jangan khawatir, Python script Anda sudah pintar dan akan "exit" 
+    # jika belum genap 1 minggu atau tidak ada update script.
+    - cron: "0 0 * * *"
+  
+  # Fitur ini memunculkan tombol "Run workflow" di GitHub 
+  # agar Anda bisa menjalankannya manual kapan saja untuk testing!
+  workflow_dispatch: 
+
+jobs:
+  run-scraper-and-ai:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install google-generativeai
+
+      - name: Run Scraper & Gemini AI
+        env:
+          # Mengambil API Key dari GitHub Secrets yang sudah Anda buat
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scraper.py
+
+      - name: Commit and Push changes
+        run: |
+          # Konfigurasi identitas bot GitHub
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Mendaftarkan file yang mungkin dibuat atau diubah
+          git add data.json history.json || true
+          
+          # Cek apakah ada perubahan. Jika ada, lakukan commit dan push.
+          # Jika script berhenti karena belum waktunya crawl, proses ini akan dilewati dengan aman.
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update artifact data & history" && git push)
