@@ -1,1 +1,176 @@
-[]
+{
+  "summary": {
+    "generated_at": "2026-03-11T22:24:51.991634Z",
+    "total_listings": 7,
+    "high_risk_count": 5,
+    "medium_risk_count": 1,
+    "alerts_by_platform": {
+      "Asumsi": 1,
+      "Historia.ID": 1,
+      "Shopee": 1,
+      "Tokopedia": 2,
+      "Hops ID": 1,
+      "YouTube": 1
+    },
+    "top_high_risk": [
+      {
+        "original_title": "AS Kembalikan Artefak Kerajaan Majapahit yang Sempat Dicuri dan Dijual Ilegal",
+        "platform": "Asumsi",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKi_7G5rqf2FjjQvOXCRZRuhw4z4soXoFrdeVJUC9PdwNQWoKKZzEyFD0oMMbFn6InRck9HH0A6bM9fhtQD0jUxEh27b-utDZ-J9ZlNI4wyU8ZJBP4JyrIAJQt8GgCb2FuuL0Cq_j_ny32Uu86F9u0XbR2p1RZbVx4S1vjAigoiG0eBKjKO5bXeHHnIJPXYxB6vdglHFGMfr1hNv3BEWY_sfznut_9",
+        "price_usd": 0,
+        "status": "HIGH RISK",
+        "risk_score": 10,
+        "origin_region": "Southeast Asia (Indonesia)",
+        "provenance_flag": false,
+        "keyword_trigger": "jual artefak kuno majapahit",
+        "reason": "Berita tentang pengembalian artefak Majapahit yang dicuri dan dijual secara ilegal oleh sindikat perdagangan barang antik internasional.",
+        "scraped_at": "2026-03-11T22:24:51.991606Z"
+      },
+      {
+        "original_title": "AS Kembalikan Benda Bersejarah Peninggalan Majapahit ke Indonesia",
+        "platform": "Historia.ID",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsfhL5210LI8pyY5zwjeok7mj-ZoUiqsfSMehs8bjZz-QR2OowDl1Zy2GcUhgs8y_o4qMzGlHTsqvuCFCaA7hEtW4tFHn1Lx4V_YT-sEjAWvu9PFCS-FNTx9-0PJ4AXZE3G_8P-sLN9GtPiXVzcbHWddyrp4oyd5yGMImn_Tp68XtSkDeqoqMIj2hBpw-7S65VICw_a6VdmveH8hjdGYkVq1w=",
+        "price_usd": 0,
+        "status": "HIGH RISK",
+        "risk_score": 10,
+        "origin_region": "Southeast Asia (Indonesia)",
+        "provenance_flag": false,
+        "keyword_trigger": "jual artefak kuno majapahit",
+        "reason": "Berita tentang pengembalian 30 artefak kuno, termasuk dari Majapahit, yang dijarah dan dijual secara ilegal oleh jaringan pedagang dan penyelundup artefak.",
+        "scraped_at": "2026-03-11T22:24:51.991614Z"
+      },
+      {
+        "original_title": "KERIS TUA PENINGGALAN MAJAPAHIT DHAPUR JALAK NGORE PAMOR WENGKON",
+        "platform": "Tokopedia",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9eblCk389rN91zYPeMNwf_OqqZWGr4BnxYCFonE9wl_RheCtGoNxFpXMm0dKQ0uy60OP-uBAs6eKR_fhsyZ5-eVo8k2DrKjpZ1ecICzk9wf7s6UQC_ueOR2-cqbmxMHsZRQLD-EAajTB8Rmx00yR7YF9JDfJbGEKNSKUd5zDjs5_osdhg7M7h9miMRtTb3mCODB9ocaULqEgc-YbFwbxPmmxiWxlHiWhJk5qx",
+        "price_usd": 309.68,
+        "status": "HIGH RISK",
+        "risk_score": 9,
+        "origin_region": "Southeast Asia (Indonesia)",
+        "provenance_flag": false,
+        "keyword_trigger": "jual artefak kuno majapahit",
+        "reason": "Diklaim sebagai keris tua peninggalan Majapahit. Penjualan pusaka dan artefak kuno tanpa dokumentasi asal-usul yang sah di marketplace publik sangat berisiko. Harga dikonversi dari Rp4.800.000 dengan kurs perkiraan 1 USD = 15.500 IDR.",
+        "scraped_at": "2026-03-11T22:24:51.991619Z"
+      },
+      {
+        "original_title": "Liontin Bandul Kalung Makoro Buto Ijo Dewa Temuan Peninggalan Kerajaan Hindu Budha Majapahit Kuno Antik Langka Sepuh",
+        "platform": "Tokopedia",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa4mPrTWTLHBJHKe85jt3jiLiNgxPI6MFRPYde3x6b4js_TfXxBXdbXNR3ppxozw57gans77V-T82V5eHSMzJJPgelNdoVchrDy3FpXLsYWyBNq0au7j3IAt9RqEh-fmbuSmX0FaSmEqMxlvsVTizADXCSPm2Q35JPapy6pyrGmrsBxmzhqron_ZRnJMGFzIRflKxjsoTZF6_Ls7BXStypZw==",
+        "price_usd": 68.1,
+        "status": "HIGH RISK",
+        "risk_score": 8,
+        "origin_region": "Southeast Asia (Indonesia)",
+        "provenance_flag": false,
+        "keyword_trigger": "jual artefak kuno majapahit",
+        "reason": "Barang diklaim sebagai 'temuan peninggalan' Majapahit. Penjualan artefak kuno tanpa bukti asal-usul yang jelas di marketplace umum berisiko tinggi. Harga dikonversi dari Rp1.055.500 dengan kurs perkiraan 1 USD = 15.500 IDR.",
+        "scraped_at": "2026-03-11T22:24:51.991618Z"
+      },
+      {
+        "original_title": "Pemaharan&Lelang Pusaka Warung Antik",
+        "platform": "YouTube",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLHU5wgzci1DYT08s4aqW1IeIxrfK_tnwqNwA4SgpjuB95fko9GumooJCcO-vqtpkGe7gZQdFFwjiYnUSiTA45jzyDbB2KEcp8zevJ1dZpF3wtVzLWUwzrkVq_QSI0s79zaSKBzIg=",
+        "price_usd": 0,
+        "status": "HIGH RISK",
+        "risk_score": 8,
+        "origin_region": "Southeast Asia (Indonesia)",
+        "provenance_flag": false,
+        "keyword_trigger": "jual artefak kuno majapahit",
+        "reason": "Saluran YouTube yang mempromosikan 'pemaharan' dan lelang pusaka yang diklaim sebagai peninggalan Majapahit, yang berpotensi melibatkan perdagangan artefak tanpa izin. Konten video tidak tersedia, sehingga detail harga tidak dapat diverifikasi.",
+        "scraped_at": "2026-03-11T22:24:51.991622Z"
+      }
+    ]
+  },
+  "listings": [
+    {
+      "original_title": "AS Kembalikan Artefak Kerajaan Majapahit yang Sempat Dicuri dan Dijual Ilegal",
+      "platform": "Asumsi",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKi_7G5rqf2FjjQvOXCRZRuhw4z4soXoFrdeVJUC9PdwNQWoKKZzEyFD0oMMbFn6InRck9HH0A6bM9fhtQD0jUxEh27b-utDZ-J9ZlNI4wyU8ZJBP4JyrIAJQt8GgCb2FuuL0Cq_j_ny32Uu86F9u0XbR2p1RZbVx4S1vjAigoiG0eBKjKO5bXeHHnIJPXYxB6vdglHFGMfr1hNv3BEWY_sfznut_9",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 10,
+      "origin_region": "Southeast Asia (Indonesia)",
+      "provenance_flag": false,
+      "keyword_trigger": "jual artefak kuno majapahit",
+      "reason": "Berita tentang pengembalian artefak Majapahit yang dicuri dan dijual secara ilegal oleh sindikat perdagangan barang antik internasional.",
+      "scraped_at": "2026-03-11T22:24:51.991606Z"
+    },
+    {
+      "original_title": "AS Kembalikan Benda Bersejarah Peninggalan Majapahit ke Indonesia",
+      "platform": "Historia.ID",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsfhL5210LI8pyY5zwjeok7mj-ZoUiqsfSMehs8bjZz-QR2OowDl1Zy2GcUhgs8y_o4qMzGlHTsqvuCFCaA7hEtW4tFHn1Lx4V_YT-sEjAWvu9PFCS-FNTx9-0PJ4AXZE3G_8P-sLN9GtPiXVzcbHWddyrp4oyd5yGMImn_Tp68XtSkDeqoqMIj2hBpw-7S65VICw_a6VdmveH8hjdGYkVq1w=",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 10,
+      "origin_region": "Southeast Asia (Indonesia)",
+      "provenance_flag": false,
+      "keyword_trigger": "jual artefak kuno majapahit",
+      "reason": "Berita tentang pengembalian 30 artefak kuno, termasuk dari Majapahit, yang dijarah dan dijual secara ilegal oleh jaringan pedagang dan penyelundup artefak.",
+      "scraped_at": "2026-03-11T22:24:51.991614Z"
+    },
+    {
+      "original_title": "Jual BARANG ANTIK// BARANG LANGKA// BARANG KUNO - 3 SULA MAJAPAHIT",
+      "platform": "Shopee",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVjo9l2PCeLjsS-yGxml2eFHrz0VaI5gunKELhZ6HEV8vS2IoYNCdHxIoBVSJrMrq2JH4fzLepcvfpwEnSUl6KeLdC9w2Yu8T4tEzGKFt8SVYBNXZ3IGL1sGevCVl19dc3EgKey_n7yBcDDJDDyqqcz3yk4HqlFbvmBvyPwM_fr1RWuZsnoq-DGqrmf4VcUIfGXI3CKJvWdzWNoW0xZbc=",
+      "price_usd": 0,
+      "status": "LOW RISK",
+      "risk_score": 1,
+      "origin_region": "Southeast Asia (Indonesia - inspiration for replica)",
+      "provenance_flag": true,
+      "keyword_trigger": "jual artefak kuno majapahit",
+      "reason": "Penjual secara eksplisit menyatakan bahwa barang tersebut adalah 'replika super' dan bukan artefak asli.",
+      "scraped_at": "2026-03-11T22:24:51.991616Z"
+    },
+    {
+      "original_title": "Liontin Bandul Kalung Makoro Buto Ijo Dewa Temuan Peninggalan Kerajaan Hindu Budha Majapahit Kuno Antik Langka Sepuh",
+      "platform": "Tokopedia",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa4mPrTWTLHBJHKe85jt3jiLiNgxPI6MFRPYde3x6b4js_TfXxBXdbXNR3ppxozw57gans77V-T82V5eHSMzJJPgelNdoVchrDy3FpXLsYWyBNq0au7j3IAt9RqEh-fmbuSmX0FaSmEqMxlvsVTizADXCSPm2Q35JPapy6pyrGmrsBxmzhqron_ZRnJMGFzIRflKxjsoTZF6_Ls7BXStypZw==",
+      "price_usd": 68.1,
+      "status": "HIGH RISK",
+      "risk_score": 8,
+      "origin_region": "Southeast Asia (Indonesia)",
+      "provenance_flag": false,
+      "keyword_trigger": "jual artefak kuno majapahit",
+      "reason": "Barang diklaim sebagai 'temuan peninggalan' Majapahit. Penjualan artefak kuno tanpa bukti asal-usul yang jelas di marketplace umum berisiko tinggi. Harga dikonversi dari Rp1.055.500 dengan kurs perkiraan 1 USD = 15.500 IDR.",
+      "scraped_at": "2026-03-11T22:24:51.991618Z"
+    },
+    {
+      "original_title": "KERIS TUA PENINGGALAN MAJAPAHIT DHAPUR JALAK NGORE PAMOR WENGKON",
+      "platform": "Tokopedia",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9eblCk389rN91zYPeMNwf_OqqZWGr4BnxYCFonE9wl_RheCtGoNxFpXMm0dKQ0uy60OP-uBAs6eKR_fhsyZ5-eVo8k2DrKjpZ1ecICzk9wf7s6UQC_ueOR2-cqbmxMHsZRQLD-EAajTB8Rmx00yR7YF9JDfJbGEKNSKUd5zDjs5_osdhg7M7h9miMRtTb3mCODB9ocaULqEgc-YbFwbxPmmxiWxlHiWhJk5qx",
+      "price_usd": 309.68,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Southeast Asia (Indonesia)",
+      "provenance_flag": false,
+      "keyword_trigger": "jual artefak kuno majapahit",
+      "reason": "Diklaim sebagai keris tua peninggalan Majapahit. Penjualan pusaka dan artefak kuno tanpa dokumentasi asal-usul yang sah di marketplace publik sangat berisiko. Harga dikonversi dari Rp4.800.000 dengan kurs perkiraan 1 USD = 15.500 IDR.",
+      "scraped_at": "2026-03-11T22:24:51.991619Z"
+    },
+    {
+      "original_title": "Kolektor barang antik dan artefak merapat! di Pasar Loak Jatinegara dijual keris dan benda peninggalan Majapahit yang langka",
+      "platform": "Hops ID",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvH4u-4AtN3TzlRFmLF2vFHC-XJ4wAFGToEVb4V2a4BBFlW-YTuLjPAKaN5cPL1NvO3fvzaeeXrkvkpEmPyDTXG71fMpk1rGxHRjwfNHDXS9EFgnwyYKAVz1E3XoMBwq-lfO1tgN3Z7Vd6zPgGygTtshsLcXgzxPjRFKOMZ2wxIekoxM1o13VNGmIyR--mR-sMvNmACkfPq0df9ZBjA47Fmk949x-BT-bdKMm9PVNujzYxVCMwZSITh8CNxDpQ1NuqyMoBis_aSPFx7I4PVV-v68m_gpPgHcmxdJd6VsQ==",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 7,
+      "origin_region": "Southeast Asia (Indonesia)",
+      "provenance_flag": false,
+      "keyword_trigger": "jual artefak kuno majapahit",
+      "reason": "Artikel berita yang melaporkan penjualan keris dan benda peninggalan Majapahit di pasar loak, yang seringkali tidak memiliki dokumentasi asal-usul yang jelas.",
+      "scraped_at": "2026-03-11T22:24:51.991621Z"
+    },
+    {
+      "original_title": "Pemaharan&Lelang Pusaka Warung Antik",
+      "platform": "YouTube",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLHU5wgzci1DYT08s4aqW1IeIxrfK_tnwqNwA4SgpjuB95fko9GumooJCcO-vqtpkGe7gZQdFFwjiYnUSiTA45jzyDbB2KEcp8zevJ1dZpF3wtVzLWUwzrkVq_QSI0s79zaSKBzIg=",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 8,
+      "origin_region": "Southeast Asia (Indonesia)",
+      "provenance_flag": false,
+      "keyword_trigger": "jual artefak kuno majapahit",
+      "reason": "Saluran YouTube yang mempromosikan 'pemaharan' dan lelang pusaka yang diklaim sebagai peninggalan Majapahit, yang berpotensi melibatkan perdagangan artefak tanpa izin. Konten video tidak tersedia, sehingga detail harga tidak dapat diverifikasi.",
+      "scraped_at": "2026-03-11T22:24:51.991622Z"
+    }
+  ]
+}
