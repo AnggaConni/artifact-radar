@@ -4,6 +4,16 @@ on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch: 
+    # Menambah opsi input manual agar bisa dipaksa jalan kapan saja
+    inputs:
+      force_crawl:
+        description: 'Paksa crawl sekarang (abaikan jadwal 14 hari)?'
+        required: true
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -25,8 +35,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
-          # Perbaikan: Jangan gunakan 'cache' jika tidak ada requirements.txt
-          # Ini penyebab error "No file matched"
 
       - name: Install dependencies
         run: |
@@ -36,6 +44,8 @@ jobs:
       - name: Run Scraper & Gemini AI
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Meneruskan input manual ke script Python
+          FORCE_CRAWL: ${{ github.event.inputs.force_crawl }}
         run: python scraper.py
 
       - name: Commit and Push changes
