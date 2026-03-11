@@ -4,7 +4,6 @@ on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch: 
-    # Menambah opsi input manual agar bisa dipaksa jalan kapan saja
     inputs:
       force_crawl:
         description: 'Paksa crawl sekarang (abaikan jadwal 14 hari)?'
@@ -44,7 +43,6 @@ jobs:
       - name: Run Scraper & Gemini AI
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Meneruskan input manual ke script Python
           FORCE_CRAWL: ${{ github.event.inputs.force_crawl }}
         run: python scraper.py
 
@@ -53,11 +51,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
+          # Mendaftarkan file agar perubahan tersimpan
           git add data.json history.json || true
           
           if git diff --staged --quiet; then
             echo "Tidak ada perubahan data."
           else
-            git commit -m "Auto-update artifact data & history [skip ci]"
+            git commit -m "Incremental update: Added new artifact detections [skip ci]"
             git push origin main
           fi
