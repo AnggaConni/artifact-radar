@@ -71,7 +71,7 @@
       <div class="bg-[#1c1814] text-[#f5f3ee] p-1.5 px-2.5 rounded-md syne-font font-bold text-lg mr-3">AR</div>
       <div>
         <h1 class="text-lg font-bold tracking-tight syne-font leading-tight">Artifact Radar</h1>
-        <p class="text-[10px] mono-font text-[#8a7f72] uppercase tracking-widest" id="build-tag">v5.0 · CRAWLED</p>
+        <p class="text-[10px] mono-font text-[#8a7f72] uppercase tracking-widest" id="build-tag">v5.1 · CRAWLED</p>
       </div>
     </div>
     
@@ -343,7 +343,7 @@
             const d = new Date(hist.last_crawl_date);
             const str = d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
             document.getElementById('last-update-sidebar').textContent = `Last crawl: ${str}`;
-            document.getElementById('build-tag').textContent = `v5.0 · ${str}`;
+            document.getElementById('build-tag').textContent = `v5.1 · ${str}`;
           } catch(e) {}
         }
 
@@ -411,26 +411,53 @@
               const region = item.origin_region || 'Unknown Origin';
               const provFlag = item.provenance_flag ? '<span class="text-[#16a34a]">✓ Provenance</span>' : '<span class="text-[#dc2626]">⚠ No Provenance</span>';
 
+              // Fallback image if screenshot_url is missing or "N/A"
+              const imgUrl = (item.screenshot_url && item.screenshot_url !== "N/A") 
+                ? item.screenshot_url 
+                : "https://placehold.co/600x400/e4dfd4/8a7f72?text=No+Screenshot+Available";
+
               grid.innerHTML += `
                 <div class="card rounded-2xl flex flex-col justify-between overflow-hidden bg-white">
+                  <!-- Thumbnail Header -->
+                  <div class="h-40 w-full overflow-hidden border-b border-[#e4dfd4] relative bg-[#f5f3ee]">
+                    <img src="${imgUrl}" alt="Source Screenshot" class="object-cover w-full h-full" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e4dfd4/8a7f72?text=Image+Unavailable';" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1c1814]/40 to-transparent"></div>
+                    <span class="absolute bottom-3 left-4 text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-widest mono-font ${badgeClass} shadow-sm border border-white/20">
+                      ${item.status || 'INFO'}
+                    </span>
+                  </div>
+                  
                   <div class="p-6">
-                    <div class="flex justify-between items-center mb-5">
-                      <span class="text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-widest mono-font ${badgeClass}">${item.status || 'INFO'}</span>
-                      <span class="text-[11px] font-bold text-[#1c1814] mono-font">RISK: ${score}/10</span>
+                    <div class="flex justify-between items-center mb-4">
+                      <span class="text-[11px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font truncate pr-2">${platform}</span>
+                      <span class="text-[11px] font-bold text-[#1c1814] mono-font shrink-0">RISK: ${score}/10</span>
                     </div>
+                    
                     <h3 class="font-bold text-lg mb-4 leading-snug text-[#1c1814]">${title}</h3>
-                    <div class="grid grid-cols-2 gap-4 mb-5 border-t border-b border-[#e4dfd4] py-4">
-                      <div><p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Platform</p><p class="text-sm font-semibold truncate" title="${platform}">${platform}</p></div>
-                      <div class="text-right"><p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Est. Value</p><p class="text-lg font-extrabold syne-font">${price}</p></div>
-                    </div>
-                    <div class="bg-[#f5f3ee] p-4 rounded-xl border border-[#e4dfd4]">
-                      <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Origin & Provenance</p>
-                      <p class="text-xs font-semibold mb-3">${region} — ${provFlag}</p>
+                    
+                    <div class="bg-[#f5f3ee] p-4 rounded-xl border border-[#e4dfd4] mb-5">
+                      <div class="flex justify-between items-end mb-3 pb-3 border-b border-[#e4dfd4]">
+                        <div>
+                          <p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Origin</p>
+                          <p class="text-xs font-semibold">${region}</p>
+                        </div>
+                        <div class="text-right">
+                          <p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Est. Value</p>
+                          <p class="text-sm font-extrabold syne-font">${price}</p>
+                        </div>
+                      </div>
+                      
+                      <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Provenance</p>
+                      <p class="text-xs font-semibold mb-3">${provFlag}</p>
+                      
                       <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-1">AI Analysis</p>
                       <p class="text-xs leading-relaxed text-[#1c1814]">"${item.reason}"</p>
                     </div>
                   </div>
-                  <a href="${item.url || '#'}" target="_blank" class="w-full text-center bg-[#1c1814] text-[#f5f3ee] text-xs font-bold py-4 uppercase tracking-widest mono-font hover:bg-[#dc2626] transition-colors">Inspect Source →</a>
+                  
+                  <a href="${item.url || '#'}" target="_blank" class="w-full text-center bg-[#1c1814] text-[#f5f3ee] text-xs font-bold py-4 uppercase tracking-widest mono-font hover:bg-[#dc2626] transition-colors">
+                    Inspect Source →
+                  </a>
                 </div>
               `;
             });
