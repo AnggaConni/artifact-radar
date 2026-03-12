@@ -1,8 +1,9 @@
 """
 =======================================================================
-  ARTIFACT RADAR v5.0 — Global Intelligence Engine
+  ARTIFACT RADAR v5.1 — Global Intelligence Engine
   AI Engine : Google Gemini 2.5 Flash (Google Search Grounding)
   Mode      : Full English, Global Scope, 8-Day Interval
+  Feature   : Auto-Backfill Missing Screenshots
 =======================================================================
 """
 
@@ -12,6 +13,7 @@ import hashlib
 import logging
 import random
 import re
+import time
 from datetime import datetime, timedelta
 import requests
 
@@ -314,6 +316,13 @@ def calculate_summary(listings):
         "top_high_risk": top_high_risk
     }
 
+def get_screenshot_url(url):
+    """Generates a dynamic screenshot URL using a free API service."""
+    if not url or url.lower() == "n/a":
+        return "N/A"
+    encoded_url = requests.utils.quote(url)
+    return f"https://api.microlink.io/?url={encoded_url}&screenshot=true&meta=false&embed=screenshot.url"
+
 # ======================================================================
 # CORE: DIRECT REST API AI ANALYZER
 # ======================================================================
@@ -343,7 +352,8 @@ def run_ai_search(api_key, existing_urls, target):
         "provenance_flag": false,
         "keyword_trigger": "{target}",
         "reason": "Detailed reasoning regarding its provenance, risk, or price",
-        "scraped_at": "{datetime.now().isoformat()}Z"
+        "scraped_at": "{datetime.now().isoformat()}Z",
+        "screenshot_url": ""
       }}
     ]
     """
@@ -416,6 +426,20 @@ def main():
         db = load_db()
         listings = db.get("listings", [])
         
+        # ── BACKFILL MISSING SCREENSHOTS FOR OLD DATA ──
+        # Fungsi ini mengecek apakah data lama sudah punya screenshot_url
+        backfill_count = 0
+        for item in listings:
+            if not item.get("screenshot_url") or item.get("screenshot_url") == "":
+                url = item.get("url")
+                if url and url.lower() != "n/a":
+                    item["screenshot_url"] = get_screenshot_url(url)
+                else:
+                    item["screenshot_url"] = "N/A"
+                backfill_count += 1
+        if backfill_count > 0:
+            log.info(f"Successfully backfilled screenshots for {backfill_count} old records.")
+
         existing_urls = {i.get('url') for i in listings if i.get('url')}
         
         # Pick 3 random global keywords per run
@@ -431,14 +455,19 @@ def main():
                     if link and link not in existing_urls:
                         item['scraped_at'] = datetime.now().isoformat() + "Z"
                         item['keyword_trigger'] = target
+                        item['screenshot_url'] = get_screenshot_url(link)
                         listings.append(item)
                         existing_urls.add(link)
                         count += 1
+            
+            # PENAMBAHAN DELAY: Jeda 3 detik antar request agar tidak diblokir Google karena rate limit (Error 429)
+            time.sleep(3)
 
         db["listings"] = listings
         db["summary"] = calculate_summary(listings)
 
-        if count > 0 or not db["summary"].get("generated_at"):
+        # Update file jika ada data baru ATAU jika ada proses backfill data lama
+        if count > 0 or backfill_count > 0 or not db["summary"].get("generated_at"):
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(db, f, indent=2, ensure_ascii=False)
 
