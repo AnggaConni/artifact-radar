@@ -1,30 +1,34 @@
-# 🏺 Artifact Radar
+#🏺 Artifact Radar v5.1 — Global Intelligence Engine
 
-Automated cultural-heritage protection tool that monitors major online marketplaces for listings that may involve stolen or looted artifacts. Runs on GitHub Actions every **2 weeks** and uses **Google Gemini AI** to classify risk.
+An automated cultural-heritage protection and geo-intelligence tool. It monitors the global online antiquities market for listings that may involve stolen, looted, or unprovenanced artifacts.
+
+Powered by Google Gemini 2.5 Flash with Google Search Grounding, the engine autonomously crawls marketplaces, news outlets, and forums every 8 days, classifying risks and mapping the origins of suspicious artifacts.
 
 ---
 
-## Architecture
+##🏗️ Architecture
+
+Unlike traditional scrapers that get blocked, Artefact Radar v5.1 delegates the search process entirely to Google's infrastructure via AI Tool Grounding, utilising direct REST API calls for maximum stability.
+
 
 ```
-GitHub Actions (bi-weekly cron)
+GitHub Actions (Daily Cron)
         │
         ▼
-  scraper.py  ──────────────────────────────────────────────────────────┐
-        │                                                                │
-        ▼                                                                ▼
-  PHASE 1 — Crawl                                              PHASE 2 — AI Analysis
-  ├── eBay               (direct HTTP)                         Gemini 2.5 Flash
-  ├── Etsy               (direct HTTP)                         ├── Risk classification
-  ├── Amazon             (direct HTTP)                         ├── Origin region detection
-  ├── OLX Indonesia      (direct HTTP)                         ├── Provenance flag check
-  ├── Carousell          (direct HTTP)                         └── Risk score 1–10
-  ├── Tokopedia          (DuckDuckGo proxy)
-  ├── Shopee ID/SG/MY    (DuckDuckGo proxy)
-  └── Facebook Marketplace (DuckDuckGo proxy)
+  scraper.py (8-Day Interval Guard)
+        │
+        ├──► Gemini 2.5 Flash REST API + Google Search Tool
+        │      ├── Scans global keywords (eBay, Facebook, Forums, Auctions)
+        │      └── Extracts strict JSON (Title, Risk, Origin, Provenance)
+        │
+        ├──► Microlink.io API
+        │      └── Generates & backfills missing screenshot URLs
         │
         ▼
-  data.json  +  history.json  →  git push → repository
+  data.json & history.json
+        │
+        ▼
+  Git Commit & Push ──► GitHub Pages ──► Interactive Dashboard & Map
 ```
 
 ---
@@ -34,16 +38,16 @@ GitHub Actions (bi-weekly cron)
 ```json
 {
   "summary": {
-    "generated_at": "2025-01-15T02:43:12Z",
+    "generated_at": "2025-10-25T02:43:12Z",
     "total_listings": 1240,
     "high_risk_count": 37,
     "medium_risk_count": 112,
-    "alerts_by_platform": { "eBay": 14, "Etsy": 8, "Tokopedia": 7 },
+    "alerts_by_platform": { "eBay": 14, "Facebook": 8, "Sotheby's": 1 },
     "top_high_risk": [ ... ]
   },
   "listings": [
     {
-      "original_title": "Ancient Majapahit Bronze Shiva, NO PROVENANCE, private sale",
+      "original_title": "Ancient Majapahit Bronze Shiva, NO PROVENANCE",
       "platform": "eBay",
       "url": "https://...",
       "price_usd": 4500,
@@ -51,9 +55,10 @@ GitHub Actions (bi-weekly cron)
       "risk_score": 9,
       "origin_region": "Southeast Asia — Java, Indonesia",
       "provenance_flag": false,
-      "keyword_trigger": "majapahit bronze statue sale",
-      "reason": "Bronze deity matching known Majapahit iconography, seller explicitly states no provenance documents, priced below auction market value.",
-      "scraped_at": "2025-01-15T02:41:00Z"
+      "keyword_trigger": "majapahit artifact for sale",
+      "reason": "Bronze deity matching known Majapahit iconography, seller explicitly states no provenance documents.",
+      "scraped_at": "2025-10-25T02:41:00Z",
+      "screenshot_url": "[https://api.microlink.io/?url=](https://api.microlink.io/?url=)..."
     }
   ]
 }
@@ -75,27 +80,32 @@ Get a free key at [aistudio.google.com](https://aistudio.google.com).
 ### 2. Place files
 ```
 your-repo/
-├── .github/
-│   └── workflows/
-│       └── crawler.yml      ← GitHub Actions workflow
-├── scraper.py               ← Main scraper
-├── data.json                ← Auto-generated results (committed by bot)
-├── history.json             ← Crawl state tracker (committed by bot)
-└── scraper.log              ← Latest run log (uploaded as artifact)
+├── .github/workflows/
+│   └── crawler.yml         # GitHub Actions workflow
+├── scraper.py              # Main Python intelligence engine
+├── index.html              # The Dashboard UI
+├── data.json               # Auto-generated results (committed by bot)
+└── history.json            # Crawl state tracker (committed by bot)
 ```
 
 ### 3. Run manually
-Go to **Actions → Artifact Radar Auto Crawler → Run workflow**.
+
+Run Manually (Bypass 8-Day Guard)
+
+Go to Actions → Artifact Radar Auto-Crawler → Run workflow.
+
+Set Force crawl now to true if you want to bypass the 8-day waiting period and scan immediately.
 
 ---
 
 ## Schedule
 
-The crawler runs on the **1st and 15th of every month at 02:00 UTC**.
+The crawler runs on an interval of 8 days.
 
-A built-in 14-day guard in `scraper.py` also prevents redundant re-runs if the workflow is triggered too soon (e.g., after a `git push`).
+A built-in 8-day guard in `scraper.py` also prevents redundant re-runs if the workflow is triggered too soon (e.g., after a `git push`).
 
 To change the interval, edit `CRAWL_INTERVAL_DAYS` in `scraper.py`.
+
 
 ---
 
@@ -104,35 +114,16 @@ To change the interval, edit `CRAWL_INTERVAL_DAYS` in `scraper.py`.
 Edit `ARTIFACT_KEYWORDS` in `scraper.py`:
 
 ```python
-ARTIFACT_KEYWORDS = [
-    "belitung shipwreck artifact sale",
-    "your new keyword here",   # ← add here
-    ...
+KEYWORDS = [
+    # Add your targeted search patterns here:
+    "Roman glass unguentarium sale",
+    "stolen archaeological artefact alert",
+    "Mayan stela fragment sale"
 ]
 ```
 
----
+⚖️ Disclaimer
 
-## Limitations & Notes
+This tool is intended for cultural-heritage protection, academic research, and law-enforcement support purposes only, consistent with the 1970 UNESCO Convention on the Means of Prohibiting and Preventing the Illicit Import, Export and Transfer of Ownership of Cultural Property and the UNIDROIT 1995 Convention on stolen cultural objects.
 
-| Platform | Method | Notes |
-|----------|--------|-------|
-| eBay | Direct HTTP | Works well; rich structured data |
-| Etsy | Direct HTTP | Works; may return fewer results |
-| Amazon | Direct HTTP | May be rate-limited; adds captchas |
-| OLX ID | Direct HTTP | Works for Indonesian listings |
-| Carousell | Direct HTTP | Partial (static HTML only) |
-| Tokopedia | DuckDuckGo proxy | Indirect; limited depth |
-| Shopee (ID/SG/MY) | DuckDuckGo proxy | Indirect; limited depth |
-| Facebook Marketplace | DuckDuckGo proxy | Very limited — FB blocks crawlers heavily |
-
-For deeper FB/Shopee/Tokopedia coverage, consider integrating:
-- [Apify](https://apify.com) marketplace scrapers
-- [Oxylabs](https://oxylabs.io) or [BrightData](https://brightdata.com) residential proxies
-- Official marketplace APIs where available
-
----
-
-## Disclaimer
-
-This tool is intended for cultural-heritage protection research and law-enforcement support purposes only, consistent with the 1970 UNESCO Convention and UNIDROIT 1995 Convention on stolen cultural objects.
+License: MIT
