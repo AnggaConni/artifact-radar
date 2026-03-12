@@ -1,4 +1,4 @@
-#🏺 Artifact Radar v5.1 — Global Intelligence Engine
+#🏺 Artifact Radar v5.1 — Global Intelligence Engine 
 
 An automated cultural-heritage protection and geo-intelligence tool. It monitors the global online antiquities market for listings that may involve stolen, looted, or unprovenanced artifacts.
 
