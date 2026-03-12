@@ -319,6 +319,7 @@ GitHub Actions (Daily Cron)
       }
     }
 
+
     // --- GEOCODER (AI String -> Lat/Lng) ---
     function getApproximateCoordinates(regionStr) {
       if(!regionStr) return null;
@@ -342,6 +343,36 @@ GitHub Actions (Daily Cron)
       return null;
     }
 
+    // --- PLATFORM CATEGORIZER ---
+    function categorizePlatform(platformStr) {
+      if (!platformStr) return 'Unknown';
+      const p = platformStr.toLowerCase();
+      
+      // Kategori 1: E-Commerce & Marketplaces
+      if (p.includes('ebay') || p.includes('etsy') || p.includes('tokopedia') || p.includes('shopee') || p.includes('bukalapak') || p.includes('amazon') || p.includes('alibaba')) {
+        return 'E-Commerce';
+      }
+      // Kategori 2: Auctions & Specialist Houses
+      if (p.includes('auction') || p.includes('sotheby') || p.includes('christie') || p.includes('catawiki') || p.includes('heritage')) {
+        return 'Auctions';
+      }
+      // Kategori 3: Social Media & Video
+      if (p.includes('youtube') || p.includes('facebook') || p.includes('instagram') || p.includes('tiktok') || p.includes('twitter') || p.includes('reddit')) {
+        return 'Social Media';
+      }
+      // Kategori 4: News, Blogs & Media
+      if (p.includes('asumsi') || p.includes('news') || p.includes('kompas') || p.includes('bbc') || p.includes('article') || p.includes('blog') || p.includes('journal')) {
+        return 'News & Media';
+      }
+      // Kategori 5: Forums & Communities
+      if (p.includes('forum') || p.includes('board') || p.includes('community')) {
+        return 'Forums';
+      }
+      
+      return 'Other Web Sources';
+    }
+
+    // --- MAP INITIALIZATION & MARKER PLOTTING ---
     function initMap(listings) {
       if(map) return; // Prevent re-init
       
@@ -421,9 +452,10 @@ GitHub Actions (Daily Cron)
           if (score >= 8) highCount++; else if (score >= 4) medCount++; else lowCount++;
           if (item.provenance_flag) provYes++; else provNo++;
 
-          let plat = item.platform || item.source_name || 'Unknown';
-          plat = plat.split('.')[0].substring(0, 15); 
-          platformCounts[plat] = (platformCounts[plat] || 0) + 1;
+        // Hitung berdasarkan kategori, bukan nama domain spesifik
+        let rawPlat = item.platform || item.source_name || 'Unknown';
+        let category = categorizePlatform(rawPlat);
+        platformCounts[category] = (platformCounts[category] || 0) + 1;
         });
 
         document.getElementById('stat-total').textContent = summary.total_listings || listings.length || 0;
@@ -461,7 +493,7 @@ GitHub Actions (Daily Cron)
           }
         });
 
-        const topPlatforms = sortedPlatforms.slice(0, 4);
+        const topPlatforms = sortedPlatforms.slice(0, 6);
         if (barChartObj) barChartObj.destroy();
         barChartObj = new Chart(document.getElementById('barChart'), {
           type: 'bar',
