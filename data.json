@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-03-12T04:31:07.382363Z",
-    "total_listings": 33,
-    "high_risk_count": 18,
-    "medium_risk_count": 4,
+    "generated_at": "2026-03-12T04:57:25.000424Z",
+    "total_listings": 46,
+    "high_risk_count": 23,
+    "medium_risk_count": 7,
     "alerts_by_platform": {
       "Asumsi": 1,
       "Historia.ID": 1,
@@ -24,7 +24,7 @@
       "Live Science": 1,
       "Newsweek": 1,
       "Noonans Mayfair": 1,
-      "eBay": 2,
+      "eBay": 3,
       "Irish Examiner": 1,
       "Art & Object": 1,
       "Ancient Origins": 1,
@@ -33,7 +33,19 @@
       "Indonesian Tribal Art (South American Ethnographic Art section)": 1,
       "Smithsonian Magazine": 1,
       "UNESCO Courier": 1,
-      "The Spunky Curl": 1
+      "The Spunky Curl": 1,
+      "National Geographic": 1,
+      "Art for Eternity": 1,
+      "Al Jazeera": 1,
+      "NL Times": 1,
+      "YouTube (The Independent)": 1,
+      "The Jerusalem Post": 1,
+      "Arrowheads.com": 1,
+      "LiveAuctioneers": 1,
+      "VIP Fan Auctions": 1,
+      "Personified Collectibles": 1,
+      "Jackson Galleries": 1,
+      "SharingItForward": 1
     },
     "top_high_risk": [
       {
@@ -47,7 +59,8 @@
         "provenance_flag": false,
         "keyword_trigger": "jual artefak kuno majapahit",
         "reason": "Berita tentang pengembalian artefak Majapahit yang dicuri dan dijual secara ilegal oleh sindikat perdagangan barang antik internasional.",
-        "scraped_at": "2026-03-11T22:24:51.991606Z"
+        "scraped_at": "2026-03-11T22:24:51.991606Z",
+        "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKi_7G5rqf2FjjQvOXCRZRuhw4z4soXoFrdeVJUC9PdwNQWoKKZzEyFD0oMMbFn6InRck9HH0A6bM9fhtQD0jUxEh27b-utDZ-J9ZlNI4wyU8ZJBP4JyrIAJQt8GgCb2FuuL0Cq_j_ny32Uu86F9u0XbR2p1RZbVx4S1vjAigoiG0eBKjKO5bXeHHnIJPXYxB6vdglHFGMfr1hNv3BEWY_sfznut_9&screenshot=true&meta=false&embed=screenshot.url"
       },
       {
         "original_title": "AS Kembalikan Benda Bersejarah Peninggalan Majapahit ke Indonesia",
@@ -60,7 +73,8 @@
         "provenance_flag": false,
         "keyword_trigger": "jual artefak kuno majapahit",
         "reason": "Berita tentang pengembalian 30 artefak kuno, termasuk dari Majapahit, yang dijarah dan dijual secara ilegal oleh jaringan pedagang dan penyelundup artefak.",
-        "scraped_at": "2026-03-11T22:24:51.991614Z"
+        "scraped_at": "2026-03-11T22:24:51.991614Z",
+        "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsfhL5210LI8pyY5zwjeok7mj-ZoUiqsfSMehs8bjZz-QR2OowDl1Zy2GcUhgs8y_o4qMzGlHTsqvuCFCaA7hEtW4tFHn1Lx4V_YT-sEjAWvu9PFCS-FNTx9-0PJ4AXZE3G_8P-sLN9GtPiXVzcbHWddyrp4oyd5yGMImn_Tp68XtSkDeqoqMIj2hBpw-7S65VICw_a6VdmveH8hjdGYkVq1w%3D&screenshot=true&meta=false&embed=screenshot.url"
       },
       {
         "original_title": "First-Time Metal Detectorist Finds Ancient Stolen Treasure Worth Thousands",
@@ -73,7 +87,8 @@
         "provenance_flag": false,
         "keyword_trigger": "artifact found metal detector sale",
         "reason": "News article reporting the discovery of a hoard of *stolen* artifacts by a metal detectorist, directly indicating theft and illicit activity.",
-        "scraped_at": "2026-03-12T04:30:42.505294Z"
+        "scraped_at": "2026-03-12T04:30:42.505294Z",
+        "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuDTHWe_Z6q_3nO3GXqMNOqcPiNu5_KZMxl39wVRhLjGT08JisPWPlHjtbgEsGaqdUqN5MzREnDPWwBQ7LDzjp8_DDsUcJXYsBgPgiaktuQUGGeKbUOgDG7NXOdhLSjTxES3dxBlkZOEkp7_hfcN77Zaqx-xmsTWWBbJUYpkkCFdGO4D0NX-GIG6reI-hYgcbFOn9PturhJFaRC4VeZ0M6K1tzcTgn&screenshot=true&meta=false&embed=screenshot.url"
       },
       {
         "original_title": "Artefacts looted by treasure hunter returned",
@@ -86,7 +101,8 @@
         "provenance_flag": false,
         "keyword_trigger": "artifact found metal detector sale",
         "reason": "News article reporting the recovery of almost 900 illegally looted artifacts by a treasure hunter using a metal detector, highlighting the ongoing threat to archaeological heritage.",
-        "scraped_at": "2026-03-12T04:30:42.505302Z"
+        "scraped_at": "2026-03-12T04:30:42.505302Z",
+        "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTooNQt9PVKi7qUzm-hZOQBHmNHkiTFez3vzaqr4DkuPu1x4lCWHj5PiPD3HF90iBnambF_RUEujCJmsdlmGq1cM5BhB9fHNOuG5suU5Rw48doFbDU7iCbDKmxTcSEfKy6KRn5mhc40JjXXvtSj5IK&screenshot=true&meta=false&embed=screenshot.url"
       },
       {
         "original_title": "Officials Seize 27,000 Artifacts Looted by French Metal Detectorist",
@@ -99,7 +115,8 @@
         "provenance_flag": false,
         "keyword_trigger": "artifact found metal detector sale",
         "reason": "News article detailing the seizure of thousands of artifacts looted by a French metal detectorist, explicitly mentioning illegal activity and attempts to sell them.",
-        "scraped_at": "2026-03-12T04:30:42.505305Z"
+        "scraped_at": "2026-03-12T04:30:42.505305Z",
+        "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuNjkTp85mYITlbbxArLLLS56nyjC6eGCYL2-6CriXOo_M6rlgEt36QYHoYbKLEkJ5hlTdCKRPG1QMFaW6DNYxgZc6VDyssN9lADODtXKj_RZeURzo03mwZH_58J9HfSiZzEZx8QfRFa2hmyaJ0faM5tmYQD8677qZxOuLNHlX4XIUWbvEbKQzBXRFKdYEU63Jhb-xDaaL7TtYqHk%3D&screenshot=true&meta=false&embed=screenshot.url"
       }
     ]
   },
@@ -115,7 +132,8 @@
       "provenance_flag": false,
       "keyword_trigger": "jual artefak kuno majapahit",
       "reason": "Berita tentang pengembalian artefak Majapahit yang dicuri dan dijual secara ilegal oleh sindikat perdagangan barang antik internasional.",
-      "scraped_at": "2026-03-11T22:24:51.991606Z"
+      "scraped_at": "2026-03-11T22:24:51.991606Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKi_7G5rqf2FjjQvOXCRZRuhw4z4soXoFrdeVJUC9PdwNQWoKKZzEyFD0oMMbFn6InRck9HH0A6bM9fhtQD0jUxEh27b-utDZ-J9ZlNI4wyU8ZJBP4JyrIAJQt8GgCb2FuuL0Cq_j_ny32Uu86F9u0XbR2p1RZbVx4S1vjAigoiG0eBKjKO5bXeHHnIJPXYxB6vdglHFGMfr1hNv3BEWY_sfznut_9&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "AS Kembalikan Benda Bersejarah Peninggalan Majapahit ke Indonesia",
@@ -128,7 +146,8 @@
       "provenance_flag": false,
       "keyword_trigger": "jual artefak kuno majapahit",
       "reason": "Berita tentang pengembalian 30 artefak kuno, termasuk dari Majapahit, yang dijarah dan dijual secara ilegal oleh jaringan pedagang dan penyelundup artefak.",
-      "scraped_at": "2026-03-11T22:24:51.991614Z"
+      "scraped_at": "2026-03-11T22:24:51.991614Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsfhL5210LI8pyY5zwjeok7mj-ZoUiqsfSMehs8bjZz-QR2OowDl1Zy2GcUhgs8y_o4qMzGlHTsqvuCFCaA7hEtW4tFHn1Lx4V_YT-sEjAWvu9PFCS-FNTx9-0PJ4AXZE3G_8P-sLN9GtPiXVzcbHWddyrp4oyd5yGMImn_Tp68XtSkDeqoqMIj2hBpw-7S65VICw_a6VdmveH8hjdGYkVq1w%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Jual BARANG ANTIK// BARANG LANGKA// BARANG KUNO - 3 SULA MAJAPAHIT",
@@ -141,7 +160,8 @@
       "provenance_flag": true,
       "keyword_trigger": "jual artefak kuno majapahit",
       "reason": "Penjual secara eksplisit menyatakan bahwa barang tersebut adalah 'replika super' dan bukan artefak asli.",
-      "scraped_at": "2026-03-11T22:24:51.991616Z"
+      "scraped_at": "2026-03-11T22:24:51.991616Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVjo9l2PCeLjsS-yGxml2eFHrz0VaI5gunKELhZ6HEV8vS2IoYNCdHxIoBVSJrMrq2JH4fzLepcvfpwEnSUl6KeLdC9w2Yu8T4tEzGKFt8SVYBNXZ3IGL1sGevCVl19dc3EgKey_n7yBcDDJDDyqqcz3yk4HqlFbvmBvyPwM_fr1RWuZsnoq-DGqrmf4VcUIfGXI3CKJvWdzWNoW0xZbc%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Liontin Bandul Kalung Makoro Buto Ijo Dewa Temuan Peninggalan Kerajaan Hindu Budha Majapahit Kuno Antik Langka Sepuh",
@@ -154,7 +174,8 @@
       "provenance_flag": false,
       "keyword_trigger": "jual artefak kuno majapahit",
       "reason": "Barang diklaim sebagai 'temuan peninggalan' Majapahit. Penjualan artefak kuno tanpa bukti asal-usul yang jelas di marketplace umum berisiko tinggi. Harga dikonversi dari Rp1.055.500 dengan kurs perkiraan 1 USD = 15.500 IDR.",
-      "scraped_at": "2026-03-11T22:24:51.991618Z"
+      "scraped_at": "2026-03-11T22:24:51.991618Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa4mPrTWTLHBJHKe85jt3jiLiNgxPI6MFRPYde3x6b4js_TfXxBXdbXNR3ppxozw57gans77V-T82V5eHSMzJJPgelNdoVchrDy3FpXLsYWyBNq0au7j3IAt9RqEh-fmbuSmX0FaSmEqMxlvsVTizADXCSPm2Q35JPapy6pyrGmrsBxmzhqron_ZRnJMGFzIRflKxjsoTZF6_Ls7BXStypZw%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "KERIS TUA PENINGGALAN MAJAPAHIT DHAPUR JALAK NGORE PAMOR WENGKON",
@@ -167,7 +188,8 @@
       "provenance_flag": false,
       "keyword_trigger": "jual artefak kuno majapahit",
       "reason": "Diklaim sebagai keris tua peninggalan Majapahit. Penjualan pusaka dan artefak kuno tanpa dokumentasi asal-usul yang sah di marketplace publik sangat berisiko. Harga dikonversi dari Rp4.800.000 dengan kurs perkiraan 1 USD = 15.500 IDR.",
-      "scraped_at": "2026-03-11T22:24:51.991619Z"
+      "scraped_at": "2026-03-11T22:24:51.991619Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9eblCk389rN91zYPeMNwf_OqqZWGr4BnxYCFonE9wl_RheCtGoNxFpXMm0dKQ0uy60OP-uBAs6eKR_fhsyZ5-eVo8k2DrKjpZ1ecICzk9wf7s6UQC_ueOR2-cqbmxMHsZRQLD-EAajTB8Rmx00yR7YF9JDfJbGEKNSKUd5zDjs5_osdhg7M7h9miMRtTb3mCODB9ocaULqEgc-YbFwbxPmmxiWxlHiWhJk5qx&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Kolektor barang antik dan artefak merapat! di Pasar Loak Jatinegara dijual keris dan benda peninggalan Majapahit yang langka",
@@ -180,7 +202,8 @@
       "provenance_flag": false,
       "keyword_trigger": "jual artefak kuno majapahit",
       "reason": "Artikel berita yang melaporkan penjualan keris dan benda peninggalan Majapahit di pasar loak, yang seringkali tidak memiliki dokumentasi asal-usul yang jelas.",
-      "scraped_at": "2026-03-11T22:24:51.991621Z"
+      "scraped_at": "2026-03-11T22:24:51.991621Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvH4u-4AtN3TzlRFmLF2vFHC-XJ4wAFGToEVb4V2a4BBFlW-YTuLjPAKaN5cPL1NvO3fvzaeeXrkvkpEmPyDTXG71fMpk1rGxHRjwfNHDXS9EFgnwyYKAVz1E3XoMBwq-lfO1tgN3Z7Vd6zPgGygTtshsLcXgzxPjRFKOMZ2wxIekoxM1o13VNGmIyR--mR-sMvNmACkfPq0df9ZBjA47Fmk949x-BT-bdKMm9PVNujzYxVCMwZSITh8CNxDpQ1NuqyMoBis_aSPFx7I4PVV-v68m_gpPgHcmxdJd6VsQ%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Pemaharan&Lelang Pusaka Warung Antik",
@@ -193,7 +216,8 @@
       "provenance_flag": false,
       "keyword_trigger": "jual artefak kuno majapahit",
       "reason": "Saluran YouTube yang mempromosikan 'pemaharan' dan lelang pusaka yang diklaim sebagai peninggalan Majapahit, yang berpotensi melibatkan perdagangan artefak tanpa izin. Konten video tidak tersedia, sehingga detail harga tidak dapat diverifikasi.",
-      "scraped_at": "2026-03-11T22:24:51.991622Z"
+      "scraped_at": "2026-03-11T22:24:51.991622Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLHU5wgzci1DYT08s4aqW1IeIxrfK_tnwqNwA4SgpjuB95fko9GumooJCcO-vqtpkGe7gZQdFFwjiYnUSiTA45jzyDbB2KEcp8zevJ1dZpF3wtVzLWUwzrkVq_QSI0s79zaSKBzIg%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "ANCIENT ROMAN IRON GLADIUS SWORD",
@@ -206,7 +230,8 @@
       "provenance_flag": true,
       "keyword_trigger": "roman legionary gladius authentic",
       "reason": "Auction listing for an ancient Roman iron gladius sword. While a private UK collection and formation in the 1990s is stated as provenance, the antiquities market inherently carries risks regarding the ultimate legal and ethical origin of artifacts.",
-      "scraped_at": "2026-03-11T22:36:19.269130Z"
+      "scraped_at": "2026-03-11T22:36:19.269130Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBm272yYirphIbabmRewY90Kjr6a09b_xVYQ4WcwCKYR_0VMvisjCaV0HfY2k60ygNdrzDHc7ET1tg55i3HnfMBqSfqyqRO8G0kOpYT2NRPNnCC3Zwl9QHy_OplTgtVy3XrU-Du_eWg1A44w7djUYJIFeaFzHj8_KUlFNBUZiU6p9vOirSb2JDlhX1bnhYH0%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Collectable Authentic Ancient Roman Legionary Bronze Sword with Dragon Handle",
@@ -219,7 +244,8 @@
       "provenance_flag": false,
       "keyword_trigger": "roman legionary gladius authentic",
       "reason": "Listing on a general marketplace (Etsy) claiming an 'authentic ancient Roman' artifact at a sale price of $262.50. This price is highly suspicious for a verified authentic ancient artifact, raising significant concerns about its true authenticity and potential misrepresentation, especially without detailed provenance.",
-      "scraped_at": "2026-03-11T22:36:19.269140Z"
+      "scraped_at": "2026-03-11T22:36:19.269140Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnqet4cd0Jiz63O1BctQQaw37dXN0sVseNErT98ccSF5R49cH9kw-m3puNf-CTdBmXH0hJbse7GkGWacHq77O4RvZhoyZPv6DVrBNBmPVSvcroGigVKXHF3wKqJ5SPB7i39DI88s51aXe3y6k%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Purchasing a Roman Gladius: : r/SWORDS",
@@ -232,7 +258,8 @@
       "provenance_flag": false,
       "keyword_trigger": "roman legionary gladius authentic",
       "reason": "Collector forum discussion where a user seeks advice on authenticating Roman gladius swords for sale on marketplaces like eBay. This highlights the inherent difficulties and risks associated with verifying the authenticity of such artifacts and the absence of a standardized authentication body for ancient swords.",
-      "scraped_at": "2026-03-11T22:36:19.269143Z"
+      "scraped_at": "2026-03-11T22:36:19.269143Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEA5fyMEEpvnEGaeRKIWt5qNYF04gmi31qpEYK07Ujr-8uKoMeXiMkBtQk9zVo4OXkiJh7sdAQcUSNP59ocvYMJAzjmfoWWGL4Ii99GrGUck0fXsHYMXxxj85MQLdVEddJh5FRRJpHB2nRCv-cIeoEBFh3ioc5tpOuQiiIfIa1pFYVtrZNStw%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "An important parcel-gilt silver Sogdian saddle cup, Central Asia, 7th/8th century",
@@ -245,7 +272,8 @@
       "provenance_flag": true,
       "keyword_trigger": "sogdian silver vessel sale",
       "reason": "Legitimate auction listing from a major auction house. Detailed description and historical context are provided, mentioning connections to Hellenistic and Sassanian worlds, Central Asian motifs, and scholarly references. The auction is closed, and the final price is not available in the snippet.",
-      "scraped_at": "2026-03-11T22:36:45.149621Z"
+      "scraped_at": "2026-03-11T22:36:45.149621Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWJFp6wN4bV1CGm5JZqs_ENC0x5bFy4G1GkfuErGXezKeoXC8kuxzR_neayXXwfJYM0TaE6drTZogSP658dCsiwBqLh2rdVfu2ETqG6Ll85_AwaPwat0yQoppsD734IlATZXz6czpYR_obrVaQGnahgBMgvyeTrGzVXbqLPUvscg2yIh6QUhfvyQmOU5z-t4DnflO0CweaSCry8SYl7BPkGh3kBZ2bW0AUse4kYSJzoAGv_CclL8WGl384mCt6ewroVtSWeO3IPbmzswvzzjIFjsSkuNdRvagCwQ%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "AN EARLY ISLAMIC SILVER DISH , PROBABLY SOGDIAN, CENTRAL ASIA, CIRCA 8TH CENTURY",
@@ -258,7 +286,8 @@
       "provenance_flag": true,
       "keyword_trigger": "sogdian silver vessel sale",
       "reason": "Legitimate auction listing from a major auction house. A detailed lot essay with historical and artistic context is provided. The final hammer price is not available in the snippet, only estimates are mentioned.",
-      "scraped_at": "2026-03-11T22:36:45.149629Z"
+      "scraped_at": "2026-03-11T22:36:45.149629Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgLWTN5G5rwZho90wkY_QMhZNjH2kiw8-X4JIrbmllGws7ho-N4Ra4_e5lOKWNJ0b_2ijO-W38330h6hJD51tMyJp1zLPOk7YPSOC-n3az4leVPEDT_KN2n3oJwjjQEpS5cicTG-8%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Western Asiatic Sogdian Silver Bowl with Animals",
@@ -271,7 +300,8 @@
       "provenance_flag": true,
       "keyword_trigger": "sogdian silver vessel sale",
       "reason": "Information about a past auction of a Sogdian silver bowl in the United Kingdom. Provenance is stated as 'Property of a London collector, acquired early 1990s.' Price is not available.",
-      "scraped_at": "2026-03-11T22:36:45.149631Z"
+      "scraped_at": "2026-03-11T22:36:45.149631Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBfy0yfiw38-6yFSweYaKMfmbgX5R12ZbWVuvFaE7QdD2J6-2opJRhkqjcuOfkarRucrBxnqju46rgFB-Lc9Vg4Say6gvqnaLp-FwUAdEFXCQ7BTagKYUd49HfxEVI76586UF_XauKGIvn1kMcL88Bl2MvbvX9eSZ0tvO5m9tudLGOWfJGWbYclDDu2SaNHOoYDb2RdGX2ncmJPCBVWZx4ZpteqeCc5y0nTwdkwG-lgpOHuepIRg%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Lot 237 Large Sogdian Silver-Gilt Wild Boar Rhyton With Tim Wonnacott",
@@ -284,7 +314,8 @@
       "provenance_flag": true,
       "keyword_trigger": "sogdian silver vessel sale",
       "reason": "Promotional video for an upcoming auction of a Sogdian silver-gilt wild boar rhyton by Timeline Auctions. The estimated price is between £60,000 and £80,000 (approximately $75,000 - $100,000 USD). Provenance includes mentions of black and white photographs of the vessel from the 1970s.",
-      "scraped_at": "2026-03-11T22:36:45.149632Z"
+      "scraped_at": "2026-03-11T22:36:45.149632Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8qu2vp2M-EjHEHl6R8NR2e_wyva7DhABtYOfFX6QTHScZwbLFMcDk4yw4QGaagBDtxyXGdQFySyIob1KcPSVH-ekbRJe1olqFX4h7fT6fWF3avX-fZ293JMovQy-NKZWnBQ6ATw%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "A Sogdian Silver Vessel Mahabharatha",
@@ -297,7 +328,8 @@
       "provenance_flag": true,
       "keyword_trigger": "sogdian silver vessel sale",
       "reason": "Academic paper detailing a specific Sogdian silver vessel with a scene from the Mahabharata. It discusses its suggested origin and provenance through various collections, including Paul Pelliot, Louis Hambis, and Melle Gobard. It is not a current listing or news of a sale.",
-      "scraped_at": "2026-03-11T22:36:45.149634Z"
+      "scraped_at": "2026-03-11T22:36:45.149634Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFk22AErycvzRWAGsY_tvzd8GdlkvtRT521YjDsCe6DilpX0Biq0ueyoeFZgFGQ5AyNI9J0ZBuAm1Cve0acg9nmMHBQ4kEy7j0bpggyJk_iAhCGS077MtquxSh1SHa4jnWu5McGAO6iOioT5WjsqeOQLL--cXcQSbBzwcrrnGfX0g%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Silver Vessels",
@@ -310,7 +342,8 @@
       "provenance_flag": true,
       "keyword_trigger": "sogdian silver vessel sale",
       "reason": "Description of Sogdian silver vessels held in the Cleveland Museum of Art's collection. Provides information about their style and origin, but not a sale or marketplace listing.",
-      "scraped_at": "2026-03-11T22:36:45.149635Z"
+      "scraped_at": "2026-03-11T22:36:45.149635Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGc8U8Sw0EdU3G0IL_8lBKHrb19WHirZkBQcJpaHZNyy9qWvqbDPkqKGXu9F0X6tLLFXeyIPraKg5zKSPRCZx7GIbo-i1XzrjAo2gMQdVDKcZVmrhgovVResh5rx-4Cz56OSg%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Looted Antiquities from Syria Are Being Sold on Facebook Marketplace - MUZEA",
@@ -323,7 +356,8 @@
       "provenance_flag": false,
       "keyword_trigger": "palmyra relief fragment sale",
       "reason": "News report highlighting the ongoing illicit trade of looted antiquities from Palmyra, Syria, specifically mentioning their sale on Facebook Marketplace. This indicates a high risk of illegal trafficking and lack of legitimate provenance.",
-      "scraped_at": "2026-03-12T04:30:12.662681Z"
+      "scraped_at": "2026-03-12T04:30:12.662681Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPTLVIrD1yi_rYBk_tl1uWMhQz9MTPZjHqg-r5mlzhSAOZ12FbPKVqWFXQicUbW4becUSLZG4-y5xVu6dCpNiJfso5L_Ze-E-hPF04DJU0wOAsq9FjNnUn-964bzmP2qR1lv-C66FbdNEdKNpqtzpBXfZNBcxcUGG_Vf1B32-kUtiAivae5uENnWesypIT-GyQq1IeUhHXWx9BXA%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "'Illegal' metal detectorist found a huge hoard of Roman treasure in Germany — and kept it hidden for 8 years",
@@ -336,7 +370,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "News article detailing an illegal discovery and concealment of Roman treasure by a metal detectorist, indicating a lack of legal declaration and potential illicit sale.",
-      "scraped_at": "2026-03-12T04:30:42.505269Z"
+      "scraped_at": "2026-03-12T04:30:42.505269Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5PpQUZAdGWjx06eB1poOBK3RLJaU93GZuOVGw3TKI2ZicRH2J-mL8YDXvLXnefLWVh2f7iscj6R75JfOAzdkLcGbLEkSD7pJiVwUOIxgvTpJ-HDGaRKfPsIaug7uSD9E-exCyIovvTF6cNQBjQkJZkIKLdpk9bQyqk_z5y2_-44tjRo95UXoXlW441u5GJZ2xdaF38MPYyUBZZs719hDbdqNDFHKRVLgxGBoP6V5Ml5yZNRsXDIsnSAlvF_5fFC3Tn3dQju7dqn9z6UtTorPHF1-7&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "100 Roman coin, low grade metal detector finds, 1st-5th century AD",
@@ -349,7 +384,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "Marketplace listing for ancient Roman coins explicitly stated as 'metal detector finds' with no clear provenance or legal documentation, implying a high risk of illicit trade.",
-      "scraped_at": "2026-03-12T04:30:42.505280Z"
+      "scraped_at": "2026-03-12T04:30:42.505280Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjyn4iit_BgKPOZzmf5vmh1Erlvj-QSgebUyhSGyWpkSiTCxWFZ5tybycqSUz44kyhv7gPSZlu7NKngAbK6FphoeFWxpoN0xLCV4RmhQpiqQdzqD-4fvsCRvbYQwIfYOL2-pdknnswsWgzfw%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "First-Time Metal Detectorist Finds Ancient Stolen Treasure Worth Thousands",
@@ -362,7 +398,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "News article reporting the discovery of a hoard of *stolen* artifacts by a metal detectorist, directly indicating theft and illicit activity.",
-      "scraped_at": "2026-03-12T04:30:42.505294Z"
+      "scraped_at": "2026-03-12T04:30:42.505294Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuDTHWe_Z6q_3nO3GXqMNOqcPiNu5_KZMxl39wVRhLjGT08JisPWPlHjtbgEsGaqdUqN5MzREnDPWwBQ7LDzjp8_DDsUcJXYsBgPgiaktuQUGGeKbUOgDG7NXOdhLSjTxES3dxBlkZOEkp7_hfcN77Zaqx-xmsTWWBbJUYpkkCFdGO4D0NX-GIG6reI-hYgcbFOn9PturhJFaRC4VeZ0M6K1tzcTgn&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Detectorist Hoards Sold at Auction",
@@ -375,7 +412,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "Auction house specializing in 'Detectorist Finds' and highlighting past sales, including a Roman gold aureus for £460,000. While an established auction house, the term 'detectorist finds' often implies a lack of full archaeological context, thus carrying a medium risk regarding provenance.",
-      "scraped_at": "2026-03-12T04:30:42.505297Z"
+      "scraped_at": "2026-03-12T04:30:42.505297Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErP4O9NQNi752yDQxhoPCu-_62lTgC1gS7bcQUEHy2YW6X-95kzEw3KmKUoqx4QOTS20g7MWrVuCdwgZy84uu7-EnkTCz7jprDcvC56R42WLrKbpnENeophtCy0g1mI9RSI4vLMVnNCM5Pt_JA7UaHJX1X&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Metal Detector Finds for sale",
@@ -388,7 +426,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "General marketplace category for 'Metal Detector Finds' on eBay, indicating a wide range of items potentially lacking proper provenance and legal documentation, leading to a high risk of illicit trade.",
-      "scraped_at": "2026-03-12T04:30:42.505300Z"
+      "scraped_at": "2026-03-12T04:30:42.505300Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYxNmHVewOCQyl9uiGFkajo-QZpEFHWV-kN1wsNgNy0Mh452dWeL4QQxZp-DCloYUF3RvfUg92VMqwxGuaB2PnVUoLKaP-xEYrqB9ocBqHg6kMXzyfchU2y4g62lMaCXilEeOFlsYzdURl4uXRzVIg0mObtclQUxw%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Artefacts looted by treasure hunter returned",
@@ -401,7 +440,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "News article reporting the recovery of almost 900 illegally looted artifacts by a treasure hunter using a metal detector, highlighting the ongoing threat to archaeological heritage.",
-      "scraped_at": "2026-03-12T04:30:42.505302Z"
+      "scraped_at": "2026-03-12T04:30:42.505302Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTooNQt9PVKi7qUzm-hZOQBHmNHkiTFez3vzaqr4DkuPu1x4lCWHj5PiPD3HF90iBnambF_RUEujCJmsdlmGq1cM5BhB9fHNOuG5suU5Rw48doFbDU7iCbDKmxTcSEfKy6KRn5mhc40JjXXvtSj5IK&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Officials Seize 27,000 Artifacts Looted by French Metal Detectorist",
@@ -414,7 +454,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "News article detailing the seizure of thousands of artifacts looted by a French metal detectorist, explicitly mentioning illegal activity and attempts to sell them.",
-      "scraped_at": "2026-03-12T04:30:42.505305Z"
+      "scraped_at": "2026-03-12T04:30:42.505305Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuNjkTp85mYITlbbxArLLLS56nyjC6eGCYL2-6CriXOo_M6rlgEt36QYHoYbKLEkJ5hlTdCKRPG1QMFaW6DNYxgZc6VDyssN9lADODtXKj_RZeURzo03mwZH_58J9HfSiZzEZx8QfRFa2hmyaJ0faM5tmYQD8677qZxOuLNHlX4XIUWbvEbKQzBXRFKdYEU63Jhb-xDaaL7TtYqHk%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Five More Prison Years For Metal Detectorist Jailed for Stealing $3.6million Hoard",
@@ -427,7 +468,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "News article about a metal detectorist jailed for stealing and selling a valuable Viking treasure hoard, explicitly detailing illegal concealment and sale.",
-      "scraped_at": "2026-03-12T04:30:42.505307Z"
+      "scraped_at": "2026-03-12T04:30:42.505307Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiqukdkogDP0IwBLOcrDsQ6yOudAwBrET0mKOcM9Vo0gbwql71jdJrh2DsHdO1w05JkNfWN9dkADNk5TKwqM7n6LpbHldTLD0NIMLjSfcH2wruTYw9r_nTCSTe37Li75e7IPN3NnDOFViw3g1Gy7JAHA2ax_Iis0btTU86pIafhR-3&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Buy Rare Coins and Collectible Relics",
@@ -440,7 +482,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "Online store selling 'Rare Coins and Collectible Relics', stating that some inventory are 'metal detecting finds'. The lack of detailed, verifiable provenance for each 'find' presents a medium risk.",
-      "scraped_at": "2026-03-12T04:30:42.505310Z"
+      "scraped_at": "2026-03-12T04:30:42.505310Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-mkVToY4uvI9_gBTIWTjCVb7IjWGrbCflGLVALXcwmQqflI-pbIMK8Lr3s07ClSeS_e9IF-KeZs0HULE9mf5vGqBWyMZ6P6NH2eH8KfenzZBXP11ko9XDUVXqucQ%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Antiques Gepid Artifact found with metal detector",
@@ -453,7 +496,8 @@
       "provenance_flag": false,
       "keyword_trigger": "artifact found metal detector sale",
       "reason": "Specific eBay listing for an 'Antiques Gepid Artifact found with metal detector'. The sale of an artifact of this historical significance on an open marketplace without explicit, verifiable provenance constitutes a high risk of illicit trade.",
-      "scraped_at": "2026-03-12T04:30:42.505313Z"
+      "scraped_at": "2026-03-12T04:30:42.505313Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETopbkcsz92apvlUlpyhsITap8HARXTSn_QLaW1sbd1xOQPk8zHXP7sZ-JTkgK0lZbis8PHXbNxk5a3wMIr8A78wj6mlrHzgFZ2_LcTetfxHyP_fHxBjUa9GmC_stFzdo%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "South American Artifacts - Stone Sculpture - Tiwanaku Figurine - Brian Stephenson Fine Art",
@@ -466,7 +510,8 @@
       "provenance_flag": false,
       "keyword_trigger": "tiwanaku puma figure sale",
       "reason": "Listing for a Tiwanaku feline figurine (Chachapuma) with stated provenance 'field collected Tiwanaku, 1974', but with a disclaimer that it 'might be an early 20th century replica'. The origin is vague and raises concerns about illicit trafficking if it were an authentic artifact. The lack of a clear, verifiable chain of ownership makes it high risk.",
-      "scraped_at": "2026-03-12T04:31:07.382318Z"
+      "scraped_at": "2026-03-12T04:31:07.382318Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//brianstephenson.com/south-american-artifacts/stone-sculpture/tiwanaku-figurine.html&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Handmade Pre Columbian Shaman Puma Idol, Pre Inca Andean Tribal Art, Ceremonial Tiwanaku Pottery, Peru Bolivia Clay Sculpture - Etsy",
@@ -479,7 +524,8 @@
       "provenance_flag": false,
       "keyword_trigger": "tiwanaku puma figure sale",
       "reason": "Marketplace listing for a 'Handmade Pre Columbian Shaman Puma Idol'. While explicitly handmade, the use of 'Pre Columbian' in the title could be misleading to some buyers regarding its age and authenticity as an artifact. It is likely a modern art piece inspired by ancient styles.",
-      "scraped_at": "2026-03-12T04:31:07.382327Z"
+      "scraped_at": "2026-03-12T04:31:07.382327Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//www.etsy.com/listing/968032746/handmade-pre-columbian-shaman-puma-idol&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "South American Ethnographic Art - Stone Sculpture - Tiwanaku Figurine",
@@ -492,7 +538,8 @@
       "provenance_flag": false,
       "keyword_trigger": "tiwanaku puma figure sale",
       "reason": "Listing for a Tiwanaku feline figurine (Chachapuma) with stated provenance 'field collected Tiwanaku, 1974', but with a disclaimer that it 'might be an early 20th century replica'. The origin is vague and raises concerns about illicit trafficking if it were an authentic artifact. The lack of a clear, verifiable chain of ownership makes it high risk.",
-      "scraped_at": "2026-03-12T04:31:07.382329Z"
+      "scraped_at": "2026-03-12T04:31:07.382329Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//indonesian-tribal-art.com/south-american-artifacts/stone-sculpture/tiwanaku-figurine.html&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "Archaeologist Reconstructs Ruins of Tiwanaku Temple in Bolivia Using 3-D Printing Technology - Smithsonian Magazine",
@@ -505,7 +552,8 @@
       "provenance_flag": false,
       "keyword_trigger": "tiwanaku puma figure sale",
       "reason": "News article discussing the reconstruction of Tiwanaku, mentioning that 'looting over the past 500 years has left Pumapunku in fragments'. While not directly about a specific puma figure sale or theft, it provides context on the historical plundering of Tiwanaku artifacts.",
-      "scraped_at": "2026-03-12T04:31:07.382331Z"
+      "scraped_at": "2026-03-12T04:31:07.382331Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//www.smithsonianmag.com/smart-news/archaeologist-reconstructs-ruins-tiwanaku-temple-bolivia-using-3-d-printing-technology-180971166/&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "The secrets of Tiwanaku, revealed by a drone | The UNESCO Courier",
@@ -518,7 +566,8 @@
       "provenience_flag": false,
       "keyword_trigger": "tiwanaku puma figure sale",
       "reason": "News article mentioning that 'Tiwanaku was brutally plundered' and that 'much of its valuable heritage disappeared'. Provides general information about the illicit trade of artifacts from the region.",
-      "scraped_at": "2026-03-12T04:31:07.382332Z"
+      "scraped_at": "2026-03-12T04:31:07.382332Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//en.unesco.org/courier/2018-2/secrets-tiwanaku-revealed-drone&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
       "original_title": "A Visitor's Guide to Tiwanaku and Puma Punku in Bolivia | The Spunky Curl",
@@ -531,7 +580,190 @@
       "provenance_flag": false,
       "keyword_trigger": "tiwanaku puma figure sale",
       "reason": "Travel guide mentioning that the Tiwanaku Site Museum showcases 'exceptional artifacts including painted ceramics, bone fragments, stone pumas, and a mummy'. This indicates the existence of such figures and their presence in museums, which is relevant context.",
-      "scraped_at": "2026-03-12T04:31:07.382333Z"
+      "scraped_at": "2026-03-12T04:31:07.382333Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//thespunkycurl.com/tiwanaku-puma-punku-bolivia/&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Gold Looted From Ancient Empire Returned to Romania",
+      "platform": "National Geographic",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGE7WQKlH_yaWeOrklxyuQSZhWJaaqVxxodCeHVQbn3QIhAH58y92iatrv7sCAoC6bbdxp4xyte632GqTfUtGcV_TFmZu3ivrng8FQs0BkX20Ed9smJNh8B_HTCIQF8_OVDtWSGkbZas0tB4-aoqypg0eyQzR8DOXSEaoJhtA9AyzEA4OU-nqkEi9K28-3XoHkezHYJkzs8xETi05jWbHRxtPyhKnfmso=",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Thrace (Dacian)",
+      "provenance_flag": false,
+      "keyword_trigger": "thracian gold treasure sale",
+      "reason": "News article detailing the looting of Dacian gold bracelets, their appearance at a Christie's auction in 1999 (Lot 26, which was not sold but remains missing), and ongoing efforts by Romanian authorities to recover stolen artifacts. The article highlights the illicit trade of these items.",
+      "scraped_at": "2026-03-12T04:56:14.434071Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGE7WQKlH_yaWeOrklxyuQSZhWJaaqVxxodCeHVQbn3QIhAH58y92iatrv7sCAoC6bbdxp4xyte632GqTfUtGcV_TFmZu3ivrng8FQs0BkX20Ed9smJNh8B_HTCIQF8_OVDtWSGkbZas0tB4-aoqypg0eyQzR8DOXSEaoJhtA9AyzEA4OU-nqkEi9K28-3XoHkezHYJkzs8xETi05jWbHRxtPyhKnfmso%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Greek Thracian Gold Fibula",
+      "platform": "Art for Eternity",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGa2c5Gzrs_rceRf4HJVd-m1y6cZ8fA_DeY3cBNi7c38LRmKiidX-OIpabzbB0WSUDub4v5fep_on2SLzcEapD2OeJsKM_k5NL7Psl5s3dGVNq22icB18OQan5qM-XxG53Uof3UUGuBZVxC3FVe",
+      "price_usd": 7637.01,
+      "status": "MEDIUM RISK",
+      "risk_score": 5,
+      "origin_region": "Thrace",
+      "provenance_flag": true,
+      "keyword_trigger": "thracian gold treasure sale",
+      "reason": "Direct marketplace listing for a 'Greek Thracian Gold Fibula' with a stated provenance: 'Private Cleveland, Ohio Collection; purchased from Fortuna Fine Arts, New York, acquired 26th, May 2005.' While provenance is stated, the antiquity market always carries some risk regarding authenticity and complete ownership history.",
+      "scraped_at": "2026-03-12T04:56:14.434313Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGa2c5Gzrs_rceRf4HJVd-m1y6cZ8fA_DeY3cBNi7c38LRmKiidX-OIpabzbB0WSUDub4v5fep_on2SLzcEapD2OeJsKM_k5NL7Psl5s3dGVNq22icB18OQan5qM-XxG53Uof3UUGuBZVxC3FVe&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Sofia Bulgaria Thracian Golden Treasure From Panagyurishte Natl History Museum - Postcard",
+      "platform": "eBay",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAKLt6ql-PU5N1B3s50E6u_mpeFuMsDphxy3h0F_y7J6JlqlCPPvIVoNESBQg0L6zeQM5Lge8g65S9KkEgtR96jYGz85Y-SYwfVkq_FfIvLPjjHDtTg6_SeZKzlUKhGjE=",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 1,
+      "origin_region": "Unknown (postcards can be from anywhere)",
+      "provenance_flag": false,
+      "keyword_trigger": "thracian gold treasure sale",
+      "reason": "Listing is for a vintage continental postcard depicting the Thracian golden treasure from the Panagyurishte National History Museum, not the actual treasure itself.",
+      "scraped_at": "2026-03-12T04:56:14.434335Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAKLt6ql-PU5N1B3s50E6u_mpeFuMsDphxy3h0F_y7J6JlqlCPPvIVoNESBQg0L6zeQM5Lge8g65S9KkEgtR96jYGz85Y-SYwfVkq_FfIvLPjjHDtTg6_SeZKzlUKhGjE%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Bulgarian treasures lost to raiders",
+      "platform": "Al Jazeera",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-JIWlhUk3T6VNa2ZyjHqiSiT3FX6Em4-CcNZJZv82CO3zvn9cAP3avqDYiaoBKHeXAY99aNiBXaiibftf-7R5AUWty4iGyNSL4zmQgFsNa5W8jELKoNvl5oUgPqfQ_xE0PeCYbtI905g_bm4cmk1Ts5ugSyIAR9i8Hy1s3KOK0o1rK6uY=",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 7,
+      "origin_region": "Bulgaria (Thrace)",
+      "provenance_flag": false,
+      "keyword_trigger": "thracian gold treasure sale",
+      "reason": "News article reporting on the ongoing issue of looters stealing Thracian antiquities in Bulgaria, highlighting the loss of cultural heritage. It does not list specific items for sale but indicates a high-risk environment for such artifacts.",
+      "scraped_at": "2026-03-12T04:56:14.434351Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-JIWlhUk3T6VNa2ZyjHqiSiT3FX6Em4-CcNZJZv82CO3zvn9cAP3avqDYiaoBKHeXAY99aNiBXaiibftf-7R5AUWty4iGyNSL4zmQgFsNa5W8jELKoNvl5oUgPqfQ_xE0PeCYbtI905g_bm4cmk1Ts5ugSyIAR9i8Hy1s3KOK0o1rK6uY%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "One Romanian gold theft suspect jailed, another offered a deal; Prosecutors release one",
+      "platform": "NL Times",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPpNbDbMzieRiQlFcYNNRFxQbFuT4bUxrZ3y14Fp-vKVZspPvpSBEM1Wr9-YZJ-Aj0A0mvggjh-5VZQfmcuBeLCo-3D5JJ7_SISpkGf6gAzv3Ym3_6fdR2s8E-c-eYCW5dAsHJrElPi53GUCiJb_26z9Gx2cGUlEEGfna06ljIltB2Jb2xR-42bzOP4JChYFobIGJtOs0TiVQCrDZe7LD1_zUtJ4FKnwDVicgs",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Romania (Dacian/Thracian)",
+      "provenance_flag": false,
+      "keyword_trigger": "thracian gold treasure sale",
+      "reason": "News reporting on the theft of Dacian gold artifacts, including a 2,500-year-old golden helmet and three golden bracelets, from the Drents Museum in January 2025. The items are still missing, indicating a high risk of illicit sale attempts.",
+      "scraped_at": "2026-03-12T04:56:14.434370Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPpNbDbMzieRiQlFcYNNRFxQbFuT4bUxrZ3y14Fp-vKVZspPvpSBEM1Wr9-YZJ-Aj0A0mvggjh-5VZQfmcuBeLCo-3D5JJ7_SISpkGf6gAzv3Ym3_6fdR2s8E-c-eYCW5dAsHJrElPi53GUCiJb_26z9Gx2cGUlEEGfna06ljIltB2Jb2xR-42bzOP4JChYFobIGJtOs0TiVQCrDZe7LD1_zUtJ4FKnwDVicgs&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Museum heist gang blow open doors to steal 2,500-year-old gold artefact",
+      "platform": "YouTube (The Independent)",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpuXqFoqq2AZeJQAVvke5szHIPXRJLaB5egar404Lz7Ncl2P4q-F_gt2dOLVVwT3rACsahifdf5RfWYYMujLZvpyUT7j2CrgBDvcUzHMlfF5ueEIUP6OetxEtPg6JnCLabclr9mFQ=",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Romania (Dacian/Thracian)",
+      "provenance_flag": false,
+      "keyword_trigger": "thracian gold treasure sale",
+      "reason": "News video reporting on the theft of a rare gold Coțofenești helmet and three Dacian royal bracelets from the Drents Museum in January 2025. The artifacts are stolen and therefore at high risk of illicit trade.",
+      "scraped_at": "2026-03-12T04:56:14.434393Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpuXqFoqq2AZeJQAVvke5szHIPXRJLaB5egar404Lz7Ncl2P4q-F_gt2dOLVVwT3rACsahifdf5RfWYYMujLZvpyUT7j2CrgBDvcUzHMlfF5ueEIUP6OetxEtPg6JnCLabclr9mFQ%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Four men on trial for theft of 2,100-year-old Celtic gold treasure from",
+      "platform": "The Jerusalem Post",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdZviO4aBj4gUNWY-lsd1OMB3o9hWuJwvPUdEcsgJL-gSTh9XUnBxwUeP6x8jqT1-TfxRWsHt7iqVSzgojFgyncnYJoLg2cTf9OQmrMQhLimLySluw_959Y3jiU68kRv90P16rip4DiVUfKzbnzGW6QDhU8TCdujhcBkltxmdyJBm-NEZlzXo-",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 8,
+      "origin_region": "Germany (Celtic, not Thracian)",
+      "provenance_flag": false,
+      "keyword_trigger": "thracian gold treasure sale",
+      "reason": "News article about the theft of a 2,100-year-old Celtic gold treasure from a museum in Germany, with parts of it potentially melted down. While not explicitly 'Thracian,' it highlights the high risk of museum thefts and subsequent illicit sales of ancient gold treasures.",
+      "scraped_at": "2026-03-12T04:56:14.434408Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdZviO4aBj4gUNWY-lsd1OMB3o9hWuJwvPUdEcsgJL-gSTh9XUnBxwUeP6x8jqT1-TfxRWsHt7iqVSzgojFgyncnYJoLg2cTf9OQmrMQhLimLySluw_959Y3jiU68kRv90P16rip4DiVUfKzbnzGW6QDhU8TCdujhcBkltxmdyJBm-NEZlzXo-&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "The Certificate of Authenticity and Prehistoric Artifact Collecting",
+      "platform": "Arrowheads.com",
+      "url": "https://www.arrowheads.com/index.php/forums/collecting-artifacts/300-the-certificate-of-authenticity-and-prehistoric-artifact-collecting",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 0,
+      "origin_region": "Unknown",
+      "provenance_flag": false,
+      "keyword_trigger": "artifact COA certificate authenticity",
+      "reason": "Article discussing the history, evolution, and issues of Certificates of Authenticity (COAs) in prehistoric artifact collecting, highlighting instances of fraud and the unreliability of some COAs, particularly later Perino COAs. It serves as a warning for collectors.",
+      "scraped_at": "2026-03-12T04:56:46.105575Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//www.arrowheads.com/index.php/forums/collecting-artifacts/300-the-certificate-of-authenticity-and-prehistoric-artifact-collecting&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "High End Native American Artifact Auction 2023-09-30 Auction - 809 Price Results",
+      "platform": "LiveAuctioneers",
+      "url": "https://www.liveauctioneers.com/auctioneer/6763/north-american-artifact-auctions/auction-catalog/high-end-native-american-artifact-auction-2023-09-30_809/",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 5,
+      "origin_region": "North America",
+      "provenance_flag": true,
+      "keyword_trigger": "artifact COA certificate authenticity",
+      "reason": "Auction results listing various Native American artifacts, many accompanied by Certificates of Authentication from specific authenticators (Ryan Keele, Roy Motley, Jerry Dickey, Ben Stermer). The auction states 'Guaranteed Authentic Artifacts' and screening by knowledgeable collectors. Despite this, the general skepticism around artifact COAs (as seen in other search results) suggests a medium risk for individual items, although LiveAuctioneers is a reputable platform.",
+      "scraped_at": "2026-03-12T04:56:46.105848Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//www.liveauctioneers.com/auctioneer/6763/north-american-artifact-auctions/auction-catalog/high-end-native-american-artifact-auction-2023-09-30_809/&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Certificate of Authenticity",
+      "platform": "VIP Fan Auctions",
+      "url": "https://www.vipfanauctions.com/authenticity",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 0,
+      "origin_region": "Unknown",
+      "provenance_flag": true,
+      "keyword_trigger": "artifact COA certificate authenticity",
+      "reason": "Marketplace outlining its Certificate of Authenticity (COA) policy for items sold. They issue their own COAs with studio logos, item-specific codes, and tamper-proof holograms, ensuring transferability and traceability. This indicates a structured approach to provenance for their merchandise.",
+      "scraped_at": "2026-03-12T04:56:46.105874Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//www.vipfanauctions.com/authenticity&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Our COA Trust Policy | Authenticity You Can Rely On",
+      "platform": "Personified Collectibles",
+      "url": "https://personifiedcollectibles.com/pages/our-coa-trust-policy",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 0,
+      "origin_region": "Unknown",
+      "provenance_flag": true,
+      "keyword_trigger": "artifact COA certificate authenticity",
+      "reason": "Marketplace detailing its COA trust policy. They provide hand-signed, serialized COAs with detailed provenance, emphasizing a multi-step internal review process for authenticity. They also encourage buyer due diligence and acknowledge the possibility of incomplete records in the collectibles market.",
+      "scraped_at": "2026-03-12T04:56:46.105886Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//personifiedcollectibles.com/pages/our-coa-trust-policy&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Authentication",
+      "platform": "Jackson Galleries",
+      "url": "https://www.jacksongalleries.com/authentication",
+      "price_usd": 25,
+      "status": "INFO ONLY",
+      "risk_score": 0,
+      "origin_region": "Unknown",
+      "provenance_flag": true,
+      "keyword_trigger": "artifact COA certificate authenticity",
+      "reason": "Service offering artifact authentication and issuing Certificates of Authenticity (COAs) based on microscopic examination and geological criteria. They claim to have issued almost 50,000 COAs and reviewed over 2.5 million artifacts for various clients, including the government. Price for a standard COA service is $25.",
+      "scraped_at": "2026-03-12T04:56:46.105898Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//www.jacksongalleries.com/authentication&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Everything you need to know about Certificates of Authenticity: When to use them and where to get them…",
+      "platform": "SharingItForward",
+      "url": "https://sharingitforward.com/everything-you-need-to-know-about-certificates-of-authenticity-when-to-use-them-and-where-to-get-them/",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 8,
+      "origin_region": "Unknown",
+      "provenance_flag": false,
+      "keyword_trigger": "artifact COA certificate authenticity",
+      "reason": "Collector blog post warning about the unreliability of some Certificates of Authenticity (COAs), particularly in online auctions like eBay. It highlights that some COAs are considered worthless, and there are instances of real COAs being copied and doctored to certify fake artworks, indicating a high risk of fraud in the market.",
+      "scraped_at": "2026-03-12T04:56:46.105908Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//sharingitforward.com/everything-you-need-to-know-about-certificates-of-authenticity-when-to-use-them-and-where-to-get-them/&screenshot=true&meta=false&embed=screenshot.url"
     }
   ]
 }
