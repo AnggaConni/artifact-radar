@@ -1,4 +1,4 @@
-#🏺 Artifact Radar v5.1 — Global Intelligence Engine 
+# 🏺 Artifact Radar v5.1 — Global Intelligence Engine 
 
 An automated cultural-heritage protection and geo-intelligence tool. It monitors the global online antiquities market for listings that may involve stolen, looted, or unprovenanced artifacts.
 
@@ -6,7 +6,7 @@ Powered by Google Gemini 2.5 Flash with Google Search Grounding, the engine auto
 
 ---
 
-##🏗️ Architecture
+## 🏗️ Architecture
 
 Unlike traditional scrapers that get blocked, Artefact Radar v5.1 delegates the search process entirely to Google's infrastructure via AI Tool Grounding, utilising direct REST API calls for maximum stability. This advanced approach ensures that even search results and listings that actively block traditional crawlers can still be detected and analyzed by the AI.
 
