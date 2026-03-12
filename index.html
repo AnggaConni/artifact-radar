@@ -137,9 +137,18 @@
             <h2 class="text-3xl font-extrabold syne-font tracking-tight">Intelligence Feed</h2>
             <p class="text-sm text-[#8a7f72] mt-1">Real-time monitoring of global antiquities market.</p>
           </div>
-          <div class="text-xs mono-font font-medium text-[#8a7f72] bg-white px-4 py-2 rounded-full border border-[#e4dfd4] shadow-sm">
+
+        <div class="flex items-center gap-3">
+          <button onclick="openInfoModal()" class="text-xs mono-font font-bold text-[#1c1814] bg-[#f5f3ee] hover:bg-[#e4dfd4] px-4 py-2 rounded-full border border-[#e4dfd4] transition-colors shadow-sm flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            How to Use
+          </button>
+          
+          <div class="text-xs mono-font font-medium text-[#8a7f72] bg-white px-4 py-2 rounded-full border border-[#e4dfd4] shadow-sm hidden sm:block">
             Updates automatically every 8 days
           </div>
+        </div>
+
         </div>
 
         <!-- Stats -->
@@ -182,6 +191,89 @@
       <div id="map" class="w-full h-full z-0"></div>
     </div>
 
+     <!-- SECTION: GUIDE HOW TO USE -->
+    <div id="info-modal" class="fixed inset-0 z-[2000] hidden flex items-center justify-center">
+  <div class="absolute inset-0 bg-[#1c1814]/40 backdrop-blur-sm" onclick="closeInfoModal()"></div>
+  
+  <div class="bg-white w-full max-w-2xl mx-4 rounded-2xl shadow-2xl relative z-10 flex flex-col max-h-[85vh] animate-[fadeIn_0.2s_ease-out]">
+    
+    <div class="p-6 border-b border-[#e4dfd4] flex justify-between items-center">
+      <h3 class="text-xl font-extrabold syne-font text-[#1c1814]">About This Intelligence Feed</h3>
+      <button onclick="closeInfoModal()" class="text-[#8a7f72] hover:text-[#dc2626] transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    
+    <div class="p-6 overflow-y-auto text-sm text-[#1c1814] space-y-5">
+      <p>Welcome to <b>Artifact Radar</b>. This system monitors the global antiquities market to identify potentially illicit trafficking of cultural artifacts.</p>
+      
+      <div>
+        <h4 class="font-bold text-[#1c1814] mono-font text-xs uppercase tracking-widest">Risk Scoring Methodology</h4>
+        <ul class="list-none space-y-2 mt-2">
+          <li class="flex items-start gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#dc2626] mt-1.5 shrink-0"></span>
+            <span><b class="text-[#dc2626]">High Risk (8-10):</b> Unprovenanced items from conflict zones or regions with strong export bans.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#d97706] mt-1.5 shrink-0"></span>
+            <span><b class="text-[#d97706]">Medium Risk (4-7):</b> Items with vague ownership history or unverified Certificates of Authenticity (COAs).</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pt-4 border-t border-[#e4dfd4]">
+        <h4 class="font-bold text-[#1c1814] mono-font text-xs uppercase tracking-widest mb-2">System Architecture</h4>
+        <p class="text-[#8a7f72] leading-relaxed mb-4">
+          Unlike traditional scrapers that get blocked, Artifact Radar v5.1 delegates the search process entirely to Google's infrastructure via AI Tool Grounding, utilizing direct REST API calls for maximum stability. This advanced approach ensures that even search results and listings that actively block traditional crawlers can still be detected and analyzed by the AI.
+        </p>
+
+        <div class="bg-[#fcfbf9] border border-[#e4dfd4] border-l-4 border-l-[#d97706] p-4 rounded-r-lg mb-4">
+          <p class="text-xs text-[#1c1814] leading-relaxed">
+            <b class="text-[#d97706] mono-font uppercase tracking-widest block mb-1">Important Note</b>
+            If a listing's thumbnail on the dashboard displays an <i>"Image Unavailable"</i> or blocked message, it serves as visual proof that the host website actively blocks standard scrapers—yet our Python engine still successfully bypassed it to extract the core intelligence.
+          </p>
+        </div>
+
+        <pre class="bg-[#1c1814] text-[#f5f3ee] p-4 rounded-xl text-[10px] sm:text-xs mono-font overflow-x-auto leading-relaxed shadow-inner">
+GitHub Actions (Daily Cron)
+        │
+        ▼
+  scraper.py (8-Day Interval Guard)
+        │
+        ├──► Gemini 2.5 Flash REST API + Google Search Tool
+        │      ├── Scans global keywords (eBay, FB, Forums)
+        │      └── Extracts strict JSON (Risk, Origin, etc.)
+        │
+        ├──► Microlink.io API
+        │      └── Generates & backfills missing screenshots
+        │
+        ▼
+  data.json & history.json
+        │
+        ▼
+  Git Commit ──► GitHub Pages ──► Interactive Dashboard</pre>
+      </div>
+
+    </div>
+    
+    <div class="p-6 border-t border-[#e4dfd4] bg-[#fcfbf9] rounded-b-2xl shrink-0">
+      <button onclick="closeInfoModal()" class="w-full bg-[#1c1814] text-[#f5f3ee] py-3 rounded-xl font-bold mono-font text-xs uppercase tracking-widest hover:bg-[#8a7f72] transition-colors">
+        Acknowledge
+      </button>
+    </div>
+  </div>
+</div>
+
+    
+    <div class="p-6 border-t border-[#e4dfd4] bg-[#fcfbf9] rounded-b-2xl">
+      <button onclick="closeInfoModal()" class="w-full bg-[#1c1814] text-[#f5f3ee] py-3 rounded-xl font-bold mono-font text-xs uppercase tracking-widest hover:bg-[#8a7f72] transition-colors">
+        Acknowledge
+      </button>
+    </div>
+  </div>
+</div>
+
+
   </main>
 
   <script>
@@ -192,6 +284,16 @@
     let radarChartObj, barChartObj, provChartObj;
     let globalListings = [];
     let map;
+
+
+    // --- MODAL CONTROL ---
+    function openInfoModal() {
+      document.getElementById('info-modal').classList.remove('hidden');
+    }
+
+    function closeInfoModal() {
+      document.getElementById('info-modal').classList.add('hidden');
+    }
 
     // --- TAB SWITCH LOGIC ---
     function switchTab(tabName) {
