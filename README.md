@@ -8,7 +8,7 @@ Powered by Google Gemini 2.5 Flash with Google Search Grounding, the engine auto
 
 ## 🏗️ Architecture
 
-Unlike traditional scrapers that get blocked, Artefact Radar v5.1 delegates the search process entirely to Google's infrastructure via AI Tool Grounding, utilising direct REST API calls for maximum stability. This advanced approach ensures that even search results and listings that actively block traditional crawlers can still be detected and analyzed by the AI.
+Unlike traditional scrapers that get blocked, Artifact Radar v5.1 delegates the search process entirely to Google's infrastructure via AI Tool Grounding, utilizing direct REST API calls for maximum stability. This advanced approach ensures that even search results and listings that actively block traditional crawlers can still be detected and analyzed by the AI. (Note: If a listing's thumbnail on the dashboard displays an "Image Unavailable" or blocked message, it serves as visual proof that the host website actively blocks standard scrapers—yet our Python engine still successfully bypassed it to extract the core intelligence).
 
 
 ```
