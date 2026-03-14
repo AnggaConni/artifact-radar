@@ -330,9 +330,9 @@ def get_screenshot_url(url):
 def run_ai_search(api_key, existing_urls, target):
     log.info(f"Targeting keyword: {target}")
   
-# Perubahan dari gemini-2.5-flash ke gemini-3.1-flash
-url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash:generateContent?key={api_key}"
-    
+    # 1. Pastikan baris URL ini rata dengan log.info di atasnya
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash:generateContent?key={api_key}"
+     
     prompt = f"""
     Use Google Search to find real marketplace listings, auctions, or news regarding: "{target}".
     Identify marketplace listings (eBay, Facebook, auction houses), theft news, or collector forums.
@@ -361,7 +361,7 @@ url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash
     
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "tools": [{"google_search_retrieval": {}}],
+        "tools": [{"google_search_retrieval": {}}], # <--- Perubahan di sini
         "generationConfig": {
             "temperature": 0.7,
             "maxOutputTokens": 8192
