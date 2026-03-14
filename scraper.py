@@ -361,7 +361,7 @@ def run_ai_search(api_key, existing_urls, target):
     
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "tools": [{"google_search_retrieval": {}}], # <--- Perubahan di sini
+        "tools": [{"google_search": {}}], # <--- Perubahan di sini
         "generationConfig": {
             "temperature": 0.7,
             "maxOutputTokens": 8192
