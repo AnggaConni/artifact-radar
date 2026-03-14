@@ -3,7 +3,15 @@
     "generated_at": "2026-03-12T05:57:22.249153Z",
     "total_listings": 55,
     "high_risk_count": 26,
-    "medium_risk_count": 9,
+    "medium_risk_count": 5,
+    "cross_check_notes": [
+      "medium_risk_count corrected from 9 to 5 — only 5 entries carry status='MEDIUM RISK' in listings[].",
+      "FLAGGED — Al Jazeera: status='INFO ONLY' but risk_score=7; consider reclassifying to MEDIUM RISK.",
+      "FLAGGED — Washington Conservation Guild: status='INFO ONLY' but risk_score=8; consider reclassifying to MEDIUM RISK.",
+      "FLAGGED — Etsy (Ugarit): status='INFO ONLY' but risk_score=5; consider reclassifying to MEDIUM RISK.",
+      "FLAGGED — 1stDibs (Ivory Carvings): status='INFO ONLY' but risk_score=5; consider reclassifying to MEDIUM RISK.",
+      "FLAGGED — SharingItForward: status='HIGH RISK' but source is a collector blog/warning post, not a marketplace listing; consider reclassifying."
+    ],
     "alerts_by_platform": {
       "Asumsi": 1,
       "Historia.ID": 1,
@@ -570,7 +578,7 @@
       "status": "INFO ONLY",
       "risk_score": 1,
       "origin_region": "Bolivia",
-      "provenience_flag": false,
+      "provenance_flag": false,
       "keyword_trigger": "tiwanaku puma figure sale",
       "reason": "News article mentioning that 'Tiwanaku was brutally plundered' and that 'much of its valuable heritage disappeared'. Provides general information about the illicit trade of artifacts from the region.",
       "scraped_at": "2026-03-12T04:31:07.382332Z",
@@ -815,7 +823,7 @@
       "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpLN4PQpKY3JzOTbNBn51-Lvhdb_P3SH-5DoIX5X_iMI3sUoxQYeIUwV8becjAPCKueWqWFc5m5m1BdZoA1KXdSA0q_J6ffmbrIeS0suXSVQca9bbOI4eKo6UyxCYHaFMJfiFET5-QP_BUP43oQ2UNbIJQPPQqy8wLophvBdGBj7u3Dan5fhbCboIS_7ITOaxn6l3VdHtk7ALk_cUTuFzB9uSm-w5KzQIP8sYepzij5BFA92hSoupzPA%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
-      "original_title": "Head in ivory incrusted with gold belongs to the prince or princess of Ugarit, 13th century BC was found in the royal palace of Ugarit “Ras Shamra” in Latakia, Syria which lies on the Mediterranean [1300x799] - Reddit",
+      "original_title": "Head in ivory incrusted with gold belongs to the prince or princess of Ugarit, 13th century BC was found in the royal palace of Ugarit \"Ras Shamra\" in Latakia, Syria which lies on the Mediterranean [1300x799] - Reddit",
       "platform": "Reddit",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVaUpKI2wjZapWq-jFIP1aLIqkL1KgzfpRm9eN-JRVCgAguJQokDG0kYnfyeD2xUYNN5d4XgUiJ9DqLy6PTJmJGakdi_JvhRbHIkl2LXldQB8uVidxlCW_YZBWHO3pIUmCQIU87DoHGw3jBVW1U20OLaFrstMOclKkeyJKjfrCTufeJso_B4LuIOFmhM-V25loq60ErnKBfsZA7w-xHr3LI95O",
       "price_usd": 0,
