@@ -329,8 +329,9 @@ def get_screenshot_url(url):
 
 def run_ai_search(api_key, existing_urls, target):
     log.info(f"Targeting keyword: {target}")
-    
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+  
+# Perubahan dari gemini-2.5-flash ke gemini-3.1-flash
+url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash:generateContent?key={api_key}"
     
     prompt = f"""
     Use Google Search to find real marketplace listings, auctions, or news regarding: "{target}".
@@ -360,7 +361,7 @@ def run_ai_search(api_key, existing_urls, target):
     
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "tools": [{"googleSearch": {}}],
+        "tools": [{"google_search_retrieval": {}}],
         "generationConfig": {
             "temperature": 0.7,
             "maxOutputTokens": 8192
