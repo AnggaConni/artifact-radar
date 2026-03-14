@@ -331,7 +331,7 @@ def run_ai_search(api_key, existing_urls, target):
     log.info(f"Targeting keyword: {target}")
   
     # 1. Pastikan baris URL ini rata dengan log.info di atasnya
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
      
     prompt = f"""
     Use Google Search to find real marketplace listings, auctions, or news regarding: "{target}".
