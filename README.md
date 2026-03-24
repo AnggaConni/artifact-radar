@@ -126,4 +126,4 @@ KEYWORDS = [
 
 This tool is intended for cultural-heritage protection, academic research, and law-enforcement support purposes only, consistent with the 1970 UNESCO Convention on the Means of Prohibiting and Preventing the Illicit Import, Export and Transfer of Ownership of Cultural Property and the UNIDROIT 1995 Convention on stolen cultural objects.
 
-License: MIT
+License: AGPL
