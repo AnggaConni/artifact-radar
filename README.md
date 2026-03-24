@@ -1,14 +1,16 @@
-# 🏺 Artifact Radar v5.1 — Global Intelligence Engine 
+# 🏺 Artifact Radar v6.0 — Global Intelligence Engine 
 
 An automated cultural-heritage protection and geo-intelligence tool. It monitors the global online antiquities market for listings that may involve stolen, looted, or unprovenanced artifacts.
 
 Powered by Google Gemini 2.5 Flash with Google Search Grounding, the engine autonomously crawls marketplaces, news outlets, and forums every 8 days, classifying risks and mapping the origins of suspicious artifacts.
 
+**v6.0** adds a **multi-agent pipeline**: **Collector** (search-grounded candidates) → **Classifier** (ICOM-style rubric) → **Reasoner** (narrative, uncertainty flags, evidence gaps). Append-only **step logs** default to `pipeline.jsonl`. If collection or classification fails or is empty, a **repair pass** re-prompts with a narrower, factual prompt.
+
 ---
 
 ## 🏗️ Architecture
 
-Unlike traditional scrapers that get blocked, Artifact Radar v5.1 delegates the search process entirely to Google's infrastructure via AI Tool Grounding, utilizing direct REST API calls for maximum stability. This advanced approach ensures that even search results and listings that actively block traditional crawlers can still be detected and analyzed by the AI. (Note: If a listing's thumbnail on the dashboard displays an "Image Unavailable" or blocked message, it serves as visual proof that the host website actively blocks standard scrapers—yet our Python engine still successfully bypassed it to extract the core intelligence).
+Unlike traditional scrapers that get blocked, Artifact Radar delegates discovery to Google's infrastructure via AI Tool Grounding and direct REST calls. (If a listing thumbnail shows "Image Unavailable", the host may block embeds—the listing was still found via search grounding.)
 
 
 ```
@@ -17,19 +19,32 @@ GitHub Actions (Daily Cron)
         ▼
   scraper.py (8-Day Interval Guard)
         │
-        ├──► Gemini 2.5 Flash REST API + Google Search Tool
-        │      ├── Scans global keywords (eBay, Facebook, Forums, Auctions)
-        │      └── Extracts strict JSON (Title, Risk, Origin, Provenance)
+        ▼
+  artifact_radar/orchestrator.py
         │
-        ├──► Microlink.io API
-        │      └── Generates & backfills missing screenshot URLs
+        ├──► Collector — Gemini + Google Search → candidate URLs (JSON)
+        │      └── Repair collector if empty / failed
+        ├──► Classifier — Gemini → status, risk_score, provenance_flag
+        │      └── Repair classifier if parse / call failed
+        ├──► Reasoner — synthesis → reason, uncertainty_flags, confidence
+        │
+        ├──► Microlink.io screenshots + normalized URL dedupe
         │
         ▼
-  data.json & history.json
+  data.json, history.json, pipeline.jsonl (optional)
         │
         ▼
-  Git Commit & Push ──► GitHub Pages ──► Interactive Dashboard & Map
+  Git Commit & Push ──► GitHub Pages ──► Dashboard & Map
 ```
+
+Listings may include a **`pipeline`** metadata object (`uncertainty_flags`, `evidence_that_would_change_assessment`, `confidence`, repair-pass flags). The dashboard renders these on each card when present; XML export adds matching `dcterms:*` extension fields.
+
+| Variable | Purpose |
+|----------|---------|
+| `GEMINI_API_KEY` | Required |
+| `FORCE_CRAWL` | `true` bypasses 8-day guard |
+| `ARTIFACT_PIPELINE_LOG` | JSONL log path (default `./pipeline.jsonl`). Empty string disables file logging |
+| `ARTIFACT_MAX_CANDIDATES_PER_KEYWORD` | Cap listings processed per keyword after collection (default `5`, max `15`) |
 
 ---
 
@@ -82,10 +97,12 @@ Get a free key at [aistudio.google.com](https://aistudio.google.com).
 your-repo/
 ├── .github/workflows/
 │   └── crawler.yml         # GitHub Actions workflow
-├── scraper.py              # Main Python intelligence engine
+├── artifact_radar/         # Multi-agent pipeline package
+├── scraper.py              # Entrypoint + schedule + persistence
 ├── index.html              # The Dashboard UI
 ├── data.json               # Auto-generated results (committed by bot)
-└── history.json            # Crawl state tracker (committed by bot)
+├── history.json            # Crawl state tracker (committed by bot)
+└── pipeline.jsonl          # Step log (local / optional commit)
 ```
 
 ### 3. Run manually
@@ -96,6 +113,15 @@ Go to Actions → Artifact Radar Auto-Crawler → Run workflow.
 
 Set Force crawl now to true if you want to bypass the 8-day waiting period and scan immediately.
 
+### 4. Run tests (local)
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+
+On GitHub, the **Tests** workflow runs `pytest` on every push and pull request to `main` / `master`.
+
 ---
 
 ## Schedule
@@ -104,14 +130,14 @@ The crawler runs on an interval of 8 days.
 
 A built-in 8-day guard in `scraper.py` also prevents redundant re-runs if the workflow is triggered too soon (e.g., after a `git push`).
 
-To change the interval, edit `CRAWL_INTERVAL_DAYS` in `scraper.py`.
+To change the interval, edit the day check in `check_schedule()` in `scraper.py` (currently 8 days).
 
 
 ---
 
 ## Adding more keywords
 
-Edit `ARTIFACT_KEYWORDS` in `scraper.py`:
+Edit `KEYWORDS` in `scraper.py`:
 
 ```python
 KEYWORDS = [
