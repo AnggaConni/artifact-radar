@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-03-24T10:16:11.485984Z",
-    "total_listings": 108,
-    "high_risk_count": 54,
-    "medium_risk_count": 23,
+    "generated_at": "2026-03-24T10:41:47.294379Z",
+    "total_listings": 114,
+    "high_risk_count": 57,
+    "medium_risk_count": 24,
     "alerts_by_platform": {
       "Asumsi": 1,
       "Historia.ID": 1,
@@ -24,7 +24,7 @@
       "Live Science": 2,
       "Newsweek": 1,
       "Noonans Mayfair": 1,
-      "eBay": 8,
+      "eBay": 9,
       "Irish Examiner": 1,
       "Art & Object": 1,
       "Ancient Origins": 2,
@@ -84,7 +84,12 @@
       "The Cradle": 1,
       "Artemis Fine Arts": 1,
       "Invaluable.com": 1,
-      "UNESCO": 1
+      "UNESCO": 1,
+      "Artnet News": 1,
+      "Lyon & Turnbull": 1,
+      "NOVICA": 1,
+      "Fagan Arms": 1,
+      "Geology.com": 1
     },
     "top_high_risk": [
       {
@@ -1747,6 +1752,165 @@
         ],
         "evidence_that_would_change_assessment": "Analyst review or live page inspection recommended.",
         "confidence": "low",
+        "source_context": "news",
+        "listing_kind": "news",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "Archaeologists Have Found an Ancient Roman Mosaic in Syria That Miraculously Survived Rampant Looting and a Civil War | Artnet News",
+      "platform": "Artnet News",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnO_LZe-2xAjM5pjakJyTtimaB9rlFazPyWYIMBKa3SirwQluf32jbrBmEgP2gfVHwqlZbQYrVkGUV8tXYUu4dV4QQAJq79rvpVgGFOZ3cCtHnyJLqjko1MwsQiuu6VNzwBQCQOHWNPTt_daHYaXkk0WfhityzVSNkZs3ap9rfcXr_wA2Q",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Syria",
+      "provenance_flag": false,
+      "keyword_trigger": "syrian mosaic fragment sale",
+      "reason": "A news report from Artnet News details the discovery of an ancient Roman mosaic in Syria. The article explicitly states that armed groups attempted to sell this mosaic on social media platforms in 2017. This observation indicates a high risk of conflict-zone looting and illicit trade, warranting a HIGH RISK classification.",
+      "scraped_at": "2026-03-24T10:27:02.170958Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnO_LZe-2xAjM5pjakJyTtimaB9rlFazPyWYIMBKa3SirwQluf32jbrBmEgP2gfVHwqlZbQYrVkGUV8tXYUu4dV4QQAJq79rvpVgGFOZ3cCtHnyJLqjko1MwsQiuu6VNzwBQCQOHWNPTt_daHYaXkk0WfhityzVSNkZs3ap9rfcXr_wA2Q&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "provenance_unknown",
+          "price_unknown",
+          "not_current_listing",
+          "single_source"
+        ],
+        "evidence_that_would_change_assessment": "Official documentation confirming the mosaic's secure placement in a protected site or museum, or successful repatriation efforts, would lower the risk assessment. New evidence of current active sale attempts, or confirmation of the mosaic's physical removal from its original context by illicit actors, would raise the risk.",
+        "confidence": "high",
+        "source_context": "news",
+        "listing_kind": "news",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "African, Oceanic & Tribal Art Auctions - Lyon & Turnbull",
+      "platform": "Lyon & Turnbull",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGS89A6j4ghas847_G0R4QJoUH0i3N8WsIy1pnsKdOhTRfO6_PSkE3UCaP8qh2O9ffL3_5zEmKz_LIQ2E3OR7q_byZp4M5nMQ9fqvMlEaJahRFg1cT0q73ooj7slj5RxbulxgIaAJN4Rlkv3IZqzPGtvbOeKwfEw7sEVw==",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "Africa, Oceania",
+      "provenance_flag": false,
+      "keyword_trigger": "african tribal artifact auction",
+      "reason": "An auction listing from Lyon & Turnbull for African and Oceanic art was identified. This is classified as MEDIUM RISK due to the absence of specific provenance information in the provided snippet, which is critical for verifying legal and ethical sourcing of cultural heritage items. Further review is required to assess potential concerns regarding the origin and ownership history of these 'museum-quality' pieces.",
+      "scraped_at": "2026-03-24T10:27:36.195214Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGS89A6j4ghas847_G0R4QJoUH0i3N8WsIy1pnsKdOhTRfO6_PSkE3UCaP8qh2O9ffL3_5zEmKz_LIQ2E3OR7q_byZp4M5nMQ9fqvMlEaJahRFg1cT0q73ooj7slj5RxbulxgIaAJN4Rlkv3IZqzPGtvbOeKwfEw7sEVw%3D%3D&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "provenance_unknown",
+          "price_unknown",
+          "single_source"
+        ],
+        "evidence_that_would_change_assessment": "Documentation of clear, verifiable provenance for each item, including legal acquisition, export, and ownership history, would lower the risk assessment. Conversely, evidence of recent illicit trafficking, disputed ownership claims, or origin from regions with high risk of cultural heritage exploitation without proper documentation would raise the risk.",
+        "confidence": "medium",
+        "source_context": "auction",
+        "listing_kind": "auction",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "Handcrafted Mexican Archaeological Ceramic Red Dog Sculpture - Colima Dog | NOVICA",
+      "platform": "NOVICA",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvfewaSe2qVdiKOMSZmsd6LYKF_RXFYEAOV2nG6DudVs1HsYuucZP6fFbY6_AU2gSe50Nlrfw1wjMQrgltmhKAZSKefHwZlgvQ6pyzVZa-nKOSR_iVfEvyxvp07rQfT-tRzfgiBNFhunTj6Cn5x1STzv2FSJcQaaqDxfjr30WMJ-MPVd-",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 0,
+      "origin_region": "Colima, Mexico",
+      "provenance_flag": false,
+      "keyword_trigger": "colima dog figurine authentic",
+      "reason": "A marketplace listing for a 'Colima Dog' figurine was identified. The listing explicitly states this is a 'handcrafted ceramic replica' and a 'modern artisan piece'. Therefore, it is classified as 'INFO ONLY' with a risk score of 0, as it is not an unprovenanced ancient cultural object.",
+      "scraped_at": "2026-03-24T10:28:05.218225Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvfewaSe2qVdiKOMSZmsd6LYKF_RXFYEAOV2nG6DudVs1HsYuucZP6fFbY6_AU2gSe50Nlrfw1wjMQrgltmhKAZSKefHwZlgvQ6pyzVZa-nKOSR_iVfEvyxvp07rQfT-tRzfgiBNFhunTj6Cn5x1STzv2FSJcQaaqDxfjr30WMJ-MPVd-&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [],
+        "evidence_that_would_change_assessment": "Evidence indicating the item is misrepresented as a replica but is, in fact, an authentic ancient artifact, or if the listing were for an unprovenanced ancient Colima Dog figurine rather than a modern reproduction.",
+        "confidence": "high",
+        "source_context": "marketplace",
+        "listing_kind": "sale_listing",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "Jade Pre - 1800 Indian Antiques for sale - eBay",
+      "platform": "eBay",
+      "url": "https://www.ebay.com/b/Jade-Pre-1800-Indian-Antiques/bn_7000624009",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 8,
+      "origin_region": "India",
+      "provenance_flag": false,
+      "keyword_trigger": "mughal jade artifact sale",
+      "reason": "An eBay marketplace listing for 'Jade Pre-1800 Indian Antiques' was observed, including items like Mughal jewelry boxes. This is classified as HIGH RISK due to the sale of pre-1800 cultural objects from India without any provenance information provided in the snippet. The absence of provenance raises concerns about potential illicit trade or unprovenanced cultural heritage.",
+      "scraped_at": "2026-03-24T10:40:20.802244Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//www.ebay.com/b/Jade-Pre-1800-Indian-Antiques/bn_7000624009&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "provenance_unknown",
+          "price_unknown"
+        ],
+        "evidence_that_would_change_assessment": "Clear documentation of legal ownership and export, detailed provenance tracing the object's history from its origin, and independent expert authentication confirming authenticity and legal status.",
+        "confidence": "high",
+        "source_context": "marketplace",
+        "listing_kind": "sale_listing",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "Viking Artifacts",
+      "platform": "Fagan Arms",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTnidd7IROIveI_Mhei-tJcjBaYPfXsCtNYBNmzmyd823tJz3z300znmNXkf6lEIovx-mozG3u54CAHX0qQGa8gzHQCwyjGCUchOilU6_Z16yOBNqdPdpIypJzbLc2NNG1eumtt2Wk6lq-x3NYah3OYA==",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 8,
+      "origin_region": "Northern Europe",
+      "provenance_flag": false,
+      "keyword_trigger": "viking artifact sale authentic",
+      "reason": "A listing for various Viking artifacts (rings, pendants) was identified on Fagan Arms, a known dealer platform. The absence of any explicit provenance information for these items, originating from Northern Europe, triggers a high-risk classification. This indicates a strong signal of unprovenanced cultural objects offered for sale.",
+      "scraped_at": "2026-03-24T10:41:12.396246Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTnidd7IROIveI_Mhei-tJcjBaYPfXsCtNYBNmzmyd823tJz3z300znmNXkf6lEIovx-mozG3u54CAHX0qQGa8gzHQCwyjGCUchOilU6_Z16yOBNqdPdpIypJzbLc2NNG1eumtt2Wk6lq-x3NYah3OYA%3D%3D&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "provenance_unknown",
+          "price_unknown"
+        ],
+        "evidence_that_would_change_assessment": "Explicit documentation of legal provenance, such as archaeological excavation reports, export licenses, or a documented chain of ownership predating 1970, would significantly lower the risk. Clear pricing information would also provide further context.",
+        "confidence": "high",
+        "source_context": "marketplace",
+        "listing_kind": "sale_listing",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "Mineral Fakes, Frauds and Scams",
+      "platform": "Geology.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMqItVwjON8uNpkJiitL0YZPjDlQ46B5AtiUCKLdcgi4dKgkj0TDS9eJGoRGylXwuUnD-Jr87aeYMLxxzLUYULr6Dxx6iRo7nYR1xQRQkaAycjpx4igTPMPBZ3nLzeoNk85DIo-GrpnoMD7vgsHdQOAvy0QNsL",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 0,
+      "origin_region": "Unknown",
+      "provenance_flag": false,
+      "keyword_trigger": "mineral specimen artifact disguised",
+      "reason": "A search for 'mineral specimen artifact disguised' yielded an educational article from Geology.com on identifying fake minerals. This content is classified as 'INFO ONLY' with a risk score of 0, as it focuses on fraud prevention through identification techniques rather than reporting or facilitating illicit trade.",
+      "scraped_at": "2026-03-24T10:41:44.293289Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMqItVwjON8uNpkJiitL0YZPjDlQ46B5AtiUCKLdcgi4dKgkj0TDS9eJGoRGylXwuUnD-Jr87aeYMLxxzLUYULr6Dxx6iRo7nYR1xQRQkaAycjpx4igTPMPBZ3nLzeoNk85DIo-GrpnoMD7vgsHdQOAvy0QNsL&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [],
+        "evidence_that_would_change_assessment": "Evidence of this content being used to promote the sale of disguised artifacts, or if it were a report of actual illicit trade or seizure of such items, would raise the assessment. Conversely, if the source was found to be unreliable or promoting illicit activities, the confidence in its 'INFO ONLY' classification would decrease.",
+        "confidence": "high",
         "source_context": "news",
         "listing_kind": "news",
         "collector_repair": false,
