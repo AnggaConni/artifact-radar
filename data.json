@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-03-24T10:01:19.175989Z",
-    "total_listings": 105,
-    "high_risk_count": 53,
-    "medium_risk_count": 21,
+    "generated_at": "2026-03-24T10:16:11.485984Z",
+    "total_listings": 108,
+    "high_risk_count": 54,
+    "medium_risk_count": 23,
     "alerts_by_platform": {
       "Asumsi": 1,
       "Historia.ID": 1,
@@ -41,7 +41,7 @@
       "YouTube (The Independent)": 1,
       "The Jerusalem Post": 1,
       "Arrowheads.com": 1,
-      "LiveAuctioneers": 1,
+      "LiveAuctioneers": 2,
       "VIP Fan Auctions": 1,
       "Personified Collectibles": 1,
       "Jackson Galleries": 1,
@@ -82,7 +82,9 @@
       "Museum Crush (News - Portable Antiquities Scheme)": 1,
       "Artemission": 1,
       "The Cradle": 1,
-      "Artemis Fine Arts": 1
+      "Artemis Fine Arts": 1,
+      "Invaluable.com": 1,
+      "UNESCO": 1
     },
     "top_high_risk": [
       {
@@ -1665,6 +1667,88 @@
         "confidence": "high",
         "source_context": "marketplace",
         "listing_kind": "sale_listing",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "Yoruba Antiques - LiveAuctioneers",
+      "platform": "LiveAuctioneers",
+      "url": "https://www.liveauctioneers.com/categories/antiques/yoruba-antique/",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "West Africa (Nigeria/Benin)",
+      "provenance_flag": false,
+      "keyword_trigger": "yoruba artifact auction",
+      "reason": "A LiveAuctioneers page listing 'Yoruba antiques' for sale was identified. This constitutes a medium risk due to the nature of cultural heritage items from West Africa being offered on a major auction platform. The absence of immediate provenance details in the provided snippet necessitates further review to assess individual item legality and ethical concerns.",
+      "scraped_at": "2026-03-24T10:15:00.756259Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//www.liveauctioneers.com/categories/antiques/yoruba-antique/&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "provenance_unknown",
+          "price_unknown",
+          "general_listing_page"
+        ],
+        "evidence_that_would_change_assessment": "Clear, verifiable provenance documentation for individual items, including legal export permits and ownership history predating relevant cultural heritage protection laws (e.g., 1970 UNESCO Convention). Specific item-level details and high-resolution images would also be beneficial.",
+        "confidence": "medium",
+        "source_context": "auction",
+        "listing_kind": "auction",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "Sold at Auction: A BRONZE STANDING BUDDHA, THAILAND, MON-DVARAVATI, 8TH-9TH CENTURY - Invaluable.com",
+      "platform": "Invaluable.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6PhkUwsG-GaHKYonejGcQjuEQ4aO6eNiUvU7sav9e2irhGGwoxxLIjLYR4LjJ7-oElUcup1S68JE1Bf3zZ5uaYetJfx3RW-lMemut3xTOU8sjFiSisYXZmX9VGYOvqVl-TNLBZj2yPk9iEjE8cc7jhkbaE9E_-htY-6tm_FajM6mWQTogf1DbQy1C6FLvscrwemeF6OG02HGYwLBrOmVoD5pUlg==",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 5,
+      "origin_region": "Thailand (Mon-Dvaravati)",
+      "provenance_flag": false,
+      "keyword_trigger": "mon kingdom bronze sale",
+      "reason": "An 8th-9th century Mon-Dvaravati bronze Buddha from Thailand was observed in an auction listing. This item is classified as MEDIUM RISK due to the explicit lack of provenance information within the provided snippet, indicating a potential due-diligence gap concerning its origin and legal trade history.",
+      "scraped_at": "2026-03-24T10:15:38.676137Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6PhkUwsG-GaHKYonejGcQjuEQ4aO6eNiUvU7sav9e2irhGGwoxxLIjLYR4LjJ7-oElUcup1S68JE1Bf3zZ5uaYetJfx3RW-lMemut3xTOU8sjFiSisYXZmX9VGYOvqVl-TNLBZj2yPk9iEjE8cc7jhkbaE9E_-htY-6tm_FajM6mWQTogf1DbQy1C6FLvscrwemeF6OG02HGYwLBrOmVoD5pUlg%3D%3D&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "provenance_unknown",
+          "price_unknown",
+          "single_source"
+        ],
+        "evidence_that_would_change_assessment": "Clear documentation of the item's provenance, including legal export permits from Thailand and a verifiable chain of ownership, would lower the risk assessment. Conversely, any indication of recent excavation or illicit trafficking would raise the risk.",
+        "confidence": "high",
+        "source_context": "auction",
+        "listing_kind": "auction",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "International Alerts - Stolen Artefacts - UNESCO",
+      "platform": "UNESCO",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLYUg2TD7FcgQS6S_fw755drxz1cO8BQfdBxZtLHYwFvscM7vcA2C0fZu8b2MfhyQP-TCzKzp2hvziydKsfAzWUpegI_E4--K0nIGOtgeTZF2DEf8K2ZoXRnTxUsD4zWgbuoRp",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Unknown",
+      "provenance_flag": false,
+      "keyword_trigger": "stolen archaeological artifact alert",
+      "reason": "Page provides international alerts from UNESCO regarding the theft of cultural properties. This directly indicates reporting on illicit activities and stolen items.",
+      "scraped_at": "2026-03-24T10:16:08.482338Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLYUg2TD7FcgQS6S_fw755drxz1cO8BQfdBxZtLHYwFvscM7vcA2C0fZu8b2MfhyQP-TCzKzp2hvziydKsfAzWUpegI_E4--K0nIGOtgeTZF2DEf8K2ZoXRnTxUsD4zWgbuoRp&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "reasoner_unavailable"
+        ],
+        "evidence_that_would_change_assessment": "Analyst review or live page inspection recommended.",
+        "confidence": "low",
+        "source_context": "news",
+        "listing_kind": "news",
         "collector_repair": false,
         "classifier_repair": false
       }
