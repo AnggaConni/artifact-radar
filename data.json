@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-03-23T02:43:04.990648Z",
-    "total_listings": 102,
-    "high_risk_count": 52,
-    "medium_risk_count": 20,
+    "generated_at": "2026-03-24T10:01:19.175989Z",
+    "total_listings": 105,
+    "high_risk_count": 53,
+    "medium_risk_count": 21,
     "alerts_by_platform": {
       "Asumsi": 1,
       "Historia.ID": 1,
@@ -24,7 +24,7 @@
       "Live Science": 2,
       "Newsweek": 1,
       "Noonans Mayfair": 1,
-      "eBay": 7,
+      "eBay": 8,
       "Irish Examiner": 1,
       "Art & Object": 1,
       "Ancient Origins": 2,
@@ -80,7 +80,9 @@
       "YouTube (News - Firstpost)": 1,
       "Marfa Public Radio (News - Homeland Security Investigations)": 1,
       "Museum Crush (News - Portable Antiquities Scheme)": 1,
-      "Artemission": 1
+      "Artemission": 1,
+      "The Cradle": 1,
+      "Artemis Fine Arts": 1
     },
     "top_high_risk": [
       {
@@ -153,7 +155,8 @@
         "scraped_at": "2026-03-12T04:30:42.505305Z",
         "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuNjkTp85mYITlbbxArLLLS56nyjC6eGCYL2-6CriXOo_M6rlgEt36QYHoYbKLEkJ5hlTdCKRPG1QMFaW6DNYxgZc6VDyssN9lADODtXKj_RZeURzo03mwZH_58J9HfSiZzEZx8QfRFa2hmyaJ0faM5tmYQD8677qZxOuLNHlX4XIUWbvEbKQzBXRFKdYEU63Jhb-xDaaL7TtYqHk%3D&screenshot=true&meta=false&embed=screenshot.url"
       }
-    ]
+    ],
+    "pipeline_version": "6.0"
   },
   "listings": [
     {
@@ -1583,6 +1586,88 @@
       "reason": "Online dealer of 'authentic antiquities and ancient artefacts'. While offering a certificate of authenticity, the general nature of selling such items without fully transparent and verifiable archaeological provenance for each piece presents a medium risk. Prices not specified in snippet.",
       "scraped_at": "2026-03-23T02:42:14.333845Z",
       "screenshot_url": "https://api.microlink.io/?url=https%3A//www.artemission.com/&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Stolen Yemeni artifacts to be sold at Israeli auction: Report - The Cradle",
+      "platform": "The Cradle",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFocsDKcjrX5qvOQDqK6Ov_ouSRxhiWzYwYRsAHRw1EkzMtZRPuldzY-4Ryb0n8w3MHT_oa9tMFhBbj7NBWMyfkiqApQAq16_gfbsZDc9mFQM7QW4u_n_GC59_dIsFUN9cE2R3xu9D8wf6CwSHgyUanM7t-fy0pYeUSw8Jwo6c6lBpaZtDHWER9u1_cH9kEaxUtm3j9ZA==",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Yemen",
+      "provenance_flag": false,
+      "keyword_trigger": "yemen artifact stolen sale",
+      "reason": "A news report details that rare and ancient historical artifacts, allegedly looted from Yemen, are set to be sold at an Israeli auction in October. This situation indicates a high risk of illicit trade in cultural heritage, particularly given Yemen's status as a conflict zone.",
+      "scraped_at": "2026-03-24T09:59:44.949479Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFocsDKcjrX5qvOQDqK6Ov_ouSRxhiWzYwYRsAHRw1EkzMtZRPuldzY-4Ryb0n8w3MHT_oa9tMFhBbj7NBWMyfkiqApQAq16_gfbsZDc9mFQM7QW4u_n_GC59_dIsFUN9cE2R3xu9D8wf6CwSHgyUanM7t-fy0pYeUSw8Jwo6c6lBpaZtDHWER9u1_cH9kEaxUtm3j9ZA%3D%3D&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "single_source_report",
+          "price_unknown",
+          "provenance_unconfirmed"
+        ],
+        "evidence_that_would_change_assessment": "Official documentation confirming legal export permits from Yemeni authorities and legitimate provenance for the artifacts would lower the risk assessment. Confirmation of the auction proceeding with these specific artifacts, or further details on the smuggling network involved, would raise the risk assessment.",
+        "confidence": "high",
+        "source_context": "news",
+        "listing_kind": "news",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "Central Asia - Artemis Fine Arts",
+      "platform": "Artemis Fine Arts",
+      "url": "https://artemisfinearts.com/product-category/central-asia/",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "Central Asia",
+      "provenance_flag": false,
+      "keyword_trigger": "central asian burial artifact",
+      "reason": "A commercial marketplace, Artemis Fine Arts, is listing various ancient artifacts from Central Asia for sale or auction. A medium risk is assigned due to the origin region, which is sensitive for cultural heritage, and the critical absence of provenance information in the provided snippet. This necessitates expert review to verify legitimacy and origin.",
+      "scraped_at": "2026-03-24T10:00:33.848412Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//artemisfinearts.com/product-category/central-asia/&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "provenance_unknown",
+          "price_unknown",
+          "specific_artifact_type_unspecified"
+        ],
+        "evidence_that_would_change_assessment": "Clear, documented provenance for each artifact, including legal export documentation and a verifiable collection history predating relevant cultural property protection laws, would significantly lower the risk. Conversely, any indication of recent illicit excavation, illegal export, or direct identification as a burial artifact without proper archaeological context would raise the risk.",
+        "confidence": "medium",
+        "source_context": "marketplace|auction",
+        "listing_kind": "auction",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
+    },
+    {
+      "original_title": "Korean National Treasure No. 188 Crown of Silla 24K Gold in Original Wood Crate | eBay",
+      "platform": "eBay",
+      "url": "https://www.ebay.com/itm/Korean-National-Treasure-No-188-Crown-of-Silla-24K-Gold-in-Original-Wood-Crate-/256426466304",
+      "price_usd": 0,
+      "status": "LOW RISK",
+      "risk_score": 1,
+      "origin_region": "Korea",
+      "provenance_flag": false,
+      "keyword_trigger": "silla gold crown artifact",
+      "reason": "An eBay listing for a 'Korean National Treasure No. 188 Crown of Silla 24K Gold' was identified. The item is explicitly described as a replica of the Silla Crown, not the original artifact. Therefore, it is classified as LOW RISK (score 1) as it does not indicate illicit trade of cultural objects.",
+      "scraped_at": "2026-03-24T10:01:16.172314Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//www.ebay.com/itm/Korean-National-Treasure-No-188-Crown-of-Silla-24K-Gold-in-Original-Wood-Crate-/256426466304&screenshot=true&meta=false&embed=screenshot.url",
+      "pipeline": {
+        "version": "6.0",
+        "uncertainty_flags": [
+          "price_unknown"
+        ],
+        "evidence_that_would_change_assessment": "Documentation or signals indicating the item is misrepresented and is, in fact, the original artifact or a high-value, illicitly traded cultural object. Evidence of deceptive practices regarding its authenticity would also alter the assessment.",
+        "confidence": "high",
+        "source_context": "marketplace",
+        "listing_kind": "sale_listing",
+        "collector_repair": false,
+        "classifier_repair": false
+      }
     }
   ]
 }
