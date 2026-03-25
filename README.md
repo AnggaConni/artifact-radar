@@ -127,3 +127,22 @@ KEYWORDS = [
 This tool is intended for cultural-heritage protection, academic research, and law-enforcement support purposes only, consistent with the 1970 UNESCO Convention on the Means of Prohibiting and Preventing the Illicit Import, Export and Transfer of Ownership of Cultural Property and the UNIDROIT 1995 Convention on stolen cultural objects.
 
 License: AGPL
+
+## Origin & Purpose
+
+Artifact Radar was originally conceptualized and developed by Angga Conni Saputra 
+based on real-world experience in cultural heritage monitoring within government 
+and international organizations.
+
+This project is designed as an open template to explore AI-assisted OSINT approaches 
+for detecting and analyzing the online trade of cultural property.
+
+Contributions, forks, and extensions are welcome, but should acknowledge the original 
+concept and repository as the foundational reference.
+
+## Citation
+
+If you use or build upon this work, please cite:
+
+Saputra, A.C. (2026). Artifact Radar: AI-assisted OSINT Monitoring System.
+GitHub Repository: https://github.com/AnggaConni/artifact-radar
