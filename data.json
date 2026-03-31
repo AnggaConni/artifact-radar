@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-03-23T02:43:04.990648Z",
-    "total_listings": 102,
+    "generated_at": "2026-03-31T02:48:44.893928Z",
+    "total_listings": 106,
     "high_risk_count": 52,
-    "medium_risk_count": 20,
+    "medium_risk_count": 23,
     "alerts_by_platform": {
       "Asumsi": 1,
       "Historia.ID": 1,
@@ -24,7 +24,7 @@
       "Live Science": 2,
       "Newsweek": 1,
       "Noonans Mayfair": 1,
-      "eBay": 7,
+      "eBay": 8,
       "Irish Examiner": 1,
       "Art & Object": 1,
       "Ancient Origins": 2,
@@ -80,7 +80,10 @@
       "YouTube (News - Firstpost)": 1,
       "Marfa Public Radio (News - Homeland Security Investigations)": 1,
       "Museum Crush (News - Portable Antiquities Scheme)": 1,
-      "Artemission": 1
+      "Artemission": 1,
+      "Antikeo (Gallery Vintage Addict)": 1,
+      "Pamono": 1,
+      "Sands of Time Gallery": 1
     },
     "top_high_risk": [
       {
@@ -1583,6 +1586,62 @@
       "reason": "Online dealer of 'authentic antiquities and ancient artefacts'. While offering a certificate of authenticity, the general nature of selling such items without fully transparent and verifiable archaeological provenance for each piece presents a medium risk. Prices not specified in snippet.",
       "scraped_at": "2026-03-23T02:42:14.333845Z",
       "screenshot_url": "https://api.microlink.io/?url=https%3A//www.artemission.com/&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Large Bronze Buddha Môn Dvaravati",
+      "platform": "Antikeo (Gallery Vintage Addict)",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDe4yIKijrQasRoesIc4gS-8MVZU61PQo7tsCMD8fUMj1dKpeXpjh9PEAQ-6O_jTdjRWvheAA1uzkMM7vVGlYCFPYdQ-aUoIUroELoYOcC7TyvSDA6NPWwpJKysYxj37GSHTZg6_1EsjbMWQZPvkKwx_1--s5j2pjIcC944YqlTkq-33dgb9ODxgxD-6gaYkPp1mb8MuZnXm2oDAgiKgFG3T0qULry9dZB_em-oCSg",
+      "price_usd": 4104.0,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "Southeast Asia (Myanmar/Burma, Hanthawaddy Kingdom)",
+      "provenance_flag": true,
+      "keyword_trigger": "mon kingdom bronze sale",
+      "reason": "Marketplace listing for a bronze Buddha from the Mon Dvaravati period, sold by 'Gallery Vintage Addict' on Antikeo. The listing mentions 'Sold with certificate of provenance', which helps mitigate risk. However, artifacts from this region and age warrant careful scrutiny of provenance due to potential illicit trade concerns.",
+      "scraped_at": "2026-03-31T02:48:41.890471Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDe4yIKijrQasRoesIc4gS-8MVZU61PQo7tsCMD8fUMj1dKpeXpjh9PEAQ-6O_jTdjRWvheAA1uzkMM7vVGlYCFPYdQ-aUoIUroELoYOcC7TyvSDA6NPWwpJKysYxj37GSHTZg6_1EsjbMWQZPvkKwx_1--s5j2pjIcC944YqlTkq-33dgb9ODxgxD-6gaYkPp1mb8MuZnXm2oDAgiKgFG3T0qULry9dZB_em-oCSg&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Myanmar Mon Artist, Figurative Sculpture, Kingdom of Hanthawaddy, Bronze",
+      "platform": "Pamono",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWz8StW_p0AFf5m4tNks-1vlc8OGyyjg7-tkTSI8IbA3w5Y3NKiL3zENoq5hmhb2ApkH880kqKV_DkVmh3fHSmx7M1TOoK5aBJsnlzZnDeC8V3JkmP17cief2xPOCxcIyA5hbs_KrB0QMcqqGyoHy3Fde6-djm2Dh8A2bph2pScnNjcQs1T0KRcu9jyCosNbnGlbfA",
+      "price_usd": 3110.4,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "Southeast Asia (Myanmar/Burma, Hanthawaddy Kingdom)",
+      "provenance_flag": true,
+      "keyword_trigger": "mon kingdom bronze sale",
+      "reason": "Marketplace listing on Pamono for a bronze figurative sculpture from the Hanthawaddy Kingdom (Mon people). The listing explicitly states 'Sold with certificate of provenance', which indicates an attempt at establishing legitimate origin. However, given the historical context of artifacts from this region, a medium risk assessment is appropriate, emphasizing the need for thorough provenance verification.",
+      "scraped_at": "2026-03-31T02:48:41.890743Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWz8StW_p0AFf5m4tNks-1vlc8OGyyjg7-tkTSI8IbA3w5Y3NKiL3zENoq5hmhb2ApkH880kqKV_DkVmh3fHSmx7M1TOoK5aBJsnlzZnDeC8V3JkmP17cief2xPOCxcIyA5hbs_KrB0QMcqqGyoHy3Fde6-djm2Dh8A2bph2pScnNjcQs1T0KRcu9jyCosNbnGlbfA&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Antiquities for Sale-Ancient Art Dealer offering exceptional artifacts",
+      "platform": "Sands of Time Gallery",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUZYCRyOVjjvBTotMNYo7nUv9yDNADBkfH1XL7TIOtGErHjXxS1nhSdHqPbqP7s9l92ryev6nHN3Px36-h5g1jfWBNWDf-tvOXxMmApiekS5QByA==",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 3,
+      "origin_region": "Unknown (General ancient art dealer)",
+      "provenance_flag": false,
+      "keyword_trigger": "mon kingdom bronze sale",
+      "reason": "This is a general listing for an ancient art dealer, 'Sands of Time Gallery', offering various antiquities. While it mentions 'Asian cultures', no specific 'Mon Kingdom bronze' items are listed with prices in the provided snippet. It serves as an informational lead to a potential source for such artifacts rather than a direct listing.",
+      "scraped_at": "2026-03-31T02:48:41.890766Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUZYCRyOVjjvBTotMNYo7nUv9yDNADBkfH1XL7TIOtGErHjXxS1nhSdHqPbqP7s9l92ryev6nHN3Px36-h5g1jfWBNWDf-tvOXxMmApiekS5QByA%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Bronze Pre - 1800 Burmese Antiques for sale",
+      "platform": "eBay",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKGtq00DldSwb4inD2s4183xSEHd-c-b6-wF57njaCbg1zl7owT3Pihd-ZY4Yf_NjOnsrATBbz0OCxjCf_OuKlei6DuQN0F9QGNWbLEW8ZCmz-pjgHGb4ocTkF06xsDwnadZXCFhCbRMxpcDrU4q6cKCfaBNcVvmomsqKyoxg1c4qo7Q==",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 7,
+      "origin_region": "Southeast Asia (Burma/Myanmar)",
+      "provenance_flag": false,
+      "keyword_trigger": "mon kingdom bronze sale",
+      "reason": "eBay search results for 'Bronze Pre - 1800 Burmese Antiques'. While not exclusively 'Mon Kingdom bronze', Mon culture is integral to Burmese history. The snippet shows a range of items, but specific provenance for individual pieces on eBay is often less rigorous or clearly stated compared to specialized auction houses. The price is listed as 0 as no specific item price was provided in the snippet, only a general price range for the search results.",
+      "scraped_at": "2026-03-31T02:48:41.890782Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKGtq00DldSwb4inD2s4183xSEHd-c-b6-wF57njaCbg1zl7owT3Pihd-ZY4Yf_NjOnsrATBbz0OCxjCf_OuKlei6DuQN0F9QGNWbLEW8ZCmz-pjgHGb4ocTkF06xsDwnadZXCFhCbRMxpcDrU4q6cKCfaBNcVvmomsqKyoxg1c4qo7Q%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     }
   ]
 }
