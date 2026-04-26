@@ -1,9 +1,9 @@
 """
 =======================================================================
-  ARTIFACT RADAR v5.4 — Medsos Hunter Edition (FIXED)
-  AI Engine : Grok 4.20 Reasoning (xAI) + live_search
-  Mode      : Full English, Global Scope, 8-Day Interval
-  Status    : Fixed - Compatible with current xAI API (April 2026)
+  ARTIFACT RADAR v5.5 — Medsos Hunter Edition (Fixed)
+  AI Engine : Grok 4.20 Reasoning + live_search (with sources)
+  Status    : Fixed - Added required 'sources' field
+  Date      : 26 April 2026
 =======================================================================
 """
 import os
@@ -13,23 +13,20 @@ import logging
 import random
 import re
 import time
-from datetime import datetime, timedelta
+from datetime import datetime
 import requests
 from openai import OpenAI
-
-# ── Logging Configuration ──
+# ── Logging ──
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[logging.StreamHandler()]
 )
 log = logging.getLogger("ArtifactRadar")
-
 # ── Configuration ──
-MODEL_NAME = "grok-4.20-reasoning"          # Updated to current best model
+MODEL_NAME = "grok-4-1-fast-reasoning"      # Bisa diganti ke grok-4-1-fast-reasoning kalau mau lebih murah
 XAI_API_KEY = None
 client = None
-
 # ── File Paths ──
 BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
@@ -264,47 +261,36 @@ def load_db():
         try:
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                if isinstance(data, list):
-                    log.info("Migrating old list format to structured JSON...")
-                    return {"summary": {}, "listings": data}
-                return data
+                return data if isinstance(data, dict) else {"summary": {}, "listings": data}
         except Exception as e:
-            log.warning(f"Old database corrupted, starting fresh: {e}")
+            log.warning(f"Database error: {e}")
     return {"summary": {}, "listings": []}
 def get_hash(path):
     try:
         h = hashlib.md5()
-        with open(path, "rb") as f: 
-            h.update(f.read())
+        with open(path, "rb") as f: h.update(f.read())
         return h.hexdigest()
-    except: 
-        return "none"
+    except: return "none"
 def check_schedule():
-    if os.environ.get("FORCE_CRAWL") == "true": 
+    if os.environ.get("FORCE_CRAWL") == "true":
         log.info("FORCE_CRAWL is active. Bypassing schedule.")
         return True
-        
-    if not os.path.exists(HISTORY_FILE): 
-        return True
+    if not os.path.exists(HISTORY_FILE): return True
     try:
         with open(HISTORY_FILE) as f:
             h = json.load(f)
         last = datetime.fromisoformat(h.get("last_crawl_date"))
-        days_passed = (datetime.now() - last).days
-        return days_passed >= 8
-    except: 
+        return (datetime.now() - last).days >= 8
+    except:
         return True
 def calculate_summary(listings):
     high_risk = [x for x in listings if x.get("risk_score", 0) >= 8]
     medium_risk = [x for x in listings if 4 <= x.get("risk_score", 0) <= 7]
-    
     platforms = {}
     for item in listings:
         plat = item.get("platform", "Unknown")
         platforms[plat] = platforms.get(plat, 0) + 1
-        
     top_high_risk = sorted(high_risk, key=lambda x: x.get("risk_score", 0), reverse=True)[:5]
-    
     return {
         "generated_at": datetime.now().isoformat() + "Z",
         "total_listings": len(listings),
@@ -314,63 +300,49 @@ def calculate_summary(listings):
         "top_high_risk": top_high_risk
     }
 def get_screenshot_url(url):
-    if not url or url.lower() == "n/a":
-        return "N/A"
-    encoded_url = requests.utils.quote(url)
-    return f"https://api.microlink.io/?url={encoded_url}&screenshot=true&meta=false&embed=screenshot.url"
+    if not url or url.lower() == "n/a": return "N/A"
+    encoded = requests.utils.quote(url)
+    return f"https://api.microlink.io/?url={encoded}&screenshot=true&meta=false&embed=screenshot.url"
 def extract_json_array(text: str):
-    if not text or not isinstance(text, str):
-        return []
-    
-    clean_text = text.replace('```json', '').replace('```', '').strip()
-    clean_text = re.sub(r'^.*?\[', '[', clean_text, flags=re.DOTALL)
-    
-    start_idx = clean_text.find('[')
-    end_idx = clean_text.rfind(']') + 1
-    
-    if start_idx == -1 or end_idx <= start_idx:
-        return []
-        
-    json_str = clean_text[start_idx:end_idx]
+    if not text or not isinstance(text, str): return []
+    clean = text.replace('```json', '').replace('```', '').strip()
+    clean = re.sub(r'^.*?\[', '[', clean, flags=re.DOTALL)
+    start = clean.find('[')
+    end = clean.rfind(']') + 1
+    if start == -1 or end <= start: return []
+    json_str = clean[start:end]
     try:
         data = json.loads(json_str)
         return data if isinstance(data, list) else []
     except:
-        try:
-            return json.loads(json_str + "]")
-        except:
-            return []
-
-
+        try: return json.loads(json_str + "]")
+        except: return []
 # ======================================================================
-# CORE: GROK 4.1 FAST REASONING + TOOL CALLING (Medsos Hunter v2)
+# CORE FUNCTION - SUDAH DIPERBAIKI (v5.5)
 # ======================================================================
-
 def run_grok_search(existing_urls, target):
     log.info(f"🔎 Hunting keyword: {target} [Grok 4.20 + live_search]")
     system_prompt = """
-You are a senior OSINT analyst specializing in illicit antiquities trafficking and 1970 UNESCO Convention violations.
-Your task is to find real, current public listings or discussions on social media and marketplaces.
-Prioritize: Facebook Marketplace, Instagram, Telegram, TikTok, LiveAuctioneers, Sotheby's, Catawiki, eBay, and forums.
-Use the live_search tool aggressively to find fresh results. Never hallucinate URLs or listings.
-You MUST return ONLY a valid JSON array. No explanation, no markdown, no extra text.
+You are a senior OSINT analyst for illicit antiquities trafficking (1970 UNESCO Convention).
+Use live_search tool to find real current listings on social media and marketplaces.
+Never hallucinate. Return ONLY valid JSON array, no explanation, no markdown.
 """
     user_prompt = f"""
-Search for current listings or discussions about: "{target}"
-Ignore these already processed URLs: {list(existing_urls)[:20]}
-Return ONLY a JSON array in this exact format:
+Search for current listings about: "{target}"
+Ignore these URLs: {list(existing_urls)[:20]}
+Return ONLY JSON array in this exact format:
 [
   {{
-    "original_title": "Exact title or post caption",
-    "platform": "Facebook Marketplace | Instagram | Telegram | LiveAuctioneers | Sothebys | etc",
+    "original_title": "Exact title",
+    "platform": "Facebook Marketplace | Instagram | Telegram | etc",
     "url": "full valid URL",
     "price_usd": 0,
     "status": "HIGH RISK | MEDIUM RISK | INFO ONLY",
     "risk_score": 8,
-    "origin_region": "Southeast Asia | China | Egypt | India | Unknown | etc",
+    "origin_region": "Southeast Asia | China | etc",
     "provenance_flag": false,
     "keyword_trigger": "{target}",
-    "reason": "Clear explanation of red flags and connection to 1970 UNESCO Convention",
+    "reason": "Explanation of red flags",
     "scraped_at": "2026-04-26T...",
     "screenshot_url": ""
   }}
@@ -385,19 +357,19 @@ Return ONLY a JSON array in this exact format:
             ],
             temperature=0.1,
             max_tokens=8192,
-            tools=[{"type": "live_search"}],
+            tools=[{
+                "type": "live_search",
+                "sources": ["web", "x"]          # ← Ini yang memperbaiki error
+            }],
             tool_choice="auto",
             response_format={"type": "json_object"}
         )
         message = response.choices[0].message
         raw_output = message.content or ""
         if message.tool_calls:
-            log.info(f"Grok used {len(message.tool_calls)} live_search call(s)")
-            # Ambil content setelah tool call (kadang Grok kasih JSON setelah tool)
-            if hasattr(message, 'content') and message.content:
+            log.info(f"Grok used {len(message.tool_calls)} tool call(s)")
+            if message.content:
                 raw_output = message.content
-            else:
-                raw_output = str(message.tool_calls[-1])  # fallback
         results = extract_json_array(raw_output)
         log.info(f"Found {len(results)} result(s) from Grok for '{target}'")
         return results
@@ -411,34 +383,26 @@ def main():
         return
     XAI_API_KEY = os.environ.get("XAI_API_KEY", "").strip()
     if not XAI_API_KEY:
-        log.error("❌ XAI_API_KEY environment variable is missing!")
+        log.error("❌ XAI_API_KEY is missing!")
         return
-    client = OpenAI(
-        api_key=XAI_API_KEY,
-        base_url="https://api.x.ai/v1",
-    )
+    client = OpenAI(api_key=XAI_API_KEY, base_url="https://api.x.ai/v1")
     try:
         db = load_db()
         listings = db.get("listings", [])
         existing_urls = {i.get('url') for i in listings if i.get('url')}
         # Backfill screenshot
-        backfill_count = 0
         for item in listings:
             if not item.get("screenshot_url"):
                 item["screenshot_url"] = get_screenshot_url(item.get("url"))
-                backfill_count += 1
-        if backfill_count > 0:
-            log.info(f"Backfilled screenshots for {backfill_count} records.")
         targets = random.sample(KEYWORDS, min(len(KEYWORDS), 3))
         
-        log.info(f"🚀 Starting Artifact Radar v5.4 — Medsos Hunter (Fixed)")
+        log.info("🚀 Starting Artifact Radar v5.5 — Medsos Hunter (Fixed sources)")
         log.info(f"Selected keywords: {targets}")
         
         count = 0
         for target in targets:
             new_items = run_grok_search(existing_urls, target)
-            
-            if isinstance(new_items, list) and len(new_items) > 0:
+            if isinstance(new_items, list) and new_items:
                 for item in new_items:
                     url = item.get('url')
                     if url and url.startswith("http") and url not in existing_urls:
@@ -448,11 +412,12 @@ def main():
                         existing_urls.add(url)
                         count += 1
                         log.info(f"✅ Added | Risk: {item.get('risk_score', 0)} | {item.get('platform')}")
-            
-            time.sleep(5)  # sedikit lebih longgar
+            else:
+                log.info(f"No new valid items from: {target}")
+            time.sleep(5)
         db["listings"] = listings
         db["summary"] = calculate_summary(listings)
-        if count > 0 or backfill_count > 0:
+        if count > 0:
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(db, f, indent=2, ensure_ascii=False)
             log.info(f"✅ Database updated. Added {count} new items.")
@@ -463,7 +428,7 @@ def main():
                 "ai_engine": MODEL_NAME
             }, f, indent=2)
             
-        log.info(f"✅ Artifact Radar v5.4 run completed successfully.")
+        log.info("✅ Artifact Radar v5.5 run completed successfully.")
     except Exception as e:
         log.error(f"Fatal Error: {e}")
 if __name__ == "__main__":
