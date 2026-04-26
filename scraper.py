@@ -1,11 +1,12 @@
 """
 =======================================================================
-  ARTIFACT RADAR v6.0 — Medsos Hunter (Responses API)
-  AI Engine : Grok 4.20 Reasoning + web_search (Official Recommended)
-  Status    : Fixed - Using new xAI Responses API
-  Date      : 26 April 2026
+  ARTIFACT RADAR v5.1 — Global Intelligence Engine
+  AI Engine : Google Gemini 2.5 Flash (Google Search Grounding)
+  Mode      : Full English, Global Scope, 8-Day Interval
+  Feature   : Auto-Backfill Missing Screenshots
 =======================================================================
 """
+
 import os
 import json
 import hashlib
@@ -13,20 +14,17 @@ import logging
 import random
 import re
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 import requests
-from openai import OpenAI
-# ── Logging ──
+
+# ── Logging Configuration ──
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[logging.StreamHandler()]
 )
 log = logging.getLogger("ArtifactRadar")
-# ── Configuration ──
-MODEL_NAME = "grok-4.20-reasoning"
-XAI_API_KEY = None
-client = None
+
 # ── File Paths ──
 BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
@@ -260,36 +258,55 @@ def load_db():
         try:
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                return data if isinstance(data, dict) else {"summary": {}, "listings": data}
+                if isinstance(data, list):
+                    log.info("Migrating old list format to structured JSON...")
+                    return {"summary": {}, "listings": data}
+                return data
         except Exception as e:
-            log.warning(f"Database error: {e}")
+            log.warning(f"Old database corrupted, starting fresh: {e}")
+            
     return {"summary": {}, "listings": []}
+
 def get_hash(path):
     try:
         h = hashlib.md5()
         with open(path, "rb") as f: h.update(f.read())
         return h.hexdigest()
     except: return "none"
+
 def check_schedule():
-    if os.environ.get("FORCE_CRAWL") == "true":
+    """Run automatically every 8 days, or immediately if FORCE_CRAWL is true."""
+    if os.environ.get("FORCE_CRAWL") == "true": 
         log.info("FORCE_CRAWL is active. Bypassing schedule.")
         return True
+        
     if not os.path.exists(HISTORY_FILE): return True
     try:
         with open(HISTORY_FILE) as f:
             h = json.load(f)
         last = datetime.fromisoformat(h.get("last_crawl_date"))
-        return (datetime.now() - last).days >= 8
-    except:
-        return True
+        
+        # 8-DAY INTERVAL CHECK
+        days_passed = (datetime.now() - last).days
+        if days_passed >= 8:
+            log.info(f"{days_passed} days have passed. Executing scheduled crawl.")
+            return True
+        else:
+            log.info(f"Only {days_passed} days passed since last crawl. Waiting for 8-day mark.")
+            return False
+    except: return True
+
 def calculate_summary(listings):
     high_risk = [x for x in listings if x.get("risk_score", 0) >= 8]
     medium_risk = [x for x in listings if 4 <= x.get("risk_score", 0) <= 7]
+    
     platforms = {}
     for item in listings:
         plat = item.get("platform", "Unknown")
         platforms[plat] = platforms.get(plat, 0) + 1
+        
     top_high_risk = sorted(high_risk, key=lambda x: x.get("risk_score", 0), reverse=True)[:5]
+    
     return {
         "generated_at": datetime.now().isoformat() + "Z",
         "total_listings": len(listings),
@@ -298,126 +315,172 @@ def calculate_summary(listings):
         "alerts_by_platform": platforms,
         "top_high_risk": top_high_risk
     }
+
 def get_screenshot_url(url):
-    if not url or url.lower() == "n/a": return "N/A"
-    encoded = requests.utils.quote(url)
-    return f"https://api.microlink.io/?url={encoded}&screenshot=true&meta=false&embed=screenshot.url"
-def extract_json_array(text: str):
-    if not text or not isinstance(text, str): return []
-    clean = text.replace('```json', '').replace('```', '').strip()
-    clean = re.sub(r'^.*?\[', '[', clean, flags=re.DOTALL)
-    start = clean.find('[')
-    end = clean.rfind(']') + 1
-    if start == -1 or end <= start: return []
-    json_str = clean[start:end]
-    try:
-        data = json.loads(json_str)
-        return data if isinstance(data, list) else []
-    except:
-        try: return json.loads(json_str + "]")
-        except: return []
+    """Generates a dynamic screenshot URL using a free API service."""
+    if not url or url.lower() == "n/a":
+        return "N/A"
+    encoded_url = requests.utils.quote(url)
+    return f"https://api.microlink.io/?url={encoded_url}&screenshot=true&meta=false&embed=screenshot.url"
+
 # ======================================================================
-# CORE - Menggunakan Responses API (V6.0)
+# CORE: DIRECT REST API AI ANALYZER
 # ======================================================================
-def run_grok_search(existing_urls, target):
-    log.info(f"🔎 Hunting keyword: {target} [Grok 4.20 + web_search]")
-    system_prompt = """
-You are a senior OSINT analyst specializing in illicit antiquities trafficking according to the 1970 UNESCO Convention.
-Use the web_search tool to find real, current listings on Facebook Marketplace, Instagram, Telegram, TikTok, auction sites, and forums.
-Never hallucinate URLs or listings. Return ONLY a valid JSON array. No explanation outside the JSON.
-"""
-    user_prompt = f"""
-Search for current listings or discussions about: "{target}"
-Ignore these already processed URLs: {list(existing_urls)[:25]}
-Return ONLY a JSON array in this exact format:
-[
-  {{
-    "original_title": "Exact title or post caption",
-    "platform": "Facebook Marketplace | Instagram | Telegram | LiveAuctioneers | Sothebys | etc",
-    "url": "full valid URL",
-    "price_usd": 0,
-    "status": "HIGH RISK | MEDIUM RISK | INFO ONLY",
-    "risk_score": 8,
-    "origin_region": "Southeast Asia | China | India | Papua New Guinea | Ukraine | etc",
-    "provenance_flag": false,
-    "keyword_trigger": "{target}",
-    "reason": "Specific red flags and connection to 1970 UNESCO Convention",
-    "scraped_at": "2026-04-26T18:38:00Z",
-    "screenshot_url": ""
-  }}
-]
-"""
-    try:
-        response = client.responses.create(
-            model=MODEL_NAME,
-            input=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            tools=[{"type": "web_search"}],
-            temperature=0.1,
-            max_output_tokens=8192,
-            response_format={"type": "json_object"}
-        )
-        # Responses API structure berbeda
-        output = response.output_text if hasattr(response, 'output_text') else str(response)
-        results = extract_json_array(output)
-        
-        log.info(f"Found {len(results)} result(s) from Grok for '{target}'")
-        return results
-    except Exception as e:
-        log.error(f"Grok hunting error for '{target}': {e}")
-        return []
-def main():
-    global client, XAI_API_KEY
+
+def run_ai_search(api_key, existing_urls, target):
+    log.info(f"Targeting keyword: {target}")
     
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    
+    prompt = f"""
+    Use Google Search to find real marketplace listings, auctions, or news regarding: "{target}".
+    Identify marketplace listings (eBay, Facebook, auction houses), theft news, or collector forums.
+    
+    Output the result STRICTLY as a JSON Array of objects.
+    Ignore these already captured URLs: {list(existing_urls)[:5]}
+    
+    Mandatory JSON Structure:
+    [
+      {{
+        "original_title": "Original title of the item or news article",
+        "platform": "Website Name (e.g., eBay, BBC, Facebook, Sotheby's)",
+        "url": "Full URL",
+        "price_usd": 0,
+        "status": "HIGH RISK | MEDIUM RISK | INFO ONLY", 
+        "risk_score": 9,
+        "origin_region": "Origin of the artifact (e.g., Southeast Asia, Middle East, Unknown)",
+        "provenance_flag": false,
+        "keyword_trigger": "{target}",
+        "reason": "Detailed reasoning regarding its provenance, risk, or price",
+        "scraped_at": "{datetime.now().isoformat()}Z",
+        "screenshot_url": ""
+      }}
+    ]
+    """
+    
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "tools": [{"googleSearch": {}}],
+        "generationConfig": {
+            "temperature": 0.7,
+            "maxOutputTokens": 8192
+        },
+        "safetySettings": [
+            {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+        ]
+    }
+    
+    try:
+        response = requests.post(url, json=payload, headers={'Content-Type': 'application/json'})
+        
+        if response.status_code != 200:
+            log.error(f"Google API Error ({response.status_code}): {response.text}")
+            return []
+
+        data = response.json()
+        
+        try:
+            text = data['candidates'][0]['content']['parts'][0]['text']
+        except (KeyError, IndexError):
+            log.error("Empty or rejected API response.")
+            return []
+            
+        log.info(f"Raw AI Output: {text[:150]}...")
+        
+        # BULLETPROOF JSON EXTRACTOR
+        clean_text = text.replace('```json', '').replace('```', '')
+        clean_text = re.sub(r'\[\d+\]', '', clean_text)
+        
+        start_idx = clean_text.find('[')
+        end_idx = clean_text.rfind(']')
+        
+        if start_idx != -1 and end_idx != -1 and start_idx < end_idx:
+            json_str = clean_text[start_idx:end_idx+1]
+            try:
+                data = json.loads(json_str)
+                return data
+            except json.JSONDecodeError as e:
+                log.error(f"JSON Parse Error: {e}")
+                return []
+        else:
+            log.warning("AI did not provide a valid JSON Array.")
+            return []
+            
+    except Exception as e:
+        log.error(f"AI Search Failed for '{target}': {e}")
+        return []
+
+def main():
     if not check_schedule():
         return
-    XAI_API_KEY = os.environ.get("XAI_API_KEY", "").strip()
-    if not XAI_API_KEY:
-        log.error("❌ XAI_API_KEY is missing!")
-        return
-    client = OpenAI(api_key=XAI_API_KEY, base_url="https://api.x.ai/v1")
+    
+    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not api_key:
+        log.error("GEMINI_API_KEY not found or empty!")
+        return 
+
     try:
         db = load_db()
         listings = db.get("listings", [])
-        existing_urls = {i.get('url') for i in listings if i.get('url')}
-        targets = random.sample(KEYWORDS, min(len(KEYWORDS), 3))
         
-        log.info("🚀 Starting Artifact Radar v6.0 — Medsos Hunter (Responses API)")
-        log.info(f"Selected keywords: {targets}")
+        # ── BACKFILL MISSING SCREENSHOTS FOR OLD DATA ──
+        # Fungsi ini mengecek apakah data lama sudah punya screenshot_url
+        backfill_count = 0
+        for item in listings:
+            if not item.get("screenshot_url") or item.get("screenshot_url") == "":
+                url = item.get("url")
+                if url and url.lower() != "n/a":
+                    item["screenshot_url"] = get_screenshot_url(url)
+                else:
+                    item["screenshot_url"] = "N/A"
+                backfill_count += 1
+        if backfill_count > 0:
+            log.info(f"Successfully backfilled screenshots for {backfill_count} old records.")
+
+        existing_urls = {i.get('url') for i in listings if i.get('url')}
+        
+        # Pick 3 random global keywords per run
+        targets = random.sample(KEYWORDS, min(len(KEYWORDS), 3))
         
         count = 0
         for target in targets:
-            new_items = run_grok_search(existing_urls, target)
-            if isinstance(new_items, list) and new_items:
+            new_items = run_ai_search(api_key, existing_urls, target)
+            
+            if isinstance(new_items, list):
                 for item in new_items:
-                    url = item.get('url')
-                    if url and url.startswith("http") and url not in existing_urls:
-                        item.setdefault('scraped_at', datetime.now().isoformat() + "Z")
-                        item.setdefault('screenshot_url', get_screenshot_url(url))
+                    link = item.get('url')
+                    if link and link not in existing_urls:
+                        item['scraped_at'] = datetime.now().isoformat() + "Z"
+                        item['keyword_trigger'] = target
+                        item['screenshot_url'] = get_screenshot_url(link)
                         listings.append(item)
-                        existing_urls.add(url)
+                        existing_urls.add(link)
                         count += 1
-                        log.info(f"✅ Added | Risk: {item.get('risk_score', 0)} | {item.get('platform')}")
-            else:
-                log.info(f"No new valid items from: {target}")
-            time.sleep(6)
+            
+            # PENAMBAHAN DELAY: Jeda 3 detik antar request agar tidak diblokir Google karena rate limit (Error 429)
+            time.sleep(3)
+
         db["listings"] = listings
         db["summary"] = calculate_summary(listings)
-        if count > 0:
+
+        # Update file jika ada data baru ATAU jika ada proses backfill data lama
+        if count > 0 or backfill_count > 0 or not db["summary"].get("generated_at"):
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(db, f, indent=2, ensure_ascii=False)
-            log.info(f"✅ Database updated. Added {count} new items.")
+
         with open(HISTORY_FILE, "w") as f:
             json.dump({
                 "last_crawl_date": datetime.now().isoformat(),
-                "script_hash": get_hash(SCRIPT_FILE),
-                "ai_engine": MODEL_NAME
+                "script_hash": get_hash(SCRIPT_FILE)
             }, f, indent=2)
             
-        log.info("✅ Artifact Radar v6.0 run completed successfully.")
+        log.info(f"✅ Run Complete. Added {count} new items. Total Database: {len(listings)} items.")
+
     except Exception as e:
-        log.error(f"Fatal Error: {e}")
+        log.error(f"Fatal Error during main execution: {e}")
+
 if __name__ == "__main__":
     main()
