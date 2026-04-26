@@ -1,11 +1,10 @@
-name: Artifact Radar v5.3 — Grok Medsos Hunter
+name: Artifact Radar Auto-Crawler
 
 on:
   schedule:
-    # Dijalankan setiap hari pukul 00:00 UTC, tapi script Python akan cek jadwal 8 hari
+    # Berjalan tiap hari, tapi Python script akan menahannya jika belum 8 hari
     - cron: "0 0 * * *"
-  
-  workflow_dispatch:
+  workflow_dispatch: 
     inputs:
       force_crawl:
         description: 'Force crawl now (bypass 8-day schedule)?'
@@ -20,7 +19,7 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  run-artifact-radar:
+  run-scraper-and-ai:
     runs-on: ubuntu-latest
     
     permissions:
@@ -35,17 +34,17 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.10"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install openai requests
+          pip install requests
 
-      - name: Run Artifact Radar v5.3 with Grok 4.1 Fast
+      - name: Run Scraper & Gemini AI
         env:
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-          FORCE_CRAWL: ${{ github.event.inputs.force_crawl || 'false' }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FORCE_CRAWL: ${{ github.event.inputs.force_crawl }}
         run: python scraper.py
 
       - name: Commit and Push changes
@@ -58,6 +57,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No new data to commit."
           else
-            git commit -m "chore: Artifact Radar v5.3 - Incremental update [Grok 4.1 Fast] [skip ci]"
+            git commit -m "Incremental update: Added new artifact intelligence [skip ci]"
             git push origin main
           fi
