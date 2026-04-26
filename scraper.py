@@ -1,8 +1,8 @@
 """
 =======================================================================
-  ARTIFACT RADAR v5.5 — Medsos Hunter Edition (Fixed)
-  AI Engine : Grok 4.20 Reasoning + live_search (with sources)
-  Status    : Fixed - Added required 'sources' field
+  ARTIFACT RADAR v6.0 — Medsos Hunter (Responses API)
+  AI Engine : Grok 4.20 Reasoning + web_search (Official Recommended)
+  Status    : Fixed - Using new xAI Responses API
   Date      : 26 April 2026
 =======================================================================
 """
@@ -24,7 +24,7 @@ logging.basicConfig(
 )
 log = logging.getLogger("ArtifactRadar")
 # ── Configuration ──
-MODEL_NAME = "grok-4-1-fast-reasoning"      # Bisa diganti ke grok-4-1-fast-reasoning kalau mau lebih murah
+MODEL_NAME = "grok-4.20-reasoning"
 XAI_API_KEY = None
 client = None
 # ── File Paths ──
@@ -32,7 +32,6 @@ BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
 DATA_FILE    = os.path.join(BASE_DIR, "data.json")
 SCRIPT_FILE  = os.path.abspath(__file__)
-
 
 # ======================================================================
 # GLOBAL KEYWORD DATABASE (Full English)
@@ -318,59 +317,52 @@ def extract_json_array(text: str):
         try: return json.loads(json_str + "]")
         except: return []
 # ======================================================================
-# CORE FUNCTION - SUDAH DIPERBAIKI (v5.5)
+# CORE - Menggunakan Responses API (V6.0)
 # ======================================================================
 def run_grok_search(existing_urls, target):
-    log.info(f"🔎 Hunting keyword: {target} [Grok 4.20 + live_search]")
+    log.info(f"🔎 Hunting keyword: {target} [Grok 4.20 + web_search]")
     system_prompt = """
-You are a senior OSINT analyst for illicit antiquities trafficking (1970 UNESCO Convention).
-Use live_search tool to find real current listings on social media and marketplaces.
-Never hallucinate. Return ONLY valid JSON array, no explanation, no markdown.
+You are a senior OSINT analyst specializing in illicit antiquities trafficking according to the 1970 UNESCO Convention.
+Use the web_search tool to find real, current listings on Facebook Marketplace, Instagram, Telegram, TikTok, auction sites, and forums.
+Never hallucinate URLs or listings. Return ONLY a valid JSON array. No explanation outside the JSON.
 """
     user_prompt = f"""
-Search for current listings about: "{target}"
-Ignore these URLs: {list(existing_urls)[:20]}
-Return ONLY JSON array in this exact format:
+Search for current listings or discussions about: "{target}"
+Ignore these already processed URLs: {list(existing_urls)[:25]}
+Return ONLY a JSON array in this exact format:
 [
   {{
-    "original_title": "Exact title",
-    "platform": "Facebook Marketplace | Instagram | Telegram | etc",
+    "original_title": "Exact title or post caption",
+    "platform": "Facebook Marketplace | Instagram | Telegram | LiveAuctioneers | Sothebys | etc",
     "url": "full valid URL",
     "price_usd": 0,
     "status": "HIGH RISK | MEDIUM RISK | INFO ONLY",
     "risk_score": 8,
-    "origin_region": "Southeast Asia | China | etc",
+    "origin_region": "Southeast Asia | China | India | Papua New Guinea | Ukraine | etc",
     "provenance_flag": false,
     "keyword_trigger": "{target}",
-    "reason": "Explanation of red flags",
-    "scraped_at": "2026-04-26T...",
+    "reason": "Specific red flags and connection to 1970 UNESCO Convention",
+    "scraped_at": "2026-04-26T18:38:00Z",
     "screenshot_url": ""
   }}
 ]
 """
     try:
-        response = client.chat.completions.create(
+        response = client.responses.create(
             model=MODEL_NAME,
-            messages=[
+            input=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
             ],
+            tools=[{"type": "web_search"}],
             temperature=0.1,
-            max_tokens=8192,
-            tools=[{
-                "type": "live_search",
-                "sources": ["web", "x"]          # ← Ini yang memperbaiki error
-            }],
-            tool_choice="auto",
+            max_output_tokens=8192,
             response_format={"type": "json_object"}
         )
-        message = response.choices[0].message
-        raw_output = message.content or ""
-        if message.tool_calls:
-            log.info(f"Grok used {len(message.tool_calls)} tool call(s)")
-            if message.content:
-                raw_output = message.content
-        results = extract_json_array(raw_output)
+        # Responses API structure berbeda
+        output = response.output_text if hasattr(response, 'output_text') else str(response)
+        results = extract_json_array(output)
+        
         log.info(f"Found {len(results)} result(s) from Grok for '{target}'")
         return results
     except Exception as e:
@@ -390,13 +382,9 @@ def main():
         db = load_db()
         listings = db.get("listings", [])
         existing_urls = {i.get('url') for i in listings if i.get('url')}
-        # Backfill screenshot
-        for item in listings:
-            if not item.get("screenshot_url"):
-                item["screenshot_url"] = get_screenshot_url(item.get("url"))
         targets = random.sample(KEYWORDS, min(len(KEYWORDS), 3))
         
-        log.info("🚀 Starting Artifact Radar v5.5 — Medsos Hunter (Fixed sources)")
+        log.info("🚀 Starting Artifact Radar v6.0 — Medsos Hunter (Responses API)")
         log.info(f"Selected keywords: {targets}")
         
         count = 0
@@ -414,7 +402,7 @@ def main():
                         log.info(f"✅ Added | Risk: {item.get('risk_score', 0)} | {item.get('platform')}")
             else:
                 log.info(f"No new valid items from: {target}")
-            time.sleep(5)
+            time.sleep(6)
         db["listings"] = listings
         db["summary"] = calculate_summary(listings)
         if count > 0:
@@ -428,7 +416,7 @@ def main():
                 "ai_engine": MODEL_NAME
             }, f, indent=2)
             
-        log.info("✅ Artifact Radar v5.5 run completed successfully.")
+        log.info("✅ Artifact Radar v6.0 run completed successfully.")
     except Exception as e:
         log.error(f"Fatal Error: {e}")
 if __name__ == "__main__":
