@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-04-16T03:23:06.637843Z",
-    "total_listings": 136,
+    "generated_at": "2026-04-26T18:47:26.546726Z",
+    "total_listings": 139,
     "high_risk_count": 56,
-    "medium_risk_count": 40,
+    "medium_risk_count": 43,
     "alerts_by_platform": {
       "Asumsi": 1,
       "Historia.ID": 1,
@@ -12,7 +12,7 @@
       "Hops ID": 1,
       "YouTube": 1,
       "Apollo Art Auctions": 1,
-      "Etsy": 7,
+      "Etsy": 10,
       "Reddit": 5,
       "Sotheby's": 5,
       "Christie's": 2,
@@ -2081,6 +2081,48 @@
       "reason": "Discussion forum post detailing that 4,000 manuscripts were destroyed or stolen during the extremist invasion, and the efforts to secretly remove and digitize others.",
       "scraped_at": "2026-04-16T03:23:03.636515Z",
       "screenshot_url": "https://api.microlink.io/?url=https%3A//www.reddit.com/r/AskHistorians/comments/17k7o3s/what_is_the_current_state_of_preservation_and/&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Thai Bronze Deity Figurine, Antique Temple Dancer Statue.",
+      "platform": "Etsy",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ-kVB8KgkeKrpvsWfzaEhl_sVAVCXDm97B-QVfkt9Nj7CDJsF1AIZ3IUZsa5ESHPYpDCrfJ6hzygkD__0SZ8P4lmuqJqBfIf1TYgLhe-7rGVwQ32bcNxrfGe0tbGTSPN6gkWH2m4bkrY=",
+      "price_usd": 214.62,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "Southeast Asia",
+      "provenance_flag": false,
+      "keyword_trigger": "thai bronze deity authentic",
+      "reason": "Online marketplace listing for an antique Thai bronze deity figurine. Claims of authenticity are common on such platforms but generally require further verification, hence medium risk.",
+      "scraped_at": "2026-04-26T18:47:23.543251Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ-kVB8KgkeKrpvsWfzaEhl_sVAVCXDm97B-QVfkt9Nj7CDJsF1AIZ3IUZsa5ESHPYpDCrfJ6hzygkD__0SZ8P4lmuqJqBfIf1TYgLhe-7rGVwQ32bcNxrfGe0tbGTSPN6gkWH2m4bkrY%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Thai Bronze Deity Figurine, Antique Temple Dancer Statue.",
+      "platform": "Etsy",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfsFBSDU4L_SGRyDuWhx3VzyD0w2-OxAcj2JKjjcHEypg4AjOsAGOjZIDYfczsYTBgD21SU1peNCZ-bUmUwT4jpBOpsdytZC_d96tA0ulqYmVxqyxc2z-9dJgiHNx1vC148xlihGQcQ-QIFIA=",
+      "price_usd": 225.59,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "Southeast Asia",
+      "provenance_flag": false,
+      "keyword_trigger": "thai bronze deity authentic",
+      "reason": "Online marketplace listing for an antique Thai bronze deity figurine. Claims of authenticity are common on such platforms but generally require further verification, hence medium risk. Price converted from GBP.",
+      "scraped_at": "2026-04-26T18:47:23.543477Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfsFBSDU4L_SGRyDuWhx3VzyD0w2-OxAcj2JKjjcHEypg4AjOsAGOjZIDYfczsYTBgD21SU1peNCZ-bUmUwT4jpBOpsdytZC_d96tA0ulqYmVxqyxc2z-9dJgiHNx1vC148xlihGQcQ-QIFIA%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Thai Bronze Deity Figurine, Antique Temple Dancer Statue.",
+      "platform": "Etsy",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoMXUdy9hEIv3qFb77oLfVVKPMRoKIW4YlUwSl6EpoBFQdgzq7ekKZHFJIE9V6nJpBgmzgGaarrpFAl8EUb2AlZ8WQOI70zngaFwzz9HDDRotYtijD8Fm5BcQwkyXn83BsDVPc9eSqHWfVRvKvQQQ2BhO-4NrI0x0HlCnP1SGgF3lfqLmg1vBF8RPUVw==",
+      "price_usd": 189.0,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "Southeast Asia",
+      "provenance_flag": false,
+      "keyword_trigger": "thai bronze deity authentic",
+      "reason": "Online marketplace listing for an antique Thai bronze deity figurine. Claims of authenticity are common on such platforms but generally require further verification, hence medium risk. Price converted from EUR.",
+      "scraped_at": "2026-04-26T18:47:23.543496Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoMXUdy9hEIv3qFb77oLfVVKPMRoKIW4YlUwSl6EpoBFQdgzq7ekKZHFJIE9V6nJpBgmzgGaarrpFAl8EUb2AlZ8WQOI70zngaFwzz9HDDRotYtijD8Fm5BcQwkyXn83BsDVPc9eSqHWfVRvKvQQQ2BhO-4NrI0x0HlCnP1SGgF3lfqLmg1vBF8RPUVw%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
     }
   ]
 }
