@@ -368,47 +368,42 @@ def extract_json_array(text: str):
 # ======================================================================
 
 def run_grok_search(existing_urls, target):
-    log.info(f"🔎 Hunting keyword: {target} [Grok 4.1 Fast + Web Search]")
+    log.info(f"🔎 Hunting keyword: {target} [Grok 4.1 Fast + Tools]")
 
     system_prompt = """
-You are a senior OSINT analyst specializing in illicit antiquities trafficking and the 1970 UNESCO Convention.
+You are a senior OSINT analyst for illicit antiquities trafficking according to the 1970 UNESCO Convention.
+Your job is to aggressively find real, current listings on social media and marketplaces.
+Prioritize: Facebook Marketplace, Instagram, Telegram channels/groups, TikTok, Discord, Catawiki, LiveAuctioneers, Sotheby's, eBay, and forums.
 
-Aggressively search for real, current listings, auctions, news, and discussions using web search capabilities. 
-Combine two approaches:
-1. Traditional search engine results + auction houses (Sotheby's, Christie's, Bonhams, LiveAuctioneers, Catawiki, Invaluable, eBay)
-2. Social media and dark channels (Facebook Marketplace, Instagram, Telegram groups/channels, TikTok, Discord, forums, metal detecting communities)
+Red flags (HIGH RISK):
+- No provenance or pre-1970 documentation
+- Camouflage language ("found in field", "inherited", "grandmother collection", "no papers", "barn find", "attic find", "estate sale")
+- Origin from conflict/looting zones
+- Price too good to be true
+- "Discreet shipping" or crypto payment
 
-Prioritize fresh content from the last 12 months when possible.
-
-Red flags based on 1970 UNESCO Convention (HIGH RISK):
-- Lack of provenance or pre-1970 documentation
-- Camouflage language ("found in field", "inherited from grandmother", "estate sale", "barn find", "attic find", "no papers", "pre-1970 collection")
-- Origin from conflict zones, recently looted areas, or high-risk countries
-- Price suspiciously low
-- "Discreet shipping", crypto payment, or "no questions asked"
-
-Never hallucinate URLs or listings. Always verify through search results.
+Use web_search tool aggressively. Never hallucinate URLs or listings.
 Output ONLY a valid JSON array. No explanation outside the JSON.
 """
 
     user_prompt = f"""
-Search the internet and social platforms for current artifact-related content about: "{target}"
+Search for current listings or discussions about: "{target}"
 
 Ignore these already processed URLs: {list(existing_urls)[:15]}
 
-Return ONLY a JSON array (maximum 5 most relevant results) using this exact structure:
+Return ONLY a JSON array in this exact format:
 [
   {{
     "original_title": "Exact title or post caption",
-    "platform": "Google | LiveAuctioneers | Facebook Marketplace | Instagram | Telegram | Sotheby's | eBay | News | etc",
+    "platform": "Facebook Marketplace | Instagram | Telegram | LiveAuctioneers | etc",
     "url": "full valid URL",
     "price_usd": 0,
     "status": "HIGH RISK | MEDIUM RISK | INFO ONLY",
-    "risk_score": 7,
-    "origin_region": "Cambodia | Egypt | Southeast Asia | Mesopotamia | Unknown | etc",
+    "risk_score": 8,
+    "origin_region": "Cambodia | Southeast Asia | Egypt | Unknown | etc",
     "provenance_flag": false,
     "keyword_trigger": "{target}",
-    "reason": "Detailed reasoning with specific red flags and connection to 1970 UNESCO Convention",
+    "reason": "Specific red flags mentioned and link to 1970 UNESCO Convention",
     "scraped_at": "2026-04-26T...",
     "screenshot_url": ""
   }}
@@ -432,11 +427,15 @@ Return ONLY a JSON array (maximum 5 most relevant results) using this exact stru
         message = response.choices[0].message
         raw_output = message.content or ""
 
+        # Simple handling untuk tool call (log saja dulu)
         if message.tool_calls:
-            log.info(f"Grok used {len(message.tool_calls)} web_search call(s) for '{target}'")
+            log.info(f"Grok used {len(message.tool_calls)} tool call(s) for '{target}'")
+            # Untuk versi ini kita ambil content-nya saja (bisa di-improve nanti)
+            if not raw_output:
+                raw_output = str(message.tool_calls)
 
         results = extract_json_array(raw_output)
-        log.info(f"→ Found {len(results)} valid result(s)")
+        log.info(f"Found {len(results)} result(s) from Grok")
         return results
 
     except Exception as e:
