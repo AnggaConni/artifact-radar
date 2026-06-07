@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-05-30T03:51:34.240293Z",
-    "total_listings": 210,
-    "high_risk_count": 76,
-    "medium_risk_count": 62,
+    "generated_at": "2026-06-07T04:20:25.592562Z",
+    "total_listings": 218,
+    "high_risk_count": 77,
+    "medium_risk_count": 69,
     "alerts_by_platform": {
       "Asumsi": 1,
       "Historia.ID": 1,
@@ -12,7 +12,7 @@
       "Hops ID": 1,
       "YouTube": 2,
       "Apollo Art Auctions": 1,
-      "Etsy": 14,
+      "Etsy": 15,
       "Reddit": 7,
       "Sotheby's": 8,
       "Christie's": 8,
@@ -137,7 +137,14 @@
       "Carnegie Endowment for International Peace": 1,
       "NoonPost English": 1,
       "Acropolo": 1,
-      "Edgar L. Owen Galleries": 1
+      "Edgar L. Owen Galleries": 1,
+      "Medicine Man Gallery": 1,
+      "Lusher Fine Art": 1,
+      "Cameron Trading Post": 1,
+      "Sarasota Estate Auction": 1,
+      "Elmore Indian Art": 1,
+      "Chimayo Trading": 1,
+      "Mebane Antique Auction Gallery": 1
     },
     "top_high_risk": [
       {
@@ -3153,6 +3160,118 @@
       "reason": "A news report from December 2007 detailed the discovery and recovery of over 30 items, including 21 gold pieces, identified as belonging to Peru's Moche Lords of Sipán tombs. These artifacts were found in a privately owned, reinforced chamber in Santiago de Compostela, Spain, and had been missing since a 1997 pre-Inca exhibition.",
       "scraped_at": "2026-05-30T03:50:52.148568Z",
       "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMno_d0JPPpCCavwoJ_3iDyvgQgawxZIyZsnoC8xyAxVQvQZZrM1lfsq7uN30YF4tbgcSGNxbaOv8v3Pa0mBVIvyTA_TTVFEYw3GyulDSdKxBWGR0pNHNt8vo6TlrEtaRLVpJvVlLj65mC5eCWCeN0PidJbpPfbclk2xGaHkTddM4h888wL0hSKE-Gx9PgLfWIwMe2kTlmBi8jb0vh0WmbLf9BIUPvYLSXA-o%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Historic Pottery & Pueblo Pottery New Mexico | Arizona's Native American Tribes - Medicine Man Gallery",
+      "platform": "Medicine Man Gallery",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgh6V3cGbGP0uo_HSlDsregW4DB9dT_r1tNfBrTN-6JcnW912_gB9SJwnexBdED88lQotRKs-S8j4mAUrPqR76-nUd-_CUafpOBTC9OeIpT77DwfNgj41YqxyIotsVA-Vr4tovyPGBmFzs-cheQnTzcvCw6fnpTNKrlblJsGdAEMdict6USQDXaK3X0NESOj4Y",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 5,
+      "origin_region": "New Mexico Pueblos and Arizona's Hopi Pueblo, Southwest US",
+      "provenance_flag": true,
+      "keyword_trigger": "pueblo pottery ancient authentic",
+      "reason": "Gallery specializing in Historic Pueblo pottery, suggesting authenticity. While the snippet mentions 'Historic Pueblo pottery' and 'authentic, handcrafted vessels', specific individual item provenance is not detailed in the snippet. The $0.00 price indicates a category page rather than a specific item listing.",
+      "scraped_at": "2026-06-07T04:20:13.222716Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgh6V3cGbGP0uo_HSlDsregW4DB9dT_r1tNfBrTN-6JcnW912_gB9SJwnexBdED88lQotRKs-S8j4mAUrPqR76-nUd-_CUafpOBTC9OeIpT77DwfNgj41YqxyIotsVA-Vr4tovyPGBmFzs-cheQnTzcvCw6fnpTNKrlblJsGdAEMdict6USQDXaK3X0NESOj4Y&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Ancient to Contemporary Pottery Auction | Lusher Fine Art",
+      "platform": "Lusher Fine Art",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDo5XiMyI-PuHquoVnTyttqgSY3RI_liS2bAjkyuAsi0GL7GyOof9VRFtZIZesFaaTf1Q1eCrNsOq82jLJmk-Z2cNabfGue6rtrIZSJ1wWfAqmE0joqc_LR937bQ9tRYPn8zWmLis3GErHkdeSKJaitxTNWnquuC-N_A69x1pLhQ==",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "Southwest US (Acoma, Cochiti, Hopi, Santa Clara, San Ildefonso, etc.)",
+      "provenance_flag": true,
+      "keyword_trigger": "pueblo pottery ancient authentic",
+      "reason": "Auction house specializing in 'Ancient to Contemporary Pottery Auction' with items dating back to the 11th century. Lusher Fine Art states it offers 'authentic Native American artifacts' and is a 'trusted source'. Specific provenance for each item would need to be checked in the full catalog. No specific price is mentioned in the snippet.",
+      "scraped_at": "2026-06-07T04:20:13.222951Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDo5XiMyI-PuHquoVnTyttqgSY3RI_liS2bAjkyuAsi0GL7GyOof9VRFtZIZesFaaTf1Q1eCrNsOq82jLJmk-Z2cNabfGue6rtrIZSJ1wWfAqmE0joqc_LR937bQ9tRYPn8zWmLis3GErHkdeSKJaitxTNWnquuC-N_A69x1pLhQ%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Shop Pueblo Pottery Online | Since 1916 - Cameron Trading Post",
+      "platform": "Cameron Trading Post",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-bIVn5pDU7SvNJkInuZz_3Q23l2k2eSWFtI73iR8YveeQdXdQbBgaX5uQmLv-BkvCOAKISuaEF2D3i1VJsrvd3Lyu1p-tkfExFYbp5Qp-3qXWZ1LkNREDoRT2j3-Dv7VPN49pq5Hay7bDbbVa2v6NHPW2JDpLY-mbJS_lUidN9dRYPtM876iq-Glv8xrnNMlxE5vT3LMHow==",
+      "price_usd": 115.0,
+      "status": "MEDIUM RISK",
+      "risk_score": 5,
+      "origin_region": "Southwest US (Zia Pueblo, Santa Ana Pueblo, Zuni Pueblo, San Juan Pueblo, Santo Domingo Pueblo, Laguna)",
+      "provenance_flag": true,
+      "keyword_trigger": "pueblo pottery ancient authentic",
+      "reason": "Online marketplace selling 'Authentic Pueblo Pottery' with specific items listed and prices. The trading post has been operating since 1916, suggesting a reputable source for Native American art. The term 'ancient' is implied by the historical context of Pueblo pottery.",
+      "scraped_at": "2026-06-07T04:20:13.222971Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-bIVn5pDU7SvNJkInuZz_3Q23l2k2eSWFtI73iR8YveeQdXdQbBgaX5uQmLv-BkvCOAKISuaEF2D3i1VJsrvd3Lyu1p-tkfExFYbp5Qp-3qXWZ1LkNREDoRT2j3-Dv7VPN49pq5Hay7bDbbVa2v6NHPW2JDpLY-mbJS_lUidN9dRYPtM876iq-Glv8xrnNMlxE5vT3LMHow%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Unmarked Pueblo Native American Pottery - Sarasota Estate Auction",
+      "platform": "Sarasota Estate Auction",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlpMvM2NISYGkkIMjo6_3L4LYI8-TUOzuUegj2_njbn1fo12ZP6QdtoIVw6H6kK9g7c51C5TcUb5M5w_87VQVv7Bf19VdxcUbiPZLAWmO_4NLth-JkWq10ulFASExxvHYSEniA-K5K0sLAFijfLuGTDyOGPFLSvnDmSQGoJ_5_it13I-vru3AO4N_C4goFlESiMszmB-vm038b25BmbrqQDCdFk5pzVfCaqLHqdH3kvQ==",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 7,
+      "origin_region": "Southwestern United States (Pueblo peoples)",
+      "provenance_flag": false,
+      "keyword_trigger": "pueblo pottery ancient authentic",
+      "reason": "Auction listing for 'Unmarked Pueblo Native American Pottery'. While described as descending from ancestral Puebloans, the 'unmarked' nature raises concerns about specific provenance and age verification. No price is available.",
+      "scraped_at": "2026-06-07T04:20:13.222988Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlpMvM2NISYGkkIMjo6_3L4LYI8-TUOzuUegj2_njbn1fo12ZP6QdtoIVw6H6kK9g7c51C5TcUb5M5w_87VQVv7Bf19VdxcUbiPZLAWmO_4NLth-JkWq10ulFASExxvHYSEniA-K5K0sLAFijfLuGTDyOGPFLSvnDmSQGoJ_5_it13I-vru3AO4N_C4goFlESiMszmB-vm038b25BmbrqQDCdFk5pzVfCaqLHqdH3kvQ%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Ancestral Puebloan Pottery - Etsy",
+      "platform": "Etsy",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGULxT2EIAcmcXHGBlGwbbNzp7O06AH1tr3fzm5EmSCoi79gb2-k2mfkOAbU-aJnNRSeESsTtEVfIFSWHm3cR8yuDxkmUYtfvFEVBiUJVlZXCRyS9oZpnk75sLQuCaZ-yq4ikTvVTZb0phhGd3Vrimmhg==",
+      "price_usd": 325.0,
+      "status": "HIGH RISK",
+      "risk_score": 8,
+      "origin_region": "Southwest US (Ancestral Puebloan / Anasazi / Mogollon)",
+      "provenance_flag": false,
+      "keyword_trigger": "pueblo pottery ancient authentic",
+      "reason": "Etsy listing 'Ancestral Pueblo Pottery Sherds' and 'Prehistoric Ancestral Puebloan Anasazi / Mogollon SNOWFLAKE Black-on-White Pitcher'. While described as 'ancient' and 'authentic', Etsy is a platform with varied seller vetting. The sale of pottery shards and prehistoric artifacts, especially with claims of specific ancient cultures, without robust, verifiable provenance from an archaeological context, poses a high risk of being unethically sourced or lacking proper documentation.",
+      "scraped_at": "2026-06-07T04:20:13.223006Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGULxT2EIAcmcXHGBlGwbbNzp7O06AH1tr3fzm5EmSCoi79gb2-k2mfkOAbU-aJnNRSeESsTtEVfIFSWHm3cR8yuDxkmUYtfvFEVBiUJVlZXCRyS9oZpnk75sLQuCaZ-yq4ikTvVTZb0phhGd3Vrimmhg%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Pueblo Pottery, Hopi, San Ildefonso, Acoma and more",
+      "platform": "Elmore Indian Art",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWbHH_JbXNgHIAD34cbl2EdgrVy-qH4mlyEAtxdwao4BjaAsJY2aTV2XuXPX0iErGtfkM_BTZyBt969CEI_UjC_9g1RtdERJFc8dIR9sK9z75fgNygq4sNNfQiLDfVal1eiabjfZ4V08Ql964w-LIZk9w=",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 5,
+      "origin_region": "New Mexico and Arizona Pueblos (Hopi, San Ildefonso, Acoma, etc.)",
+      "provenance_flag": true,
+      "keyword_trigger": "pueblo pottery ancient authentic",
+      "reason": "Gallery representing historic Pueblo pottery from 1850-1950, which aligns with 'authentic' and 'historic' (implicitly 'ancient' in the context of Pueblo pottery history). The gallery format suggests a degree of vetting, but specific item provenance is not in the snippet. No specific price is mentioned.",
+      "scraped_at": "2026-06-07T04:20:13.223021Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWbHH_JbXNgHIAD34cbl2EdgrVy-qH4mlyEAtxdwao4BjaAsJY2aTV2XuXPX0iErGtfkM_BTZyBt969CEI_UjC_9g1RtdERJFc8dIR9sK9z75fgNygq4sNNfQiLDfVal1eiabjfZ4V08Ql964w-LIZk9w%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Historic/Vintage - Chimayo Trading Navajo Rugs Pueblo Pottery Fine Art",
+      "platform": "Chimayo Trading",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjGKudwvxqFHFEPs6SMtHAmQ5x64sPepKFMpb81kFGOdVA6RAi_T0Y8GRKl3ZXrjRuy5pxt690ri-TM3hUOlZThQPKxeQwKdfqMAya-Yu-Lyq31vZw5RpLxbIOXyRbmzMaV3f4EoWed8OxYDTF3dc4TTzkQkOJvK37m0gpWLrugQ==",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 5,
+      "origin_region": "Southwest US (Santa Clara, Hopi-Tewa, San Ildefonso, Acoma, San Juan Pueblo)",
+      "provenance_flag": true,
+      "keyword_trigger": "pueblo pottery ancient authentic",
+      "reason": "Trading post selling 'Historic/Vintage Pottery', including a 'San Juan Pueblo Storage Jar, 19th Century'. This indicates a focus on older, authentic pieces. Specific provenance for individual items would require further investigation. No specific price is mentioned.",
+      "scraped_at": "2026-06-07T04:20:13.223037Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjGKudwvxqFHFEPs6SMtHAmQ5x64sPepKFMpb81kFGOdVA6RAi_T0Y8GRKl3ZXrjRuy5pxt690ri-TM3hUOlZThQPKxeQwKdfqMAya-Yu-Lyq31vZw5RpLxbIOXyRbmzMaV3f4EoWed8OxYDTF3dc4TTzkQkOJvK37m0gpWLrugQ%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Native American Hopi Zuni Pueblo Pottery Collection - Mebane Antique Auction Gallery",
+      "platform": "Mebane Antique Auction Gallery",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmQFVLBJjI5BtVMs6Qu2b2eimjDd4rPrkQgAD5oge42w5mUwgLXoxQA1omRGpffhP4DyZZ1vw_xRq9m6Wz_Ei-AsI4eex2ygmMA7O-wXxCsv9Orh4f6ECkkpgnkaBcd_773osK46gSekeNMrfJN1D7doha870d23URgEWQv5aKT0ukSVp0HGEu48GOnT1gd_Z-pAzi1uNiOIVNEIpr5re58CiodbPxUo7TvDZJka31AoKuo0nfhs_K1paOEr-7iB4Nm-Nr",
+      "price_usd": 0,
+      "status": "MEDIUM RISK",
+      "risk_score": 6,
+      "origin_region": "Hopi and Zuni Pueblos, Southwest US",
+      "provenance_flag": true,
+      "keyword_trigger": "pueblo pottery ancient authentic",
+      "reason": "Auction listing for 'Native American Hopi Zuni Pueblo Pottery Collection' from the '19/20th Century' with historical roots dating back to '700 CE'. The auction house provides details on the origin and age range. Specific provenance for individual items would be in the full auction catalog. No price is available in the snippet.",
+      "scraped_at": "2026-06-07T04:20:13.223052Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmQFVLBJjI5BtVMs6Qu2b2eimjDd4rPrkQgAD5oge42w5mUwgLXoxQA1omRGpffhP4DyZZ1vw_xRq9m6Wz_Ei-AsI4eex2ygmMA7O-wXxCsv9Orh4f6ECkkpgnkaBcd_773osK46gSekeNMrfJN1D7doha870d23URgEWQv5aKT0ukSVp0HGEu48GOnT1gd_Z-pAzi1uNiOIVNEIpr5re58CiodbPxUo7TvDZJka31AoKuo0nfhs_K1paOEr-7iB4Nm-Nr&screenshot=true&meta=false&embed=screenshot.url"
     }
   ]
 }
