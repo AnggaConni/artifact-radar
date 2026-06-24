@@ -1,8 +1,8 @@
 {
   "summary": {
-    "generated_at": "2026-06-07T04:20:25.592562Z",
-    "total_listings": 218,
-    "high_risk_count": 77,
+    "generated_at": "2026-06-24T03:58:47.068477Z",
+    "total_listings": 219,
+    "high_risk_count": 78,
     "medium_risk_count": 69,
     "alerts_by_platform": {
       "Asumsi": 1,
@@ -144,7 +144,8 @@
       "Sarasota Estate Auction": 1,
       "Elmore Indian Art": 1,
       "Chimayo Trading": 1,
-      "Mebane Antique Auction Gallery": 1
+      "Mebane Antique Auction Gallery": 1,
+      "Bible History Daily (Biblical Archaeology Society)": 1
     },
     "top_high_risk": [
       {
@@ -3272,6 +3273,20 @@
       "reason": "Auction listing for 'Native American Hopi Zuni Pueblo Pottery Collection' from the '19/20th Century' with historical roots dating back to '700 CE'. The auction house provides details on the origin and age range. Specific provenance for individual items would be in the full auction catalog. No price is available in the snippet.",
       "scraped_at": "2026-06-07T04:20:13.223052Z",
       "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmQFVLBJjI5BtVMs6Qu2b2eimjDd4rPrkQgAD5oge42w5mUwgLXoxQA1omRGpffhP4DyZZ1vw_xRq9m6Wz_Ei-AsI4eex2ygmMA7O-wXxCsv9Orh4f6ECkkpgnkaBcd_773osK46gSekeNMrfJN1D7doha870d23URgEWQv5aKT0ukSVp0HGEu48GOnT1gd_Z-pAzi1uNiOIVNEIpr5re58CiodbPxUo7TvDZJka31AoKuo0nfhs_K1paOEr-7iB4Nm-Nr&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Stolen Artifacts, Biblical Ivories, and Magic Bowls",
+      "platform": "Bible History Daily (Biblical Archaeology Society)",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElRvXtnWp9GuLjvrC2f92YIsDgb3IbWidkgha8MVF6svBBoFZ4vjBP9xxik7j6Leoki0eiK0mh5NdxZymhEMRpVqd1dhsnmp0U2IZhC_npoioIM1UOjhwlHAAm4M0SSQi91z14w5UH4zpBTQ1FxKpMynyGQ7La_wUryE42k04Xa7pQyOT1SXKkhVZ0PHqRZgHjXWQo96huSzXX",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Middle East",
+      "provenance_flag": false,
+      "keyword_trigger": "ugarit ivory carving sale",
+      "reason": "This news article reports on the seizure of stolen biblical-era carved ivories by the Israel Antiquities Authority, which were believed to be illegally excavated and sold on the black market. While not explicitly 'Ugarit' ivories, these artifacts are from the same geographical and historical context (Middle East, biblical period), indicating a high risk of illicit trade for any ancient ivory carvings from this region appearing for sale without clear provenance. Ugarit is an ancient Middle Eastern site, and any ivory carvings attributed to it would be highly susceptible to similar illicit trade concerns, making their appearance on a marketplace highly suspicious.",
+      "scraped_at": "2026-06-24T03:57:53.311407Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElRvXtnWp9GuLjvrC2f92YIsDgb3IbWidkgha8MVF6svBBoFZ4vjBP9xxik7j6Leoki0eiK0mh5NdxZymhEMRpVqd1dhsnmp0U2IZhC_npoioIM1UOjhwlHAAm4M0SSQi91z14w5UH4zpBTQ1FxKpMynyGQ7La_wUryE42k04Xa7pQyOT1SXKkhVZ0PHqRZgHjXWQo96huSzXX&screenshot=true&meta=false&embed=screenshot.url"
     }
   ]
 }
