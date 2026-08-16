@@ -1,8 +1,8 @@
 {
   "summary": {
-    "generated_at": "2026-08-07T02:51:33.322814Z",
-    "total_listings": 275,
-    "high_risk_count": 89,
+    "generated_at": "2026-08-16T01:37:40.621295Z",
+    "total_listings": 278,
+    "high_risk_count": 91,
     "medium_risk_count": 85,
     "alerts_by_platform": {
       "Asumsi": 1,
@@ -184,7 +184,10 @@
       "Estimonia (Ruby Lane)": 1,
       "Collector's Marketplace": 1,
       "Numis Forums": 1,
-      "Antiques Trade Gazette": 1
+      "Antiques Trade Gazette": 1,
+      "Moscow Auction House": 1,
+      "Undisclosed Black Market Channels": 1,
+      "Interpol": 1
     },
     "top_high_risk": [
       {
@@ -4110,6 +4113,48 @@
       "reason": "This news and guide site focuses on the antiquities market, highlighting the critical importance of provenance due to a history of looting and reporting on fraud investigations related to false provenance.",
       "scraped_at": "2026-08-07T02:50:50.279792Z",
       "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_grHqA6JbGN-YPCl0VDefha4UGeMRsqCXgRRrg3dqhWuc51CYJSbAUvqYzU1sCQDAt5QzKmARvS70XpizeuE2oFOSRM_Qxonoiu9nsff6PAtHpuRVzQGIgR0OEqqZp31SuPvZRjsIoz5Trl7s4RcUQ_ebRj6EavDCi7tRg0LGRzqRo-OzhYLzi4pNAzBioJtw&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Aivazovsky painting stolen from Ukraine turns up at auction in Russia",
+      "platform": "Moscow Auction House",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHr4cZ9aJC6af1NWtWStyCgs5ghC6l_zbgKRHtZP9dbHgUBP-mXayo5t6ikN-A-VyVFwB8nzJNPDXDx5KTswLQoRa8fZwrGCiae_pPjcHM1pDZElN-4_sbSDPeX5JK-dZOmf-eG1HAaXUy_ydSDExxAkA==",
+      "price_usd": 1090000,
+      "status": "HIGH RISK",
+      "risk_score": 9,
+      "origin_region": "Ukraine (Mariupol/Crimea)",
+      "provenance_flag": false,
+      "keyword_trigger": "ukraine cultural property looted",
+      "reason": "The painting 'Moonlit Night' by Ivan Aivazovsky, identified as stolen from the Mariupol Art Museum and illegally transferred to the Simferopol Art Museum, was openly auctioned at the Moscow Auction House for approximately US$1.09 million, disregarding international law.",
+      "scraped_at": "2026-08-16T01:36:57.504291Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHr4cZ9aJC6af1NWtWStyCgs5ghC6l_zbgKRHtZP9dbHgUBP-mXayo5t6ikN-A-VyVFwB8nzJNPDXDx5KTswLQoRa8fZwrGCiae_pPjcHM1pDZElN-4_sbSDPeX5JK-dZOmf-eG1HAaXUy_ydSDExxAkA%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Russia trading looted Ukrainian artefacts on black market – over 1.7 million items stolen",
+      "platform": "Undisclosed Black Market Channels",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw7yjyf4kYCKBNic0rHginZpnljR6P3Mce-xgS30OC51qPf-PARyHff0iN7pkHRzSAyfT2XUZcGNkXkvYws211TmGI82h58KKE82kH9m6M1YEdvhGOHNB0lYKQJbDFsK-y5sPRqtZk7yjrJl6cgExJWQ==",
+      "price_usd": 0,
+      "status": "HIGH RISK",
+      "risk_score": 8,
+      "origin_region": "Ukraine (various occupied territories)",
+      "provenance_flag": false,
+      "keyword_trigger": "ukraine cultural property looted",
+      "reason": "Ukrainian Minister of Culture Mykola Tochytskyi and other officials report that over 1.7 million pieces of Ukrainian cultural heritage, including archaeological finds and museum collections, have been stolen from occupied territories and are being sold on the black market.",
+      "scraped_at": "2026-08-16T01:36:57.504529Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw7yjyf4kYCKBNic0rHginZpnljR6P3Mce-xgS30OC51qPf-PARyHff0iN7pkHRzSAyfT2XUZcGNkXkvYws211TmGI82h58KKE82kH9m6M1YEdvhGOHNB0lYKQJbDFsK-y5sPRqtZk7yjrJl6cgExJWQ%3D%3D&screenshot=true&meta=false&embed=screenshot.url"
+    },
+    {
+      "original_title": "Interpol online database detailing artifacts stolen from Ukrainian museums",
+      "platform": "Interpol",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtF9vDG7kuyViHuCSG9eCppCRC7Sgd6zE6nvHbQN81ip1W5UWSQnakMb190eC-4eetYvlUD7qOEYUxqacd3vvznMnkmiconK1GCtB247XTgIf5PiOgCF_2xJHRo_cT83DpFdr3rkStZTuGXmIhdRuddtIJWK95prubQwwqdQ_gCVlYWha8IeLRlsKbWnSjTFzHIujmcyCF",
+      "price_usd": 0,
+      "status": "INFO ONLY",
+      "risk_score": 3,
+      "origin_region": "Ukraine",
+      "provenance_flag": false,
+      "keyword_trigger": "ukraine cultural property looted",
+      "reason": "News reports indicate that Interpol published an online database in February 2026, detailing artifacts stolen from Ukrainian museums, compiled by the National Police of Ukraine, to aid in tracing missing works.",
+      "scraped_at": "2026-08-16T01:36:57.504548Z",
+      "screenshot_url": "https://api.microlink.io/?url=https%3A//vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtF9vDG7kuyViHuCSG9eCppCRC7Sgd6zE6nvHbQN81ip1W5UWSQnakMb190eC-4eetYvlUD7qOEYUxqacd3vvznMnkmiconK1GCtB247XTgIf5PiOgCF_2xJHRo_cT83DpFdr3rkStZTuGXmIhdRuddtIJWK95prubQwwqdQ_gCVlYWha8IeLRlsKbWnSjTFzHIujmcyCF&screenshot=true&meta=false&embed=screenshot.url"
     }
   ]
 }
