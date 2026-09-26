@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "df6cd516b0e6efd05afa4073b90dd386ad0e6b30",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:54:11.580579Z",
+      "title": "The Asante Gold Weights - Penn Museum",
+      "page_title": "Expedition Magazine  | The Asante Gold Weights",
+      "page_description": "<p>Within the glass cases in the Africa Galleries, they appear as miniaturized trophies, toys, or jewelry, but these beautifully crafted […]</p>",
+      "image_urls": [
+        "/apple-touch-icon.png"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "ding states under a centralized government and judiciary system. It is their kingdom that the Penn Museum’s gold weight collection represents. \n The term “gold” weight is a bit of a misnomer. While they are used to measure gold dust and nuggets, they are actually cast from brass. There are two primary ways the Asante produced their brass objects. In direct c",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Ghana (Asante/Ashanti kingdom)",
+      "source_url": "https://www.penn.museum/sites/expedition/the-asante-gold-weights/",
+      "final_url": "https://www.penn.museum/sites/expedition/the-asante-gold-weights",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "50f124c4ca59889dedfec0b64e43a2fb35f8fee2fbf94386ec5b8b5a9e25f739",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "64b03cb502c96c8d1c748b7a2ff1b729d4b3be2c7d03011c5bedc4df3e577514",
+      "first_observed_at": "2026-09-26T14:54:11.580579Z",
+      "last_observed_at": "2026-09-26T14:54:11.580579Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:54:11.580579Z",
+  "snapshot_count": 1
+}

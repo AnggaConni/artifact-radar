@@ -30,10 +30,10 @@
       "last_modified": "Sat, 26 Sep 2026 12:06:38 GMT",
       "snapshot_signature": "303bb223b5733a1e94edf3f439d1b51e24aa59ac62e493285933976c9a498aef",
       "first_observed_at": "2026-09-26T14:42:20.811196Z",
-      "last_observed_at": "2026-09-26T14:46:01.561053Z",
-      "observations_seen": 2
+      "last_observed_at": "2026-09-26T14:54:04.910873Z",
+      "observations_seen": 3
     }
   ],
-  "updated_at": "2026-09-26T14:46:01.561053Z",
+  "updated_at": "2026-09-26T14:54:04.910873Z",
   "snapshot_count": 1
 }

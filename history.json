@@ -1,7 +1,7 @@
 {
-  "last_crawl_date": "2026-09-26T14:46:08.029948",
-  "script_hash": "2c09a890405b313452150f8c09e6a1c2",
-  "query_cursor": 3,
+  "last_crawl_date": "2026-09-26T14:54:13.801728",
+  "script_hash": "93b9d741ab8fd025c45c9cabb71d0350",
+  "query_cursor": 4,
   "recent_queries": [
     "majapahit artifact for sale",
     "etruscan bronze antiquity",
@@ -11,26 +11,29 @@
     "nok terracotta figure sale",
     "srivijaya gold artifact",
     "roman legionary gladius authentic",
-    "yoruba artifact auction"
+    "yoruba artifact auction",
+    "angkor wat style antiquity",
+    "byzantine icon antique",
+    "akan goldweight collection"
   ],
   "targets_per_run": 3,
   "crawl_version": "v7.0",
   "source_monitor": {
-    "active": 57,
-    "removed": 51,
-    "unavailable": 37,
-    "changed": 26,
+    "active": 60,
+    "removed": 59,
+    "unavailable": 46,
+    "changed": 25,
     "recovered": 0,
     "redirected": 0,
-    "removed_events": 1,
+    "removed_events": 0,
     "unavailable_events": 0,
-    "content_change_events": 26,
+    "content_change_events": 25,
     "snapshot_field_change_events": 10,
-    "title_change_events": 2,
-    "description_change_events": 0,
+    "title_change_events": 3,
+    "description_change_events": 1,
     "price_change_events": 0,
-    "image_change_events": 3,
-    "provenance_change_events": 0,
+    "image_change_events": 4,
+    "provenance_change_events": 1,
     "risk_change_events": 0
   }
 }

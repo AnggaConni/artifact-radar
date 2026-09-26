@@ -74,8 +74,43 @@
       "first_observed_at": "2026-09-26T14:46:06.678727Z",
       "last_observed_at": "2026-09-26T14:46:06.678727Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-09-26T14:54:10.680721Z",
+      "title": "Historic Javanese Art Treasures Victims Of Looting",
+      "page_title": "British Museum Sold Benin Bronzes",
+      "page_description": "Precedent argument will be used by Nigeria.",
+      "image_urls": [
+        "https://imageio.forbes.com/specials-images/imageserve/62d6b4e84973cf4561f269bb/forbes-thumb/0x0.jpg",
+        "https://specials-images.forbesimg.com/imageserve/6ab698b562928a540b493f83/960x0.jpg",
+        "https://specials-images.forbesimg.com/imageserve/6ab6b011cb2f1f259d7f7665/0x0.jpg",
+        "https://specials-images.forbesimg.com/imageserve/6ab6a36527197d4fd406df6c/960x0.jpg",
+        "https://specials-images.forbesimg.com/imageserve/6ab7d416e8d50b969c4e8295/960x0.jpg",
+        "https://specials-images.forbesimg.com/imageserve/65f4b1f8b580f37d13aa72e0/960x0.jpg?cropX1=125&cropX2=2820&cropY1=95&cropY2=1610",
+        "https://specials-images.forbesimg.com/imageserve/6ab79d315bc850a35b351acd/960x0.jpg",
+        "https://specials-images.forbesimg.com/imageserve/6ab7cd2d5bc850a35b351ad9/960x0.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia, East Java",
+      "source_url": "https://www.forbes.com/2002/04/03/0403conn.html",
+      "final_url": "https://www.forbes.com/2002/04/03/0403conn.html",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "fb4c6377711e5257d556c2d8ea382f926ff00aeb6ad6993880fdc360d0d6fadf",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "20fcf5c2099d11415eba83d00875fbdcd5888e083cd069f29ad663a06b8180bf",
+      "first_observed_at": "2026-09-26T14:54:10.680721Z",
+      "last_observed_at": "2026-09-26T14:54:10.680721Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-09-26T14:46:06.678727Z",
-  "snapshot_count": 2
+  "updated_at": "2026-09-26T14:54:10.680721Z",
+  "snapshot_count": 3
 }

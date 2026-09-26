@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "90b90d95e7277b434eece8dd25e3ce8278df183d",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:54:12.485262Z",
+      "title": "Sankofa bird gold weight",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Ghana (Akan peoples)",
+      "source_url": "https://www.metmuseum.org/art/collection/search/318894",
+      "final_url": "https://www.metmuseum.org/art/collection/search/318894",
+      "source_status": "UNAVAILABLE",
+      "http_status": 429,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "c4d6a2f01dba73f2e8c8984fda96332fb52b113d5e2f2c03f2eeeea36ac61efc",
+      "first_observed_at": "2026-09-26T14:54:12.485262Z",
+      "last_observed_at": "2026-09-26T14:54:12.485262Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:54:12.485262Z",
+  "snapshot_count": 1
+}

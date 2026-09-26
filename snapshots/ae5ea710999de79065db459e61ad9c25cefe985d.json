@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "ae5ea710999de79065db459e61ad9c25cefe985d",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:54:12.059782Z",
+      "title": "Poids à peser l'or Akan Akan goldweight, Ghana",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Ghana",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhd9FSw0GxmSmFHYf24nHnhfnAak4UJC-w_0NRyJ1jHSRGZbwG2ITBkwTMld3gbRh1uJDdTqGkz6-5Z4uXI4aCC28kPSwjzNbqaah3N8rwj8GTQ6V_S1X4Adt8xQncbb2IzlsoEeEc",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "dde3dd9951cfe8fbf6c6d0c0769d98e99f9d1364c53ccf6e66dbb66880740f6a",
+      "first_observed_at": "2026-09-26T14:54:12.059782Z",
+      "last_observed_at": "2026-09-26T14:54:12.059782Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:54:12.059782Z",
+  "snapshot_count": 1
+}
