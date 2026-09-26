@@ -558,6 +558,10 @@
         // Provenance
         if (provFilter === 'YES' && !item.provenance_flag) return false;
         if (provFilter === 'NO'  &&  item.provenance_flag) return false;
+        const ev = evidenceFor(item);
+        if (evidenceFilter === 'PROVENANCE' && !ev.provenance_missing_signal) return false;
+        if (evidenceFilter === 'TRAFFICKING' && !ev.trafficking_or_looting_signal) return false;
+        if (evidenceFilter === 'LEGAL' && !ev.export_or_legal_risk_signal) return false;
         // Search
         if (query) {
           const haystack = [item.original_title, item.platform, item.origin_region, item.reason, item.keyword_trigger, item.source_type, (item.risk_factors||[]).join(' ')]
