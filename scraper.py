@@ -3,7 +3,7 @@
   ARTIFACT RADAR v6.0 — Evidence-Aware Intelligence Engine
   AI Engine : Google Gemini 2.5 Flash (Google Search Grounding)
   Mode      : Full English, Global Scope, 4-Day Interval
-  Feature   : Auto-Backfill Missing Screenshots
+  Feature   : Source Monitoring + Historical Change Detection
 =======================================================================
 """
 
@@ -35,6 +35,10 @@ SCRIPT_FILE  = os.path.abspath(__file__)
 TARGETS_PER_RUN = max(1, min(int(os.environ.get("TARGETS_PER_RUN", "3")), 6))
 QUERY_HISTORY_LIMIT = 12
 QUERY_STRIDE = 97
+     
+SOURCE_CHECK_WORKERS = max(2, min(int(os.environ.get("SOURCE_CHECK_WORKERS", "8")), 12))
+SOURCE_CHECK_TIMEOUT = max(5, min(int(os.environ.get("SOURCE_CHECK_TIMEOUT", "12")), 30))
+HISTORY_EVENT_LIMIT = 12
 
 # ======================================================================
 # GLOBAL KEYWORD DATABASE (Full English)
@@ -255,6 +259,266 @@ KEYWORDS = [
 ]
 
 
+
+# ======================================================================
+# SOURCE MONITORING / CHANGE DETECTION
+# ======================================================================
+
+def canonical_source_url(item):
+    return normalize_url(
+        item.get("canonical_source_url") or
+        item.get("source_url") or
+        item.get("url")
+    )
+
+
+def is_grounding_redirect(url):
+    if not url:
+        return False
+    u = url.lower()
+    return "vertexaisearch.cloud.google.com" in u or "grounding-api-redirect" in u
+
+
+def source_signature(response):
+    """Create a conservative content signature for change detection."""
+    content_type = (response.headers.get("content-type") or "").lower()
+    raw = response.content[:524288]
+
+    if "text/html" in content_type or "application/xhtml" in content_type:
+        try:
+            text = raw.decode(response.encoding or "utf-8", errors="ignore")
+            text = re.sub(r"(?is)<(script|style|noscript|svg).*?</\\1>", " ", text)
+            text = re.sub(r"(?s)<!--.*?-->", " ", text)
+            text = re.sub(r"\\s+", " ", text).strip().lower()
+            raw = text[:200000].encode("utf-8")
+        except Exception:
+            pass
+
+    return hashlib.sha256(raw).hexdigest()
+
+
+def fetch_source_state(item):
+    """
+    Check a source without interpreting intent.
+    404/410 = source no longer returned.
+    403/429/5xx/timeout = unavailable/blocked, not proof of deletion.
+    Content hash changes = technical change signal, not proof of a material edit.
+    """
+    url = canonical_source_url(item)
+    if not url:
+        return {
+            "status": "UNKNOWN",
+            "reason": "No canonical source URL",
+            "checked_at": datetime.now().isoformat() + "Z"
+        }
+
+    if is_grounding_redirect(url):
+        return {
+            "status": "UNKNOWN",
+            "reason": "Grounding redirect URL; source cannot be reliably monitored",
+            "checked_at": datetime.now().isoformat() + "Z",
+            "checked_url": url
+        }
+
+    checked_at = datetime.now().isoformat() + "Z"
+    headers = {
+        "User-Agent": "ArtifactRadar/6.1 (+https://github.com/AnggaConni/artifact-radar)"
+    }
+
+    try:
+        response = requests.get(
+            url,
+            headers=headers,
+            timeout=SOURCE_CHECK_TIMEOUT,
+            allow_redirects=True,
+            stream=True
+        )
+
+        body = b""
+        for chunk in response.iter_content(chunk_size=65536):
+            if chunk:
+                body += chunk
+                if len(body) >= 524288:
+                    break
+
+        # requests.Response.content is not guaranteed after partial streaming,
+        # so temporarily replace it for signature generation.
+        original_content = response._content
+        response._content = body
+
+        content_hash = source_signature(response) if response.status_code == 200 else ""
+        response._content = original_content
+
+        final_url = normalize_url(response.url)
+
+        if response.status_code in (404, 410):
+            status = "REMOVED"
+        elif 200 <= response.status_code < 300:
+            status = "ACTIVE"
+        elif response.status_code in (301, 302, 303, 307, 308):
+            status = "REDIRECTED"
+        elif response.status_code in (401, 403, 405, 406, 429):
+            status = "UNAVAILABLE"
+        elif 500 <= response.status_code < 600:
+            status = "UNAVAILABLE"
+        else:
+            status = "UNKNOWN"
+
+        return {
+            "status": status,
+            "http_status": response.status_code,
+            "reason": response.reason or "",
+            "checked_at": checked_at,
+            "checked_url": url,
+            "final_url": final_url,
+            "content_hash": content_hash,
+            "etag": response.headers.get("etag", ""),
+            "last_modified": response.headers.get("last-modified", "")
+        }
+
+    except requests.exceptions.Timeout:
+        return {
+            "status": "UNAVAILABLE",
+            "reason": "Request timeout",
+            "checked_at": checked_at,
+            "checked_url": url
+        }
+    except requests.exceptions.RequestException as exc:
+        return {
+            "status": "UNAVAILABLE",
+            "reason": f"Request error: {type(exc).__name__}",
+            "checked_at": checked_at,
+            "checked_url": url
+        }
+    except Exception as exc:
+        return {
+            "status": "UNKNOWN",
+            "reason": f"Monitor error: {type(exc).__name__}",
+            "checked_at": checked_at,
+            "checked_url": url
+        }
+
+
+def update_source_history(listings, source_history):
+    """
+    Update current source state and append a compact event history per record.
+    Returns summary counters for the current crawl.
+    """
+    counters = {
+        "active": 0,
+        "removed": 0,
+        "unavailable": 0,
+        "changed": 0,
+        "recovered": 0,
+        "redirected": 0
+    }
+
+    monitor_targets = []
+    for item in listings:
+        fp = item.get("record_fingerprint") or record_fingerprint(item)
+        url = canonical_source_url(item)
+        item["record_fingerprint"] = fp
+
+        if not fp or not url:
+            item["source_status"] = "UNKNOWN"
+            item["source_status_reason"] = "No monitorable canonical source URL"
+            continue
+
+        monitor_targets.append((fp, item))
+
+    def check(pair):
+        fp, item = pair
+        return fp, fetch_source_state(item)
+
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    with ThreadPoolExecutor(max_workers=SOURCE_CHECK_WORKERS) as executor:
+        futures = [executor.submit(check, pair) for pair in monitor_targets]
+        results = [future.result() for future in as_completed(futures)]
+
+    for fp, state in results:
+        item = next((x for x in listings if x.get("record_fingerprint") == fp), None)
+        if item is None:
+            continue
+
+        entry = source_history.get(fp, {})
+        events = entry.get("events", [])
+        previous_status = entry.get("last_status", "")
+        previous_hash = entry.get("last_content_hash", "")
+
+        current_status = state.get("status", "UNKNOWN")
+        current_hash = state.get("content_hash", "")
+
+        change_type = "UNCHANGED"
+        if not events:
+            change_type = "INITIAL_CHECK"
+        elif current_status == "REMOVED" and previous_status not in ("REMOVED", "UNKNOWN"):
+            change_type = "SOURCE_DISAPPEARED"
+        elif current_status == "ACTIVE" and previous_status in ("REMOVED", "UNAVAILABLE"):
+            change_type = "SOURCE_RECOVERED"
+        elif current_status == "ACTIVE" and previous_hash and current_hash and previous_hash != current_hash:
+            change_type = "POSSIBLE_CONTENT_CHANGE"
+        elif current_status == "REDIRECTED" and previous_status != "REDIRECTED":
+            change_type = "SOURCE_REDIRECTED"
+        elif current_status == "UNAVAILABLE" and previous_status == "ACTIVE":
+            change_type = "SOURCE_UNAVAILABLE"
+
+        if current_status == "ACTIVE":
+            counters["active"] += 1
+        elif current_status == "REMOVED":
+            counters["removed"] += 1
+        elif current_status == "UNAVAILABLE":
+            counters["unavailable"] += 1
+        elif current_status == "REDIRECTED":
+            counters["redirected"] += 1
+
+        if change_type == "POSSIBLE_CONTENT_CHANGE":
+            counters["changed"] += 1
+        elif change_type == "SOURCE_RECOVERED":
+            counters["recovered"] += 1
+
+        event = {
+            "checked_at": state.get("checked_at"),
+            "status": current_status,
+            "change_type": change_type,
+            "http_status": state.get("http_status"),
+            "final_url": state.get("final_url"),
+            "content_hash": current_hash,
+            "reason": state.get("reason", ""),
+            "etag": state.get("etag", ""),
+            "last_modified": state.get("last_modified", "")
+        }
+
+        events.append(event)
+        events = events[-HISTORY_EVENT_LIMIT:]
+
+        entry.update({
+            "first_seen": entry.get("first_seen") or item.get("first_seen") or item.get("scraped_at"),
+            "last_checked": state.get("checked_at"),
+            "last_status": current_status,
+            "last_content_hash": current_hash,
+            "last_final_url": state.get("final_url", ""),
+            "events": events
+        })
+        source_history[fp] = entry
+
+        item["source_status"] = current_status
+        item["source_status_reason"] = state.get("reason", "")
+        item["source_http_status"] = state.get("http_status")
+        item["source_checked_at"] = state.get("checked_at")
+        item["source_final_url"] = state.get("final_url", "")
+        item["source_content_hash"] = current_hash
+        item["source_change_type"] = change_type
+        item["source_change_detected"] = change_type in {
+            "SOURCE_DISAPPEARED", "SOURCE_RECOVERED",
+            "POSSIBLE_CONTENT_CHANGE", "SOURCE_REDIRECTED"
+        }
+        item["source_history_count"] = len(events)
+        if change_type == "POSSIBLE_CONTENT_CHANGE":
+            item["last_content_change_at"] = state.get("checked_at")
+
+    return counters
+
+
 # ======================================================================
 # QUERY ROTATION / URL NORMALISATION / EVIDENCE SCORING
 # ======================================================================
@@ -443,6 +707,9 @@ def enrich_item(item, target):
     item["url"] = canonical
     item["keyword_trigger"] = target
     item["scraped_at"] = datetime.now().isoformat() + "Z"
+    item.setdefault("first_seen", item["scraped_at"])
+    item["last_seen"] = item["scraped_at"]
+    item["seen_count"] = int(item.get("seen_count", 0) or 0) + 1
 
     ai_score = item.get("risk_score")
     try:
@@ -671,12 +938,26 @@ def main():
         listings = db.get("listings", [])
 
         history = {}
+        source_history = {}
+        source_history_file = os.path.join(BASE_DIR, "source_history.json")
+        if os.path.exists(source_history_file):
+            try:
+                with open(source_history_file, encoding="utf-8") as f:
+                    source_history = json.load(f)
+            except Exception:
+                source_history = {}
         if os.path.exists(HISTORY_FILE):
             try:
                 with open(HISTORY_FILE, encoding="utf-8") as f:
                     history = json.load(f)
             except Exception:
                 history = {}
+
+        crawl_now = datetime.now().isoformat() + "Z"
+        for item in listings:
+            item.setdefault("first_seen", item.get("scraped_at") or crawl_now)
+            item["last_seen"] = crawl_now
+            item["seen_count"] = int(item.get("seen_count", 0) or 0) + 1
 
         backfill_count = 0
         for item in listings:
@@ -749,8 +1030,16 @@ def main():
             recent_queries.append(target)
             time.sleep(3)
 
+        source_monitor = update_source_history(listings, source_history)
+
         db["listings"] = listings
         db["summary"] = calculate_summary(listings)
+        db["summary"]["source_active_count"] = source_monitor["active"]
+        db["summary"]["source_removed_count"] = source_monitor["removed"]
+        db["summary"]["source_unavailable_count"] = source_monitor["unavailable"]
+        db["summary"]["source_redirected_count"] = source_monitor["redirected"]
+        db["summary"]["source_changed_count"] = source_monitor["changed"]
+        db["summary"]["source_recovered_count"] = source_monitor["recovered"]
         db["summary"]["provenanced_count"] = sum(
             1 for x in listings if x.get("provenance_flag")
         )
@@ -763,9 +1052,14 @@ def main():
             if x.get("evidence", {}).get("trafficking_or_looting_signal")
         )
 
-        if count > 0 or backfill_count > 0 or not db["summary"].get("generated_at"):
+        if (count > 0 or backfill_count > 0 or source_monitor["removed"] > 0 or
+                source_monitor["changed"] > 0 or source_monitor["recovered"] > 0 or
+                source_monitor["unavailable"] > 0 or not db["summary"].get("generated_at")):
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(db, f, indent=2, ensure_ascii=False)
+
+        with open(source_history_file, "w", encoding="utf-8") as f:
+            json.dump(source_history, f, indent=2, ensure_ascii=False)
 
         recent_queries = recent_queries[-QUERY_HISTORY_LIMIT:]
         history_out = {
@@ -774,7 +1068,8 @@ def main():
             "query_cursor": next_cursor,
             "recent_queries": recent_queries,
             "targets_per_run": TARGETS_PER_RUN,
-            "crawl_version": "v6.0"
+            "crawl_version": "v6.1",
+            "source_monitor": source_monitor
         }
 
         with open(HISTORY_FILE, "w", encoding="utf-8") as f:
