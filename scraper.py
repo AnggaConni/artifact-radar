@@ -326,6 +326,16 @@ def choose_query_targets(history):
     return targets, next_cursor
 
 
+
+def record_fingerprint(item):
+    """Create a conservative fallback identity key for duplicate listings."""
+    title = re.sub(r"[^a-z0-9]+", " ", str(item.get("original_title", "")).lower()).strip()
+    platform = re.sub(r"[^a-z0-9]+", " ", str(item.get("platform", "")).lower()).strip()
+    if not title or not platform:
+        return ""
+    return hashlib.sha1(f"{platform}|{title}".encode("utf-8")).hexdigest()
+
+
 def derive_evidence(item, target):
     """Create explicit, auditable evidence flags from returned fields."""
     text = " ".join([
@@ -449,6 +459,8 @@ def enrich_item(item, target):
     item["risk_score"] = evidence_score
     item["status"] = status
     item["risk_method"] = "evidence_v6"
+
+    item["record_fingerprint"] = record_fingerprint(item)
 
     if not item.get("screenshot_url"):
         item["screenshot_url"] = get_screenshot_url(canonical)
@@ -677,6 +689,7 @@ def main():
                 backfill_count += 1
 
         existing_url_keys = set()
+        existing_fingerprints = set()
         for item in listings:
             key = normalize_url(
                 item.get("canonical_source_url") or
@@ -685,6 +698,9 @@ def main():
             )
             if key:
                 existing_url_keys.add(key)
+            fp = item.get("record_fingerprint") or record_fingerprint(item)
+            if fp:
+                existing_fingerprints.add(fp)
 
         targets, next_cursor = choose_query_targets(history)
         log.info(f"Selected {len(targets)} targets: {targets}")
@@ -719,12 +735,15 @@ def main():
                 if not link_key:
                     continue
 
-                if link_key in existing_url_keys:
+                fingerprint = item.get("record_fingerprint") or record_fingerprint(item)
+                if link_key in existing_url_keys or (fingerprint and fingerprint in existing_fingerprints):
                     duplicate_count += 1
                     continue
 
                 listings.append(item)
                 existing_url_keys.add(link_key)
+                if fingerprint:
+                    existing_fingerprints.add(fingerprint)
                 count += 1
 
             recent_queries.append(target)
