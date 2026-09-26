@@ -1061,7 +1061,7 @@
                 ((obs.snapshot_diffs || []).length ? '<div class="mt-3 p-3 rounded-xl bg-white border border-[#e4dfd4] space-y-2">' +
                   (obs.snapshot_diffs || []).slice(0,5).map(function(diff){ return '<div class="grid grid-cols-[95px_1fr] gap-2 text-[10px]"><span class="mono-font uppercase tracking-widest text-[#8a7f72]">' + escHtml(diff.field || 'field') + '</span><span class="text-[#1c1814]">' + escHtml(snapshotDiffValue(diff.field, diff.before)) + ' → ' + escHtml(snapshotDiffValue(diff.field, diff.after)) + '</span></div>'; }).join('') +
                 '</div>' : '') +
-                '<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+                '<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">' +
                   '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Evidence</p><p class="text-xs font-bold mt-1">' + riskText + '</p>' + riskBar + '</div>' +
                   '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Price</p><p class="text-xs font-bold mt-1">' + price + '</p></div>' +
                   '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Provenance</p><p class="text-xs font-bold mt-1">' + prov + '</p></div>' +
