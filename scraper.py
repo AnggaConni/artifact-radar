@@ -477,6 +477,15 @@ def update_source_history(listings, source_history):
         if change_type == "POSSIBLE_CONTENT_CHANGE":
             counters["changed"] += 1
             counters["content_change_events"] += 1
+        elif change_type == "RISK_SCORE_CHANGED":
+            counters["changed"] += 1
+            counters["content_change_events"] += 1
+        elif change_type == "PROVENANCE_STATUS_CHANGED":
+            counters["changed"] += 1
+            counters["content_change_events"] += 1
+        elif change_type == "PRICE_CHANGED":
+            counters["changed"] += 1
+            counters["content_change_events"] += 1
         elif change_type == "SOURCE_RECOVERED":
             counters["recovered"] += 1
         elif change_type == "SOURCE_DISAPPEARED":
@@ -493,11 +502,33 @@ def update_source_history(listings, source_history):
             "content_hash": current_hash,
             "reason": state.get("reason", ""),
             "etag": state.get("etag", ""),
-            "last_modified": state.get("last_modified", "")
+            "last_modified": state.get("last_modified", ""),
+            "title": item.get("original_title", ""),
+            "risk_score": item.get("risk_score"),
+            "ai_risk_score": item.get("ai_risk_score"),
+            "provenance_flag": item.get("provenance_flag"),
+            "price_usd": item.get("price_usd"),
+            "source_type": item.get("source_type", ""),
+            "platform": item.get("platform", "")
         }
 
         events.append(event)
         events = events[-HISTORY_EVENT_LIMIT:]
+
+        observations = entry.get("observations", [])
+        observations.append({
+            "observed_at": state.get("checked_at"),
+            "title": item.get("original_title", ""),
+            "risk_score": item.get("risk_score"),
+            "ai_risk_score": item.get("ai_risk_score"),
+            "provenance_flag": item.get("provenance_flag"),
+            "price_usd": item.get("price_usd"),
+            "source_status": current_status,
+            "change_type": change_type,
+            "source_type": item.get("source_type", ""),
+            "platform": item.get("platform", "")
+        })
+        observations = observations[-HISTORY_EVENT_LIMIT:]
 
         entry.update({
             "first_seen": entry.get("first_seen") or item.get("first_seen") or item.get("scraped_at"),
@@ -505,7 +536,12 @@ def update_source_history(listings, source_history):
             "last_status": current_status,
             "last_content_hash": current_hash,
             "last_final_url": state.get("final_url", ""),
-            "events": events
+            "last_risk_score": item.get("risk_score"),
+            "last_ai_risk_score": item.get("ai_risk_score"),
+            "last_price_usd": item.get("price_usd"),
+            "last_provenance_flag": item.get("provenance_flag"),
+            "events": events,
+            "observations": observations
         })
         source_history[fp] = entry
 
