@@ -232,9 +232,10 @@
             <div><p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font">Change Intelligence</p><h2 class="text-lg font-extrabold syne-font mt-1">What changed since the last scan?</h2></div>
             <p id="change-disclaimer" class="text-[10px] text-[#8a7f72] max-w-xl leading-relaxed">A source becoming unavailable is a technical observation, not proof of deletion, illicit activity, or misconduct.</p>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
             <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">New</p><p id="change-new" class="text-2xl font-extrabold syne-font mt-1">0</p></div>
             <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#7c3aed]">Content Change</p><p id="change-changed" class="text-2xl font-extrabold syne-font mt-1 text-[#7c3aed]">0</p></div>
+            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#0891b2]">Field Changes</p><p id="change-field" class="text-2xl font-extrabold syne-font mt-1 text-[#0891b2]">0</p></div>
             <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#dc2626]">Disappeared</p><p id="change-removed" class="text-2xl font-extrabold syne-font mt-1 text-[#dc2626]">0</p></div>
             <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#d97706]">Unavailable</p><p id="change-unavailable" class="text-2xl font-extrabold syne-font mt-1 text-[#d97706]">0</p></div>
             <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#16a34a]">Recovered</p><p id="change-recovered" class="text-2xl font-extrabold syne-font mt-1 text-[#16a34a]">0</p></div>
@@ -324,6 +325,7 @@
             <button class="chip active" id="chip-source-ALL" onclick="setSourceFilter('ALL')">All</button>
             <button class="chip" id="chip-source-ACTIVE" onclick="setSourceFilter('ACTIVE')">🟢 Active</button>
             <button class="chip" id="chip-source-CHANGED" onclick="setSourceFilter('CHANGED')">🟣 Changed</button>
+            <button class="chip" id="chip-source-FIELD" onclick="setSourceFilter('FIELD')">🔎 Field Changed</button>
             <button class="chip" id="chip-source-REMOVED" onclick="setSourceFilter('REMOVED')">🔴 Removed</button>
             <button class="chip" id="chip-source-UNAVAILABLE" onclick="setSourceFilter('UNAVAILABLE')">🟡 Unavailable</button>
           </div>
@@ -403,6 +405,10 @@
             <p class="text-[#64748b] leading-relaxed">Artifact Radar keeps an observation history for monitorable source URLs. A record remains in the dataset even when its source later becomes unavailable, so the dashboard can show that the source was previously observed.</p>
             <p class="text-[#64748b] leading-relaxed mt-2"><b>Important:</b> a 404/410 response is recorded as “Source disappeared”; it does not by itself prove intentional deletion, illicit activity, or wrongdoing. A 403/429/5xx response or timeout is recorded as “Unavailable”. A changed content signature is a technical signal and can be caused by legitimate edits, dynamic content, advertising, localisation, or site redesign.</p>
           </div>
+          <div class="p-4 rounded-xl bg-[#ecfeff] border border-[#a5f3fc]">
+            <h4 class="font-bold text-[#0e7490] mono-font text-xs uppercase tracking-widest mb-2">V7 Evidence Snapshots</h4>
+            <p class="text-[#155e75] leading-relaxed">For monitorable HTML sources, Artifact Radar stores compact structured snapshots and keeps up to 12 distinct observed states per fingerprint. The system compares page title, description, images, page price metadata, provenance-related text, evidence scores and final URLs. A detected difference is an observation of change, not proof of intentional editing or wrongdoing.</p>
+          </div>
           <div>
             <h4 class="font-bold text-[#1c1814] mono-font text-xs uppercase tracking-widest">Risk Scoring Methodology</h4>
             <ul class="list-none space-y-2 mt-2">
@@ -427,6 +433,7 @@
         │
         ├──► Source Availability Monitor
         ├──► source_history.json
+        ├──► snapshots/<fingerprint>.json
         ├──► Gemini 2.5 Flash REST API + Google Search
         ├──► Microlink.io API (Screenshots)
         ▼
@@ -563,6 +570,32 @@
       return '<span class="intel-pill ' + toneClass + '">' + escHtml(label) + '</span>';
     }
 
+    function snapshotChangeLabel(code) {
+      const labels = {
+        INITIAL_SNAPSHOT: 'Initial snapshot',
+        TITLE_CHANGED: 'Title changed',
+        DESCRIPTION_CHANGED: 'Description changed',
+        PRICE_CHANGED: 'Price changed',
+        PAGE_PRICE_CHANGED: 'Page price changed',
+        PROVENANCE_CHANGED: 'Provenance changed',
+        PROVENANCE_TEXT_CHANGED: 'Provenance text changed',
+        IMAGE_CHANGED: 'Image changed',
+        RISK_SCORE_CHANGED: 'Evidence score changed',
+        AI_RISK_SCORE_CHANGED: 'AI score changed',
+        FINAL_URL_CHANGED: 'Final URL changed'
+      };
+      return labels[code] || String(code || '').replaceAll('_', ' ');
+    }
+
+    function snapshotDiffValue(field, value) {
+      if (value === null || value === undefined || value === '') return '—';
+      if (field === 'images') {
+        return Array.isArray(value) ? (value.length + ' image' + (value.length === 1 ? '' : 's')) : 'image set';
+      }
+      const text = String(value).replace(/\s+/g, ' ').trim();
+      return text.length > 180 ? text.slice(0, 180) + '…' : text;
+    }
+
     function sourceTone(status) {
       if (status === 'ACTIVE') return 'good';
       if (status === 'REMOVED') return 'bad';
@@ -616,7 +649,7 @@
     function setSourceFilter(v) {
       sourceFilter = v;
       document.querySelectorAll('[id^="chip-source-"]').forEach(el => el.className = 'chip');
-      const idMap = {'ALL':'ALL','ACTIVE':'ACTIVE','CHANGED':'CHANGED','REMOVED':'REMOVED','UNAVAILABLE':'UNAVAILABLE'};
+      const idMap = {'ALL':'ALL','ACTIVE':'ACTIVE','CHANGED':'CHANGED','FIELD':'FIELD','REMOVED':'REMOVED','UNAVAILABLE':'UNAVAILABLE'};
       const btn = document.getElementById('chip-source-' + idMap[v]);
       if (btn) btn.className = 'chip active';
       onFilterChange();
@@ -653,6 +686,7 @@
         const sourceState = sourceStateOf(item);
         if (sourceFilter === 'ACTIVE' && sourceState !== 'ACTIVE') return false;
         if (sourceFilter === 'CHANGED' && !item.source_change_detected) return false;
+        if (sourceFilter === 'FIELD' && !item.snapshot_changed) return false;
         if (sourceFilter === 'REMOVED' && sourceState !== 'REMOVED') return false;
         if (sourceFilter === 'UNAVAILABLE' && sourceState !== 'UNAVAILABLE') return false;
         // Search
@@ -767,7 +801,7 @@
               </div>
               <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-0.5">Provenance</p>
               <p class="text-xs font-semibold mb-2">${provFlag}</p>
-              <div class="flex flex-wrap gap-1.5 mb-3">${sourcePill(sourceStateOf(item))}${item.source_change_detected ? signalPill(item.source_change_type === "SOURCE_DISAPPEARED" ? "Disappearance signal" : "Change signal","warn") : ""}</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">${sourcePill(sourceStateOf(item))}${item.source_change_detected ? signalPill(item.source_change_type === "SOURCE_DISAPPEARED" ? "Disappearance signal" : "Change signal","warn") : ""}${(item.snapshot_changes||[]).slice(0,3).map(function(code){ return signalPill(snapshotChangeLabel(code),"neutral"); }).join("")}</div>
               <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-0.5">AI Analysis</p>
               <p class="text-xs leading-relaxed text-[#1c1814]">"${reason}"</p>
             </div>
@@ -1021,7 +1055,13 @@
                     (obs.observed_at ? new Date(obs.observed_at).toLocaleString("en-GB") : "Unknown time") + '</p></div>' +
                   sourcePill(status) +
                 '</div>' +
-                '<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">' +
+                ((obs.snapshot_changes || []).length ? '<div class="mt-3 flex flex-wrap gap-1.5">' +
+                  (obs.snapshot_changes || []).map(function(code){ return signalPill(snapshotChangeLabel(code), 'neutral'); }).join('') +
+                '</div>' : '') +
+                ((obs.snapshot_diffs || []).length ? '<div class="mt-3 p-3 rounded-xl bg-white border border-[#e4dfd4] space-y-2">' +
+                  (obs.snapshot_diffs || []).slice(0,5).map(function(diff){ return '<div class="grid grid-cols-[95px_1fr] gap-2 text-[10px]"><span class="mono-font uppercase tracking-widest text-[#8a7f72]">' + escHtml(diff.field || 'field') + '</span><span class="text-[#1c1814]">' + escHtml(snapshotDiffValue(diff.field, diff.before)) + ' → ' + escHtml(snapshotDiffValue(diff.field, diff.after)) + '</span></div>'; }).join('') +
+                '</div>' : '') +
+                '<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
                   '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Evidence</p><p class="text-xs font-bold mt-1">' + riskText + '</p>' + riskBar + '</div>' +
                   '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Price</p><p class="text-xs font-bold mt-1">' + price + '</p></div>' +
                   '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Provenance</p><p class="text-xs font-bold mt-1">' + prov + '</p></div>' +
@@ -1101,6 +1141,7 @@
         document.getElementById('stat-signals').textContent = summary.trafficking_signal_count ?? traffickingCount;
         document.getElementById('change-new').textContent = listings.filter(function(x){ return x.new_in_last_crawl; }).length;
         document.getElementById('change-changed').textContent = summary.source_changed_count ?? listings.filter(function(x){ return x.source_change_type === 'POSSIBLE_CONTENT_CHANGE'; }).length;
+        document.getElementById('change-field').textContent = summary.snapshot_field_change_events ?? listings.filter(function(x){ return x.snapshot_changed; }).length;
         document.getElementById('change-removed').textContent = summary.source_removed_count ?? listings.filter(function(x){ return x.source_status === 'REMOVED'; }).length;
         document.getElementById('change-unavailable').textContent = summary.source_unavailable_count ?? listings.filter(function(x){ return x.source_status === 'UNAVAILABLE'; }).length;
         document.getElementById('change-recovered').textContent = summary.source_recovered_count ?? listings.filter(function(x){ return x.source_change_type === 'SOURCE_RECOVERED'; }).length;
@@ -1113,7 +1154,7 @@
               const d = new Date(hist.last_crawl_date);
               const str = d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
               document.getElementById('last-update-sidebar').textContent = 'Last crawl: ' + str;
-              document.getElementById('build-tag').textContent = 'v6.4 · ' + str;
+              document.getElementById('build-tag').textContent = 'v7.0 · ' + str;
             }
           } catch(e) {
             console.warn('history.json could not be parsed; continuing.', e);
