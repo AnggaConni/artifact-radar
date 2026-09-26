@@ -2,7 +2,7 @@
 =======================================================================
   ARTIFACT RADAR v6.0 — Evidence-Aware Intelligence Engine
   AI Engine : Google Gemini 2.5 Flash (Google Search Grounding)
-  Mode      : Full English, Global Scope, 8-Day Interval
+  Mode      : Full English, Global Scope, 4-Day Interval
   Feature   : Auto-Backfill Missing Screenshots
 =======================================================================
 """
@@ -494,7 +494,7 @@ def get_hash(path):
     except: return "none"
 
 def check_schedule():
-    """Run automatically every 8 days, or immediately if FORCE_CRAWL is true."""
+    """Run automatically every 4 days, or immediately if FORCE_CRAWL is true."""
     if os.environ.get("FORCE_CRAWL") == "true": 
         log.info("FORCE_CRAWL is active. Bypassing schedule.")
         return True
@@ -505,13 +505,13 @@ def check_schedule():
             h = json.load(f)
         last = datetime.fromisoformat(h.get("last_crawl_date"))
         
-        # 8-DAY INTERVAL CHECK
+        # 4-DAY INTERVAL CHECK
         days_passed = (datetime.now() - last).days
-        if days_passed >= 8:
+        if days_passed >= 4:
             log.info(f"{days_passed} days have passed. Executing scheduled crawl.")
             return True
         else:
-            log.info(f"Only {days_passed} days passed since last crawl. Waiting for 8-day mark.")
+            log.info(f"Only {days_passed} days passed since last crawl. Waiting for 4-day mark.")
             return False
     except: return True
 
