@@ -1166,8 +1166,7 @@ def run_ai_search(api_key, existing_url_keys, target):
         "tools": [{"googleSearch": {}}],
         "generationConfig": {
             "temperature": 0.1,
-            "maxOutputTokens": 16384,
-            "responseMimeType": "application/json"
+            "maxOutputTokens": 16384
         },
         "safetySettings": [
             {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
