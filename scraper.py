@@ -718,6 +718,7 @@ def enrich_item(item, target):
     item.setdefault("first_seen", item["scraped_at"])
     item["last_seen"] = item["scraped_at"]
     item["seen_count"] = int(item.get("seen_count", 0) or 0) + 1
+    item["new_in_last_crawl"] = True
 
     ai_score = item.get("risk_score")
     try:
@@ -966,6 +967,7 @@ def main():
             item.setdefault("first_seen", item.get("scraped_at") or crawl_now)
             item["last_seen"] = crawl_now
             item["seen_count"] = int(item.get("seen_count", 0) or 0) + 1
+            item["new_in_last_crawl"] = False
 
         backfill_count = 0
         for item in listings:
