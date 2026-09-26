@@ -1,4 +1,12 @@
 {
-  "last_crawl_date": "2026-09-19T03:59:34.703494",
-  "script_hash": "fe6a1c302d908e1fc847f11ab237f2e1"
+  "last_crawl_date": "2026-09-26T13:55:23.748459",
+  "script_hash": "00f302e74a571bcb95b22e14ac0bf69b",
+  "query_cursor": 1,
+  "recent_queries": [
+    "majapahit artifact for sale",
+    "etruscan bronze antiquity",
+    "ife bronze figure authentic"
+  ],
+  "targets_per_run": 3,
+  "crawl_version": "v6.0"
 }
