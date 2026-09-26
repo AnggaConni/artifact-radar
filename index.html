@@ -774,18 +774,27 @@
       const raw = String(url).toLowerCase();
       const status = sourceStateOf(item);
       let disabledReason = '';
-      if (!url) disabledReason = 'No source URL was captured for this record.';
-      else if (raw.includes('vertexaisearch.cloud.google.com') || raw.includes('grounding-api-redirect')) disabledReason = 'This record only has a temporary Google Search grounding redirect; a direct source URL was not captured.';
-      else if (status === 'REMOVED') disabledReason = 'The monitored source most recently returned HTTP 404/410.';
-      else if (status === 'UNAVAILABLE') disabledReason = 'The monitored source could not be reached or blocked the check.';
+      let disabledLabel = 'Source Unavailable';
+      if (!url) {
+        disabledReason = 'No source URL was captured for this record.';
+        disabledLabel = 'Source URL Missing';
+      } else if (raw.includes('vertexaisearch.cloud.google.com') || raw.includes('grounding-api-redirect')) {
+        disabledReason = 'Only a temporary Google Search grounding redirect was captured; a direct source URL was not captured.';
+        disabledLabel = 'Direct Source Not Captured';
+      } else if (status === 'REMOVED') {
+        disabledReason = 'The monitored source most recently returned HTTP 404/410.';
+        disabledLabel = 'Source Removed';
+      } else if (status === 'UNAVAILABLE') {
+        disabledReason = 'The monitored source could not be reached or blocked the automated check.';
+        disabledLabel = 'Source Unavailable';
+      }
 
       if (disabledReason) {
         return '<button type="button" class="action-btn action-btn-disabled flex-1" title="' + escHtml(disabledReason) + '" aria-label="' + escHtml(disabledReason) + '">' +
           '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 8A6 6 0 106 8v4a2 2 0 002 2h8a2 2 0 002-2V8z"></path><path d="M12 11v2"></path></svg>' +
-          'Source Unavailable' +
+          escHtml(disabledLabel) +
         '</button>';
       }
-
       return '<a href="' + escHtml(url) + '" target="_blank" rel="noopener noreferrer" class="action-btn action-btn-source flex-1" title="Open the recorded source page in a new tab">' +
         '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5"></path></svg>' +
         'Inspect Source' +
