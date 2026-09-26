@@ -906,9 +906,6 @@
         lines.push(`    <dcterms:sourceStatus>${xmlEscape(item.source_status || 'UNKNOWN')}</dcterms:sourceStatus>`);
         lines.push(`    <dcterms:sourceCheckedAt>${xmlEscape(item.source_checked_at || '')}</dcterms:sourceCheckedAt>`);
         lines.push(`    <dcterms:sourceChangeType>${xmlEscape(item.source_change_type || '')}</dcterms:sourceChangeType>`);
-        lines.push(`    <dcterms:sourceStatus>${xmlEscape(item.source_status || 'UNKNOWN')}</dcterms:sourceStatus>`);
-        lines.push(`    <dcterms:sourceCheckedAt>${xmlEscape(item.source_checked_at || '')}</dcterms:sourceCheckedAt>`);
-        lines.push(`    <dcterms:sourceChangeType>${xmlEscape(item.source_change_type || '')}</dcterms:sourceChangeType>`);
         if (item.price_usd) lines.push(`    <dcterms:estimatedValueUSD>${item.price_usd}</dcterms:estimatedValueUSD>`);
         lines.push(`  </record>`);
       });
@@ -968,9 +965,12 @@
       let previousPrice = null;
 
       document.getElementById("history-events").innerHTML = observations.length
-        ? observations.slice().reverse().map(function(obs){
+        ? observations.slice().reverse().map(function(obs, displayIndex){
+            const chronologicalIndex = observations.length - 1 - displayIndex;
+            const prior = chronologicalIndex > 0 ? observations[chronologicalIndex - 1] : null;
             const risk = obs.risk_score !== undefined && obs.risk_score !== null ? Number(obs.risk_score) : null;
-            const riskDelta = previousRisk !== null && risk !== null ? risk - previousRisk : 0;
+            const priorRisk = prior && prior.risk_score !== undefined && prior.risk_score !== null ? Number(prior.risk_score) : null;
+            const riskDelta = priorRisk !== null && risk !== null ? risk - priorRisk : 0;
             const riskText = risk !== null ? risk + "/10" + (riskDelta ? " (" + (riskDelta > 0 ? "+" : "") + riskDelta + ")" : "") : "—";
             const change = obs.change_type || "UNCHANGED";
             const status = obs.source_status || "UNKNOWN";
@@ -1014,7 +1014,7 @@
                   '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Evidence</p><p class="text-xs font-bold mt-1">' + riskText + '</p>' + riskBar + '</div>' +
                   '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Price</p><p class="text-xs font-bold mt-1">' + price + '</p></div>' +
                   '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Provenance</p><p class="text-xs font-bold mt-1">' + prov + '</p></div>' +
-                  '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">HTTP</p><p class="text-xs font-bold mt-1">' + (entry.events && entry.events.length ? (entry.events[entry.events.length-1].http_status || "—") : "—") + '</p></div>' +
+                  '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">HTTP</p><p class="text-xs font-bold mt-1">' + (obs.http_status || "—") + '</p></div>' +
                 '</div>' +
                 (obs.title ? '<p class="text-[11px] text-[#8a7f72] mt-3">' + escHtml(obs.title) + '</p>' : '') +
               '</div>' +
