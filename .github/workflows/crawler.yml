@@ -2,12 +2,12 @@ name: Artifact Radar Auto-Crawler
 
 on:
   schedule:
-    # Berjalan tiap hari, tapi Python script akan menahannya jika belum 8 hari
+    # Berjalan tiap hari, tapi Python script akan menahannya jika belum 4 hari
     - cron: "0 0 * * *"
   workflow_dispatch: 
     inputs:
       force_crawl:
-        description: 'Force crawl now (bypass 8-day schedule)?'
+        description: 'Force crawl now (bypass 4-day schedule)?'
         required: true
         default: 'false'
         type: choice
