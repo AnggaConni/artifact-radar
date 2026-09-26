@@ -94,6 +94,12 @@
     .signal-warn { color:#b45309; background:#fef3c7; border-color:#fde68a; }
     .signal-bad { color:#b91c1c; background:#fee2e2; border-color:#fecaca; }
     .signal-neutral { color:#0369a1; background:#e0f2fe; border-color:#bae6fd; }
+    .source-active { color:#15803d; background:#dcfce7; border-color:#bbf7d0; }
+    .source-removed { color:#b91c1c; background:#fee2e2; border-color:#fecaca; }
+    .source-unavailable { color:#b45309; background:#fef3c7; border-color:#fde68a; }
+    .source-changed { color:#7c3aed; background:#ede9fe; border-color:#ddd6fe; }
+    .source-unknown { color:#64748b; background:#f1f5f9; border-color:#e2e8f0; }
+    .history-event { border-left:2px solid #e4dfd4; padding-left:12px; }
   </style>
 </head>
 <body class="flex h-screen overflow-hidden">
@@ -216,6 +222,21 @@
           </div>
         </div>
 
+        <!-- ── CHANGE INTELLIGENCE ── -->
+        <div class="card rounded-2xl p-5 mb-6 bg-[#fcfbf9] border border-[#e4dfd4]">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div><p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font">Change Intelligence</p><h2 class="text-lg font-extrabold syne-font mt-1">What changed since the last scan?</h2></div>
+            <p id="change-disclaimer" class="text-[10px] text-[#8a7f72] max-w-xl leading-relaxed">A source becoming unavailable is a technical observation, not proof of deletion, illicit activity, or misconduct.</p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">New</p><p id="change-new" class="text-2xl font-extrabold syne-font mt-1">0</p></div>
+            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#7c3aed]">Content Change</p><p id="change-changed" class="text-2xl font-extrabold syne-font mt-1 text-[#7c3aed]">0</p></div>
+            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#dc2626]">Disappeared</p><p id="change-removed" class="text-2xl font-extrabold syne-font mt-1 text-[#dc2626]">0</p></div>
+            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#d97706]">Unavailable</p><p id="change-unavailable" class="text-2xl font-extrabold syne-font mt-1 text-[#d97706]">0</p></div>
+            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#16a34a]">Recovered</p><p id="change-recovered" class="text-2xl font-extrabold syne-font mt-1 text-[#16a34a]">0</p></div>
+          </div>
+        </div>
+
         <!-- ── FILTER BAR ── -->
         <div class="bg-white border border-[#e4dfd4] rounded-2xl p-4 mb-6 space-y-3">
 
@@ -291,6 +312,16 @@
             <button class="chip" id="chip-evidence-PROV" onclick="setEvidenceFilter('PROVENANCE')">⚠ Provenance Gap</button>
             <button class="chip" id="chip-evidence-TRAFFICKING" onclick="setEvidenceFilter('TRAFFICKING')">🚨 Trafficking / Looting</button>
             <button class="chip" id="chip-evidence-LEGAL" onclick="setEvidenceFilter('LEGAL')">⚖ Legal / Export</button>
+          </div>
+
+          <!-- Row 6: Source monitoring -->
+          <div class="flex flex-wrap gap-2 items-center">
+            <span class="text-[10px] mono-font font-bold text-[#8a7f72] uppercase tracking-widest mr-1">Source:</span>
+            <button class="chip active" id="chip-source-ALL" onclick="setSourceFilter('ALL')">All</button>
+            <button class="chip" id="chip-source-ACTIVE" onclick="setSourceFilter('ACTIVE')">🟢 Active</button>
+            <button class="chip" id="chip-source-CHANGED" onclick="setSourceFilter('CHANGED')">🟣 Changed</button>
+            <button class="chip" id="chip-source-REMOVED" onclick="setSourceFilter('REMOVED')">🔴 Removed</button>
+            <button class="chip" id="chip-source-UNAVAILABLE" onclick="setSourceFilter('UNAVAILABLE')">🟡 Unavailable</button>
           </div>
         </div>
 
@@ -407,6 +438,8 @@
     let catFilter      = 'ALL';
     let provFilter     = 'ALL';
     let evidenceFilter = 'ALL';
+    let sourceFilter = 'ALL';
+    let sourceHistory = {};
 
     // ── TOAST ──
     function showToast(msg) {
@@ -496,6 +529,19 @@
       return 'OTHER';
     }
 
+    function sourceStateOf(item) { return item.source_status || 'UNKNOWN'; }
+    function sourceTone(status) {
+      if (status === 'ACTIVE') return 'good';
+      if (status === 'REMOVED') return 'bad';
+      if (status === 'UNAVAILABLE') return 'warn';
+      if (status === 'POSSIBLE_CONTENT_CHANGE' || status === 'REDIRECTED') return 'warn';
+      return 'neutral';
+    }
+    function sourcePill(status) {
+      const labels = {'ACTIVE':'Source active','REMOVED':'Source unavailable / removed','UNAVAILABLE':'Source check unavailable','POSSIBLE_CONTENT_CHANGE':'Possible content change','REDIRECTED':'Source redirected','UNKNOWN':'Not monitorable'};
+      return signalPill(labels[status] || status || 'Unknown', sourceTone(status));
+    }
+
     // ── FILTER HELPERS ──
     function setStatusFilter(v) {
       statusFilter = v;
@@ -534,6 +580,15 @@
       onFilterChange();
     }
 
+    function setSourceFilter(v) {
+      sourceFilter = v;
+      document.querySelectorAll('[id^="chip-source-"]').forEach(el => el.className = 'chip');
+      const idMap = {'ALL':'ALL','ACTIVE':'ACTIVE','CHANGED':'CHANGED','REMOVED':'REMOVED','UNAVAILABLE':'UNAVAILABLE'};
+      const btn = document.getElementById('chip-source-' + idMap[v]);
+      if (btn) btn.className = 'chip active';
+      onFilterChange();
+    }
+
     function onPageSizeChange() {
       pageSize = parseInt(document.getElementById('pageSizeSelect').value);
       currentPage = 1;
@@ -562,6 +617,11 @@
         if (evidenceFilter === 'PROVENANCE' && !ev.provenance_missing_signal) return false;
         if (evidenceFilter === 'TRAFFICKING' && !ev.trafficking_or_looting_signal) return false;
         if (evidenceFilter === 'LEGAL' && !ev.export_or_legal_risk_signal) return false;
+        const sourceState = sourceStateOf(item);
+        if (sourceFilter === 'ACTIVE' && sourceState !== 'ACTIVE') return false;
+        if (sourceFilter === 'CHANGED' && !item.source_change_detected) return false;
+        if (sourceFilter === 'REMOVED' && sourceState !== 'REMOVED') return false;
+        if (sourceFilter === 'UNAVAILABLE' && sourceState !== 'UNAVAILABLE') return false;
         // Search
         if (query) {
           const haystack = [item.original_title, item.platform, item.origin_region, item.reason, item.keyword_trigger, item.source_type, (item.risk_factors||[]).join(' ')]
