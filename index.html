@@ -122,6 +122,9 @@
     .change-stat-recovered::after { background:#16a34a; }
     .change-zero { font-size:2rem; line-height:1; letter-spacing:-.05em; }
     .change-note { border-top:1px solid #ebe6dc; }
+    .change-status-note { display:flex; align-items:flex-start; gap:10px; padding:10px 12px; border:1px solid #ebe6dc; border-radius:11px; background:#faf8f3; }
+    .change-status-icon { width:22px; height:22px; border-radius:7px; display:flex; align-items:center; justify-content:center; flex:none; background:#fff; border:1px solid #e4dfd4; color:#8a7f72; font:700 10px/1 'DM Mono',monospace; }
+    .change-status-copy { min-width:0; }
     .change-badge { display:inline-flex; align-items:center; gap:6px; padding:4px 9px; border-radius:999px; font:700 9px/1 'DM Mono',monospace; text-transform:uppercase; letter-spacing:.08em; }
     .change-dot { width:6px; height:6px; border-radius:50%; flex:none; }
   </style>
@@ -256,9 +259,14 @@
                 </div>
                 <h2 class="text-xl md:text-2xl font-extrabold syne-font tracking-tight">What changed since the last scan?</h2>
               </div>
-              <div class="max-w-md text-left md:text-right">
-                <p id="change-disclaimer" class="text-[10px] leading-relaxed text-[#6b6258]">Change counters reflect observed differences across crawler runs. A source becoming unavailable does not by itself prove deletion, illicit activity, or misconduct.</p>
-                <p id="change-baseline" class="text-[10px] mono-font text-[#8a7f72] mt-1">V7 baseline: pending first monitoring crawl.</p>
+              <div class="w-full md:w-auto md:max-w-xl">
+                <div class="change-status-note">
+                  <span id="change-status-icon" class="change-status-icon">i</span>
+                  <div class="change-status-copy">
+                    <p id="change-disclaimer" class="text-[10px] leading-relaxed text-[#6b6258]">V7 baseline is pending. The current dataset predates structured snapshot monitoring.</p>
+                    <p id="change-baseline" class="text-[9px] mono-font text-[#8a7f72] mt-1">No change comparison is available yet.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -291,13 +299,8 @@
               </div>
             </div>
 
-            <div class="change-baseline rounded-xl px-4 py-3 mt-3">
-              <div class="flex items-start gap-3">
-                <div class="w-7 h-7 rounded-lg bg-white border border-[#e4dfd4] flex items-center justify-center shrink-0">
-                  <span class="mono-font text-[11px] font-bold text-[#8a7f72]">i</span>
-                </div>
-                <p class="text-[10px] leading-relaxed text-[#6b6258]"><b>Why are these counters 0?</b> The current 292-record dataset predates the first V7 structured-snapshot run. The first V7 crawl establishes the baseline; it does not reconstruct changes that happened before monitoring began.</p>
-              </div>
+            <div class="change-note mt-4 pt-3">
+              <p class="text-[9px] mono-font text-[#8a7f72] leading-relaxed">Note: source disappearance, unavailability and field-level differences are technical observations. They do not establish intent, deletion, illicit activity, or misconduct.</p>
             </div>
           </div>
         </section>
@@ -1187,6 +1190,38 @@
       return raw;
     }
 
+    function updateChangeIntelligenceNotice(stats, isV7History) {
+      const totalObservedChanges =
+        (stats.newCount || 0) +
+        (stats.contentChange || 0) +
+        (stats.fieldChanges || 0) +
+        (stats.removed || 0) +
+        (stats.unavailable || 0) +
+        (stats.recovered || 0);
+
+      const disclaimer = document.getElementById('change-disclaimer');
+      const baseline = document.getElementById('change-baseline');
+      const icon = document.getElementById('change-status-icon');
+      if (!disclaimer || !baseline || !icon) return;
+
+      if (!isV7History) {
+        icon.textContent = 'i';
+        disclaimer.textContent = 'V7 baseline is pending. The current dataset predates structured snapshot monitoring.';
+        baseline.textContent = 'No change comparison is available yet.';
+        return;
+      }
+
+      if (totalObservedChanges === 0) {
+        icon.textContent = '✓';
+        disclaimer.textContent = 'V7 baseline established. No new source or field changes were observed in the latest monitoring run.';
+        baseline.textContent = 'Zero means “no changes observed in this run” — not “nothing ever changed”.';
+      } else {
+        icon.textContent = '!';
+        disclaimer.textContent = 'Changes were observed since the previous monitoring run. These are technical observations of source or record differences.';
+        baseline.textContent = 'Observed changes do not by themselves establish intentional editing, deletion, illicit activity, or misconduct.';
+      }
+    }
+
     async function loadData() {
       let stage = 'fetching data.json';
       try {
@@ -1240,7 +1275,7 @@
         document.getElementById('change-new').textContent = listings.filter(function(x){ return x.new_in_last_crawl; }).length;
         document.getElementById('change-changed').textContent = summary.source_changed_count ?? listings.filter(function(x){ return x.source_change_type === 'POSSIBLE_CONTENT_CHANGE'; }).length;
         document.getElementById('change-field').textContent = summary.snapshot_field_change_events ?? listings.filter(function(x){ return x.snapshot_changed; }).length;
-        document.getElementById('change-baseline').textContent = 'V7 baseline: pending first monitoring crawl.';
+        // Change notice is finalised after history metadata is loaded.
         document.getElementById('change-removed').textContent = summary.source_removed_count ?? listings.filter(function(x){ return x.source_status === 'REMOVED'; }).length;
         document.getElementById('change-unavailable').textContent = summary.source_unavailable_count ?? listings.filter(function(x){ return x.source_status === 'UNAVAILABLE'; }).length;
         document.getElementById('change-recovered').textContent = summary.source_recovered_count ?? listings.filter(function(x){ return x.source_change_type === 'SOURCE_RECOVERED'; }).length;
@@ -1256,12 +1291,26 @@
               document.getElementById('build-tag').textContent = 'v7.0 · ' + str;
             }
             const isV7History = hist.crawl_version === 'v7.0';
-            document.getElementById('change-baseline').textContent = isV7History
-              ? 'V7 monitoring is active. Counters reflect observed changes since the latest established baseline.'
-              : 'V7 baseline: pending first monitoring crawl. Current counters are 0 because this dataset was last written before V7 snapshot monitoring.';
+            updateChangeIntelligenceNotice({
+              newCount: Number(document.getElementById('change-new').textContent) || 0,
+              contentChange: Number(document.getElementById('change-changed').textContent) || 0,
+              fieldChanges: Number(document.getElementById('change-field').textContent) || 0,
+              removed: Number(document.getElementById('change-removed').textContent) || 0,
+              unavailable: Number(document.getElementById('change-unavailable').textContent) || 0,
+              recovered: Number(document.getElementById('change-recovered').textContent) || 0
+            }, isV7History);
           } catch(e) {
             console.warn('history.json could not be parsed; continuing.', e);
           }
+        } else {
+          updateChangeIntelligenceNotice({
+            newCount: Number(document.getElementById('change-new').textContent) || 0,
+            contentChange: Number(document.getElementById('change-changed').textContent) || 0,
+            fieldChanges: Number(document.getElementById('change-field').textContent) || 0,
+            removed: Number(document.getElementById('change-removed').textContent) || 0,
+            unavailable: Number(document.getElementById('change-unavailable').textContent) || 0,
+            recovered: Number(document.getElementById('change-recovered').textContent) || 0
+          }, false);
         }
 
         // Charts
