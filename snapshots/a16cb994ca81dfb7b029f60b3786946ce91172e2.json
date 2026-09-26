@@ -39,8 +39,43 @@
       "first_observed_at": "2026-09-26T14:42:17.889601Z",
       "last_observed_at": "2026-09-26T14:42:17.889601Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-09-26T14:45:59.039781Z",
+      "title": "Tang Dynasty Terracotta Pottery Statue of Civil Officer, Oxford TL Tested",
+      "page_title": "Antique Asian Ceramics - 4,420 For Sale at 1stDibs | antique chinese vases, antique chinese porcelain, antique asian pottery",
+      "page_description": "Shop antique and modern ceramics and other Asian furniture and art from top sellers and makers around the world. Global shipping available.",
+      "image_urls": [
+        "https://a.1stdibscdn.com/archivesE/upload/f_74672/f_514103421786625935495/90510e15-7ee9-4537-b0f4-4d0ad71b62cd/IMG_5663_bg_processed.JPG",
+        "https://a.1stdibscdn.com/archivesE/upload/f_74672/f_514103421786625935495/90510e15-7ee9-4537-b0f4-4d0ad71b62cd/IMG_5663_bg_processed.JPG?width=768",
+        "https://a.1stdibscdn.com/antique-chinese-qing-dynasty-oxblood-flambe-porcelain-vase-for-sale/f_79892/f_511455321785062946469/f_51145532_1785062946902_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/chinese-imari-large-hand-painted-plate-kangxi-period-circa-1700-for-sale/f_9903/f_505067821780996545329/f_50506782_1780996545766_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/large-antique-japanese-satsuma-porcelain-vase-attributed-to-masanobu-for-sale/f_16102/f_510902921784667613464/f_51090292_1784667613614_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/18thc-chinese-export-blue-and-white-jar-porcelain-hand-painted-scene-qing-for-sale/f_9903/f_483514521768560744464/f_48351452_1768560744951_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/japanese-imari-red-white-porcelain-charger-with-garden-scene-20thc-for-sale/f_23963/f_511505621785112825160/f_51150562_1785112825272_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/chinoiserie-large-blue-and-white-porcelain-planter-for-sale/1121189/f_491482121773153197399/49148212_datamatics.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "",
+      "price_usd": 5800,
+      "provenance_flag": true,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "China",
+      "source_url": "https://www.1stdibs.com/furniture/asian-art-furniture/ceramics/tl-tested",
+      "final_url": "https://www.1stdibs.com/furniture/asian-art-furniture/ceramics",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "e25951391b22c870f2a6795557fbcad79760570fd334271bae4ac98a7c2f3f32",
+      "etag": "",
+      "last_modified": "Wed, 23 Sep 2026 17:29:57 GMT",
+      "snapshot_signature": "404bdd60ccbac154836426bae353856034bf31681d311ce46932261f26469b4d",
+      "first_observed_at": "2026-09-26T14:45:59.039781Z",
+      "last_observed_at": "2026-09-26T14:45:59.039781Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-09-26T14:42:17.889601Z",
-  "snapshot_count": 1
+  "updated_at": "2026-09-26T14:45:59.039781Z",
+  "snapshot_count": 2
 }

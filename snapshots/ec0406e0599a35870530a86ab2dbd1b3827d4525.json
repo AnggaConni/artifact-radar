@@ -30,8 +30,34 @@
       "first_observed_at": "2026-09-26T14:42:13.492879Z",
       "last_observed_at": "2026-09-26T14:42:13.492879Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-09-26T14:45:55.413523Z",
+      "title": "Certificate of Authenticity",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://www.vipfanauctions.com/authenticity",
+      "final_url": "https://vipfanauctions.com/authenticity",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "cc2050bf145b4ff967e6d02db017f567d79996cb62cfd8e32812782bc158a8ee",
+      "first_observed_at": "2026-09-26T14:45:55.413523Z",
+      "last_observed_at": "2026-09-26T14:45:55.413523Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-09-26T14:42:13.492879Z",
-  "snapshot_count": 1
+  "updated_at": "2026-09-26T14:45:55.413523Z",
+  "snapshot_count": 2
 }

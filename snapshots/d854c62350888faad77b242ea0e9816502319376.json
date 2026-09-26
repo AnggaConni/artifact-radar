@@ -33,10 +33,10 @@
       "last_modified": "",
       "snapshot_signature": "1ee67b80581777855a52d38b5a21eba6dcbc0a12ac134098ad3384c875fcd499",
       "first_observed_at": "2026-09-26T14:42:21.875182Z",
-      "last_observed_at": "2026-09-26T14:42:21.875182Z",
-      "observations_seen": 1
+      "last_observed_at": "2026-09-26T14:46:02.218746Z",
+      "observations_seen": 2
     }
   ],
-  "updated_at": "2026-09-26T14:42:21.875182Z",
+  "updated_at": "2026-09-26T14:46:02.218746Z",
   "snapshot_count": 1
 }
