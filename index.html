@@ -552,6 +552,17 @@
     }
 
     function sourceStateOf(item) { return item.source_status || 'UNKNOWN'; }
+
+    function signalPill(label, tone = 'neutral') {
+      const toneClass = {
+        good: 'signal-good',
+        warn: 'signal-warn',
+        bad: 'signal-bad',
+        neutral: 'signal-neutral'
+      }[tone] || 'signal-neutral';
+      return '<span class="intel-pill ' + toneClass + '">' + escHtml(label) + '</span>';
+    }
+
     function sourceTone(status) {
       if (status === 'ACTIVE') return 'good';
       if (status === 'REMOVED') return 'bad';
@@ -1039,18 +1050,37 @@
     }
 
     async function loadData() {
+      let stage = 'fetching data.json';
       try {
         const [dataResp, histResp, sourceHistResp] = await Promise.all([
-          fetch('data.json'),
-          fetch('history.json').catch(() => null),
-          fetch('source_history.json').catch(() => null)
+          fetch('data.json', { cache: 'no-store' }),
+          fetch('history.json', { cache: 'no-store' }).catch(() => null),
+          fetch('source_history.json', { cache: 'no-store' }).catch(() => null)
         ]);
+
+        if (!dataResp.ok) {
+          throw new Error('data.json HTTP ' + dataResp.status);
+        }
+
+        stage = 'parsing data.json';
         const raw = await dataResp.json();
         const { listings, summary } = normalise(raw);
+
+        stage = 'loading source history';
         globalListings = listings;
-        if (sourceHistResp) { try { sourceHistory = await sourceHistResp.json(); } catch(e) { sourceHistory = {}; } }
+        if (sourceHistResp && sourceHistResp.ok) {
+          try {
+            sourceHistory = await sourceHistResp.json();
+          } catch(e) {
+            console.warn('source_history.json could not be parsed; continuing without timeline history.', e);
+            sourceHistory = {};
+          }
+        } else {
+          sourceHistory = {};
+        }
 
         // Stats
+        stage = 'updating statistics';
         let highCount = 0, medCount = 0, lowCount = 0, provYes = 0, provNo = 0, traffickingCount = 0;
         const platformCounts = {};
 
@@ -1063,41 +1093,51 @@
           platformCounts[cat] = (platformCounts[cat] || 0) + 1;
         });
 
-        document.getElementById('stat-total').textContent    = summary.total_listings  || listings.length;
-        document.getElementById('stat-risk').textContent     = summary.high_risk_count || highCount;
-        document.getElementById('stat-medium').textContent   = summary.medium_risk_count || medCount;
+        document.getElementById('stat-total').textContent    = summary.total_listings ?? listings.length;
+        document.getElementById('stat-risk').textContent     = summary.high_risk_count ?? highCount;
+        document.getElementById('stat-medium').textContent   = summary.medium_risk_count ?? medCount;
         const sortedPlat = Object.entries(platformCounts).sort((a, b) => b[1] - a[1]);
         document.getElementById('stat-platforms').textContent = sortedPlat.length;
-        document.getElementById('stat-signals').textContent = summary.trafficking_signal_count || traffickingCount;
+        document.getElementById('stat-signals').textContent = summary.trafficking_signal_count ?? traffickingCount;
         document.getElementById('change-new').textContent = listings.filter(function(x){ return x.new_in_last_crawl; }).length;
-        document.getElementById('change-changed').textContent = summary.source_changed_count || listings.filter(function(x){ return x.source_change_type === 'POSSIBLE_CONTENT_CHANGE'; }).length;
-        document.getElementById('change-removed').textContent = summary.source_removed_count || listings.filter(function(x){ return x.source_status === 'REMOVED'; }).length;
-        document.getElementById('change-unavailable').textContent = summary.source_unavailable_count || listings.filter(function(x){ return x.source_status === 'UNAVAILABLE'; }).length;
-        document.getElementById('change-recovered').textContent = summary.source_recovered_count || listings.filter(function(x){ return x.source_change_type === 'SOURCE_RECOVERED'; }).length;
+        document.getElementById('change-changed').textContent = summary.source_changed_count ?? listings.filter(function(x){ return x.source_change_type === 'POSSIBLE_CONTENT_CHANGE'; }).length;
+        document.getElementById('change-removed').textContent = summary.source_removed_count ?? listings.filter(function(x){ return x.source_status === 'REMOVED'; }).length;
+        document.getElementById('change-unavailable').textContent = summary.source_unavailable_count ?? listings.filter(function(x){ return x.source_status === 'UNAVAILABLE'; }).length;
+        document.getElementById('change-recovered').textContent = summary.source_recovered_count ?? listings.filter(function(x){ return x.source_change_type === 'SOURCE_RECOVERED'; }).length;
 
-        if (histResp) {
+        if (histResp && histResp.ok) {
           try {
+            stage = 'parsing history.json';
             const hist = await histResp.json();
-            const d   = new Date(hist.last_crawl_date);
-            const str = d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
-            document.getElementById('last-update-sidebar').textContent = `Last crawl: ${str}`;
-            document.getElementById('build-tag').textContent = `v6.3 · ${str}`;
-          } catch(e) {}
+            if (hist.last_crawl_date) {
+              const d = new Date(hist.last_crawl_date);
+              const str = d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+              document.getElementById('last-update-sidebar').textContent = 'Last crawl: ' + str;
+              document.getElementById('build-tag').textContent = 'v6.3 · ' + str;
+            }
+          } catch(e) {
+            console.warn('history.json could not be parsed; continuing.', e);
+          }
         }
 
         // Charts
+        stage = 'rendering charts';
         buildCharts(highCount, medCount, lowCount, provYes, provNo, sortedPlat);
 
         // Apply default filter (shows all, newest first)
+        stage = 'rendering artifact cards';
         applyFiltersAndRender();
 
         // Init map lazily
+        stage = 'initialising map';
         initMap(listings);
 
       } catch(err) {
-        console.error(err);
+        console.error('Artifact Radar load error at ' + stage, err);
         document.getElementById('cards-grid').innerHTML =
-          `<div class="col-span-full py-20 text-center text-[#dc2626] mono-font text-sm">Failed to load data.json — check console.</div>`;
+          '<div class="col-span-full py-20 text-center text-[#dc2626] mono-font text-sm">' +
+          'Artifact Radar error during ' + escHtml(stage) + ': ' + escHtml(err.message || String(err)) +
+          '</div>';
       }
     }
 
