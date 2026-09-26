@@ -1,6 +1,6 @@
 """
 =======================================================================
-  ARTIFACT RADAR v7.0 — Evidence Snapshot Intelligence Engine
+  ARTIFACT RADAR v7.1 — Robust JSON + Evidence Snapshot Intelligence
   AI Engine : Google Gemini 2.5 Flash (Google Search Grounding)
   Mode      : Full English, Global Scope, 4-Day Interval
   Feature   : Source Monitoring + Structured Evidence Snapshots
@@ -539,7 +539,7 @@ def fetch_source_state(item):
 
     checked_at = datetime.now().isoformat() + "Z"
     headers = {
-        "User-Agent": "ArtifactRadar/7.0 (+https://github.com/AnggaConni/artifact-radar)"
+        "User-Agent": "ArtifactRadar/7.1 (+https://github.com/AnggaConni/artifact-radar)"
     }
 
     try:
@@ -1165,8 +1165,9 @@ def run_ai_search(api_key, existing_url_keys, target):
         "contents": [{"parts": [{"text": prompt}]}],
         "tools": [{"googleSearch": {}}],
         "generationConfig": {
-            "temperature": 0.2,
-            "maxOutputTokens": 8192
+            "temperature": 0.1,
+            "maxOutputTokens": 16384,
+            "responseMimeType": "application/json"
         },
         "safetySettings": [
             {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
@@ -1200,24 +1201,62 @@ def run_ai_search(api_key, existing_url_keys, target):
         grounding = candidate.get("groundingMetadata", {}) or {}
         log.info(f"Raw AI Output: {text[:180]}...")
 
-        fence = chr(96) * 3
-        clean_text = text.replace(fence + "json", "").replace(fence, "")
-        clean_text = re.sub(r"\[\d+\]", "", clean_text)
+        def parse_json_array(raw_text):
+            if not raw_text:
+                return None
 
-        start_idx = clean_text.find("[")
-        end_idx = clean_text.rfind("]")
+            cleaned = raw_text.strip()
+            fence = chr(96) * 3
+            cleaned = re.sub(r"^" + re.escape(fence) + r"(?:json)?\s*", "", cleaned, flags=re.I)
+            cleaned = re.sub(r"\s*" + re.escape(fence) + r"$", "", cleaned)
+            cleaned = re.sub(r"\[\d+\]", "", cleaned).strip()
 
-        if start_idx == -1 or end_idx == -1 or start_idx >= end_idx:
-            log.warning("AI did not provide a valid JSON Array.")
-            return {"items": [], "grounding": grounding}
+            # First try the whole response after removing markdown fences.
+            try:
+                parsed = json.loads(cleaned)
+                if isinstance(parsed, list):
+                    return parsed
+            except json.JSONDecodeError:
+                pass
 
-        try:
-            items = json.loads(clean_text[start_idx:end_idx + 1])
-        except json.JSONDecodeError as e:
-            log.error(f"JSON Parse Error: {e}")
-            return {"items": [], "grounding": grounding}
+            # Fall back to the first balanced JSON array in the response.
+            start = cleaned.find("[")
+            if start < 0:
+                return None
 
-        if not isinstance(items, list):
+            depth = 0
+            in_string = False
+            escaped = False
+            for idx in range(start, len(cleaned)):
+                ch = cleaned[idx]
+                if in_string:
+                    if escaped:
+                        escaped = False
+                    elif ch == "\\":
+                        escaped = True
+                    elif ch == '"':
+                        in_string = False
+                    continue
+
+                if ch == '"':
+                    in_string = True
+                elif ch == "[":
+                    depth += 1
+                elif ch == "]":
+                    depth -= 1
+                    if depth == 0:
+                        candidate_json = cleaned[start:idx + 1]
+                        try:
+                            parsed = json.loads(candidate_json)
+                            if isinstance(parsed, list):
+                                return parsed
+                        except json.JSONDecodeError:
+                            return None
+            return None
+
+        items = parse_json_array(text)
+        if items is None:
+            log.warning("AI response could not be parsed as a JSON array; retaining grounding metadata and continuing.")
             return {"items": [], "grounding": grounding}
 
         return {"items": items, "grounding": grounding}
