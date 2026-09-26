@@ -290,7 +290,7 @@ def source_signature(response):
     if "text/html" in content_type or "application/xhtml" in content_type:
         try:
             text = raw.decode(response.encoding or "utf-8", errors="ignore")
-            text = re.sub(r"(?is)<(script|style|noscript|svg).*?</\\1>", " ", text)
+            text = re.sub(r"(?is)<(script|style|noscript|svg).*?</\1>", " ", text)
             text = re.sub(r"(?s)<!--.*?-->", " ", text)
             text = re.sub(r"\\s+", " ", text).strip().lower()
             raw = text[:200000].encode("utf-8")
@@ -301,7 +301,7 @@ def source_signature(response):
 
 
 def _clean_html_text(raw):
-    text = re.sub(r"(?is)<(script|style|noscript|svg).*?>.*?</\\1>", " ", raw or "")
+    text = re.sub(r"(?is)<(script|style|noscript|svg).*?>.*?</\1>", " ", raw or "")
     text = re.sub(r"(?s)<!--.*?-->", " ", text)
     text = re.sub(r"(?s)<[^>]+>", " ", text)
     text = unescape(text)
@@ -323,53 +323,63 @@ def extract_page_metadata(body, content_type=""):
     if not body or "html" not in (content_type or "").lower():
         return {}
     try:
-        encoding = "utf-8"
-        raw = body.decode(encoding, errors="replace")
+        raw = body.decode("utf-8", errors="replace")
+
         title = _first_meta(raw, [
-            r"<meta[^>]+property=[\\\"']og:title[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
-            r"<meta[^>]+content=[\\\"']([^\\\"']+)[\\\"'][^>]+property=[\\\"']og:title[\\\"']",
-            r"<title[^>]*>(.*?)</title>"
+            r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:title["\']',
+            r'<title[^>]*>(.*?)</title>'
         ])
+
         description = _first_meta(raw, [
-            r"<meta[^>]+name=[\\\"']description[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
-            r"<meta[^>]+content=[\\\"']([^\\\"']+)[\\\"'][^>]+name=[\\\"']description[\\\"']",
-            r"<meta[^>]+property=[\\\"']og:description[\\\"'][^>]+content=[\\\"']([^\\\"']+)"
+            r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']+)',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']description["\']',
+            r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']+)'
         ])
+
         images = []
-        for pattern in [
-            r"<meta[^>]+property=[\\\"']og:image[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
-            r"<meta[^>]+content=[\\\"']([^\\\"']+)[\\\"'][^>]+property=[\\\"']og:image[\\\"']",
-            r"<meta[^>]+name=[\\\"']twitter:image[\\\"'][^>]+content=[\\\"']([^\\\"']+)"
-        ]:
-            for m in re.finditer(pattern, raw, re.I):
-                value = unescape(m.group(1)).strip()
+        image_patterns = [
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+            r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)'
+        ]
+        for pattern in image_patterns:
+            for match in re.finditer(pattern, raw, re.I):
+                value = unescape(match.group(1)).strip()
                 if value and value not in images:
                     images.append(value)
-        for m in re.finditer(r"[\\\"']image[\\\"']\\s*:\\s*[\\\"']([^\\\"']+)", raw, re.I):
-            value = unescape(m.group(1)).strip()
+                if len(images) >= 8:
+                    break
+            if len(images) >= 8:
+                break
+
+        for match in re.finditer(r'["\']image["\']\s*:\s*["\']([^"\']+)', raw, re.I):
+            value = unescape(match.group(1)).strip()
             if value and value not in images:
                 images.append(value)
             if len(images) >= 8:
                 break
 
         price_text = _first_meta(raw, [
-            r"[\\\"']price[\\\"']\\s*:\\s*[\\\"']([^\\\"']+)",
-            r"itemprop=[\\\"']price[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
-            r"<meta[^>]+property=[\\\"']product:price:amount[\\\"'][^>]+content=[\\\"']([^\\\"']+)"
+            r'["\']price["\']\s*:\s*["\']([^"\']+)',
+            r'itemprop=["\']price["\'][^>]+content=["\']([^"\']+)',
+            r'<meta[^>]+property=["\']product:price:amount["\'][^>]+content=["\']([^"\']+)'
         ])
+
         currency = _first_meta(raw, [
-            r"[\\\"']priceCurrency[\\\"']\\s*:\\s*[\\\"']([^\\\"']+)",
-            r"itemprop=[\\\"']priceCurrency[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
-            r"<meta[^>]+property=[\\\"']product:price:currency[\\\"'][^>]+content=[\\\"']([^\\\"']+)"
+            r'["\']priceCurrency["\']\s*:\s*["\']([^"\']+)',
+            r'itemprop=["\']priceCurrency["\'][^>]+content=["\']([^"\']+)',
+            r'<meta[^>]+property=["\']product:price:currency["\'][^>]+content=["\']([^"\']+)'
         ])
 
         plain = _clean_html_text(raw)
         provenance_excerpt = ""
+        lowered = plain.lower()
         for term in ("provenance", "collection", "ownership", "acquired", "provenienza"):
-            idx = plain.lower().find(term)
+            idx = lowered.find(term)
             if idx >= 0:
-                start = max(0, idx - 120)
-                provenance_excerpt = plain[start:start + 360]
+                start_idx = max(0, idx - 120)
+                provenance_excerpt = plain[start_idx:start_idx + 360]
                 break
 
         return {
