@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "756f96f8f07aa1478aaa11ef7531d91085a4ebaa",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:24.986976Z",
+      "title": "US Government, Sotheby's Battle Over Ancient Khmer Warrior Statue",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 3000000,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Cambodia)",
+      "source_url": "https://www.voanews.com/a/us-government-sothebys-battle-over-ancient-khmer-warrior-statue/1109919.html",
+      "final_url": "https://www.voanews.com/a/us-government-sothebys-battle-over-ancient-khmer-warrior-statue/1109919.html",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "9f68b1c82a89b93fc873228899b2e69870afb1acff95e85ecc0a163f7f70e534",
+      "first_observed_at": "2026-09-26T14:42:24.986976Z",
+      "last_observed_at": "2026-09-26T14:42:24.986976Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:24.986976Z",
+  "snapshot_count": 1
+}

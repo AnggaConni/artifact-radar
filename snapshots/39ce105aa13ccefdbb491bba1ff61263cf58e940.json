@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "39ce105aa13ccefdbb491bba1ff61263cf58e940",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:22.001824Z",
+      "title": "A JOMON VESSEL , LATE TO FINAL JOMON PERIOD (BC 2000-300)",
+      "page_title": "AN AMERICAN SILVER WATER PITCHER, MARK OF GORHAM MFG. CO., PROVIDENCE, RHODE ISLAND, CIRCA 1860 | Christie's",
+      "page_description": "MARK OF GORHAM MFG. CO., PROVIDENCE, RHODE ISLAND, CIRCA 1860",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.christies.com/lot/lot-6250771",
+      "final_url": "https://www.christies.com/lot/lot-6250771",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "7c3c7dee77535cbd3d38b8d1f987f1a11e7d54b47ed7ab844b7bc42f82da8bd8",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "50561be5694840e45da6f64df1845525a2ce447245f8f36870c9d30ce06caca2",
+      "first_observed_at": "2026-09-26T14:42:22.001824Z",
+      "last_observed_at": "2026-09-26T14:42:22.001824Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:22.001824Z",
+  "snapshot_count": 1
+}

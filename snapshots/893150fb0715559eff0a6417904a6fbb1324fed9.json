@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "893150fb0715559eff0a6417904a6fbb1324fed9",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.835417Z",
+      "title": "28 New Dead Sea Scrolls Fragments Sold in US | Live Science",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 8,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCGV3vXy4Ax3p-ZK21Mptb4W0fAHbkv5g98TOqJqKC20JwV1JI-eezL5ejkCdtKcfxbTdH6kpsDzuHcRImD3o5CWldtfQANHsBbPgpGCDHZOVCriTG3Ahsq_rNl25uqylFh4RVDJVA-Nkfw3-FhGdA_5rl0zDtAo9-WyKhTMb8qfI==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "f34e24b85d3b3ad70b90a54671ce4dbf61bfe8b571ea1823d3c292c93605dfe1",
+      "first_observed_at": "2026-09-26T14:42:13.835417Z",
+      "last_observed_at": "2026-09-26T14:42:13.835417Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.835417Z",
+  "snapshot_count": 1
+}

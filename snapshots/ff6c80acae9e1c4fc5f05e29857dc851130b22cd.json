@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "ff6c80acae9e1c4fc5f05e29857dc851130b22cd",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.963569Z",
+      "title": "Majapahit Terracotta Seated Female w/ Jar for sale at auction on 6th August",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia, Java, Majapahit Empire",
+      "source_url": "https://www.bidsquare.com/auctions/artemis-fine-arts/majapahit-terracotta-seated-female-w-jar-147480",
+      "final_url": "https://www.bidsquare.com/auctions/artemis-fine-arts/majapahit-terracotta-seated-female-w-jar-147480",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "f11020ed5b2b8ad2fb76124366865b50db957b64a26ce45bc340f959e98b7c69",
+      "first_observed_at": "2026-09-26T14:42:26.963569Z",
+      "last_observed_at": "2026-09-26T14:42:26.963569Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.963569Z",
+  "snapshot_count": 1
+}

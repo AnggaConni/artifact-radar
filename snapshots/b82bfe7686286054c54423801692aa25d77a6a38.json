@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "b82bfe7686286054c54423801692aa25d77a6a38",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:21.626221Z",
+      "title": "Ancient Japanese Jomon Incised Pottery Vessel",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.bidsquare.com/auctions/artemis-fine-arts/ancient-japanese-jomon-incised-pottery-vessel-11674",
+      "final_url": "https://www.bidsquare.com/auctions/artemis-fine-arts/ancient-japanese-jomon-incised-pottery-vessel-11674",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "ed7db21b43d68027b2342cff617588ed343246001037132b92442f55de1ec452",
+      "first_observed_at": "2026-09-26T14:42:21.626221Z",
+      "last_observed_at": "2026-09-26T14:42:21.626221Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:21.626221Z",
+  "snapshot_count": 1
+}

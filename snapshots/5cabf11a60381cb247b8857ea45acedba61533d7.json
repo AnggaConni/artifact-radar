@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "5cabf11a60381cb247b8857ea45acedba61533d7",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.437532Z",
+      "title": "Officials Seize 27,000 Artifacts Looted by French Metal Detectorist",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 946670,
+      "provenance_flag": false,
+      "risk_score": 10,
+      "ai_risk_score": null,
+      "origin_region": "France (Roman, Bronze Age, Iron Age, Renaissance, Middle Ages)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuNjkTp85mYITlbbxArLLLS56nyjC6eGCYL2-6CriXOo_M6rlgEt36QYHoYbKLEkJ5hlTdCKRPG1QMFaW6DNYxgZc6VDyssN9lADODtXKj_RZeURzo03mwZH_58J9HfSiZzEZx8QfRFa2hmyaJ0faM5tmYQD8677qZxOuLNHlX4XIUWbvEbKQzBXRFKdYEU63Jhb-xDaaL7TtYqHk=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "46c033518cac602cfdf4f1d12402db014ab0b5c4a932110ac33be55dd1bf593f",
+      "first_observed_at": "2026-09-26T14:42:13.437532Z",
+      "last_observed_at": "2026-09-26T14:42:13.437532Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.437532Z",
+  "snapshot_count": 1
+}

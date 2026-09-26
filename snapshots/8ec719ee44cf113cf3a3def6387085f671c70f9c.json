@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8ec719ee44cf113cf3a3def6387085f671c70f9c",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.436787Z",
+      "title": "An important parcel-gilt silver Sogdian saddle cup, Central Asia, 7th/8th century",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Central Asia (Sogdiana)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWJFp6wN4bV1CGm5JZqs_ENC0x5bFy4G1GkfuErGXezKeoXC8kuxzR_neayXXwfJYM0TaE6drTZogSP658dCsiwBqLh2rdVfu2ETqG6Ll85_AwaPwat0yQoppsD734IlATZXz6czpYR_obrVaQGnahgBMgvyeTrGzVXbqLPUvscg2yIh6QUhfvyQmOU5z-t4DnflO0CweaSCry8SYl7BPkGh3kBZ2bW0AUse4kYSJzoAGv_CclL8WGl384mCt6ewroVtSWeO3IPbmzswvzzjIFjsSkuNdRvagCwQ==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "50f814bd961927b4ddf2ada6d6fc9d15ccbff0761fa76c8249fa4c359ee4e8f1",
+      "first_observed_at": "2026-09-26T14:42:13.436787Z",
+      "last_observed_at": "2026-09-26T14:42:13.436787Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.436787Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "672f7e38db98fcc8cfe1bc7ffda41184150c4a1e",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:14.112874Z",
+      "title": "Ba man charged for alleged theft of religious statues and items from prayer houses in Nadi",
+      "page_title": "Fijivillage",
+      "page_description": "Latest news and sports",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.fijivillage.com/news/Ba-man-charged-for-alleged-theft-of-religious-statues-and-items-from-prayer-houses-in-Nadi-4x8f7",
+      "final_url": "https://www.fijivillage.com/news/Ba-man-charged-for-alleged-theft-of-religious-statues-and-items-from-prayer-houses-in-Nadi-4x8f7",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "1e253bc85a49778f16ed7ff38d51136737fec80c3f4de35a1c540a40b931d795",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d3c47ebe7ac995511319577becdac8126d38ebe71ae4fa6216e1f91a74dabebc",
+      "first_observed_at": "2026-09-26T14:42:14.112874Z",
+      "last_observed_at": "2026-09-26T14:42:14.112874Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:14.112874Z",
+  "snapshot_count": 1
+}

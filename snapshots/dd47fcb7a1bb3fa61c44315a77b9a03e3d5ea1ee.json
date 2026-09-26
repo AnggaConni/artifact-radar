@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "dd47fcb7a1bb3fa61c44315a77b9a03e3d5ea1ee",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:17.607787Z",
+      "title": "The giant Bronze Age ritual dagger found in a field in Norfolk",
+      "page_title": "The giant Bronze Age ritual dagger found in a field in Norfolk",
+      "page_description": "The Rudham Dirk, an oversize Bronze Age ritual dagger that was famously used for years as a doorstop by a Norfolk farmer It is 800 years older than the ancient city of Rome and is even older than the Pharaoh...",
+      "image_urls": [
+        "https://museumcrush.org/wp-content/uploads/2018/03/Rudham_Dirk-1024x683.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "overed in Norfolk in 1988. \n The National Heritage Memorial Fund paid for the Rudham ritual dagger and it is now in the collection of Norwich Castle Museum and Art Gallery. \n      © Norfolk Museum Service  \n “What makes the Rudham Dirk particularly distinctive is its monumental size,” says Dr Tim Pestell, Senior Curator of Archaeology at the museum, who adds",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 3,
+      "ai_risk_score": null,
+      "origin_region": "Bronze Age (Norfolk, England)",
+      "source_url": "https://museumcrush.org/the-giant-bronze-age-ritual-dagger-found-in-a-field-in-norfolk",
+      "final_url": "https://museumcrush.org/the-giant-bronze-age-ritual-dagger-found-in-a-field-in-norfolk",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "b03268be4f3dfad9e398ce8465967eeb264b4eb1c7569a28b04c5a84ce6a15cd",
+      "etag": "",
+      "last_modified": "Sat, 26 Sep 2026 10:29:18 GMT",
+      "snapshot_signature": "9758033fe2a15cef3c1bc39892601e2fd059fbdb5e86b31e7b1d1111e6f51e56",
+      "first_observed_at": "2026-09-26T14:42:17.607787Z",
+      "last_observed_at": "2026-09-26T14:42:17.607787Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:17.607787Z",
+  "snapshot_count": 1
+}

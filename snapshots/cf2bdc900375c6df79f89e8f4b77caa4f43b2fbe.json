@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "cf2bdc900375c6df79f89e8f4b77caa4f43b2fbe",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:15.003761Z",
+      "title": "Throwing Club, Fiji | Art of Africa, Oceania, and the Americas | 2021",
+      "page_title": "Throwing Club, Fiji | Art of Africa, Oceania, and the Americas | 2021",
+      "page_description": "<p>Property from the Estate of Valerie Franklin, Sold to Benefit the Hood Museum of Art</p><p>Throwing Club,&nbsp;Fiji</p><p><br></p><p>Length: 24 1/2 in (62",
+      "image_urls": [
+        "https://sothebys-md.brightspotcdn.com/dims4/default/ab7ea41/2147483647/strip/true/crop/1500x2000+0+0/resize/4096x5461!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F9e%2F6c%2F1af77ab746d7b361d305a683aad9%2F156n10881-9lw7k-01.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "ood Museum of Art  Throwing Club, Fiji     Length: 24 1/2 in (62.2 cm)     Condition report         Please log in       Provenance         Denver Art Museum  Harry A. Franklin, Beverly Hills, acquired from the above by exchange in April, 1962 Valerie Franklin, Los Angeles, by descent from the above       Catalogue note          Throwing clubs, or  i ula , we",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 4,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.sothebys.com/en/buy/auction/2021/art-of-africa-oceania-and-the-americas/throwing-club-fiji",
+      "final_url": "https://www.sothebys.com/en/buy/auction/2021/art-of-africa-oceania-and-the-americas/throwing-club-fiji",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "4c0ac3b81ce41678694ce4ce5ab7247b1e7c8ae0c5c9f0bb3760290f730bbd4b",
+      "etag": "\"2jklvt7uii8plk\"",
+      "last_modified": "",
+      "snapshot_signature": "040a49526bf081a6598529cbf65b0e91899d3b570981735020832de6bcbd2fb0",
+      "first_observed_at": "2026-09-26T14:42:15.003761Z",
+      "last_observed_at": "2026-09-26T14:42:15.003761Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:15.003761Z",
+  "snapshot_count": 1
+}

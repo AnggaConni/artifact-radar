@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8500684e5a15b745e5ad82b6cdbde4c337ee288f",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:19.280761Z",
+      "title": "3 Antique Bronze Laos Buddha Statues, 18th/19th C",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Laos",
+      "source_url": "https://www.bidsquare.com/auctions/material-culture/3-antique-bronze-laos-buddha-statues-18th-19th-c-20700",
+      "final_url": "https://www.bidsquare.com/auctions/material-culture/3-antique-bronze-laos-buddha-statues-18th-19th-c-20700",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e981e961897870cda8295eec2bdc77c0a298a61d43380d03dcc1bc04d791b3ba",
+      "first_observed_at": "2026-09-26T14:42:19.280761Z",
+      "last_observed_at": "2026-09-26T14:42:19.280761Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:19.280761Z",
+  "snapshot_count": 1
+}

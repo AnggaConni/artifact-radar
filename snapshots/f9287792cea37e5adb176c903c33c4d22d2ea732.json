@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "f9287792cea37e5adb176c903c33c4d22d2ea732",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.435663Z",
+      "title": "AS Kembalikan Artefak Kerajaan Majapahit yang Sempat Dicuri dan Dijual Ilegal",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 10,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Indonesia)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKi_7G5rqf2FjjQvOXCRZRuhw4z4soXoFrdeVJUC9PdwNQWoKKZzEyFD0oMMbFn6InRck9HH0A6bM9fhtQD0jUxEh27b-utDZ-J9ZlNI4wyU8ZJBP4JyrIAJQt8GgCb2FuuL0Cq_j_ny32Uu86F9u0XbR2p1RZbVx4S1vjAigoiG0eBKjKO5bXeHHnIJPXYxB6vdglHFGMfr1hNv3BEWY_sfznut_9",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "9f3f7c3f7488fa0aa148936fcdcaa7227850e4942edccd515eef261af271cc3b",
+      "first_observed_at": "2026-09-26T14:42:13.435663Z",
+      "last_observed_at": "2026-09-26T14:42:13.435663Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.435663Z",
+  "snapshot_count": 1
+}

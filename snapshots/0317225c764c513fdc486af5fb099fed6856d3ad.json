@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "0317225c764c513fdc486af5fb099fed6856d3ad",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.963453Z",
+      "title": "A thread for my antiquities",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 3,
+      "ai_risk_score": null,
+      "origin_region": "Egypt, South Italy, Athens, Corinth",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdJ3TkClyDKcE1J_Xeln3hEY5IFca6t2bY7S8FkbrHRTKAG3zgGldldN9CM1v1Q8_VcISv_1PSoy4AoShlpak9XRFEcr9_3FWjKArbfzdDRjyIGLflYbc1GwdoPaCVuaOmRvh3vvHvpWCvmOys8yXcNOESrxoXgVyU5g7RAQ==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a714e5cbe926d27e5276fc74d6931a04789c5a061f4d6a810be010ce96eff92b",
+      "first_observed_at": "2026-09-26T14:42:26.963453Z",
+      "last_observed_at": "2026-09-26T14:42:26.963453Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.963453Z",
+  "snapshot_count": 1
+}

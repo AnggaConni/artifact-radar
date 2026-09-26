@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2f53aa1d49c57e16adb6da26092ea33bee37ec84",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:21.690280Z",
+      "title": "AN EARTHENWARE SMALL CENSER. JOMON PERIOD (1000-300 BCE).",
+      "page_title": "HUANG YONGYU (B. 1924)",
+      "page_description": "HUANG YONGYU (B. 1924) Red Plum Blossoms Scroll, mounted and framed, ink and colour on paper 41.5 x 75.5 cm. (16 ⅜ x 29 ¾ in.) Entitled, inscribed and signed, with two seal of the artist Dated spring, jiazi year (1984)",
+      "image_urls": [
+        "https://www.christies.com/img/LotImages/2018/HGK/2018_HGK_16074_1615_000(huang_yongyu_red_plum_blossoms102256).jpg?mode=max"
+      ],
+      "page_price_text": "120000.00",
+      "page_price_currency": "HKD",
+      "provenance_excerpt": "ld in the condition they are in at the time of sale.  \r\nWe have sought to record changes in the condition of this piece acquired after its initial manufacture. -There are some minor mould spots throughout the painting, and concentrated primarily on the left edge; -otherwise it is in overall very good condition.\r\n                 \r\n                 '+document",
+      "price_usd": 5000,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.christies.com/lot/lot-6140590",
+      "final_url": "https://onlineonly.christies.com/s/exquisite-eye-chinese-paintings-online/huang-yongyu-b-1924-1615/56409",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "4265fce2a5c526bae20d9ad30c9c64cf2a2b9e01813479b1baaecc620267e5d2",
+      "etag": "",
+      "last_modified": "Sat, 26 Sep 2026 14:42:22 GMT",
+      "snapshot_signature": "583bef493b9dee31abfe866daca14f6a86c1ea9f03bdc561c361b4e513f5ae8b",
+      "first_observed_at": "2026-09-26T14:42:21.690280Z",
+      "last_observed_at": "2026-09-26T14:42:21.690280Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:21.690280Z",
+  "snapshot_count": 1
+}

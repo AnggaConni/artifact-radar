@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "68fc1657709157cb6312577ca9ae78a86476808c",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:15.087300Z",
+      "title": "War Club, Fiji | The Scholar's Feast: The Rosman Rubel Collection | 2021",
+      "page_title": "War Club, Fiji | The Scholar's Feast: The Rosman Rubel Collection |",
+      "page_description": "<p>War Club</p><p>Fiji</p><p><em>waka vividrasa</em></p><p><br></p><p>Height: 43 in (109 cm)</p>",
+      "image_urls": [
+        "https://sothebys-md.brightspotcdn.com/dims4/default/3d0220a/2147483647/strip/true/crop/3601x4800+0+0/resize/4096x5460!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2Fdb%2Feb%2Fd8ed423c420db6c41060209f9042%2F075n10791-98m8g-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "cription   War Club  Fiji   waka vividrasa      Height: 43 in (109 cm)     Condition report         Please log in       Provenance         Abraham Rosman and Paula Rubel, New York       Catalogue note          This classic skull smashing club is of the  waka  type, a form with a head that is “typified by the short length of retained tap root and the mace-lik",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 4,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.sothebys.com/en/buy/auction/2021/the-scholars-feast-the-rosman-rubel-collection/war-club-fiji",
+      "final_url": "https://www.sothebys.com/en/buy/auction/2021/the-scholars-feast-the-rosman-rubel-collection/war-club-fiji",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "1f389f08cc587bc1984028362e08a5e8b0612a5611b5e61227790e67f2e1acdf",
+      "etag": "\"154rnmta72i7k17\"",
+      "last_modified": "",
+      "snapshot_signature": "1dec0f6d48397f6ce342f4a02dccb3fbf0496399303280708eea15aca43b9b74",
+      "first_observed_at": "2026-09-26T14:42:15.087300Z",
+      "last_observed_at": "2026-09-26T14:42:15.087300Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:15.087300Z",
+  "snapshot_count": 1
+}

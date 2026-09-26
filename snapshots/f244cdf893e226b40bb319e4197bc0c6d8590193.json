@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "f244cdf893e226b40bb319e4197bc0c6d8590193",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.435969Z",
+      "title": "Jual BARANG ANTIK// BARANG LANGKA// BARANG KUNO - 3 SULA MAJAPAHIT",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Indonesia - inspiration for replica)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVjo9l2PCeLjsS-yGxml2eFHrz0VaI5gunKELhZ6HEV8vS2IoYNCdHxIoBVSJrMrq2JH4fzLepcvfpwEnSUl6KeLdC9w2Yu8T4tEzGKFt8SVYBNXZ3IGL1sGevCVl19dc3EgKey_n7yBcDDJDDyqqcz3yk4HqlFbvmBvyPwM_fr1RWuZsnoq-DGqrmf4VcUIfGXI3CKJvWdzWNoW0xZbc=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "50f814bd961927b4ddf2ada6d6fc9d15ccbff0761fa76c8249fa4c359ee4e8f1",
+      "first_observed_at": "2026-09-26T14:42:13.435969Z",
+      "last_observed_at": "2026-09-26T14:42:13.435969Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.435969Z",
+  "snapshot_count": 1
+}

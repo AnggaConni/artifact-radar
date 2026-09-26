@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "6e00eedc8ba924934e8ac478b1fe420359b66fcc",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:21.427408Z",
+      "title": "Thai Bronze Deity Figurine, Antique Temple Dancer Statue.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 214.62,
+      "provenance_flag": false,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ-kVB8KgkeKrpvsWfzaEhl_sVAVCXDm97B-QVfkt9Nj7CDJsF1AIZ3IUZsa5ESHPYpDCrfJ6hzygkD__0SZ8P4lmuqJqBfIf1TYgLhe-7rGVwQ32bcNxrfGe0tbGTSPN6gkWH2m4bkrY=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "6494f6fb2bd3085dea71c5e2b5d94a3f50739f0ad1c7d91cd3562dc1833bb1a0",
+      "first_observed_at": "2026-09-26T14:42:21.427408Z",
+      "last_observed_at": "2026-09-26T14:42:21.427478Z",
+      "observations_seen": 3
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:21.427478Z",
+  "snapshot_count": 1
+}

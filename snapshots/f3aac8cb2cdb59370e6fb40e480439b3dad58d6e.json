@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "f3aac8cb2cdb59370e6fb40e480439b3dad58d6e",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:20.060520Z",
+      "title": "Old Weathered Lao Buddha Image",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Laos",
+      "source_url": "https://www.etsy.com/listing/1429983949/old-weathered-lao-buddha-image",
+      "final_url": "https://www.etsy.com/listing/1429983949/old-weathered-lao-buddha-image",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "72fc0e69ab003a00123faa28ff9ee0241df6ad16411e83024857c1f256a89463",
+      "first_observed_at": "2026-09-26T14:42:20.060520Z",
+      "last_observed_at": "2026-09-26T14:42:20.060520Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:20.060520Z",
+  "snapshot_count": 1
+}

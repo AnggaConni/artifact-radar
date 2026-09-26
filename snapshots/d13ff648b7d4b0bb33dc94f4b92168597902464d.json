@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d13ff648b7d4b0bb33dc94f4b92168597902464d",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:18.895590Z",
+      "title": "Ancient Wooden Buddha Eroded - Laos",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Laos",
+      "source_url": "https://www.ebay.fr/itm/196144577826",
+      "final_url": "https://www.ebay.fr/itm/196144577826",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "4cbc2af7e6fc0b7f3eb6c936ac54c2aa6a20580ed185596aca8fe1d4a570289d",
+      "first_observed_at": "2026-09-26T14:42:18.895590Z",
+      "last_observed_at": "2026-09-26T14:42:18.895590Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:18.895590Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a1de2e905e7e8e2fd6eb02a0b88cb40d9ca7dc4e",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.126343Z",
+      "title": "Ushabti figurine found in London to be returned",
+      "page_title": "Ushabti figurine found in London to be returned",
+      "page_description": "An ancient Ushabti statue that had been missing from an Aswan museum has been found in London and returned to Egypt.",
+      "image_urls": [
+        "https://www.archaeology.wiki/wp-content/uploads/2017/02/ushabti-recovered-from-london.gif"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://www.archaeology.wiki/blog/2017/02/02/ushabti-figurine-found-london-returned",
+      "final_url": "https://www.archaeology.wiki/blog/2017/02/02/ushabti-figurine-found-london-returned",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "a725ed88b89d2193913ef9214e3ecb4a864852fade28915fd12f35f34f197bfb",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "69e22b32e1aad740b22dcbb7d6992fb25bc0eeb8897f9d2d14919888322f0b8f",
+      "first_observed_at": "2026-09-26T14:42:26.126343Z",
+      "last_observed_at": "2026-09-26T14:42:26.126343Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.126343Z",
+  "snapshot_count": 1
+}

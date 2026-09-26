@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8f0b24b7a450b3482de34af44a4dbe3b1f8c2b73",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.446627Z",
+      "title": "Four men on trial for theft of 2,100-year-old Celtic gold treasure from",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 8,
+      "ai_risk_score": null,
+      "origin_region": "Germany (Celtic, not Thracian)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdZviO4aBj4gUNWY-lsd1OMB3o9hWuJwvPUdEcsgJL-gSTh9XUnBxwUeP6x8jqT1-TfxRWsHt7iqVSzgojFgyncnYJoLg2cTf9OQmrMQhLimLySluw_959Y3jiU68kRv90P16rip4DiVUfKzbnzGW6QDhU8TCdujhcBkltxmdyJBm-NEZlzXo-",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "f34e24b85d3b3ad70b90a54671ce4dbf61bfe8b571ea1823d3c292c93605dfe1",
+      "first_observed_at": "2026-09-26T14:42:13.446627Z",
+      "last_observed_at": "2026-09-26T14:42:13.446627Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.446627Z",
+  "snapshot_count": 1
+}

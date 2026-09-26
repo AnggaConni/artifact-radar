@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "244f14fb0741287ed25967e6fbdf164c0dc96490",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.445361Z",
+      "title": "A Visitor's Guide to Tiwanaku and Puma Punku in Bolivia | The Spunky Curl",
+      "page_title": "A Visitor's Guide to Tiwanaku and Puma Punku in Bolivia",
+      "page_description": "Explore the ancient ruins of a pre-Inca civilization to see celestial gateways, carved monoliths, and a sunken court with protruding tenon heads.",
+      "image_urls": [
+        "https://images.thespunkycurl.com/blog/default/content/tiwanaku-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "aped platform mound had three levels of stone retaining walls which were surrounded by courts and pathways. A haphazard collection of bizarre stones, fallen gateways, and red sandstone slabs remain at the summit. Some of the lintels have tiny pin holes used to secure gold and precious stones. The glittering effect surely enhanced the spiritual ambience of th",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Bolivia",
+      "source_url": "https://thespunkycurl.com/tiwanaku-puma-punku-bolivia",
+      "final_url": "https://thespunkycurl.com/tiwanaku-puma-punku-bolivia",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "3d0b5de42d0fd18a0abbbed6827cabe9f09b983d0d2f38be0170b8b8e9814b43",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "6bd3689a2013136979c4648524e0f7f1ac8cfaed4d032840ada8b53d94c85be1",
+      "first_observed_at": "2026-09-26T14:42:13.445361Z",
+      "last_observed_at": "2026-09-26T14:42:13.445361Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.445361Z",
+  "snapshot_count": 1
+}

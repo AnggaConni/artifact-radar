@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8c2bfb3730d2479c9ea804788f5b294f46f6ff08",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:23.134049Z",
+      "title": "Pottery from Japan's Jomon Period Discovered in Lake Biwa, Perfectly Preserved for 10,000 Years",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.indiandefencereview.com/news/pottery-from-japans-jomon-period-discovered-in-lake-biwa-perfectly-preserved-for-10000-years",
+      "final_url": "https://www.indiandefencereview.com/news/pottery-from-japans-jomon-period-discovered-in-lake-biwa-perfectly-preserved-for-10000-years",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "eb02645b85b89839eaddb7da13eb37ed5e6b321e599b0a99c31067478cc1529d",
+      "first_observed_at": "2026-09-26T14:42:23.134049Z",
+      "last_observed_at": "2026-09-26T14:42:23.134049Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:23.134049Z",
+  "snapshot_count": 1
+}

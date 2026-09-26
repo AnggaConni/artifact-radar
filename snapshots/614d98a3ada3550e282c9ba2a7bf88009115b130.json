@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "614d98a3ada3550e282c9ba2a7bf88009115b130",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:23.454457Z",
+      "title": "A Sasanian silver-gilt royal plate - Bonhams",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEB84xWeTxG5GPQyqoSagiA90N4tQ7zG72lfalw6hHfICve28b6WJy_12Tq_TIwFIznSmT9HCC9xmbPuae3VLj5bnfpN1Pp_ThhL-gEPyQsO8grvfbq0sqloCq5h_e_Wz7hxq4kELhyDFJfsjEmdW3JJxF_YPu0FLYaie1TiHEftUtLYJAZMG6NPpHp",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "50f814bd961927b4ddf2ada6d6fc9d15ccbff0761fa76c8249fa4c359ee4e8f1",
+      "first_observed_at": "2026-09-26T14:42:23.454457Z",
+      "last_observed_at": "2026-09-26T14:42:23.454457Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:23.454457Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "7c29f143539f825d8b497259153e062f688e930f",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:16.269472Z",
+      "title": "RARE ANCIENT ARTIFACTS ANTIQUITIES FOR SALE",
+      "page_title": "RARE ANCIENT ARTIFACTS ANTIQUITIES FOR SALE",
+      "page_description": "The finest Ancient Artifacts and Antiquities For Sale, worthy of any private or museum collection.  Each artifact includes a lifetime certificate of authenticity and condition / history sheet.",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "ARE ANCIENT SWITZERLAND BRONZE AGE MEDICAL BONE SAW FOR SURGICAL AMPUTATION OF THE EUROPEAN TUMULUS CULTURE WITH FAMOUS PROVENANCE  *CEL032 \n               \n\n               \n                   \n                      \n       \n         \n             MSRP: \n             \n                \n             \n         \n         \n         \n             \n                ",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 7,
+      "ai_risk_score": null,
+      "origin_region": "Various (e.g., Bactrian, Pre-Columbian, Neolithic, Mayan, Luristan, Seljuk, Scythian)",
+      "source_url": "https://www.timevaultgallery.com/rare-ancient-artifacts-antiquities-for-sale",
+      "final_url": "https://timevaultgallery.com/rare-ancient-artifacts-antiquities-for-sale",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "5d59e114c554702ab5ce2df1b1f8cfd5b1c0a8bc47b0ba15e20ddb281fd520d5",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d2b62776f1e60eaa0481e1c13f12226f550da2f87aa24f87d9f4edcf13089ddb",
+      "first_observed_at": "2026-09-26T14:42:16.269472Z",
+      "last_observed_at": "2026-09-26T14:42:16.269472Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:16.269472Z",
+  "snapshot_count": 1
+}

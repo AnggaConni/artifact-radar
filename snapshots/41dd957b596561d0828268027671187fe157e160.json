@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "41dd957b596561d0828268027671187fe157e160",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.963409Z",
+      "title": "Where to Sell Antiques & Collectibles: 7 Best Places Compared (2026)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpVSC_gTzfpmXqBTsdgAEpvECUyvs_Di2dh5lRDOvzdCSgmDQRQeiRnlA6uitwWnXR-pdPpe1-1YfLjobp5xWaA89FjtUV0oy20y_ZC39Zqn_SPrE0HJ8kDLI68r3r",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "c9e6bf1097d1d5ec4cb018d2e95a35cdca90a74feb82869866160863fed7a4a4",
+      "first_observed_at": "2026-09-26T14:42:26.963409Z",
+      "last_observed_at": "2026-09-26T14:42:26.963409Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.963409Z",
+  "snapshot_count": 1
+}

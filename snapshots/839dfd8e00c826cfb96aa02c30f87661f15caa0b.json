@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "839dfd8e00c826cfb96aa02c30f87661f15caa0b",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.835020Z",
+      "title": "SOURCES OF IVORY, THEIR EXPLOITATION AND USE: IMPLICATIONS FOR BRONZE AGE TRADE",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcp_ui416rIT9lQZigNpdJV8-oJH8GvTmurJ-Fo-7_9gX8NNB4KRVDIPiiP07hQhkXiOXOAIe9bOBAR9ueVg36bJzlf-OGCsH650fflYjFlA9f3YHbeco7RnTglLqNoPJswo3ZIRkDWnThaots28-GF4GZbFCHoOPBLBX_dCBJm-EdSpw7AcBdbsPwvMsxio3BRJOtQCXhn7d4rp-BHwLg5DoOooslQel2Jc0-2CnMIsdOeLV9RDqnpDe7Bv881p9joQWwWHds",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "50f814bd961927b4ddf2ada6d6fc9d15ccbff0761fa76c8249fa4c359ee4e8f1",
+      "first_observed_at": "2026-09-26T14:42:13.835020Z",
+      "last_observed_at": "2026-09-26T14:42:13.835020Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.835020Z",
+  "snapshot_count": 1
+}

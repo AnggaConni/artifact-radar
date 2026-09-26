@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c2b6c36197d343c88f484745bd15485db8e64412",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:15.704107Z",
+      "title": "Discover Fiji's Legacy in Oceanic Decorative Arts - Nicholas Wells Antiques",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.nicholaswells.com/discover-fijis-legacy-in-oceanic-decorative-arts",
+      "final_url": "https://nwtiques.com/discover-fijis-legacy-in-oceanic-decorative-arts",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "55dfeb78ac4cfb82b8f5dee7f391631525d3a5d4605f1ed8dffe2d625dc26a78",
+      "first_observed_at": "2026-09-26T14:42:15.704107Z",
+      "last_observed_at": "2026-09-26T14:42:15.704107Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:15.704107Z",
+  "snapshot_count": 1
+}

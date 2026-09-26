@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "7fc8557465f7b5ea528d6c70df540ab6479ac81b",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.962784Z",
+      "title": "Vietnamese Lot of (4) Cu Lao Cham Shipwreck Jars",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Vietnam)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-BdEH-yRgsdPJVFrHL_mj-QRSd2kXB8jZS48kgVAMlYyOEjwWAhvta78eLFiFCL4Sy8LTaGwY9D5a1HYC7HRE6o9qyZ9h7Q2fD-w9ZDZXqWljN7agBC5g5GlWvjeM2SbYVDbBwAQfMaouI_6nSvtGCDtML5BB8Kvuf7SOW1jXCC5y3iSyda2dipoVPQcB8lgkAfEnYWZMB_GUE8c=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5e830984338b74c3493bc723c01de11fb1aff54a4a8e5f02d996d6fdaddf8d71",
+      "first_observed_at": "2026-09-26T14:42:26.962784Z",
+      "last_observed_at": "2026-09-26T14:42:26.962784Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.962784Z",
+  "snapshot_count": 1
+}

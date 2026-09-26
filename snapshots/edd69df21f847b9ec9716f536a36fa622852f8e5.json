@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "edd69df21f847b9ec9716f536a36fa622852f8e5",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:16.246229Z",
+      "title": "First-Time Metal Detectorist Finds Ancient Stolen Treasure Worth Thousands",
+      "page_title": "Israel: Some UN Members Would Be 'Happy' to See Greater Number of Dead Jews",
+      "page_description": "Israeli Ambassador to the United Nations Gilad Erdan criticized the United Nations' hypocrisy and questioned whether they would have asked the Allied forces to show restraint against Hitler.",
+      "image_urls": [
+        "https://assets.newsweek.com/wp-content/uploads/2025/08/1802704-gilad-erdan-united-nations-israel.jpg?w=1200&crop=1"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 7800,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Roman, Viking, Ancient Egypt, Bronze Age, Medieval (Worcestershire, England - recovered from theft)",
+      "source_url": "https://www.newsweek.com/first-time-metal-detectorist-finds-ancient-stolen-treasure-worth-thousands-1593452",
+      "final_url": "https://www.newsweek.com/first-time-metal-detectorist-finds-ancient-stolen-treasure-worth-thousands-1593452",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "023925bff6b238a9a35a6e93905dbc61052274aaec6047b9934c17ebb5b2a70b",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "cf89514ca78c4621469d3b582f370569d561c9bd6c4c33dd4463846c2ae45a94",
+      "first_observed_at": "2026-09-26T14:42:16.246229Z",
+      "last_observed_at": "2026-09-26T14:42:16.246229Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:16.246229Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "4c8bf1be104d473d2f7c4504bcca2177985b59c7",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:15.885769Z",
+      "title": "The Professor's Collection Part One Reveals Rare Indigenous Artifacts at Auction",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 4,
+      "ai_risk_score": null,
+      "origin_region": "Unknown (Oceanic art, including Polynesia, Melanesia, Micronesia)",
+      "source_url": "https://www.einpresswire.com/article/719139587/the-professor-s-collection-part-one-reveals-rare-indigenous-artifacts-at-auction",
+      "final_url": "https://www.einpresswire.com/article/719139587/the-professor-s-collection-part-one-reveals-rare-indigenous-artifacts-at-auction",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"30123b8350ed4fc6828e271af28e4ac5\"",
+      "last_modified": "",
+      "snapshot_signature": "ce1fdacef6d8fbf68d9a237f123c2c31cdf15bddfb421fedd24facf3110ec381",
+      "first_observed_at": "2026-09-26T14:42:15.885769Z",
+      "last_observed_at": "2026-09-26T14:42:15.885769Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:15.885769Z",
+  "snapshot_count": 1
+}

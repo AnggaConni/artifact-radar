@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8ecdeb38ae981bfeca8af955dcfce20f48a20f12",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:23.454278Z",
+      "title": "Sold at Auction: Vintage 11x14 Framed Mayan Codex Print.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWe8Xn8nUY58GL9JsADOhKdmWDmrghbUdNJIcTuO1q3oSewq8zymuVuvbkTgOiBmqKEGYhOne63hUxgumKv25J_PBX0Npit0pIVd9HJMn8yO37r3LANQQnzf8U6DBFXSaPzhAZhbJZtyyDOVBg5LufARrdAN8jNkHC1W3oco4QlNOs66ty3IDfGsS99ITw8eOdbiJg9LFePQ==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "60ca003126b427427f12e26f3f584ce68d4c18e576a3fe98d7efb27cbd21d7fd",
+      "first_observed_at": "2026-09-26T14:42:23.454278Z",
+      "last_observed_at": "2026-09-26T14:42:23.454278Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:23.454278Z",
+  "snapshot_count": 1
+}

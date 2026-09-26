@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "3b349af954b3095fc7f273fab4794e5053c4977f",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.962574Z",
+      "title": "Namban or Nanban Lacquer Chest, Japan-Portuguese",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEXoho-ITIPXXkdmbN_lC2hsdJ-PZ_SygmiSr1PqWzHrhLq58-UenuzyP-bOfuqvnptdbOrp0RDvC6tqVlKlYis13xQrQsK_K31-kfauOpLVj9Gj0EsD9ruZIyLMGAtov_PnGso-6kdiNWjAt2tBoz2UrjRhVVyNr00e5INkY1jLvG-Gz4MrhXJpX4_EeRj1t4k7BfWsudDO5KKGSR",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "60ca003126b427427f12e26f3f584ce68d4c18e576a3fe98d7efb27cbd21d7fd",
+      "first_observed_at": "2026-09-26T14:42:26.962574Z",
+      "last_observed_at": "2026-09-26T14:42:26.962574Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.962574Z",
+  "snapshot_count": 1
+}

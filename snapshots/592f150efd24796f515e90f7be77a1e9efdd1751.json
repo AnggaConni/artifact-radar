@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "592f150efd24796f515e90f7be77a1e9efdd1751",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.755013Z",
+      "title": "Authentication",
+      "page_title": "Authentication - Jackson Galleries",
+      "page_description": "Jump to Authentication Pricing Since 1989 Bill Jackson and Alex Przygoda at Jackson Galleries have been providing professional Authentication to the Prehistoric Antiquities Market. Our non-destructive method known as Analysis …",
+      "image_urls": [
+        "http://jacksongalleries.com/wp-content/uploads/2019/04/bill.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "mmitment to letting the artifacts themselves tell us if they are authentic, not hearsay, rumor, stories or   associated provenance. Our well-founded artifact authentication method is reliant on a scientific methodology based on known facts compiled and corroborated by numerous related scientific papers by geologists, microbiologists, archaeologists, forensic",
+      "price_usd": 25,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://www.jacksongalleries.com/authentication",
+      "final_url": "https://www.jacksongalleries.com/authentication",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "1f5d0ab870c9ba14bd4a35b7f1f908374155ed32b9950084f3b48ff53f7315fe",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3da87065b2d39ca122f530199bc8041a30ee6cc629cfcd6398235e42bc3a50cd",
+      "first_observed_at": "2026-09-26T14:42:13.755013Z",
+      "last_observed_at": "2026-09-26T14:42:13.755013Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.755013Z",
+  "snapshot_count": 1
+}

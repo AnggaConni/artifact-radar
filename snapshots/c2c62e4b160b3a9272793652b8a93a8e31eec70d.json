@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c2c62e4b160b3a9272793652b8a93a8e31eec70d",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:25.969914Z",
+      "title": "Looted ancient statue returned to Egypt",
+      "page_title": "Looted ancient statue returned to Egypt",
+      "page_description": "The director of Vienna's Art History Museum (KHM) Sabine Haag handed over on Monday a priceless Egyptian statue to the Egyptian ambassador after it was recovered from two suspected antiquity thieves earlier this year.",
+      "image_urls": [
+        "https://assets.thelocal.com/cdn-cgi/rs:fit:1200/quality:75/plain/https://apiwp.thelocal.com/wp-content/uploads/2015/11/watermarks-logo-b0c8b70367e147050ef28cdc6caa9812016c1f94a458bf4bbee58aed14c744b7.jpg@webp",
+        "https://assets.thelocal.com/cdn-cgi/rs:fit:1200/quality:75/plain/https://apiwp.thelocal.com/wp-content/uploads/2015/11/b0c8b70367e147050ef28cdc6caa9812016c1f94a458bf4bbee58aed14c744b7.jpg@webp"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " the KHM for authentication, where they confirmed it was more than 2,500 years old. \n \n\t  \n \n\tAfter determining that no provenance could be found for the statue, it was decided to return it to the government of Egypt, so it was placed in the care of Egyptian ambassador Khaled Abdelrahman Abdellatif Shamaa. \n \n\t  \n \n\tThe two men were acquitted during the tria",
+      "price_usd": 2140000,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://www.thelocal.at/20151116/looted-ancient-statue-returned-to-egypt",
+      "final_url": "https://www.thelocal.at/20151116/looted-ancient-statue-returned-to-egypt",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "2307a27856d219976b0acb8e790701eed99d356961c2be04a5d7ae2924f7e8ed",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "0ec38453792f323c7ed938f6a816cdc13c1ece8bd32746a6c327bf9e990ed2c1",
+      "first_observed_at": "2026-09-26T14:42:25.969914Z",
+      "last_observed_at": "2026-09-26T14:42:25.969914Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:25.969914Z",
+  "snapshot_count": 1
+}

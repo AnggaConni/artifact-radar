@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2cf9a6655e65730003caa5519f74314a41455eb1",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:19.346892Z",
+      "title": "Stolen Buddha statues returned to Laos - Nation Thailand",
+      "page_title": "Nation Thailand news website, thai news, thailand news, Bangkok thailand, aec, breaking news : Nation Thailand",
+      "page_description": "Thailand's most updated English news website, thai news, thailand news, Bangkok thailand, aec,newspaper english,  breaking news : The Nation",
+      "image_urls": [
+        "https://media.nationthailand.com/images/3.0/default.webp",
+        "/uploads/images/md/2026/09/KBO8RRA0fz0rICr0x5M8.webp",
+        "/uploads/images/md/2026/09/6C7TmCykrVCW5B9o00W3.webp",
+        "/uploads/images/md/2026/09/4Q2Hnmdod0pX564qu8TK.webp",
+        "/uploads/images/md/2026/09/W0dQWQSqDh6V4071EfO0.webp",
+        "/uploads/images/md/2026/09/7eV0NMtlFKa0xUthnFVG.webp",
+        "/uploads/images/md/2026/09/XeriiHM1ytaxhddQ8clt.webp",
+        "/uploads/images/md/2026/09/vZFV6ZgC9zTfRZbSwNsL.webp"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Laos, Luang Prabang province (Ting cave)",
+      "source_url": "https://www.nationthailand.com/international/370001880",
+      "final_url": "https://www.nationthailand.com/category/latest-news",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "8de7b0ee016a9ec286a1ddc0ccf9483a66ea239152f983084d9a7cc57f14fe86",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5d28eabfc4a10b7f93d99675486cca688662c141f5c49bbb7f95b6e2d6928a91",
+      "first_observed_at": "2026-09-26T14:42:19.346892Z",
+      "last_observed_at": "2026-09-26T14:42:19.346892Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:19.346892Z",
+  "snapshot_count": 1
+}

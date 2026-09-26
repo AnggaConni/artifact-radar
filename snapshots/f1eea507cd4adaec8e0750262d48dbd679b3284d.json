@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "f1eea507cd4adaec8e0750262d48dbd679b3284d",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:21.911284Z",
+      "title": "An earthenware vessel with sculptural rim, Late Jomon period (5th - 3rd century BC)",
+      "page_title": "LI FUYUAN (B. 1942)",
+      "page_description": "LI FUYUAN (B. 1942) Birds Scroll, mounted and framed, ink and colour on paper 29 x 39.5 cm. (11 ⅜ x 15 ½ in.) Signed, with one seal of the artist",
+      "image_urls": [
+        "https://www.christies.com/img/LotImages/2018/HGK/2018_HGK_16074_1618_000(li_fuyuan_birds102327).jpg?mode=max"
+      ],
+      "page_price_text": "24000.00",
+      "page_price_currency": "HKD",
+      "provenance_excerpt": " and framed, ink and colour on paper 29 x 39.5 cm. (11 ⅜ x 15 ½ in.) Signed, with one seal of the artist                Provenance         The current owner lived in Beijing in the 1990s, and became interested in arts, and started collecting paintings, mostly by artists in the Beijing region.          Conditions of Sale     FAQs     This lot is offered by Ch",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.christies.com/lot/lot-6140593",
+      "final_url": "https://onlineonly.christies.com/s/exquisite-eye-chinese-paintings-online/li-fuyuan-b-1942-1618/56405",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "62b55a5bd83efc3bd1c48312c896174c49a3ea214d5f035b3d1f3e4afab8e667",
+      "etag": "",
+      "last_modified": "Sat, 26 Sep 2026 14:42:23 GMT",
+      "snapshot_signature": "78d0a4578aa0b2da3fb53c18d0462b19afda03465b4216b41289710d5c8eacad",
+      "first_observed_at": "2026-09-26T14:42:21.911284Z",
+      "last_observed_at": "2026-09-26T14:42:21.911284Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:21.911284Z",
+  "snapshot_count": 1
+}

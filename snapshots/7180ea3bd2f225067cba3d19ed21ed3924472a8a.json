@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "7180ea3bd2f225067cba3d19ed21ed3924472a8a",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:25.326113Z",
+      "title": "Ancient South Arabian Alabaster Statue",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 1237,
+      "provenance_flag": false,
+      "risk_score": 7,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF09EAnP36hYB9LPWbafRloyWzZ2_RVbizRrVjh_2iCArIpBbLaFOYmQIebaxARqMTP47DgBKCno8o03-KBj-S5iUw3okuLG01VLwevLBfjgYhzer9jxYwdhlAP8mAIO4LAg8jduA==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3abbffbd69813d11326e1cb3e15968b66351db3b4c29afc1580f97bdffc7f5f1",
+      "first_observed_at": "2026-09-26T14:42:25.326113Z",
+      "last_observed_at": "2026-09-26T14:42:25.326113Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:25.326113Z",
+  "snapshot_count": 1
+}

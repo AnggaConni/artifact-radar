@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "406523acbad1f8cd7ed75fa12dd80ee6f3c6bb65",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.835246Z",
+      "title": "Elephant tusks worth ₹2 crore stolen from Pangode Military Station in Kerala - The Hindu",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 240000,
+      "provenance_flag": false,
+      "risk_score": 10,
+      "ai_risk_score": null,
+      "origin_region": "India",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzhm7FlCCSUryseNYywQm5wQ6yY54DUSezGOoezBeYZGcmFtptB6g_D8SMKsR9xq1d01TxWuldkDZALjych3IIHGx4sacYqDtgsNoNQFTZ74CvHhVoNhBlVne_1sCZirIRv9zc3fZ-a5xM9O6_wA_ezRZ9uAevaJSzBsGoZx6ehu0CrKsWgrNFxcOR0tKC75L4MtUg9PA5PQ_ijJEYuB9uhGt_Keg3zxc0pCUdYMAE3Qdlfv8scjHnuPO9rgNRPuqmndR09NoXSYo=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "1d7546803a25543c6aac842f8c91a1ab8d1f511542387aa8abac9d92da1e1e0a",
+      "first_observed_at": "2026-09-26T14:42:13.835246Z",
+      "last_observed_at": "2026-09-26T14:42:13.835246Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.835246Z",
+  "snapshot_count": 1
+}

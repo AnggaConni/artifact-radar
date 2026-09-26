@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "dd858afa120f29d0f07eb784fc0c7cdef51dc521",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.963321Z",
+      "title": "JOAC Community Marketplace",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2RJK2WJOVCkDnJiSzEr4lCd9-2oGesGl-n9x_6F_7iEo4ziYDjHuLCZz69tEbP0-CTJHDA_TPsn1kTFY-QNtsXjortg0vgPzVu9CVRR4ujEESSZRFVt0PdPMzXqKMT3SGBpmYNDZ9Ere2a2YMkw==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5e830984338b74c3493bc723c01de11fb1aff54a4a8e5f02d996d6fdaddf8d71",
+      "first_observed_at": "2026-09-26T14:42:26.963321Z",
+      "last_observed_at": "2026-09-26T14:42:26.963321Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.963321Z",
+  "snapshot_count": 1
+}

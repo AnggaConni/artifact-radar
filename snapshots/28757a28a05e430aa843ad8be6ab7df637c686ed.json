@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "28757a28a05e430aa843ad8be6ab7df637c686ed",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.963135Z",
+      "title": "Why Syrian antiquities are flooding Facebook Marketplace",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Syria",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIjM2gUjJvvZ02nNbi_szDUzQduJzYeD09WEcJgc2WPtGaxNX1fNpbgoGNUJHnMwF52Z-5pLhlRZDxxz_E7M6jrYN1ajBDCZTCpWGpitbx5ktzyGEJF5BvWBaLrNlPS0Z3phS0-LheQ7J6nYfn5nd_fxswK5Yw6A0R4CRPd0GMLkmJc4680eKBgkZiodI=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "481590da232172ce5047169f3ff4361dc666ba31db8989bdb9a99daa0a20496b",
+      "first_observed_at": "2026-09-26T14:42:26.963135Z",
+      "last_observed_at": "2026-09-26T14:42:26.963135Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.963135Z",
+  "snapshot_count": 1
+}

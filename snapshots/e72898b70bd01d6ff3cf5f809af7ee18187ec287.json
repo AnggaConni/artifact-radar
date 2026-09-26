@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "e72898b70bd01d6ff3cf5f809af7ee18187ec287",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.437552Z",
+      "title": "Five More Prison Years For Metal Detectorist Jailed for Stealing $3.6million Hoard",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 3600000,
+      "provenance_flag": false,
+      "risk_score": 10,
+      "ai_risk_score": null,
+      "origin_region": "UK (Viking, Anglo-Saxon)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiqukdkogDP0IwBLOcrDsQ6yOudAwBrET0mKOcM9Vo0gbwql71jdJrh2DsHdO1w05JkNfWN9dkADNk5TKwqM7n6LpbHldTLD0NIMLjSfcH2wruTYw9r_nTCSTe37Li75e7IPN3NnDOFViw3g1Gy7JAHA2ax_Iis0btTU86pIafhR-3",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "aa2352e81838db18ba0fb989b51a18f0dc6a82e9ff8322771ba1b2f2d58e6570",
+      "first_observed_at": "2026-09-26T14:42:13.437552Z",
+      "last_observed_at": "2026-09-26T14:42:13.437552Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.437552Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d854c62350888faad77b242ea0e9816502319376",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:21.875182Z",
+      "title": "A LARGE JOMON VESSEL , MIDDLE JOMON PERIOD (BC 3000-2000)",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-23847-09292026-1.jpg",
+        "/img/SaleImages/HGK-23848-09302026-1.jpg",
+        "/img/SaleImages/HGK-23849-09302026-1.jpg",
+        "/img/SaleImages/PAR-24887-09302026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "t and objects      Auction results        Featured      20th/21st Century Art | Hong Kong      Monsoon: The Peter Simon Collection | London      Contemporary New York      Collections | Global      Luxury | Global      20th/21st Century Art | Global          Private Sales               Current Exhibitions      Decorative Arts For Your Home | Online      Thro",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.christies.com/lot/lot-6140592",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "39173ff1c4321d6f22c3cc6071b94508bb82df9589cc3e67dd8271eb7cea9c7f",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "1ee67b80581777855a52d38b5a21eba6dcbc0a12ac134098ad3384c875fcd499",
+      "first_observed_at": "2026-09-26T14:42:21.875182Z",
+      "last_observed_at": "2026-09-26T14:42:21.875182Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:21.875182Z",
+  "snapshot_count": 1
+}

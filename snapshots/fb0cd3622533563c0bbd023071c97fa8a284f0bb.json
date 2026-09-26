@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "fb0cd3622533563c0bbd023071c97fa8a284f0bb",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:23.454618Z",
+      "title": "ancient sasanian hand beaten solid silver ceremonial plate with pictoral scene - eBay",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 1500,
+      "provenance_flag": false,
+      "risk_score": 7,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ7QBgpEnbFicuAO3zDu7LkOSfp0mRDFPS-p-_A1lx8xVONBsDN6LhN1fq5u5790dG4Cm5uIBFhCQyqPYLz12BVRNwkBKW9rkIri4i_5fiTFWgPyd5mpY2N0xM-Ygei-0=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5e150a0346b5a0272f7dcfee473a111f4a7d9a07993876537d43d41ba92bf8f9",
+      "first_observed_at": "2026-09-26T14:42:23.454618Z",
+      "last_observed_at": "2026-09-26T14:42:23.454618Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:23.454618Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "07f90460397d0fe413a87e5c6858ed8f4f4ea7d7",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.835442Z",
+      "title": "Museum of the Bible says five of its Dead Sea Scrolls fragments are forgeries",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 10,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6lgGRExvucIz2XH-FOPKYn3saAjW9C59MP-JwRtPSNVaKp_Qh5oLjzxf9TikG9ayYZanUyHWNutJ6I49lZhILQ8DcT8lQ-gkvXtiwSXoaVDwmI_pCPSRMK8_ZacUpRGJU9OhzZVoGw8MxS78eJHxSRw80HyFKmM8QhdhMsarK76HqgsW2RzAQao6Vsj8mfRqoHaIec8RS3XMDJzBJGBbO2fuUcS2d",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "9f3f7c3f7488fa0aa148936fcdcaa7227850e4942edccd515eef261af271cc3b",
+      "first_observed_at": "2026-09-26T14:42:13.835442Z",
+      "last_observed_at": "2026-09-26T14:42:13.835442Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.835442Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "b52d871d20adc58bdb711da30b229435c3154c30",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:17.889546Z",
+      "title": "Antiquities for Sale-Ancient Art Dealer offering exceptional artifacts",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 3,
+      "ai_risk_score": null,
+      "origin_region": "Unknown (General ancient art dealer)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUZYCRyOVjjvBTotMNYo7nUv9yDNADBkfH1XL7TIOtGErHjXxS1nhSdHqPbqP7s9l92ryev6nHN3Px36-h5g1jfWBNWDf-tvOXxMmApiekS5QByA==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5d3c3b6e01414fb51ca39d24960c97a6717e1170b4101b113958e93edda612f5",
+      "first_observed_at": "2026-09-26T14:42:17.889546Z",
+      "last_observed_at": "2026-09-26T14:42:17.889546Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:17.889546Z",
+  "snapshot_count": 1
+}

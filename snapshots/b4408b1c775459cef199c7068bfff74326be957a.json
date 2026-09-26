@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "b4408b1c775459cef199c7068bfff74326be957a",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:16.931206Z",
+      "title": "Authentic & Legally / Ethically Owned Ancient Roman, Egyptian and Greek artifacts and coins for sale",
+      "page_title": "Ancient Resource: Ancient Coins and Artifacts for Sale. Los Angeles, California USA",
+      "page_description": "Authentic ancient Roman, Egyptian and Greek artifacts and coins for sale from from Gabriel Vandervort and Ancient Resource. Los Angeles, California, USA.****",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " 1998 and 2003. \r\n\t\t\t\t\t\t\t\t\t\tAt the time, I began   \"The Ancient Resource\"   as a hobby, to show my personal antiquities collection to anyone interested. This turned into a small local business... the site caught on, and now it is worldwide... I have literally customers on every continent of the globe, finalized by a sale to Antarctica in October of 2024. \r\n\t",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Roman, Egyptian, Greek",
+      "source_url": "https://www.ancientresource.com/",
+      "final_url": "https://www.ancientresource.com/",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "50a559b24eab72ad84c605cf10581640a71e2b65b9122ec395777226eddd1026",
+      "etag": "\"10a4b-646480869b940\"",
+      "last_modified": "Fri, 19 Dec 2025 06:17:33 GMT",
+      "snapshot_signature": "d87056f8153b841fd18a47a46a7dcc33b31370438d2d23f0ac96eb16df7f6898",
+      "first_observed_at": "2026-09-26T14:42:16.931206Z",
+      "last_observed_at": "2026-09-26T14:42:16.931206Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:16.931206Z",
+  "snapshot_count": 1
+}

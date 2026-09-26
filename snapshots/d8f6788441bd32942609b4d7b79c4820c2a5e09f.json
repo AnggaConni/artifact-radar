@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d8f6788441bd32942609b4d7b79c4820c2a5e09f",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:25.326327Z",
+      "title": "Ancestral Puebloan Pottery - Etsy",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 325.0,
+      "provenance_flag": false,
+      "risk_score": 8,
+      "ai_risk_score": null,
+      "origin_region": "Southwest US (Ancestral Puebloan / Anasazi / Mogollon)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGULxT2EIAcmcXHGBlGwbbNzp7O06AH1tr3fzm5EmSCoi79gb2-k2mfkOAbU-aJnNRSeESsTtEVfIFSWHm3cR8yuDxkmUYtfvFEVBiUJVlZXCRyS9oZpnk75sLQuCaZ-yq4ikTvVTZb0phhGd3Vrimmhg==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d253c75baa73b86d426a65656be5588c6de11db39a747f0533e470f5520af789",
+      "first_observed_at": "2026-09-26T14:42:25.326327Z",
+      "last_observed_at": "2026-09-26T14:42:25.326327Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:25.326327Z",
+  "snapshot_count": 1
+}

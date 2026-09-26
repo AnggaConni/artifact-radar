@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "273814a40af644ae205c2738a492fb321eb80152",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:16.808530Z",
+      "title": "Mexico's culture ministry urges eBay to halt sales of pre-Hispanic artefacts",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Mexico (Pre-Hispanic)",
+      "source_url": "https://www.theartnewspaper.com/2026/03/19/mexicos-culture-ministry-urges-ebay-to-halt-sales-of-pre-hispanic-artefacts",
+      "final_url": "https://www.theartnewspaper.com/2026/03/19/mexicos-culture-ministry-urges-ebay-to-halt-sales-of-pre-hispanic-artefacts",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"8596a32b6c3ab79aa171735bddc1e6be\"",
+      "last_modified": "Thu, 17 Sep 2026 13:19:26 GMT",
+      "snapshot_signature": "8ec89f44d0f6a658751087fe8edaed305d2f779eb14f03ec1dbcf68e1bb053fe",
+      "first_observed_at": "2026-09-26T14:42:16.808530Z",
+      "last_observed_at": "2026-09-26T14:42:16.808530Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:16.808530Z",
+  "snapshot_count": 1
+}

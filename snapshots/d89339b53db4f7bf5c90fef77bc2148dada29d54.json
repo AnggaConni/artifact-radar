@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d89339b53db4f7bf5c90fef77bc2148dada29d54",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:22.187124Z",
+      "title": "Japanese Ancient Small Pottery / Jomon Pottery Jar / 3000 Years ago / Wabi-Sabi",
+      "page_title": "Antique and Vintage Figurative Sculptures - 17,259 For Sale at 1stDibs | antique ornaments figurines, sofia artif age, niall smith antiques",
+      "page_description": "Shop vintage, mid-century, modern and antique figurative sculptures from top sellers and makers around the world. Global shipping available.",
+      "image_urls": [
+        "https://a.1stdibscdn.com/archivesE/upload/f_39981/f_519989421789397078581/d4d2d67f-e11d-489f-85fc-3bb87cd1cad0/IMG_8228_bg_processed.jpg",
+        "https://a.1stdibscdn.com/archivesE/upload/f_39981/f_519989421789397078581/d4d2d67f-e11d-489f-85fc-3bb87cd1cad0/IMG_8228_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_39981/f_520235821789532320453/2805762e-6e51-435f-9e3b-17230eaf20b8/Photoroom_20260916_061751_bg_processed.jpeg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_23123/f_516598421788879830151/8aec0c05-9b30-4d99-86cd-8915fe32b92b/French_Art_Deco_Lady_Woman_by_Georges_Gori_1_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_25253/f_513443421786267206443/f5ac065e-27b3-44a9-b842-b8ffecb5d72d/230286_0_bg_processed.JPG?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_9711/f_513742821786467315344/b7060492-1036-4f82-8883-e86931eea70c/1_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/1957-handmade-hamburg-tugboat-petra-maritime-ship-model-germany-for-sale/f_101252/f_515142321787239029180/f_51514232_1787239029469_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_8651/f_521106321789928306837/18ce13b8-2463-4499-86d5-294782260626/OrpheusNewArtWares_bg_processed.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "",
+      "price_usd": 600,
+      "provenance_flag": false,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.1stdibs.com/furniture/decorative-objects/vases-vessels/pots/japanese-ancient-small-pottery-jomon-pottery-jar-3000-years-ago-wabi-sabi/id-f_35008532",
+      "final_url": "https://www.1stdibs.com/furniture/decorative-objects/sculptures/figurative-sculptures",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "6e248138af31a70a729024fe22cb075a614df927447d73231ffac6964eed3b39",
+      "etag": "",
+      "last_modified": "Wed, 23 Sep 2026 17:29:57 GMT",
+      "snapshot_signature": "4a4635b35cd6ee69f980ad7a6f0b7b4566881a8b4fd7b680a7de65e8c4bfb624",
+      "first_observed_at": "2026-09-26T14:42:22.187124Z",
+      "last_observed_at": "2026-09-26T14:42:22.187124Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:22.187124Z",
+  "snapshot_count": 1
+}

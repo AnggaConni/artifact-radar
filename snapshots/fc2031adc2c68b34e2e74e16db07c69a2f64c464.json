@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "fc2031adc2c68b34e2e74e16db07c69a2f64c464",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:17.899928Z",
+      "title": "TL-testing of porcelain/TL-labs/other ways of authentication – General Discussion Board",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGE5CoCbQ0QluNB7KPYm49GMJMNIzgBbLBRousdDpHaYbcHhhMzWnl8uC1s6hN3hidC--HS3uhdvG5aCrvT5wleRJzPIxzdIVdEbamnH-BYlQ3xwMSdu1-TvmRfdxV9fnBiB2ZiRtwrFli9HhSVmB06fXGINOqwMPY1p-VA6js09J_xKHdl0vXLvRuaLEGrp-G1eLj6Rw8QoH2R1fDIYrHOU3Ul_e2cGtOgczdqujYkDoo_4ikVDw==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a0207bf2a204bb48ba1a1b91811adfeadc4762557c43b7196772963157a99ea2",
+      "first_observed_at": "2026-09-26T14:42:17.899928Z",
+      "last_observed_at": "2026-09-26T14:42:17.899928Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:17.899928Z",
+  "snapshot_count": 1
+}

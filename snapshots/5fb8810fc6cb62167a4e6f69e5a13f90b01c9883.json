@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "5fb8810fc6cb62167a4e6f69e5a13f90b01c9883",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:25.325989Z",
+      "title": "Stolen heritage: Illicit trade in Yemen's rare manuscripts",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGU9PRmQKn1UOAq5aQ3W9j0GPmSpHKh6hIqByMkRBFr0ebhssidn__4IYnaJytzuCMKgf4tbUdre1GHwb3BAHwP15Saj2dE4cExk54IRZB57k0aoOUL7OIVyBHNymQB7K4oOR1McPWCXv0yw8XHgdGu3J9go0Q1dxS-2ke4qoJn5L5yZwjXKsLjUPa8S6okUyaC",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "848e8c79ef4f07922dc07c885ebb833ec16036b8a7e628a45aee3a731ec73bce",
+      "first_observed_at": "2026-09-26T14:42:25.325989Z",
+      "last_observed_at": "2026-09-26T14:42:25.325989Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:25.325989Z",
+  "snapshot_count": 1
+}

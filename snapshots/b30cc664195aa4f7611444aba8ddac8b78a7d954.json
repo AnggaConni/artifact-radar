@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "b30cc664195aa4f7611444aba8ddac8b78a7d954",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.446386Z",
+      "title": "Greek Thracian Gold Fibula",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 7637.01,
+      "provenance_flag": true,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Thrace",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGa2c5Gzrs_rceRf4HJVd-m1y6cZ8fA_DeY3cBNi7c38LRmKiidX-OIpabzbB0WSUDub4v5fep_on2SLzcEapD2OeJsKM_k5NL7Psl5s3dGVNq22icB18OQan5qM-XxG53Uof3UUGuBZVxC3FVe",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "30bbad1c783894525e13fb655f338a67c4179c4d699bbca772cf246bb4fcb7d4",
+      "first_observed_at": "2026-09-26T14:42:13.446386Z",
+      "last_observed_at": "2026-09-26T14:42:13.446386Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.446386Z",
+  "snapshot_count": 1
+}

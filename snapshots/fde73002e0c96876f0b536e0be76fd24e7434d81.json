@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "fde73002e0c96876f0b536e0be76fd24e7434d81",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.963086Z",
+      "title": "The Business Of Stolen Ancient Artifacts",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 800000,
+      "provenance_flag": true,
+      "risk_score": 8,
+      "ai_risk_score": null,
+      "origin_region": "Mexico (Maya and Olmec), Cambodia (Khmer Empire), Iraq",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSHS_kVaec70TIyLt4UBd2IRMCMB-XIX00xYwDEPtehcLbJAurAxhhKAwPe9YL86VQh2MDQ1cE-hwsB4WyU1fjhiMeQ3KfgoTqyPMhfHkJFvLoEdcgs7rh8eMJ9gvc51GXICJw8tw7_38YkTPT1lZyPXbO6DswkEu_CiI0eSkFYm_kut-XZZAgdtzMRBMQ-",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "93773f73e4022fc3a6ab991f29f26a13b8b96e7e5a5758503c6cb1e31c3cc0a9",
+      "first_observed_at": "2026-09-26T14:42:26.963086Z",
+      "last_observed_at": "2026-09-26T14:42:26.963086Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.963086Z",
+  "snapshot_count": 1
+}

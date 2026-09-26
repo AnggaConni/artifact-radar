@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "59ea2cd99b7e66bc7abeae98f7e02a5a953bfe76",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.444440Z",
+      "title": "The secrets of Tiwanaku, revealed by a drone | The UNESCO Courier",
+      "page_title": "The UNESCO Courier | The UNESCO Courier",
+      "page_description": "UNESCO’s magazine – bringing you local perspectives on global issues since 1948. Available in 6+ languages.",
+      "image_urls": [
+        "https://courier.unesco.org/sites/default/files/styles/best_image/public/2022-03/Header-UNESCO-v02-Shade.png.webp?itok=DCwEsGBN"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " Approved programme and budget 2024-2025 (42 C/5)         Resources     Documents     UNESDOC - Digital library     Art Collection     Multimedia archives     Archives     UNESCO Courier     Official Photo Gallery     Basic Texts       Databases and Statistics     Core data portal     key data     Observatory of killed Journalists     UNESCO Institute for St",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Bolivia",
+      "source_url": "https://en.unesco.org/courier/2018-2/secrets-tiwanaku-revealed-drone",
+      "final_url": "https://courier.unesco.org/en",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "0c3ccdb5ce7cc88cfdd06a1af682dd378b0e18f4ee717479cd83ae852ff4aeeb",
+      "etag": "W/\"1790398764\"",
+      "last_modified": "Sat, 26 Sep 2026 04:59:24 GMT",
+      "snapshot_signature": "0368036f37d3325f9821d120e51703de2d27ad53d3fd9720ab6ae67d7154138a",
+      "first_observed_at": "2026-09-26T14:42:13.444440Z",
+      "last_observed_at": "2026-09-26T14:42:13.444440Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.444440Z",
+  "snapshot_count": 1
+}

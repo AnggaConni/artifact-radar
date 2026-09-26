@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2ce3aae1a6d08c5254e231e6198527d29fc7a483",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.443480Z",
+      "title": "Archaeologist Reconstructs Ruins of Tiwanaku Temple in Bolivia Using 3-D Printing Technology - Smithsonian Magazine",
+      "page_title": "Archaeologists Identify Oldest Known Human Burial in Lower Central America",
+      "page_description": "The unusually muscular young woman was buried in what is now Nicaragua nearly 6,000 years ago",
+      "image_urls": [
+        "https://th-thumbnailer.cdn-si-edu.com/DTznalMJT9RZVcDbWogzaXKKw14=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/4b/9d/4b9dd759-b8fc-4ce7-bf06-b6573159fd31/excavation1.jpg",
+        "https://th-thumbnailer.cdn-si-edu.com/CrsYbZ2Pym_Y3rrmawd4csDymp8=/fit-in/1200x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/4b/9d/4b9dd759-b8fc-4ce7-bf06-b6573159fd31/excavation1.jpg",
+        "https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/accounts/headshot/meilan_headshot2.png"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Bolivia",
+      "source_url": "https://www.smithsonianmag.com/smart-news/archaeologist-reconstructs-ruins-tiwanaku-temple-bolivia-using-3-d-printing-technology-180971166",
+      "final_url": "https://www.smithsonianmag.com/smart-news/archaeologists-identify-oldest-known-human-burial-lower-central-america-180971166",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "722140910c21c5077f4865d953d98e084539266ae0c4bcf71d37ec3b0ef8dea6",
+      "etag": "",
+      "last_modified": "Sat, 26 Sep 2026 14:42:14 GMT",
+      "snapshot_signature": "a456833aba140d00226e83aadf9623594f5d853b3615d610b3985e1b8bd70546",
+      "first_observed_at": "2026-09-26T14:42:13.443480Z",
+      "last_observed_at": "2026-09-26T14:42:13.443480Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.443480Z",
+  "snapshot_count": 1
+}

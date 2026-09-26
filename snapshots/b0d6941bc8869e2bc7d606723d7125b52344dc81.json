@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "b0d6941bc8869e2bc7d606723d7125b52344dc81",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:19.939457Z",
+      "title": "17TH CENTURY LAO BUDDHA",
+      "page_title": "17TH CENTURY LAO BUDDHA - ANTIQUE BUDDHA GALLERY",
+      "page_description": "MATERIAL : BRONZE SIZE : H 50cm W 26cm Very heavy for its size Lao Buddha in very good condition for its age sitting on a high altar his eyes are made from black pearls and mother of pearl traces of gold gilding sitting in Bhumisparsha Mudra .... touching the earth!",
+      "image_urls": [
+        "https://antiquebuddhagallery.com/wp-content/uploads/2018/11/IMGP3573-1.jpg"
+      ],
+      "page_price_text": "7700",
+      "page_price_currency": "AUD",
+      "provenance_excerpt": "  \n         \n\t\t\t                \n     \n\n     \n         \n              \n         \n     \n\n \n\t\t \n\n\t   HOME  \n  CONTACT  \n  COLLECTION  \n          \n\t\t\t                       \n\t \n\n         \n\t\t\t   HOME  \n  CONTACT  \n  COLLECTION  \n                        \n\n     \n\n\n\t\n \n\n\t\t \n\n\t\t\t \n\n\t \n\t\n\t\t \n\t\t\n\t\t\t \n\t\t\t\t\n\n\t \n\t\n\t\t\n\t\t\t\t\t Home \t\t\n\t\t\n\t\t\t\t\t » \t\t\n\t\n\t\t\n\t\t\t\t\t Laos \t\t\n\t\t\n\t\t\t\t",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Laos",
+      "source_url": "https://antiquebuddhagallery.com/17th-century-lao-buddha",
+      "final_url": "https://antiquebuddhagallery.com/product/17th-century-lao-buddha",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "2f6e4a74278d88ffc00824c0a632400a97ad7d29dd69209ac3a34c843ab4cb59",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "69ab8171c1858aa18746230c7d3cb75be420e999afcd9ef9bb81351238158fd4",
+      "first_observed_at": "2026-09-26T14:42:19.939457Z",
+      "last_observed_at": "2026-09-26T14:42:19.939457Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:19.939457Z",
+  "snapshot_count": 1
+}

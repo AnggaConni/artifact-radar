@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c28e12ac630196ad8288f6b6eef1f00823aa8e71",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.446547Z",
+      "title": "One Romanian gold theft suspect jailed, another offered a deal; Prosecutors release one",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Romania (Dacian/Thracian)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPpNbDbMzieRiQlFcYNNRFxQbFuT4bUxrZ3y14Fp-vKVZspPvpSBEM1Wr9-YZJ-Aj0A0mvggjh-5VZQfmcuBeLCo-3D5JJ7_SISpkGf6gAzv3Ym3_6fdR2s8E-c-eYCW5dAsHJrElPi53GUCiJb_26z9Gx2cGUlEEGfna06ljIltB2Jb2xR-42bzOP4JChYFobIGJtOs0TiVQCrDZe7LD1_zUtJ4FKnwDVicgs",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "848e8c79ef4f07922dc07c885ebb833ec16036b8a7e628a45aee3a731ec73bce",
+      "first_observed_at": "2026-09-26T14:42:13.446547Z",
+      "last_observed_at": "2026-09-26T14:42:13.446547Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.446547Z",
+  "snapshot_count": 1
+}

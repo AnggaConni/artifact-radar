@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "cbec78ad699053ea4612d9c1ced81c5480585f8c",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:23.453992Z",
+      "title": "The big steal: how do ancient treasures from museums end up for sale on the internet?",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt1hzBjCBiOsZpAJp3W7DlSOUKLksC9xDbq3bo8Idan87YN6imioRQ8GdirA92cBE52f7IOEaJ2OxrOujpX9h98b4JOWuaDjWE3jm12zWPDSEGk4d44owdhFgqLwoXHKgdddVsNAorAedXKxbfxa3QviumMrLtb5dD8PZaAHgvgcqfW87dF6GndF0iVQs_AxmPN0FcWDdX6rXfNUr9VZIv2h22-oqXgT2mHyXOigZE7gG6VwOEncOtX0wBRAGE",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "848e8c79ef4f07922dc07c885ebb833ec16036b8a7e628a45aee3a731ec73bce",
+      "first_observed_at": "2026-09-26T14:42:23.453992Z",
+      "last_observed_at": "2026-09-26T14:42:23.453992Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:23.453992Z",
+  "snapshot_count": 1
+}

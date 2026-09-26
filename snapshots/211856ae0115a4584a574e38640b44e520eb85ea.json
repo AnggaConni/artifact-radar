@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "211856ae0115a4584a574e38640b44e520eb85ea",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:21.493311Z",
+      "title": "Jōmon Pottery Cup Artifact",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.ebay.com/itm/386820235948",
+      "final_url": "https://www.ebay.com/itm/386820235948",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a0f2dd77c1398515cb5c30c2292ceb5fe66c131e03b9ef40ec88789d73e2845f",
+      "first_observed_at": "2026-09-26T14:42:21.493311Z",
+      "last_observed_at": "2026-09-26T14:42:21.493311Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:21.493311Z",
+  "snapshot_count": 1
+}

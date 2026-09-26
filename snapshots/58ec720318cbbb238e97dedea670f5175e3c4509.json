@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "58ec720318cbbb238e97dedea670f5175e3c4509",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.436240Z",
+      "title": "Kolektor barang antik dan artefak merapat! di Pasar Loak Jatinegara dijual keris dan benda peninggalan Majapahit yang langka",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 7,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Indonesia)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvH4u-4AtN3TzlRFmLF2vFHC-XJ4wAFGToEVb4V2a4BBFlW-YTuLjPAKaN5cPL1NvO3fvzaeeXrkvkpEmPyDTXG71fMpk1rGxHRjwfNHDXS9EFgnwyYKAVz1E3XoMBwq-lfO1tgN3Z7Vd6zPgGygTtshsLcXgzxPjRFKOMZ2wxIekoxM1o13VNGmIyR--mR-sMvNmACkfPq0df9ZBjA47Fmk949x-BT-bdKMm9PVNujzYxVCMwZSITh8CNxDpQ1NuqyMoBis_aSPFx7I4PVV-v68m_gpPgHcmxdJd6VsQ==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "293c58620e55fea5e91b770b7f421a9dddf72c391141f0e5ed586b9ec1b01681",
+      "first_observed_at": "2026-09-26T14:42:13.436240Z",
+      "last_observed_at": "2026-09-26T14:42:13.436240Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.436240Z",
+  "snapshot_count": 1
+}

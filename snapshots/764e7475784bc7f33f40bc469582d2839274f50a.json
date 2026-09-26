@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "764e7475784bc7f33f40bc469582d2839274f50a",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.962735Z",
+      "title": "Uncovering the History of an Edo-Period Japanese Chest",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcnXZ25BbdLlcbWU35RK1QIZJLD1ojGoISyy3atgpVxevg6a0gzAVxieOW9PiVcKh94XEJFQi-se75KckAhhsUipYTiAFiyAWZEo1ks6N8R7-JSUOr6hanutEweQeZZBmvXJGHCP_JMS_cgR-qN_maxpHs2sHhLrgh-JKB2Lln3oUdbwrGJ4116Nhu5A==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "7b1d99394ebc9cfafbb92028e39f3fc319a288af2ef281cf9c5d450c6af042f5",
+      "first_observed_at": "2026-09-26T14:42:26.962735Z",
+      "last_observed_at": "2026-09-26T14:42:26.962735Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.962735Z",
+  "snapshot_count": 1
+}

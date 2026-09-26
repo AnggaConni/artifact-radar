@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "e646571907fba6e6d2fbd7a96bfe25cec4067a77",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:21.105504Z",
+      "title": "Smuggling Timbuktu's Libraries: Preservation and Protecting Manuscripts Against Human Threats - Allison Burris",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 4,
+      "ai_risk_score": null,
+      "origin_region": "Mali, Timbuktu",
+      "source_url": "https://scholarworks.bellarmine.edu/bjbh/vol18/iss1/9",
+      "final_url": "https://scholarworks.bellarmine.edu/bjbh/vol18/iss1/9",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "9bd7061d26387240c6364f8c7732451f77ea4d16209a248cc56de84aef93e4eb",
+      "first_observed_at": "2026-09-26T14:42:21.105504Z",
+      "last_observed_at": "2026-09-26T14:42:21.105504Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:21.105504Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c770488b5b9cded1524682928058559e5bf92bec",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.863984Z",
+      "title": "Ba man charged over alleged theft of religious statues in Nadi - The Fiji Times",
+      "page_title": "Ba man charged over alleged theft of religious statues in Nadi - The Fiji Times",
+      "page_description": "A 32-year-old man from Ba has been charged in connection with the alleged theft of several religious statues and sacred items from private prayer houses in […]",
+      "image_urls": [
+        "https://www.fijitimes.com.fj/wp-content/uploads/2025/09/Fiji-Police-Logo-1-2.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.fijitimes.com.fj/ba-man-charged-over-alleged-theft-of-religious-statues-in-nadi",
+      "final_url": "https://www.fijitimes.com.fj/ba-man-charged-over-alleged-theft-of-religious-statues-in-nadi",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "544ac8813b72d66292708beb122e78bee67c0cd0642174d89ba31f3a6d6f2ece",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "bf334002d0e6c8f4af50dfa87009fa171a788040e71c54b0c8ca42f4234a4c36",
+      "first_observed_at": "2026-09-26T14:42:13.863984Z",
+      "last_observed_at": "2026-09-26T14:42:13.863984Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.863984Z",
+  "snapshot_count": 1
+}

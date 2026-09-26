@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "807f23f621978e212c82d07cafd4d1c351adee6c",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:25.326236Z",
+      "title": "Historic Pottery & Pueblo Pottery New Mexico | Arizona's Native American Tribes - Medicine Man Gallery",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "New Mexico Pueblos and Arizona's Hopi Pueblo, Southwest US",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgh6V3cGbGP0uo_HSlDsregW4DB9dT_r1tNfBrTN-6JcnW912_gB9SJwnexBdED88lQotRKs-S8j4mAUrPqR76-nUd-_CUafpOBTC9OeIpT77DwfNgj41YqxyIotsVA-Vr4tovyPGBmFzs-cheQnTzcvCw6fnpTNKrlblJsGdAEMdict6USQDXaK3X0NESOj4Y",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "cc6725c6ec46ac2575b75fc039fda4d5162861856bbbff211e48fe6ec449add3",
+      "first_observed_at": "2026-09-26T14:42:25.326236Z",
+      "last_observed_at": "2026-09-26T14:42:25.326236Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:25.326236Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "861bf3b531f3762973fc7d25b63efae64cba327e",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:21.574862Z",
+      "title": "Tall Ancient Japanese Jomon Pottery Vessel, TL Tested",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.invaluable.com/auction-lot/tall-ancient-japanese-jomon-pottery-vessel-tl-test-79-c-b5f47d9a18",
+      "final_url": "https://www.invaluable.com/auction-lot/tall-ancient-japanese-jomon-pottery-vessel-tl-test-79-c-b5f47d9a18",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"12a9-3kg+drKhU3+q8eu7GrFdZMLDRnU\"",
+      "last_modified": "",
+      "snapshot_signature": "8ef161ead066fc66d17b940aa33a61464ec5ad975653388aeecbe33cbed8b711",
+      "first_observed_at": "2026-09-26T14:42:21.574862Z",
+      "last_observed_at": "2026-09-26T14:42:21.574862Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:21.574862Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2ae9af78eb38cf03945afddf286c9ef8969d41bd",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:19.559079Z",
+      "title": "Lao Buddha (Wood, 120 years old)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Laos",
+      "source_url": "https://azibaza.com/lao-buddha-images/178-lao-buddha-wood-120-years-old.html",
+      "final_url": "https://azibaza.com/lao-buddha-images/178-lao-buddha-wood-120-years-old.html",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "6f5a8ea92ca6d4c86634f682f3797df14151c583046b0aea02d16c0255287c1f",
+      "first_observed_at": "2026-09-26T14:42:19.559079Z",
+      "last_observed_at": "2026-09-26T14:42:19.559079Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:19.559079Z",
+  "snapshot_count": 1
+}

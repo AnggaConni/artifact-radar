@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "513f04a89feb37ba50cf989255e3294d80bbdd96",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.835319Z",
+      "title": "American evangelical collectors buy up Dead Sea Scroll fragments - The World from PRX",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 8,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX4GElKx4KR88e_RhxPub4Ry6W8HWosEK0CtQ64HWLa3-sin6P2Zflbd_iTIwdmSVzhLXDMgzAZZjLp32zmFIuiCkzIoK3CTUV4hY27VJqBdgZ0noh1X9fj9z9WGJy0IQPyIkBp9aprLrVgHgDffcFVnFo-m3i7X6jTidxGaNU6voBzIQyCLBZVyIo4hlB6DyAt-WEkfcexbHjben6BTr_",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "f34e24b85d3b3ad70b90a54671ce4dbf61bfe8b571ea1823d3c292c93605dfe1",
+      "first_observed_at": "2026-09-26T14:42:13.835319Z",
+      "last_observed_at": "2026-09-26T14:42:13.835319Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.835319Z",
+  "snapshot_count": 1
+}

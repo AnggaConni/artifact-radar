@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "4c7feecbb51bc5be030d94c5bb19c9405d4b7407",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:28.275738Z",
+      "title": "Ife-Style Yoruba Bronze Portrait Head, Nigeria",
+      "page_title": "Red Wire Cage Sculptural Pendant Light Fixture, circa 1960 at 1stDibs | what is the red wire in a ceiling light fixture, red wire light fixture, red wire in light fixture",
+      "page_description": "View this item and discover similar  for sale at 1stDibs - A beautiful example of what our shop does best, we've brought back this original midcentury 1960s wire cage pendant light fixture freshly refinished in",
+      "image_urls": [
+        "https://a.1stdibscdn.com/red-wire-cage-sculptural-pendant-light-fixture-circa-1960-for-sale/1121189/f_207455221606197983409/20745522_master.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 1875,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Nigeria",
+      "source_url": "https://www.1stdibs.com/furniture/decorative-objects/sculptures/busts/ife-style-yoruba-bronze-portrait-head-nigeria/id-f_20745522/",
+      "final_url": "https://www.1stdibs.com/furniture/lighting/chandeliers-pendant-lights/red-wire-cage-sculptural-pendant-light-fixture-circa-1960/id-f_20745522",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "7e501fc15d24790e550cb1a8b98efcb3d92909abb43720978bc5d69c5bf59874",
+      "etag": "",
+      "last_modified": "Wed, 23 Sep 2026 17:29:57 GMT",
+      "snapshot_signature": "a9a05fb8a536acd28c5977b17cd65d93176239f6bfce0a4318eb48cd43d121d6",
+      "first_observed_at": "2026-09-26T14:42:28.275738Z",
+      "last_observed_at": "2026-09-26T14:42:28.275738Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:28.275738Z",
+  "snapshot_count": 1
+}

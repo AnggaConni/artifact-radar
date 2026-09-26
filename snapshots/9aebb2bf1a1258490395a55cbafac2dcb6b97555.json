@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "9aebb2bf1a1258490395a55cbafac2dcb6b97555",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:21.261092Z",
+      "title": "How Timbuktu Protected Its Trove of Manuscripts - Google Arts & Culture",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Mali, Timbuktu",
+      "source_url": "https://artsandculture.google.com/story/how-timbuktu-protected-its-trove-of-manuscripts/5AWRz_L_7iGq8w",
+      "final_url": "https://artsandculture.google.com/story/how-timbuktu-protected-its-trove-of-manuscripts/5AWRz_L_7iGq8w",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d9a4dba5ade315ad3b2f1a87704c2f81ab0aa6e4dc1537394284b02c89d55822",
+      "first_observed_at": "2026-09-26T14:42:21.261092Z",
+      "last_observed_at": "2026-09-26T14:42:21.261092Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:21.261092Z",
+  "snapshot_count": 1
+}

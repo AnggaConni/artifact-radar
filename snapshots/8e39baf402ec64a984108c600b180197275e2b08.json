@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8e39baf402ec64a984108c600b180197275e2b08",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.962926Z",
+      "title": "10 High-Dollar Auction Items of Questionable Origin - The Tutankhamen Head",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 6400000,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Egypt",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuY7ZQR04b9zXOmv7eYeErSqi_B56R3CdvVH559WQ6EMlPSJlxyzR6VKBc-XwuF-Me-N5QaeEvT1pEfPebIHTh2dRCJd-62p1TNpD7G3j5-qCkBn2PTMXbQH8T8hT4Fd8dvF2Y9qf_llKQEaZsODl44k-Tf5qYWRH5pP2eVv4sUyj9tDXYjfTZDcbu-NDA3w==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "91887eba5d7007a947aab07ba0ae87ae8677020866c395eab0bde274951db642",
+      "first_observed_at": "2026-09-26T14:42:26.962926Z",
+      "last_observed_at": "2026-09-26T14:42:26.962926Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.962926Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "315265ffb250a087695538b9c4674fc1d606ec3b",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.446314Z",
+      "title": "Gold Looted From Ancient Empire Returned to Romania",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Thrace (Dacian)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGE7WQKlH_yaWeOrklxyuQSZhWJaaqVxxodCeHVQbn3QIhAH58y92iatrv7sCAoC6bbdxp4xyte632GqTfUtGcV_TFmZu3ivrng8FQs0BkX20Ed9smJNh8B_HTCIQF8_OVDtWSGkbZas0tB4-aoqypg0eyQzR8DOXSEaoJhtA9AyzEA4OU-nqkEi9K28-3XoHkezHYJkzs8xETi05jWbHRxtPyhKnfmso=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "848e8c79ef4f07922dc07c885ebb833ec16036b8a7e628a45aee3a731ec73bce",
+      "first_observed_at": "2026-09-26T14:42:13.446314Z",
+      "last_observed_at": "2026-09-26T14:42:13.446314Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.446314Z",
+  "snapshot_count": 1
+}

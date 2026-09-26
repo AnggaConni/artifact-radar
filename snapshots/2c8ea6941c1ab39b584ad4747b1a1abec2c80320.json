@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2c8ea6941c1ab39b584ad4747b1a1abec2c80320",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:17.899887Z",
+      "title": "TL - Antique Authentication (Warning: Fraudulent Oxford Authentication reports)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 8,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd9m1sY2jGvXISO22pbzWdYudAVddcwNv0LfLQWrHSzb7QRnClMsRgiD7cjZQxhf2l94qYMY5PbS4wYXOPlDCSsrlHIHYwgT4wp63zixUMEo4XoVX0zyn9d4sQcBU0iuJHFEA=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "f34e24b85d3b3ad70b90a54671ce4dbf61bfe8b571ea1823d3c292c93605dfe1",
+      "first_observed_at": "2026-09-26T14:42:17.899887Z",
+      "last_observed_at": "2026-09-26T14:42:17.899887Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:17.899887Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "e4df0f075c7ca9f4d9be1283e96199e4f3bf6771",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.437200Z",
+      "title": "'Illegal' metal detectorist found a huge hoard of Roman treasure in Germany — and kept it hidden for 8 years",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Germany",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5PpQUZAdGWjx06eB1poOBK3RLJaU93GZuOVGw3TKI2ZicRH2J-mL8YDXvLXnefLWVh2f7iscj6R75JfOAzdkLcGbLEkSD7pJiVwUOIxgvTpJ-HDGaRKfPsIaug7uSD9E-exCyIovvTF6cNQBjQkJZkIKLdpk9bQyqk_z5y2_-44tjRo95UXoXlW441u5GJZ2xdaF38MPYyUBZZs719hDbdqNDFHKRVLgxGBoP6V5Ml5yZNRsXDIsnSAlvF_5fFC3Tn3dQju7dqn9z6UtTorPHF1-7",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "848e8c79ef4f07922dc07c885ebb833ec16036b8a7e628a45aee3a731ec73bce",
+      "first_observed_at": "2026-09-26T14:42:13.437200Z",
+      "last_observed_at": "2026-09-26T14:42:13.437200Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.437200Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "840d0379a24433a0ca11855e378b20563b02548f",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:23.454170Z",
+      "title": "Oldest Surviving Maya Codex Declared Authentic - Co-Geeking",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Mesoamerica (Mexico)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE42-A2kpTqPfhKGCO3xJuTN32jowBe181z4FS1BGoiSTf23CAUX1nkHcMbfF1Vgi705Hwf0pCbgcDVqQjmADJS52ICnPiyXGTea9HvSJ6MkYGdcbFT_AuJ_tzAUXK-QuY0OKmBi7q8D7Rt5r3NV3GZiBxzLnnZmoxj8pEE0dbpHJOkZze3blq3zFLHQg==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "60ca003126b427427f12e26f3f584ce68d4c18e576a3fe98d7efb27cbd21d7fd",
+      "first_observed_at": "2026-09-26T14:42:23.454170Z",
+      "last_observed_at": "2026-09-26T14:42:23.454170Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:23.454170Z",
+  "snapshot_count": 1
+}

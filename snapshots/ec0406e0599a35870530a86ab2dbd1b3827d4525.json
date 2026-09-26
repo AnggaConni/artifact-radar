@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "ec0406e0599a35870530a86ab2dbd1b3827d4525",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.492879Z",
+      "title": "Certificate of Authenticity",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://www.vipfanauctions.com/authenticity",
+      "final_url": "https://www.vipfanauctions.com/authenticity",
+      "source_status": "ACTIVE",
+      "http_status": 202,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "90312833bee9c514c71f444336974a0a7c9d46ec9a020eca8b0137ce0d787eef",
+      "first_observed_at": "2026-09-26T14:42:13.492879Z",
+      "last_observed_at": "2026-09-26T14:42:13.492879Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.492879Z",
+  "snapshot_count": 1
+}

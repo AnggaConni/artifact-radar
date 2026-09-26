@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1534d90d704440488c4026d66d2de7233718b99c",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:27.722723Z",
+      "title": "'Stolen' ancient sculpture returned to Nigeria is 'the kind of fake you could buy on eBay', African art expert says",
+      "page_title": "'Stolen' ancient sculpture returned to Nigeria is 'the kind of fake you could buy on eBay', African art expert says",
+      "page_description": "Countries' rush to restitute objects is part of the problem, says Belgian lawyer",
+      "image_urls": [
+        "https://cdn.sanity.io/images/cxgd3urn/production/b45d99bbd5068ee07bcde62f8f2f9362c335d42c-853x1280.jpg?rect=54,265,747,448&w=1200&h=720&q=85&fit=crop&auto=format",
+        "https://cdn.sanity.io/images/cxgd3urn/production/b45d99bbd5068ee07bcde62f8f2f9362c335d42c-853x1280.jpg?rect=55,281,745,447&w=1200&h=720&q=85&fit=crop&auto=format"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "iece was handed to Nigeria's ambassador to Mexico, Aminu Iyaw, in a special ceremony last week.  “The sculpture and its provenance were authenticated by experts and agencies of both countries, with the participation of specialists from the National Institute of Anthropology and History. It had been exported illegally,” says a statement issued by the Mexican ",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Nigeria",
+      "source_url": "https://www.theartnewspaper.com/2020/03/02/stolen-ancient-sculpture-returned-to-nigeria-is-the-kind-of-fake-you-could-buy-on-ebay-african-art-expert-says",
+      "final_url": "https://www.theartnewspaper.com/2020/03/02/stolen-ancient-sculpture-returned-to-nigeria-is-the-kind-of-fake-you-could-buy-on-ebay-african-art-expert-says",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "2632db8dbd63ff757ff5a7ff3b56247c092388ab4cbbb1f8eb928af1d4f8c596",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "62896fc63b1daa55b0fd4c3525b4f4230ee9372ca95a2a2683ff038177793818",
+      "first_observed_at": "2026-09-26T14:42:27.722723Z",
+      "last_observed_at": "2026-09-26T14:42:27.722723Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:27.722723Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "f67fae1a4f2bfd726b00cabec2181cde48a2e9a9",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:25.120188Z",
+      "title": "Khmerfigur (Khmer figure)",
+      "page_title": "One of the leading auction houses in Europe | HAMPEL Fine Art Auctions Munich",
+      "page_description": "One of the leading auction houses in Europe. Auctions of high quality art objects & collections. Safe expertise. December Auctions 2026, Thursday, 3 December 2026, Consignments deadline 23 October 2026",
+      "image_urls": [
+        "Illustration"
+      ],
+      "page_price_text": "0",
+      "page_price_currency": "EUR",
+      "provenance_excerpt": "ry auction via  livestream  from all around the world. \n\n\t\t\t Benefit from our expertise and have your art objects, your collection or  estate valued free of charge at any time . Our acquisition staff in Italy, France, the Netherlands, Spain, Monaco, Austria and the USA are always on the lookout for exquisite objects for our auctions. \n\n\t\t\t Our experts look f",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 3,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Cambodia)",
+      "source_url": "https://www.hampel-auctions.com/en/item-283-1022161.html",
+      "final_url": "https://www.hampel-auctions.com/",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "1371f3c6f12538feeb37a06c31ad3fc986b86b576ae25421e1d78fe66030bc5c",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3a98e7b33cb80fea90853b280f6a11c06d4a0fadaa1a6010b9e452d257978bb7",
+      "first_observed_at": "2026-09-26T14:42:25.120188Z",
+      "last_observed_at": "2026-09-26T14:42:25.120188Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:25.120188Z",
+  "snapshot_count": 1
+}

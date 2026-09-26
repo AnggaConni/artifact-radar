@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "9d4f311d2f195d3b6fa261b594c177f4ab479f79",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.963183Z",
+      "title": "Hundreds of Looted Ancient Artifacts Confiscated From the Black Market Are Now on Display in Naples",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Italy",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhRS_GPBvQBuFX2q2G4u8Q8PG9eDugehKB75rpyyp2qs6IlAdg27KMhHhdIYhLHEKaCGV-rrIQmwus2ribYX7UyIzJ0815g5Xcvvmt7cPzk3ujhwVs73qk8EZH_Ak-S84FVbi9ui71xycD_6SMt3rA4kDA5mYJQONW-z7VX4tr1YssWiQuVrJVeeahcF3Fbwd9DQDFZAtpdXRf7F_4zS_UguzUmFIxgnaGSKVVtC-LSi04JuGrCMzv3Sdwte48zHeWuO5dXV0tmlrI45M=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "cc6725c6ec46ac2575b75fc039fda4d5162861856bbbff211e48fe6ec449add3",
+      "first_observed_at": "2026-09-26T14:42:26.963183Z",
+      "last_observed_at": "2026-09-26T14:42:26.963183Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.963183Z",
+  "snapshot_count": 1
+}

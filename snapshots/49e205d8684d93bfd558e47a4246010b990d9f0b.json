@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "49e205d8684d93bfd558e47a4246010b990d9f0b",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:16.002792Z",
+      "title": "Plumber stumbles across hoard of ancient coins in field: 'Once in a lifetime find'",
+      "page_title": "Plumber stumbles across hoard of ancient coins in field: 'Once in a lifetime find'",
+      "page_description": "A British plumber named David Dunn is auctioning off a hoard of ancient Roman coins that he found while metal detecting in a field in 2023.",
+      "image_urls": [
+        "https://static.foxnews.com/foxnews.com/content/uploads/2025/02/uk-roman-coins-found-1.png",
+        "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1024/512/uk-roman-coins-found-1.png?ve=1&tl=1"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 60000,
+      "provenance_flag": true,
+      "risk_score": 3,
+      "ai_risk_score": null,
+      "origin_region": "Roman (Leicestershire, UK)",
+      "source_url": "https://www.foxnews.com/lifestyle/plumber-stumbles-across-hoard-ancient-coins-field-once-lifetime-find",
+      "final_url": "https://www.foxnews.com/lifestyle/plumber-stumbles-across-hoard-ancient-coins-field-once-lifetime-find",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "507c25cda6869812ada22f76e959890f0f2df5fa882b68e91df0c42d40cbeb89",
+      "etag": "\"6e88c-QI8hZEYEOAUBb/hfU2bQRsrsS+k\"",
+      "last_modified": "",
+      "snapshot_signature": "95cdae6927535b29dc36549ea1a10a922d50153081ae393ca8dc036e0fe6ba1a",
+      "first_observed_at": "2026-09-26T14:42:16.002792Z",
+      "last_observed_at": "2026-09-26T14:42:16.002792Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:16.002792Z",
+  "snapshot_count": 1
+}

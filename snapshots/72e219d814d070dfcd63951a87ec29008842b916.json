@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "72e219d814d070dfcd63951a87ec29008842b916",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:14.473334Z",
+      "title": "Paddle Shaped Club, Fiji | Art of Africa, Oceania, and the Americas",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 4,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.sothebys.com/en/buy/auction/2021/art-of-africa-oceania-and-the-americas/paddle-shaped-club-fiji",
+      "final_url": "https://www.sothebys.com/en/buy/auction/2021/art-of-africa-oceania-and-the-americas/paddle-shaped-club-fiji",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "\"spynae56ss12ug\"",
+      "last_modified": "",
+      "snapshot_signature": "34a77b728b18074221e250d357d64df4967b7fd0827f7af0a62e2fb055b1148d",
+      "first_observed_at": "2026-09-26T14:42:14.473334Z",
+      "last_observed_at": "2026-09-26T14:42:14.473334Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:14.473334Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "72f529c0cf7e6277599f65931e0ca5638678dbaf",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:22.483490Z",
+      "title": "Real replica gallery of flame pottery and clay figurines - 縄文ギャラリー「JOMON」",
+      "page_title": "縄文土器・火焔土器・土偶レプリカ販売｜縄文ギャラリー「JOMON」｜新潟市内の土器・土偶ギャラリー",
+      "page_description": "新潟県は火焔土器の故郷です。2021年に縄文の文化が「世界遺産」になり、そんな中で縄文ギャラリー「JOMON」が2019年3月にOPENしました。「より楽しく・より身近に、そしてよりお手頃で･･･」をテーマに、リアルだけど小さくカワイイ商品を取り揃えております。",
+      "image_urls": [
+        "https://jomondoki.jp/wp-content/uploads/2022/09/ogp_jomondoki.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Japan (replicas)",
+      "source_url": "https://www.jomondoki.jp/",
+      "final_url": "https://jomondoki.jp/",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "32306f185f358a685ddc81042c5ba8ef48d7405be24fcc621c7ec59cff1a2e06",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a78f4bd95b61e846ae752c0de84749fe98ec89bfcf181a44f9cb4cdb4c1fb93a",
+      "first_observed_at": "2026-09-26T14:42:22.483490Z",
+      "last_observed_at": "2026-09-26T14:42:22.483490Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:22.483490Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "94fdd4d671e146d82453e43ac13da8278726d5ab",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:27.189993Z",
+      "title": "Ancient Majapahit Terracotta Head Fragment, 14th Century Java, Antique Indonesian Artifact",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 495,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia, Java",
+      "source_url": "https://www.etsy.com/listing/1000000000/ancient-majapahit-terracotta-head",
+      "final_url": "https://www.etsy.com/listing/1000000000/ancient-majapahit-terracotta-head",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3603e1ed6602d0646ec55ca1d41d38ddccaf14944db5e97446814a23c6229fa9",
+      "first_observed_at": "2026-09-26T14:42:27.189993Z",
+      "last_observed_at": "2026-09-26T14:42:27.189993Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:27.189993Z",
+  "snapshot_count": 1
+}

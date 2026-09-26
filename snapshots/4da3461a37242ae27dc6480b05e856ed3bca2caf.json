@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "4da3461a37242ae27dc6480b05e856ed3bca2caf",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.438829Z",
+      "title": "Handmade Pre Columbian Shaman Puma Idol, Pre Inca Andean Tribal Art, Ceremonial Tiwanaku Pottery, Peru Bolivia Clay Sculpture - Etsy",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Peru Bolivia (Andean)",
+      "source_url": "https://www.etsy.com/listing/968032746/handmade-pre-columbian-shaman-puma-idol",
+      "final_url": "https://www.etsy.com/listing/968032746/handmade-pre-columbian-shaman-puma-idol",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "ce8314284d8fc94f5a297604aa8a6154be270a922a92338e90919b2532d41815",
+      "first_observed_at": "2026-09-26T14:42:13.438829Z",
+      "last_observed_at": "2026-09-26T14:42:13.438829Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.438829Z",
+  "snapshot_count": 1
+}

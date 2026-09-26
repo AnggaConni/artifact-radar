@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "da908a66ed08670c78450c91c0a100f5927c31c3",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:17.349618Z",
+      "title": "Italy Recovers $8.5 Million Artefacts After Tomb Raiders' Facebook Post",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "s_to_cow\":true,\"web_mix_long_byline_from_data\":true,\"web_modern_badge_shape\":true,\"web_modern_buttons\":true,\"web_modern_collections\":true,\"web_modern_dialogs\":true,\"web_modern_official_card_enable_shorts\":true,\"web_modern_official_card_for_events\":true,\"web_modern_official_card_for_music_artists\":true,\"web_modern_official_card_two_column_for_events\":true,\"we",
+      "price_usd": 8500000,
+      "provenance_flag": false,
+      "risk_score": 10,
+      "ai_risk_score": null,
+      "origin_region": "Etruscan (Italy)",
+      "source_url": "https://www.youtube.com/watch?v=some-video-id",
+      "final_url": "https://www.youtube.com/watch?v=some-video-id",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "6096adbdd6eb321bbdf2152bb75237ba96bf83495163ba99d4820af2a549dc9b",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3ea7de352054c3cd7e4af6cd63f486a61e555b126a5994cf32e236d5dc53d640",
+      "first_observed_at": "2026-09-26T14:42:17.349618Z",
+      "last_observed_at": "2026-09-26T14:42:17.349618Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:17.349618Z",
+  "snapshot_count": 1
+}

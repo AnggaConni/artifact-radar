@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c51a4765dc11e376261576af42adf478028b5593",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.446452Z",
+      "title": "Sofia Bulgaria Thracian Golden Treasure From Panagyurishte Natl History Museum - Postcard",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Unknown (postcards can be from anywhere)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAKLt6ql-PU5N1B3s50E6u_mpeFuMsDphxy3h0F_y7J6JlqlCPPvIVoNESBQg0L6zeQM5Lge8g65S9KkEgtR96jYGz85Y-SYwfVkq_FfIvLPjjHDtTg6_SeZKzlUKhGjE=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "60ca003126b427427f12e26f3f584ce68d4c18e576a3fe98d7efb27cbd21d7fd",
+      "first_observed_at": "2026-09-26T14:42:13.446452Z",
+      "last_observed_at": "2026-09-26T14:42:13.446452Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.446452Z",
+  "snapshot_count": 1
+}

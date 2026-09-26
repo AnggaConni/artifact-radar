@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "5dc8b2297911231d349bc119220c258714f56b90",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:27.873142Z",
+      "title": "Belgian Blunder: Government Sells Stolen Ife Head for €240",
+      "page_title": "Belgian Blunder: Government Sells Stolen Ife Head for €240 - Cultural Property News",
+      "page_description": "A magnificent life-size Ife bronze head, one of nine artworks, was stolen from the National Museum of Nigeria in Jos in 1987. The theft was documented – the thieves broke in and viciously attacked a guard – but the Nigerian authorities failed to identify the culprits. They did, however, notify both Interpol and UNESCO, which",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " regional UK auctioneer with a clientele for Asian and ethnographic art. The auction house expert researched the head’s provenance and found that it was stolen. The auction house contacted the Metropolitan Police, who seized the head. \n   Another Ife head in a Nigerian museum, photo taken in 1962. African Studies Center Leiden, NSAG Crebolder Collection. CCA",
+      "price_usd": 260.88,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Nigeria",
+      "source_url": "https://culturalpropertynews.org/belgian-blunder-government-sells-stolen-ife-head-for-e240/",
+      "final_url": "https://culturalpropertynews.org/belgian-blunder-government-sells-stolen-ife-head-for-e240",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "c6761f9e9a81fd8ac06d505f49b2c5c9f7d45c42af4643cb2cd5f89abc1693bf",
+      "etag": "",
+      "last_modified": "Sat, 26 Sep 2026 14:27:28 GMT",
+      "snapshot_signature": "ab8f53f081e6de53b9f09dc2c4fa2429be459f0f53b7f01899233c6a4e7da221",
+      "first_observed_at": "2026-09-26T14:42:27.873142Z",
+      "last_observed_at": "2026-09-26T14:42:27.873142Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:27.873142Z",
+  "snapshot_count": 1
+}

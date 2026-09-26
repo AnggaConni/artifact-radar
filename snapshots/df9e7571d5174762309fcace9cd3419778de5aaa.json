@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "df9e7571d5174762309fcace9cd3419778de5aaa",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.962463Z",
+      "title": "A RARE SHELL-INLAID NANBAN LACQUER CABINET",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 16848,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-N3qOCRwNtm7wylA-lCpAUpxK9dFu8knPqw4ZZLFW_pD7r6sUvm7twGNThHeKZE-WFgT8kaTThXw1ky10K4o9uOMf30phc4XEBl--lz9nxpJ9eDjiDbkiYp-Sj47IaQLoE7FTTlBr7exwZKgGalK10Eds_iANNRmW4aoaCzMwmEu1zLnc-c8EuMH8GKsjGZ-0H10UAiqXBYm3FMa6",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "147ab868912fe380e30a7f9e78ed8a6fb14ef56810b5481994c3d73b2e38f120",
+      "first_observed_at": "2026-09-26T14:42:26.962463Z",
+      "last_observed_at": "2026-09-26T14:42:26.962463Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.962463Z",
+  "snapshot_count": 1
+}

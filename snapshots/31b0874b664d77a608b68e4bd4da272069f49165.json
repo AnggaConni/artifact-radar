@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "31b0874b664d77a608b68e4bd4da272069f49165",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:13.437260Z",
+      "title": "Detectorist Hoards Sold at Auction",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "UK (various, e.g., Roman, Tudor, Anglo-Saxon)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErP4O9NQNi752yDQxhoPCu-_62lTgC1gS7bcQUEHy2YW6X-95kzEw3KmKUoqx4QOTS20g7MWrVuCdwgZy84uu7-EnkTCz7jprDcvC56R42WLrKbpnENeophtCy0g1mI9RSI4vLMVnNCM5Pt_JA7UaHJX1X",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "10d4e1c9059f3b5e981c93fc9dfc104c4bab1ad24e5842dd62ab5f4629a48126",
+      "first_observed_at": "2026-09-26T14:42:13.437260Z",
+      "last_observed_at": "2026-09-26T14:42:13.437260Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:13.437260Z",
+  "snapshot_count": 1
+}

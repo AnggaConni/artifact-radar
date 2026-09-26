@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "6757a5f56709369d0dd7f79ed80e7576fbc92df0",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:15.946518Z",
+      "title": "Ancient Scythian ring, Amulet ring, Authentic Scythian artifact, 5-2 centuries BC, historical artifact, Oval amulet, Metal detector find",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Scythia (likely Eastern Europe/Central Asia)",
+      "source_url": "https://www.etsy.com/listing/some-id/ancient-scythian-ring-amulet-ring-authentic-scythian-artifact",
+      "final_url": "https://www.etsy.com/listing/some-id/ancient-scythian-ring-amulet-ring-authentic-scythian-artifact",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "bd8371d3e839c2217504dcdd10521ebdd6a543565fb632c2bf8c4106f9de3f3c",
+      "first_observed_at": "2026-09-26T14:42:15.946518Z",
+      "last_observed_at": "2026-09-26T14:42:15.946518Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:15.946518Z",
+  "snapshot_count": 1
+}

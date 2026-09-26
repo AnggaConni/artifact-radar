@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "e31d35107a105474d61e3bb444a31aaf64254bcc",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:20.072735Z",
+      "title": "Timbuktu manuscripts mostly safe, university says - MPR News",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Mali, Timbuktu",
+      "source_url": "https://www.mprnews.org/story/2013/01/30/world/timbuktu-manuscripts-safe",
+      "final_url": "https://www.mprnews.org/story/2013/01/30/world/timbuktu-manuscripts-safe",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "\"3myhfbs29tdx1\"",
+      "last_modified": "",
+      "snapshot_signature": "8eb263933e7e932944fb18f618ae1dafd3ecdb12e0c9be443ad428196af3738e",
+      "first_observed_at": "2026-09-26T14:42:20.072735Z",
+      "last_observed_at": "2026-09-26T14:42:20.072735Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:20.072735Z",
+  "snapshot_count": 1
+}

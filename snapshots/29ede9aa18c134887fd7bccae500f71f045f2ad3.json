@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "29ede9aa18c134887fd7bccae500f71f045f2ad3",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:25.557427Z",
+      "title": "Ancient Egyptian Ushabtis (Shawabtis) for Sale",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 750,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://ancientresource.com/lots/ancient-egyptian-ushabtis-shawabtis",
+      "final_url": "https://ancientresource.com/lots/ancient-egyptian-ushabtis-shawabtis",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "eedd9355e66dbc93955a489083151242338ea9181ccb6ae74798ee9290730e74",
+      "first_observed_at": "2026-09-26T14:42:25.557427Z",
+      "last_observed_at": "2026-09-26T14:42:25.557427Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:25.557427Z",
+  "snapshot_count": 1
+}

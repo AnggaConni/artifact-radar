@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "5b863748135f6ccb40891cf6ca26c2607e5fbeec",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:17.889507Z",
+      "title": "Myanmar Mon Artist, Figurative Sculpture, Kingdom of Hanthawaddy, Bronze",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 3110.4,
+      "provenance_flag": true,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Myanmar/Burma, Hanthawaddy Kingdom)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWz8StW_p0AFf5m4tNks-1vlc8OGyyjg7-tkTSI8IbA3w5Y3NKiL3zENoq5hmhb2ApkH880kqKV_DkVmh3fHSmx7M1TOoK5aBJsnlzZnDeC8V3JkmP17cief2xPOCxcIyA5hbs_KrB0QMcqqGyoHy3Fde6-djm2Dh8A2bph2pScnNjcQs1T0KRcu9jyCosNbnGlbfA",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "8564de334ff7c3a198822b864d3f69e751aeb9b2cdae3061d358c6a6478c2653",
+      "first_observed_at": "2026-09-26T14:42:17.889507Z",
+      "last_observed_at": "2026-09-26T14:42:17.889507Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:17.889507Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "eef0e9344489e0ac6393622d4fe31282e38b673f",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:25.326282Z",
+      "title": "Shop Pueblo Pottery Online | Since 1916 - Cameron Trading Post",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 115.0,
+      "provenance_flag": true,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Southwest US (Zia Pueblo, Santa Ana Pueblo, Zuni Pueblo, San Juan Pueblo, Santo Domingo Pueblo, Laguna)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-bIVn5pDU7SvNJkInuZz_3Q23l2k2eSWFtI73iR8YveeQdXdQbBgaX5uQmLv-BkvCOAKISuaEF2D3i1VJsrvd3Lyu1p-tkfExFYbp5Qp-3qXWZ1LkNREDoRT2j3-Dv7VPN49pq5Hay7bDbbVa2v6NHPW2JDpLY-mbJS_lUidN9dRYPtM876iq-Glv8xrnNMlxE5vT3LMHow==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "801e15d8b1ea9ba1c6f38254b6b07aa3b1d2a38476b5a5545e135aa985f912d2",
+      "first_observed_at": "2026-09-26T14:42:25.326282Z",
+      "last_observed_at": "2026-09-26T14:42:25.326282Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:25.326282Z",
+  "snapshot_count": 1
+}

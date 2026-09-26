@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c51c0515095dcdaaa48e1a90ce974974c476c684",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:26.963110Z",
+      "title": "Arab Conference calls for measures against antiquities smuggling",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "MENA region (Middle East and North Africa)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnUb3G_MZ6jZK1FzoxzC4zfwOQTea-atm2mwBk7_Kx8LNUV2LR5kzGLfVvuqv2cX0J7XRxOb14lR29S0HQVNNWapoheR6Ssz-2TGKY188hmOJHs6EJKhzrrZwV_xSeFnWl7-wOO080viucu2QKW8Dctn68DJH6Si0HgUPNJQQZE8hPEVjm3jG3Prt51e2Sife5d7fvV8zrli_d86K_ilBV0PoyBG0qEakwPfC9v7Obe2MEmreoEmp1MkGRmNNN",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a31d85b4b34972783f3f80e962fcab78936f6176ba61b10624ab610987b289b2",
+      "first_observed_at": "2026-09-26T14:42:26.963110Z",
+      "last_observed_at": "2026-09-26T14:42:26.963110Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:26.963110Z",
+  "snapshot_count": 1
+}

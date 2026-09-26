@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "ce72148157fc7bf39b8d070365d4db59ac64f4c3",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:23.453955Z",
+      "title": "Curated Collection of Hand-Worked Stone Lithic Artifacts and Projectile Points - 21 Pieces For.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 425,
+      "provenance_flag": false,
+      "risk_score": 7,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5jE1KjJaNWqAVZjCqkYbtyiEKWeTrzM7lSivqk8Kf8mZTh2H7fAU5bJLTFCIJogZx7y_0Q1CNVY70M6QTNw6hGF8VwRTQ03I7JXGqpIOkELetsRywuNNRLc_ji3sRmPOCurjgFkFPhZJTD9JX0Lv-fl4=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "756397d45d8f728900ec486b07c32bd845a1da95708953e2a04b4e45858dbfda",
+      "first_observed_at": "2026-09-26T14:42:23.453955Z",
+      "last_observed_at": "2026-09-26T14:42:23.453955Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:23.453955Z",
+  "snapshot_count": 1
+}

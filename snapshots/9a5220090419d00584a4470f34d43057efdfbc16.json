@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "9a5220090419d00584a4470f34d43057efdfbc16",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:23.454222Z",
+      "title": "13th century Maya codex, long shrouded in controversy, proves genuine | Brown University",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": null,
+      "origin_region": "Mesoamerica (Mexico)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTqf9UrkbPDnM0ST7AYS_Z066072tnvyJKfQkM2tUUVc6PzIZaBzE78jKli8309w8_y6HsUo2C7KuFs8XQ0Z73Q1OQx0YCg9MbBo4Fcw6CAj_PHHt8rMWC8X-T2Zxp8psVtuz6P0yTErFs",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "60ca003126b427427f12e26f3f584ce68d4c18e576a3fe98d7efb27cbd21d7fd",
+      "first_observed_at": "2026-09-26T14:42:23.454222Z",
+      "last_observed_at": "2026-09-26T14:42:23.454222Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:23.454222Z",
+  "snapshot_count": 1
+}

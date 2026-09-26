@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a2d696d0825cb00f59fd65908f4034373f413844",
+  "observations": [
+    {
+      "observed_at": "2026-09-26T14:42:16.460992Z",
+      "title": "Ancient artifacts stolen 40 years ago in Alabama recovered",
+      "page_title": "Vogtle evacuation plan updated",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "bscription Terms & Conditions   Advertiser Acceptance Policy   Terms of Service   Privacy Policy   California Notice at Collection   Do Not Sell or Share My Personal Information   Your Privacy Choices   Staff Directory    Contact Us   Support Local Business   Advertise Your Business   Buy and Sell   Licensing & Reprints   Help Center   Subscriber Guide   Man",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Native American (Moundville, Alabama, USA)",
+      "source_url": "https://www.tuscaloosanews.com/story/news/2018/11/14/ancient-artifacts-stolen-40-years-ago-in-alabama-recovered/14467554007",
+      "final_url": "https://www.tuscaloosanews.com/story/news/2013/01/21/vogtle-evacuation-plan-updated/14467554007",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "a455931e4985ee79584a178454c1715abffce064dcf238015fbeef291e1dc5e2",
+      "etag": "W/\"2b39b-D30mq+u4+PQctllLLD3FF77lKxw\"",
+      "last_modified": "",
+      "snapshot_signature": "286a7fc21f709d54d5cd75be8bb2637d6f76ba8f1c72b46844ff5f7217f4dcb7",
+      "first_observed_at": "2026-09-26T14:42:16.460992Z",
+      "last_observed_at": "2026-09-26T14:42:16.460992Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-09-26T14:42:16.460992Z",
+  "snapshot_count": 1
+}
