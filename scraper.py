@@ -14,6 +14,7 @@ import logging
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 import re
 import time
+from html import unescape
 from datetime import datetime, timedelta
 import requests
 
@@ -39,6 +40,8 @@ QUERY_STRIDE = 97
 SOURCE_CHECK_WORKERS = max(2, min(int(os.environ.get("SOURCE_CHECK_WORKERS", "8")), 12))
 SOURCE_CHECK_TIMEOUT = max(5, min(int(os.environ.get("SOURCE_CHECK_TIMEOUT", "12")), 30))
 HISTORY_EVENT_LIMIT = 12
+SNAPSHOT_LIMIT = 12
+SNAPSHOT_DIR = os.path.join(BASE_DIR, "snapshots")
 
 # ======================================================================
 # GLOBAL KEYWORD DATABASE (Full English)
@@ -297,6 +300,210 @@ def source_signature(response):
     return hashlib.sha256(raw).hexdigest()
 
 
+def _clean_html_text(raw):
+    text = re.sub(r"(?is)<(script|style|noscript|svg).*?>.*?</\\1>", " ", raw or "")
+    text = re.sub(r"(?s)<!--.*?-->", " ", text)
+    text = re.sub(r"(?s)<[^>]+>", " ", text)
+    text = unescape(text)
+    return re.sub(r"\\s+", " ", text).strip()
+
+
+def _first_meta(text, patterns):
+    for pattern in patterns:
+        m = re.search(pattern, text or "", re.I)
+        if m:
+            value = unescape(m.group(1)).strip()
+            if value:
+                return value
+    return ""
+
+
+def extract_page_metadata(body, content_type=""):
+    """Extract lightweight structured page metadata for change detection."""
+    if not body or "html" not in (content_type or "").lower():
+        return {}
+    try:
+        encoding = "utf-8"
+        raw = body.decode(encoding, errors="replace")
+        title = _first_meta(raw, [
+            r"<meta[^>]+property=[\\\"']og:title[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
+            r"<meta[^>]+content=[\\\"']([^\\\"']+)[\\\"'][^>]+property=[\\\"']og:title[\\\"']",
+            r"<title[^>]*>(.*?)</title>"
+        ])
+        description = _first_meta(raw, [
+            r"<meta[^>]+name=[\\\"']description[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
+            r"<meta[^>]+content=[\\\"']([^\\\"']+)[\\\"'][^>]+name=[\\\"']description[\\\"']",
+            r"<meta[^>]+property=[\\\"']og:description[\\\"'][^>]+content=[\\\"']([^\\\"']+)"
+        ])
+        images = []
+        for pattern in [
+            r"<meta[^>]+property=[\\\"']og:image[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
+            r"<meta[^>]+content=[\\\"']([^\\\"']+)[\\\"'][^>]+property=[\\\"']og:image[\\\"']",
+            r"<meta[^>]+name=[\\\"']twitter:image[\\\"'][^>]+content=[\\\"']([^\\\"']+)"
+        ]:
+            for m in re.finditer(pattern, raw, re.I):
+                value = unescape(m.group(1)).strip()
+                if value and value not in images:
+                    images.append(value)
+        for m in re.finditer(r"[\\\"']image[\\\"']\\s*:\\s*[\\\"']([^\\\"']+)", raw, re.I):
+            value = unescape(m.group(1)).strip()
+            if value and value not in images:
+                images.append(value)
+            if len(images) >= 8:
+                break
+
+        price_text = _first_meta(raw, [
+            r"[\\\"']price[\\\"']\\s*:\\s*[\\\"']([^\\\"']+)",
+            r"itemprop=[\\\"']price[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
+            r"<meta[^>]+property=[\\\"']product:price:amount[\\\"'][^>]+content=[\\\"']([^\\\"']+)"
+        ])
+        currency = _first_meta(raw, [
+            r"[\\\"']priceCurrency[\\\"']\\s*:\\s*[\\\"']([^\\\"']+)",
+            r"itemprop=[\\\"']priceCurrency[\\\"'][^>]+content=[\\\"']([^\\\"']+)",
+            r"<meta[^>]+property=[\\\"']product:price:currency[\\\"'][^>]+content=[\\\"']([^\\\"']+)"
+        ])
+
+        plain = _clean_html_text(raw)
+        provenance_excerpt = ""
+        for term in ("provenance", "collection", "ownership", "acquired", "provenienza"):
+            idx = plain.lower().find(term)
+            if idx >= 0:
+                start = max(0, idx - 120)
+                provenance_excerpt = plain[start:start + 360]
+                break
+
+        return {
+            "page_title": title[:500],
+            "page_description": description[:1200],
+            "image_urls": images[:8],
+            "page_price_text": price_text[:120],
+            "page_price_currency": currency[:20],
+            "provenance_excerpt": provenance_excerpt[:500]
+        }
+    except Exception:
+        return {}
+
+
+def snapshot_file_path(fingerprint):
+    os.makedirs(SNAPSHOT_DIR, exist_ok=True)
+    return os.path.join(SNAPSHOT_DIR, f"{fingerprint}.json")
+
+
+def load_snapshot_history(fingerprint):
+    path = snapshot_file_path(fingerprint)
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            return data
+    except Exception:
+        pass
+    return {"_meta": {"version": "1.0", "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."}, "fingerprint": fingerprint, "observations": []}
+
+
+def snapshot_value_signature(snapshot):
+    payload = {
+        "page_title": snapshot.get("page_title", ""),
+        "page_description": snapshot.get("page_description", ""),
+        "image_urls": sorted(snapshot.get("image_urls", [])),
+        "page_price_text": snapshot.get("page_price_text", ""),
+        "page_price_currency": snapshot.get("page_price_currency", ""),
+        "provenance_excerpt": snapshot.get("provenance_excerpt", ""),
+        "price_usd": snapshot.get("price_usd"),
+        "provenance_flag": snapshot.get("provenance_flag"),
+        "risk_score": snapshot.get("risk_score"),
+        "ai_risk_score": snapshot.get("ai_risk_score"),
+        "final_url": snapshot.get("final_url", ""),
+        "source_status": snapshot.get("source_status", "")
+    }
+    return hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()
+
+
+def make_snapshot(item, state):
+    page = state.get("page_metadata", {}) or {}
+    snapshot = {
+        "observed_at": state.get("checked_at") or datetime.now().isoformat() + "Z",
+        "title": item.get("original_title", ""),
+        "page_title": page.get("page_title", ""),
+        "page_description": page.get("page_description", ""),
+        "image_urls": page.get("image_urls", []),
+        "page_price_text": page.get("page_price_text", ""),
+        "page_price_currency": page.get("page_price_currency", ""),
+        "provenance_excerpt": page.get("provenance_excerpt", ""),
+        "price_usd": item.get("price_usd"),
+        "provenance_flag": item.get("provenance_flag"),
+        "risk_score": item.get("risk_score"),
+        "ai_risk_score": item.get("ai_risk_score"),
+        "origin_region": item.get("origin_region", ""),
+        "source_url": item.get("canonical_source_url") or canonical_source_url(item),
+        "final_url": state.get("final_url", ""),
+        "source_status": state.get("status", "UNKNOWN"),
+        "http_status": state.get("http_status"),
+        "content_hash": state.get("content_hash", ""),
+        "etag": state.get("etag", ""),
+        "last_modified": state.get("last_modified", "")
+    }
+    snapshot["snapshot_signature"] = snapshot_value_signature(snapshot)
+    return snapshot
+
+
+def diff_snapshots(previous, current):
+    if not previous:
+        return [{"field": "snapshot", "change": "INITIAL_SNAPSHOT", "before": None, "after": current.get("observed_at")}]
+
+    diffs = []
+    def add(field, change, before, after):
+        if before != after:
+            diffs.append({
+                "field": field,
+                "change": change,
+                "before": before,
+                "after": after
+            })
+
+    add("title", "TITLE_CHANGED", previous.get("page_title") or previous.get("title", ""), current.get("page_title") or current.get("title", ""))
+    add("description", "DESCRIPTION_CHANGED", previous.get("page_description", ""), current.get("page_description", ""))
+    add("price", "PRICE_CHANGED", previous.get("price_usd"), current.get("price_usd"))
+    add("page_price", "PAGE_PRICE_CHANGED", previous.get("page_price_text", ""), current.get("page_price_text", ""))
+    add("provenance", "PROVENANCE_CHANGED", previous.get("provenance_flag"), current.get("provenance_flag"))
+    add("provenance_text", "PROVENANCE_TEXT_CHANGED", previous.get("provenance_excerpt", ""), current.get("provenance_excerpt", ""))
+    add("images", "IMAGE_CHANGED", sorted(previous.get("image_urls", [])), sorted(current.get("image_urls", [])))
+    add("risk_score", "RISK_SCORE_CHANGED", previous.get("risk_score"), current.get("risk_score"))
+    add("ai_risk_score", "AI_RISK_SCORE_CHANGED", previous.get("ai_risk_score"), current.get("ai_risk_score"))
+    add("final_url", "FINAL_URL_CHANGED", previous.get("final_url", ""), current.get("final_url", ""))
+    return diffs
+
+
+def persist_snapshot(fingerprint, snapshot):
+    store = load_snapshot_history(fingerprint)
+    observations = store.get("observations", []) if isinstance(store.get("observations"), list) else []
+    previous = observations[-1] if observations else None
+    diffs = diff_snapshots(previous, snapshot)
+
+    if previous and previous.get("snapshot_signature") == snapshot.get("snapshot_signature"):
+        previous["last_observed_at"] = snapshot.get("observed_at")
+        previous["observations_seen"] = int(previous.get("observations_seen", 1) or 1) + 1
+        current = previous
+    else:
+        snapshot["first_observed_at"] = snapshot.get("observed_at")
+        snapshot["last_observed_at"] = snapshot.get("observed_at")
+        snapshot["observations_seen"] = 1
+        observations.append(snapshot)
+        observations = observations[-SNAPSHOT_LIMIT:]
+        current = snapshot
+
+    store.update({
+        "fingerprint": fingerprint,
+        "updated_at": snapshot.get("observed_at"),
+        "snapshot_count": len(observations),
+        "observations": observations
+    })
+    with open(snapshot_file_path(fingerprint), "w", encoding="utf-8") as f:
+        json.dump(store, f, indent=2, ensure_ascii=False)
+
+    return previous, current, diffs, len(observations)
+
+
 def fetch_source_state(item):
     """
     Check a source without interpreting intent.
@@ -322,7 +529,7 @@ def fetch_source_state(item):
 
     checked_at = datetime.now().isoformat() + "Z"
     headers = {
-        "User-Agent": "ArtifactRadar/6.1 (+https://github.com/AnggaConni/artifact-radar)"
+        "User-Agent": "ArtifactRadar/7.0 (+https://github.com/AnggaConni/artifact-radar)"
     }
 
     try:
@@ -347,6 +554,8 @@ def fetch_source_state(item):
         response._content = body
 
         content_hash = source_signature(response) if response.status_code == 200 else ""
+        content_type = response.headers.get("content-type", "")
+        page_metadata = extract_page_metadata(body, content_type) if response.status_code == 200 else {}
         response._content = original_content
 
         final_url = normalize_url(response.url)
@@ -373,7 +582,8 @@ def fetch_source_state(item):
             "final_url": final_url,
             "content_hash": content_hash,
             "etag": response.headers.get("etag", ""),
-            "last_modified": response.headers.get("last-modified", "")
+            "last_modified": response.headers.get("last-modified", ""),
+            "page_metadata": page_metadata
         }
 
     except requests.exceptions.Timeout:
@@ -413,7 +623,14 @@ def update_source_history(listings, source_history):
         "redirected": 0,
         "removed_events": 0,
         "unavailable_events": 0,
-        "content_change_events": 0
+        "content_change_events": 0,
+        "snapshot_field_change_events": 0,
+        "title_change_events": 0,
+        "description_change_events": 0,
+        "price_change_events": 0,
+        "image_change_events": 0,
+        "provenance_change_events": 0,
+        "risk_change_events": 0
     }
 
     monitor_targets = []
@@ -450,6 +667,21 @@ def update_source_history(listings, source_history):
 
         current_status = state.get("status", "UNKNOWN")
         current_hash = state.get("content_hash", "")
+
+        snapshot = make_snapshot(item, state)
+        previous_snapshot, current_snapshot, snapshot_diffs, snapshot_count = persist_snapshot(fp, snapshot)
+        snapshot_changes = [d.get("change") for d in snapshot_diffs if d.get("change")]
+        snapshot_changed = bool(previous_snapshot and snapshot_changes and snapshot_changes != ["INITIAL_SNAPSHOT"])
+
+        if snapshot_changed:
+            counters["snapshot_field_change_events"] += 1
+            for code in snapshot_changes:
+                if code in ("TITLE_CHANGED",): counters["title_change_events"] += 1
+                if code in ("DESCRIPTION_CHANGED",): counters["description_change_events"] += 1
+                if code in ("PRICE_CHANGED", "PAGE_PRICE_CHANGED"): counters["price_change_events"] += 1
+                if code in ("IMAGE_CHANGED",): counters["image_change_events"] += 1
+                if code in ("PROVENANCE_CHANGED", "PROVENANCE_TEXT_CHANGED"): counters["provenance_change_events"] += 1
+                if code in ("RISK_SCORE_CHANGED", "AI_RISK_SCORE_CHANGED"): counters["risk_change_events"] += 1
 
         change_type = "UNCHANGED"
         if not events:
@@ -509,7 +741,11 @@ def update_source_history(listings, source_history):
             "provenance_flag": item.get("provenance_flag"),
             "price_usd": item.get("price_usd"),
             "source_type": item.get("source_type", ""),
-            "platform": item.get("platform", "")
+            "platform": item.get("platform", ""),
+            "snapshot_count": snapshot_count,
+            "snapshot_changes": snapshot_changes,
+            "snapshot_diffs": snapshot_diffs,
+            "snapshot_file": f"snapshots/{fp}.json"
         }
 
         events.append(event)
@@ -527,7 +763,10 @@ def update_source_history(listings, source_history):
             "http_status": state.get("http_status"),
             "change_type": change_type,
             "source_type": item.get("source_type", ""),
-            "platform": item.get("platform", "")
+            "platform": item.get("platform", ""),
+            "snapshot_count": snapshot_count,
+            "snapshot_changes": snapshot_changes,
+            "snapshot_diffs": snapshot_diffs
         })
         observations = observations[-HISTORY_EVENT_LIMIT:]
 
@@ -541,6 +780,9 @@ def update_source_history(listings, source_history):
             "last_ai_risk_score": item.get("ai_risk_score"),
             "last_price_usd": item.get("price_usd"),
             "last_provenance_flag": item.get("provenance_flag"),
+            "last_snapshot_signature": current_snapshot.get("snapshot_signature"),
+            "last_snapshot_observed_at": current_snapshot.get("observed_at"),
+            "snapshot_changed": snapshot_changed,
             "events": events,
             "observations": observations
         })
@@ -553,10 +795,15 @@ def update_source_history(listings, source_history):
         item["source_final_url"] = state.get("final_url", "")
         item["source_content_hash"] = current_hash
         item["source_change_type"] = change_type
+        item["snapshot_changed"] = snapshot_changed
+        item["snapshot_changes"] = snapshot_changes
+        item["snapshot_last_observed_at"] = current_snapshot.get("observed_at")
+        item["snapshot_count"] = snapshot_count
+        item["snapshot_file"] = f"snapshots/{fp}.json"
         item["source_change_detected"] = change_type in {
             "SOURCE_DISAPPEARED", "SOURCE_RECOVERED",
             "POSSIBLE_CONTENT_CHANGE", "SOURCE_REDIRECTED"
-        }
+        } or snapshot_changed
         item["source_history_count"] = len(events)
         if change_type == "POSSIBLE_CONTENT_CHANGE":
             item["last_content_change_at"] = state.get("checked_at")
@@ -1089,6 +1336,13 @@ def main():
         db["summary"]["source_removed_count"] = source_monitor["removed_events"]
         db["summary"]["source_unavailable_count"] = source_monitor["unavailable_events"]
         db["summary"]["source_recovered_count"] = source_monitor["recovered"]
+        db["summary"]["snapshot_field_change_events"] = source_monitor["snapshot_field_change_events"]
+        db["summary"]["snapshot_title_change_events"] = source_monitor["title_change_events"]
+        db["summary"]["snapshot_description_change_events"] = source_monitor["description_change_events"]
+        db["summary"]["snapshot_price_change_events"] = source_monitor["price_change_events"]
+        db["summary"]["snapshot_image_change_events"] = source_monitor["image_change_events"]
+        db["summary"]["snapshot_provenance_change_events"] = source_monitor["provenance_change_events"]
+        db["summary"]["snapshot_risk_change_events"] = source_monitor["risk_change_events"]
         db["summary"]["provenanced_count"] = sum(
             1 for x in listings if x.get("provenance_flag")
         )
@@ -1117,7 +1371,7 @@ def main():
             "query_cursor": next_cursor,
             "recent_queries": recent_queries,
             "targets_per_run": TARGETS_PER_RUN,
-            "crawl_version": "v6.1",
+            "crawl_version": "v7.0",
             "source_monitor": source_monitor
         }
 
