@@ -1,6 +1,6 @@
 """
 =======================================================================
-  ARTIFACT RADAR v5.1 — Global Intelligence Engine
+  ARTIFACT RADAR v6.0 — Evidence-Aware Intelligence Engine
   AI Engine : Google Gemini 2.5 Flash (Google Search Grounding)
   Mode      : Full English, Global Scope, 8-Day Interval
   Feature   : Auto-Backfill Missing Screenshots
@@ -11,7 +11,7 @@ import os
 import json
 import hashlib
 import logging
-import random
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 import re
 import time
 from datetime import datetime, timedelta
@@ -30,6 +30,11 @@ BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
 DATA_FILE    = os.path.join(BASE_DIR, "data.json")
 SCRIPT_FILE  = os.path.abspath(__file__)
+
+# ── Runtime Controls ──
+TARGETS_PER_RUN = max(1, min(int(os.environ.get("TARGETS_PER_RUN", "3")), 6))
+QUERY_HISTORY_LIMIT = 12
+QUERY_STRIDE = 97
 
 # ======================================================================
 # GLOBAL KEYWORD DATABASE (Full English)
@@ -249,6 +254,208 @@ KEYWORDS = [
 "ethnographic object not antiquity listed"
 ]
 
+
+# ======================================================================
+# QUERY ROTATION / URL NORMALISATION / EVIDENCE SCORING
+# ======================================================================
+
+def normalize_url(raw_url):
+    """Return a stable URL representation for duplicate detection and storage."""
+    if not raw_url:
+        return ""
+    raw_url = str(raw_url).strip()
+    if not raw_url or raw_url.lower() in {"n/a", "none", "null"}:
+        return ""
+    try:
+        p = urlsplit(raw_url)
+        scheme = p.scheme.lower() or "https"
+        netloc = p.netloc.lower()
+        if netloc.endswith(":80") and scheme == "http":
+            netloc = netloc[:-3]
+        if netloc.endswith(":443") and scheme == "https":
+            netloc = netloc[:-4]
+
+        blocked = {
+            "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+            "gclid", "fbclid", "mc_cid", "mc_eid", "ref", "source"
+        }
+        qs = [(k, v) for k, v in parse_qsl(p.query, keep_blank_values=True)
+              if k.lower() not in blocked]
+        qs.sort()
+
+        return urlunsplit((
+            scheme,
+            netloc,
+            p.path.rstrip("/") or "/",
+            urlencode(qs, doseq=True),
+            ""
+        ))
+    except Exception:
+        return raw_url.rstrip("/")
+
+
+def choose_query_targets(history):
+    """Rotate through the keyword bank deterministically instead of random sampling."""
+    cursor = int(history.get("query_cursor", 0) or 0)
+    n = len(KEYWORDS)
+    if not n:
+        return [], cursor
+
+    step = max(1, min(QUERY_STRIDE, n - 1))
+    recent = {str(x).strip().lower() for x in history.get("recent_queries", [])[-QUERY_HISTORY_LIMIT:]}
+    targets = []
+    checked = 0
+    offset = 0
+
+    while len(targets) < TARGETS_PER_RUN and checked < n * 2:
+        idx = (cursor + offset * step) % n
+        candidate = KEYWORDS[idx]
+        if candidate.lower() not in recent and candidate not in targets:
+            targets.append(candidate)
+        offset += 1
+        checked += 1
+
+    while len(targets) < min(TARGETS_PER_RUN, n):
+        idx = (cursor + offset * step) % n
+        candidate = KEYWORDS[idx]
+        if candidate not in targets:
+            targets.append(candidate)
+        offset += 1
+
+    next_cursor = (cursor + 1) % n
+    return targets, next_cursor
+
+
+def derive_evidence(item, target):
+    """Create explicit, auditable evidence flags from returned fields."""
+    text = " ".join([
+        str(item.get("original_title", "")),
+        str(item.get("reason", "")),
+        str(item.get("platform", "")),
+        str(item.get("origin_region", "")),
+        str(item.get("source_type", "")),
+        str(target or "")
+    ]).lower()
+
+    def has_any(words):
+        return any(w in text for w in words)
+
+    evidence = {
+        "sale_or_market_signal": has_any([
+            "for sale", "sale", "auction", "listing", "marketplace", "dealer",
+            "seller", "buy", "bidding", "price", "lot"
+        ]),
+        "provenance_missing_signal": (
+            item.get("provenance_flag") is False and has_any([
+                "no provenance", "without provenance", "no papers", "no documentation",
+                "undocumented", "unknown provenance", "unclear provenance",
+                "missing provenance", "no ownership history", "unknown origin"
+            ])
+        ),
+        "trafficking_or_looting_signal": has_any([
+            "trafficking", "smuggling", "looted", "loot", "stolen", "illicit",
+            "black market", "seized", "seizure", "repatriat", "illegal export",
+            "illegal import", "conflict zone", "war zone"
+        ]),
+        "export_or_legal_risk_signal": has_any([
+            "export ban", "export restriction", "export permit", "customs",
+            "cultural property law", "restricted", "prohibited", "permit required",
+            "import restriction", "legal grey", "legal gray", "no papers"
+        ]),
+        "seller_opacity_signal": has_any([
+            "anonymous seller", "anonymous", "unknown seller", "private seller",
+            "discreet", "no questions asked", "anonymous payment", "crypto payment"
+        ]),
+        "authenticity_claim_signal": has_any([
+            "authentic", "genuine", "ancient", "original", "authenticity"
+        ]),
+        "documented_provenance_signal": bool(item.get("provenance_flag")) or has_any([
+            "provenance", "private collection", "public collection", "museum collection",
+            "published collection", "acquired in", "formerly collection"
+        ]),
+        "news_or_institutional_context": has_any([
+            "news", "museum", "university", "government", "police", "interpol",
+            "unesco", "customs", "research", "academic"
+        ])
+    }
+
+    return evidence
+
+
+def calculate_evidence_risk(item, evidence):
+    """Deterministic score based on observed signals; AI score is retained separately."""
+    score = 0
+    factors = []
+
+    weights = [
+        ("trafficking_or_looting_signal", 3, "Trafficking / looting signal"),
+        ("provenance_missing_signal", 3, "Missing / unclear provenance"),
+        ("export_or_legal_risk_signal", 2, "Export / legal-risk signal"),
+        ("seller_opacity_signal", 1, "Seller / transaction opacity"),
+        ("sale_or_market_signal", 1, "Active market / sale signal"),
+    ]
+
+    for key, points, label in weights:
+        if evidence.get(key):
+            score += points
+            factors.append(label)
+
+    if evidence.get("authenticity_claim_signal") and evidence.get("sale_or_market_signal"):
+        score += 1
+        factors.append("Authenticity claim attached to a market signal")
+
+    if evidence.get("documented_provenance_signal") and not evidence.get("provenance_missing_signal"):
+        score -= 3
+        factors.append("Documented provenance signal")
+
+    score = max(0, min(10, score))
+
+    if score >= 8:
+        status = "HIGH RISK"
+    elif score >= 4:
+        status = "MEDIUM RISK"
+    else:
+        status = "INFO ONLY"
+
+    return score, status, factors
+
+
+def enrich_item(item, target):
+    """Normalise a model result and attach auditable evidence fields."""
+    if not isinstance(item, dict):
+        return None
+
+    direct_url = item.get("canonical_source_url") or item.get("source_url") or item.get("url")
+    canonical = normalize_url(direct_url)
+    if not canonical:
+        return None
+
+    item["url"] = canonical
+    item["keyword_trigger"] = target
+    item["scraped_at"] = datetime.now().isoformat() + "Z"
+
+    ai_score = item.get("risk_score")
+    try:
+        ai_score = int(round(float(ai_score)))
+    except (TypeError, ValueError):
+        ai_score = 0
+    item["ai_risk_score"] = max(0, min(10, ai_score))
+
+    evidence = derive_evidence(item, target)
+    evidence_score, status, factors = calculate_evidence_risk(item, evidence)
+
+    item["evidence"] = evidence
+    item["risk_factors"] = factors
+    item["risk_score"] = evidence_score
+    item["status"] = status
+    item["risk_method"] = "evidence_v6"
+
+    if not item.get("screenshot_url"):
+        item["screenshot_url"] = get_screenshot_url(canonical)
+
+    return item
+
+
 # ======================================================================
 # DATA PERSISTENCE & MIGRATION
 # ======================================================================
@@ -327,42 +534,56 @@ def get_screenshot_url(url):
 # CORE: DIRECT REST API AI ANALYZER
 # ======================================================================
 
-def run_ai_search(api_key, existing_urls, target):
+
+def run_ai_search(api_key, existing_url_keys, target):
     log.info(f"Targeting keyword: {target}")
-    
+
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-    
+
     prompt = f"""
-    Use Google Search to find real marketplace listings, auctions, or news regarding: "{target}".
-    Identify marketplace listings (eBay, Facebook, auction houses), theft news, or collector forums.
-    
-    Output the result STRICTLY as a JSON Array of objects.
-    Ignore these already captured URLs: {list(existing_urls)[:5]}
-    
-    Mandatory JSON Structure:
+    Use Google Search grounding to find real, publicly accessible web sources relevant to:
+    "{target}"
+
+    Focus on actual artifact / antiquities listings, auction records, trafficking or looting reports,
+    provenance issues, or credible institutional / news reporting. Prefer the original source page
+    over a secondary article that merely mentions it.
+
+    Return ONLY a JSON array. Each object must describe ONE distinct source/item.
+
+    Important URL rule:
+    - "canonical_source_url" must be the direct source URL you found.
+    - NEVER return a vertexaisearch.cloud.google.com grounding redirect URL when a direct source URL is available.
+    - Do not invent URLs.
+    - If a direct source URL cannot be determined, return the grounded URL in "url" and set "canonical_source_url" to "".
+
+    Required fields:
     [
       {{
-        "original_title": "Original title of the item or news article",
-        "platform": "Website Name (e.g., eBay, BBC, Facebook, Sotheby's)",
-        "url": "Full URL",
+        "original_title": "Original source/listing title",
+        "platform": "Source/platform name",
+        "source_type": "MARKETPLACE | AUCTION | NEWS | FORUM | SOCIAL | MUSEUM | ACADEMIC | GOVERNMENT | OTHER",
+        "canonical_source_url": "Direct source URL or empty string",
+        "url": "Source URL",
         "price_usd": 0,
-        "status": "HIGH RISK | MEDIUM RISK | INFO ONLY", 
-        "risk_score": 9,
-        "origin_region": "Origin of the artifact (e.g., Southeast Asia, Middle East, Unknown)",
+        "origin_region": "Best-supported artifact origin region; use Unknown when not supported",
         "provenance_flag": false,
-        "keyword_trigger": "{target}",
-        "reason": "Detailed reasoning regarding its provenance, risk, or price",
-        "scraped_at": "{datetime.now().isoformat()}Z",
-        "screenshot_url": ""
+        "reason": "Concise evidence-based explanation of what was observed and why it matters",
+        "risk_score": 0
       }}
     ]
+
+    Risk score is ONLY an AI assessment and will be kept separately as ai_risk_score.
+    Do not inflate risk merely because something is old, expensive, or sold by an auction house.
+
+    Ignore already-known URLs (normalised comparison):
+    {list(existing_url_keys)[:60]}
     """
-    
+
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "tools": [{"googleSearch": {}}],
         "generationConfig": {
-            "temperature": 0.7,
+            "temperature": 0.2,
             "maxOutputTokens": 8192
         },
         "safetySettings": [
@@ -372,112 +593,178 @@ def run_ai_search(api_key, existing_urls, target):
             {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
         ]
     }
-    
+
     try:
-        response = requests.post(url, json=payload, headers={'Content-Type': 'application/json'})
-        
+        response = requests.post(
+            url,
+            json=payload,
+            headers={"Content-Type": "application/json"},
+            timeout=120
+        )
+
         if response.status_code != 200:
             log.error(f"Google API Error ({response.status_code}): {response.text}")
-            return []
+            return {"items": [], "grounding": {}}
 
-        data = response.json()
-        
+        response_data = response.json()
+
         try:
-            text = data['candidates'][0]['content']['parts'][0]['text']
+            candidate = response_data["candidates"][0]
+            text = candidate["content"]["parts"][0]["text"]
         except (KeyError, IndexError):
             log.error("Empty or rejected API response.")
-            return []
-            
-        log.info(f"Raw AI Output: {text[:150]}...")
-        
-        # BULLETPROOF JSON EXTRACTOR
-        clean_text = text.replace('```json', '').replace('```', '')
-        clean_text = re.sub(r'\[\d+\]', '', clean_text)
-        
-        start_idx = clean_text.find('[')
-        end_idx = clean_text.rfind(']')
-        
-        if start_idx != -1 and end_idx != -1 and start_idx < end_idx:
-            json_str = clean_text[start_idx:end_idx+1]
-            try:
-                data = json.loads(json_str)
-                return data
-            except json.JSONDecodeError as e:
-                log.error(f"JSON Parse Error: {e}")
-                return []
-        else:
+            return {"items": [], "grounding": {}}
+
+        grounding = candidate.get("groundingMetadata", {}) or {}
+        log.info(f"Raw AI Output: {text[:180]}...")
+
+        fence = chr(96) * 3
+        clean_text = text.replace(fence + "json", "").replace(fence, "")
+        clean_text = re.sub(r"\[\d+\]", "", clean_text)
+
+        start_idx = clean_text.find("[")
+        end_idx = clean_text.rfind("]")
+
+        if start_idx == -1 or end_idx == -1 or start_idx >= end_idx:
             log.warning("AI did not provide a valid JSON Array.")
-            return []
-            
+            return {"items": [], "grounding": grounding}
+
+        try:
+            items = json.loads(clean_text[start_idx:end_idx + 1])
+        except json.JSONDecodeError as e:
+            log.error(f"JSON Parse Error: {e}")
+            return {"items": [], "grounding": grounding}
+
+        if not isinstance(items, list):
+            return {"items": [], "grounding": grounding}
+
+        return {"items": items, "grounding": grounding}
+
     except Exception as e:
         log.error(f"AI Search Failed for '{target}': {e}")
-        return []
+        return {"items": [], "grounding": {}}
+
 
 def main():
     if not check_schedule():
         return
-    
+
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key:
         log.error("GEMINI_API_KEY not found or empty!")
-        return 
+        return
 
     try:
         db = load_db()
         listings = db.get("listings", [])
-        
-        # ── BACKFILL MISSING SCREENSHOTS FOR OLD DATA ──
-        # Fungsi ini mengecek apakah data lama sudah punya screenshot_url
+
+        history = {}
+        if os.path.exists(HISTORY_FILE):
+            try:
+                with open(HISTORY_FILE, encoding="utf-8") as f:
+                    history = json.load(f)
+            except Exception:
+                history = {}
+
         backfill_count = 0
         for item in listings:
-            if not item.get("screenshot_url") or item.get("screenshot_url") == "":
-                url = item.get("url")
-                if url and url.lower() != "n/a":
-                    item["screenshot_url"] = get_screenshot_url(url)
+            if not item.get("screenshot_url"):
+                url_value = item.get("url")
+                if url_value:
+                    item["screenshot_url"] = get_screenshot_url(url_value)
                 else:
                     item["screenshot_url"] = "N/A"
                 backfill_count += 1
-        if backfill_count > 0:
-            log.info(f"Successfully backfilled screenshots for {backfill_count} old records.")
 
-        existing_urls = {i.get('url') for i in listings if i.get('url')}
-        
-        # Pick 3 random global keywords per run
-        targets = random.sample(KEYWORDS, min(len(KEYWORDS), 3))
-        
+        existing_url_keys = set()
+        for item in listings:
+            key = normalize_url(
+                item.get("canonical_source_url") or
+                item.get("source_url") or
+                item.get("url")
+            )
+            if key:
+                existing_url_keys.add(key)
+
+        targets, next_cursor = choose_query_targets(history)
+        log.info(f"Selected {len(targets)} targets: {targets}")
+
         count = 0
+        duplicate_count = 0
+        grounding_source_count = 0
+
+        recent_queries = list(history.get("recent_queries", []))
+
         for target in targets:
-            new_items = run_ai_search(api_key, existing_urls, target)
-            
-            if isinstance(new_items, list):
-                for item in new_items:
-                    link = item.get('url')
-                    if link and link not in existing_urls:
-                        item['scraped_at'] = datetime.now().isoformat() + "Z"
-                        item['keyword_trigger'] = target
-                        item['screenshot_url'] = get_screenshot_url(link)
-                        listings.append(item)
-                        existing_urls.add(link)
-                        count += 1
-            
-            # PENAMBAHAN DELAY: Jeda 3 detik antar request agar tidak diblokir Google karena rate limit (Error 429)
+            result = run_ai_search(api_key, existing_url_keys, target)
+            new_items = result.get("items", []) if isinstance(result, dict) else []
+
+            grounding = result.get("grounding", {}) if isinstance(result, dict) else {}
+            grounding_chunks = grounding.get("groundingChunks", []) or []
+            grounding_source_count += len([
+                c for c in grounding_chunks
+                if isinstance(c, dict)
+                and isinstance(c.get("web"), dict)
+                and c["web"].get("uri")
+            ])
+
+            for raw_item in new_items:
+                item = enrich_item(raw_item, target)
+                if not item:
+                    continue
+
+                link_key = normalize_url(
+                    item.get("canonical_source_url") or item.get("url")
+                )
+                if not link_key:
+                    continue
+
+                if link_key in existing_url_keys:
+                    duplicate_count += 1
+                    continue
+
+                listings.append(item)
+                existing_url_keys.add(link_key)
+                count += 1
+
+            recent_queries.append(target)
             time.sleep(3)
 
         db["listings"] = listings
         db["summary"] = calculate_summary(listings)
+        db["summary"]["provenanced_count"] = sum(
+            1 for x in listings if x.get("provenance_flag")
+        )
+        db["summary"]["no_provenance_count"] = sum(
+            1 for x in listings
+            if x.get("evidence", {}).get("provenance_missing_signal")
+        )
+        db["summary"]["trafficking_signal_count"] = sum(
+            1 for x in listings
+            if x.get("evidence", {}).get("trafficking_or_looting_signal")
+        )
 
-        # Update file jika ada data baru ATAU jika ada proses backfill data lama
         if count > 0 or backfill_count > 0 or not db["summary"].get("generated_at"):
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(db, f, indent=2, ensure_ascii=False)
 
-        with open(HISTORY_FILE, "w") as f:
-            json.dump({
-                "last_crawl_date": datetime.now().isoformat(),
-                "script_hash": get_hash(SCRIPT_FILE)
-            }, f, indent=2)
-            
-        log.info(f"✅ Run Complete. Added {count} new items. Total Database: {len(listings)} items.")
+        recent_queries = recent_queries[-QUERY_HISTORY_LIMIT:]
+        history_out = {
+            "last_crawl_date": datetime.now().isoformat(),
+            "script_hash": get_hash(SCRIPT_FILE),
+            "query_cursor": next_cursor,
+            "recent_queries": recent_queries,
+            "targets_per_run": TARGETS_PER_RUN,
+            "crawl_version": "v6.0"
+        }
+
+        with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(history_out, f, indent=2, ensure_ascii=False)
+
+        log.info(
+            f"✅ Run Complete. Added {count} new items, skipped {duplicate_count} duplicates, "
+            f"grounding sources seen {grounding_source_count}. Total Database: {len(listings)} items."
+        )
 
     except Exception as e:
         log.error(f"Fatal Error during main execution: {e}")
