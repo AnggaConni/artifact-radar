@@ -524,6 +524,7 @@ def update_source_history(listings, source_history):
             "provenance_flag": item.get("provenance_flag"),
             "price_usd": item.get("price_usd"),
             "source_status": current_status,
+            "http_status": state.get("http_status"),
             "change_type": change_type,
             "source_type": item.get("source_type", ""),
             "platform": item.get("platform", "")
