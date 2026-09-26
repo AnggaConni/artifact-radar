@@ -89,6 +89,13 @@
     /* Toast */
     #toast { position:fixed; bottom:24px; right:24px; z-index:9999; background:var(--text); color:#f5f3ee; padding:12px 20px; border-radius:12px; font-size:12px; font-family:'DM Mono',monospace; font-weight:600; box-shadow:0 8px 20px rgba(0,0,0,.15); transition:opacity .3s, transform .3s; opacity:0; transform:translateY(8px); pointer-events:none; }
     #toast.show { opacity:1; transform:translateY(0); }
+    .intel-pill { display:inline-flex; align-items:center; gap:5px; padding:4px 8px; border-radius:999px; font-size:9px; font-family:'DM Mono',monospace; font-weight:700; text-transform:uppercase; letter-spacing:.05em; border:1px solid transparent; }
+    .profile-modal { background:rgba(28,24,20,.45); backdrop-filter:blur(6px); }
+    .profile-section { background:#fcfbf9; border:1px solid #e4dfd4; border-radius:14px; }
+    .signal-good { color:#15803d; background:#dcfce7; border-color:#bbf7d0; }
+    .signal-warn { color:#b45309; background:#fef3c7; border-color:#fde68a; }
+    .signal-bad { color:#b91c1c; background:#fee2e2; border-color:#fecaca; }
+    .signal-neutral { color:#0369a1; background:#e0f2fe; border-color:#bae6fd; }
   </style>
 </head>
 <body class="flex h-screen overflow-hidden">
@@ -182,13 +189,13 @@
             </button>
 
             <div class="text-xs mono-font font-medium text-[#8a7f72] bg-white px-3 py-2 rounded-full border border-[#e4dfd4] shadow-sm hidden sm:block">
-              Auto-updates every 8 days
+              Auto-updates every 4 days
             </div>
           </div>
         </div>
 
         <!-- Stats -->
-        <div class="grid grid-cols-2 xl:grid-cols-4 gap-3 mb-8">
+        <div class="grid grid-cols-2 xl:grid-cols-5 gap-3 mb-8">
           <div class="card p-5 rounded-2xl">
             <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font">Total Listings</p>
             <p id="stat-total" class="text-4xl font-extrabold mt-2 syne-font">0</p>
@@ -204,6 +211,10 @@
           <div class="card p-5 rounded-2xl">
             <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font">Total Platforms</p>
             <p id="stat-platforms" class="text-4xl font-extrabold mt-2 syne-font">0</p>
+          </div>
+          <div class="card p-5 rounded-2xl border-b-4 border-b-[#0f766e]">
+            <p class="text-[10px] font-bold text-[#0f766e] uppercase tracking-widest mono-font">Trafficking Signals</p>
+            <p id="stat-signals" class="text-4xl font-extrabold mt-2 syne-font text-[#0f766e]">0</p>
           </div>
         </div>
 
@@ -274,6 +285,15 @@
               </select>
             </div>
           </div>
+
+          <!-- Row 5: Evidence signals -->
+          <div class="flex flex-wrap gap-2 items-center">
+            <span class="text-[10px] mono-font font-bold text-[#8a7f72] uppercase tracking-widest mr-1">Evidence:</span>
+            <button class="chip active" id="chip-evidence-ALL" onclick="setEvidenceFilter('ALL')">All Signals</button>
+            <button class="chip" id="chip-evidence-PROV" onclick="setEvidenceFilter('PROVENANCE')">⚠ Provenance Gap</button>
+            <button class="chip" id="chip-evidence-TRAFFICKING" onclick="setEvidenceFilter('TRAFFICKING')">🚨 Trafficking / Looting</button>
+            <button class="chip" id="chip-evidence-LEGAL" onclick="setEvidenceFilter('LEGAL')">⚖ Legal / Export</button>
+          </div>
         </div>
 
         <!-- Grid -->
@@ -321,6 +341,57 @@
       </div>
 
       <div id="map" class="w-full h-full z-0"></div>
+    </div>
+
+    <!-- ═══════════ INTELLIGENCE PROFILE MODAL ═══════════ -->
+    <div id="profile-modal" class="fixed inset-0 z-[2500] hidden items-center justify-center profile-modal">
+      <div class="absolute inset-0" onclick="closeProfile()"></div>
+      <div class="bg-white w-full max-w-4xl mx-4 rounded-3xl shadow-2xl relative z-10 flex flex-col max-h-[90vh] overflow-hidden">
+        <div class="p-6 border-b border-[#e4dfd4] flex justify-between items-start gap-4 shrink-0">
+          <div>
+            <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-1">Artifact Intelligence Profile</p>
+            <h3 id="profile-title" class="text-2xl font-extrabold syne-font text-[#1c1814] leading-tight">—</h3>
+            <p id="profile-source" class="text-xs text-[#8a7f72] mt-1 mono-font">—</p>
+          </div>
+          <button onclick="closeProfile()" class="text-[#8a7f72] hover:text-[#dc2626] transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <div class="p-6 overflow-y-auto space-y-5">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="profile-section p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Evidence Score</p><p id="profile-risk" class="text-3xl font-extrabold syne-font mt-1">—</p></div>
+            <div class="profile-section p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">AI Assessment</p><p id="profile-ai" class="text-3xl font-extrabold syne-font mt-1">—</p></div>
+            <div class="profile-section p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Source Type</p><p id="profile-type" class="text-base font-bold mt-2">—</p></div>
+            <div class="profile-section p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Origin</p><p id="profile-region" class="text-xs font-semibold mt-2">—</p></div>
+          </div>
+          <div class="profile-section p-5">
+            <div class="flex items-center justify-between gap-3 mb-3">
+              <h4 class="font-bold mono-font text-xs uppercase tracking-widest">Observed Evidence</h4>
+              <span id="profile-evidence-count" class="text-[10px] mono-font text-[#8a7f72]"></span>
+            </div>
+            <div id="profile-evidence" class="grid sm:grid-cols-2 gap-2"></div>
+          </div>
+          <div class="profile-section p-5">
+            <h4 class="font-bold mono-font text-xs uppercase tracking-widest mb-3">Risk Factors</h4>
+            <div id="profile-factors" class="flex flex-wrap gap-2"></div>
+          </div>
+          <div class="profile-section p-5">
+            <h4 class="font-bold mono-font text-xs uppercase tracking-widest mb-2">AI / Source Analysis</h4>
+            <p id="profile-reason" class="text-sm leading-relaxed text-[#1c1814]">—</p>
+          </div>
+          <div class="profile-section p-5">
+            <div class="grid sm:grid-cols-3 gap-4 text-sm">
+              <div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Platform</p><p id="profile-platform" class="font-semibold mt-1">—</p></div>
+              <div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Estimated Value</p><p id="profile-price" class="font-semibold mt-1">—</p></div>
+              <div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Detected Query</p><p id="profile-query" class="font-semibold mt-1">—</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 border-t border-[#e4dfd4] bg-[#fcfbf9] flex gap-2 shrink-0">
+          <a id="profile-source-link" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-[#1c1814] text-[#f5f3ee] py-3 rounded-xl font-bold mono-font text-xs uppercase tracking-widest hover:bg-[#dc2626] transition-colors">Open Original Source →</a>
+          <button onclick="closeProfile()" class="px-6 py-3 rounded-xl border border-[#e4dfd4] bg-white text-[#1c1814] font-bold mono-font text-xs uppercase tracking-widest">Close</button>
+        </div>
+      </div>
     </div>
 
     <!-- ═══════════ INFO MODAL ═══════════ -->
@@ -388,6 +459,7 @@
     let statusFilter   = 'ALL';
     let catFilter      = 'ALL';
     let provFilter     = 'ALL';
+    let evidenceFilter = 'ALL';
 
     // ── TOAST ──
     function showToast(msg) {
@@ -462,6 +534,31 @@
       return 'Other Web Sources';
     }
 
+    // ── V6 INTELLIGENCE HELPERS ──
+    function sourceTypeOf(item) {
+      if (item.source_type) return item.source_type;
+      const p = (item.platform || '').toLowerCase();
+      if (p.includes('auction') || p.includes('sotheby') || p.includes('christie') || p.includes('catawiki')) return 'AUCTION';
+      if (p.includes('ebay') || p.includes('etsy') || p.includes('tokopedia') || p.includes('shopee') || p.includes('1stdibs')) return 'MARKETPLACE';
+      if (p.includes('museum')) return 'MUSEUM';
+      if (p.includes('university') || p.includes('academic') || p.includes('journal') || p.includes('scholar')) return 'ACADEMIC';
+      if (p.includes('police') || p.includes('government') || p.includes('customs') || p.includes('interpol') || p.includes('unesco')) return 'GOVERNMENT';
+      if (p.includes('reddit') || p.includes('forum') || p.includes('youtube') || p.includes('facebook') || p.includes('instagram')) return 'FORUM / SOCIAL';
+      if (p.includes('news') || p.includes('guardian') || p.includes('bbc') || p.includes('times') || p.includes('post')) return 'NEWS';
+      return 'OTHER';
+    }
+
+    function evidenceFor(item) { return item.evidence || {}; }
+
+    function evidenceCount(item) {
+      return Object.values(evidenceFor(item)).filter(Boolean).length;
+    }
+
+    function signalPill(label, tone) {
+      const cls = tone === 'bad' ? 'signal-bad' : tone === 'warn' ? 'signal-warn' : tone === 'good' ? 'signal-good' : 'signal-neutral';
+      return '<span class="intel-pill ' + cls + '">' + escHtml(label) + '</span>';
+    }
+
     // ── FILTER HELPERS ──
     function setStatusFilter(v) {
       statusFilter = v;
@@ -487,6 +584,15 @@
       provFilter = v;
       document.querySelectorAll('[id^="chip-prov-"]').forEach(el => el.className = 'chip');
       const btn = document.getElementById('chip-prov-' + v);
+      if (btn) btn.className = 'chip active';
+      onFilterChange();
+    }
+
+    function setEvidenceFilter(v) {
+      evidenceFilter = v;
+      document.querySelectorAll('[id^="chip-evidence-"]').forEach(el => el.className = 'chip');
+      const idMap = {'ALL':'ALL','PROVENANCE':'PROV','TRAFFICKING':'TRAFFICKING','LEGAL':'LEGAL'};
+      const btn = document.getElementById('chip-evidence-' + idMap[v]);
       if (btn) btn.className = 'chip active';
       onFilterChange();
     }
@@ -517,7 +623,7 @@
         if (provFilter === 'NO'  &&  item.provenance_flag) return false;
         // Search
         if (query) {
-          const haystack = [item.original_title, item.platform, item.origin_region, item.reason, item.keyword_trigger]
+          const haystack = [item.original_title, item.platform, item.origin_region, item.reason, item.keyword_trigger, item.source_type, (item.risk_factors||[]).join(' ')]
             .join(' ').toLowerCase();
           if (!haystack.includes(query)) return false;
         }
@@ -580,64 +686,97 @@
 
     function buildCardHTML(item, idx) {
       const score = item.risk_score || 0;
+      const aiScore = item.ai_risk_score !== undefined ? item.ai_risk_score : null;
       let badgeClass = 'badge-info';
       if (score >= 8) badgeClass = 'badge-high';
       else if (score >= 4) badgeClass = 'badge-medium';
       else if (item.status === 'LOW RISK') badgeClass = 'badge-low';
 
-      const price    = item.price_usd ? `$${Number(item.price_usd).toLocaleString()}` : 'TBA';
-      const title    = escHtml(item.original_title || 'Unknown Artifact');
+      const price = item.price_usd ? '$' + Number(item.price_usd).toLocaleString() : 'TBA';
+      const title = escHtml(item.original_title || 'Unknown Artifact');
       const platform = escHtml(item.platform || 'Unknown Source');
-      const region   = escHtml(item.origin_region || 'Unknown Origin');
+      const sourceType = escHtml(sourceTypeOf(item));
+      const region = escHtml(item.origin_region || 'Unknown Origin');
       const provFlag = item.provenance_flag
-        ? '<span class="text-[#16a34a]">✓ Provenance</span>'
-        : '<span class="text-[#dc2626]">⚠ No Provenance</span>';
+        ? '<span class="text-[#16a34a]">✓ Provenance signal</span>'
+        : '<span class="text-[#dc2626]">⚠ No verified provenance</span>';
       const imgUrl = (item.screenshot_url && item.screenshot_url !== 'N/A')
         ? item.screenshot_url
         : 'https://placehold.co/600x400/e4dfd4/8a7f72?text=No+Screenshot';
-      const reason = escHtml(item.reason || '');
-      const url    = item.url || '#';
+      const reason = escHtml(item.reason || 'No analysis text available.');
+      const url = escHtml(item.url || '#');
+      const e = evidenceFor(item);
+      const factors = Array.isArray(item.risk_factors) ? item.risk_factors.slice(0,3) : [];
+      const signalCount = evidenceCount(item);
+      const signals = [];
+      if (e.provenance_missing_signal) signals.push(signalPill('Provenance gap','bad'));
+      if (e.trafficking_or_looting_signal) signals.push(signalPill('Trafficking / looting','bad'));
+      if (e.export_or_legal_risk_signal) signals.push(signalPill('Legal / export','warn'));
+      if (e.seller_opacity_signal) signals.push(signalPill('Seller opacity','warn'));
+      if (e.sale_or_market_signal) signals.push(signalPill('Market signal','neutral'));
+      if (e.documented_provenance_signal) signals.push(signalPill('Documented provenance','good'));
 
-      return `
-        <div class="card rounded-2xl flex flex-col justify-between overflow-hidden bg-white">
+      return '\n        <div class="card rounded-2xl flex flex-col justify-between overflow-hidden bg-white">
           <div class="h-40 w-full overflow-hidden border-b border-[#e4dfd4] relative bg-[#f5f3ee]">
-            <img src="${imgUrl}" alt="Source Screenshot" class="object-cover w-full h-full" loading="lazy"
-              onerror="this.onerror=null;this.src='https://placehold.co/600x400/e4dfd4/8a7f72?text=Image+Unavailable'" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1c1814]/40 to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-widest mono-font ${badgeClass} shadow-sm border border-white/20">
-              ${item.status || 'INFO'}
-            </span>
-          </div>
-          <div class="p-5">
-            <div class="flex justify-between items-center mb-3">
-              <span class="text-[11px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font truncate pr-2">${platform}</span>
-              <span class="text-[11px] font-bold text-[#1c1814] mono-font shrink-0">RISK: ${score}/10</span>
+            <img src="' + imgUrl + '" alt="Source Screenshot" class="object-cover w-full h-full" loading="lazy"
+              onerror="this.onerror=null;this.src=\'https://placehold.co/600x400/e4dfd4/8a7f72?text=Image+Unavailable\'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1c1814]/50 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 flex gap-2 items-center flex-wrap">
+              <span class="text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-widest mono-font ' + badgeClass + ' shadow-sm border border-white/20">' + (item.status || 'INFO') + '</span>
+              <span class="text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-widest mono-font bg-white/90 text-[#1c1814]">' + sourceType + '</span>
             </div>
-            <h3 class="font-bold text-base mb-4 leading-snug text-[#1c1814]">${title}</h3>
+          </div>
+
+          <div class="p-5">
+            <div class="flex justify-between items-center mb-3 gap-2">
+              <span class="text-[11px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font truncate pr-2">' + platform + '</span>
+              <span class="text-[11px] font-bold text-[#1c1814] mono-font shrink-0">EVIDENCE: ' + score + '/10</span>
+            </div>
+
+            <h3 class="font-bold text-base mb-3 leading-snug text-[#1c1814]">' + title + '</h3>
+
+            <div class="flex gap-2 flex-wrap mb-4">
+              ' + signalPill(signalCount + ' evidence signal' + (signalCount === 1 ? '' : 's'), signalCount >= 3 ? 'bad' : signalCount ? 'warn' : 'neutral') + '
+              ' + (aiScore !== null ? signalPill('AI ' + aiScore + '/10', 'neutral') : '') + '
+            </div>
+
             <div class="bg-[#f5f3ee] p-4 rounded-xl border border-[#e4dfd4] mb-4">
-              <div class="flex justify-between items-end mb-3 pb-3 border-b border-[#e4dfd4]">
+              <div class="grid grid-cols-2 gap-3 mb-3 pb-3 border-b border-[#e4dfd4]">
                 <div>
                   <p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-0.5">Origin</p>
-                  <p class="text-xs font-semibold">${region}</p>
+                  <p class="text-xs font-semibold">' + region + '</p>
                 </div>
                 <div class="text-right">
                   <p class="text-[10px] text-[#8a7f72] uppercase tracking-widest mono-font mb-0.5">Est. Value</p>
-                  <p class="text-sm font-extrabold syne-font">${price}</p>
+                  <p class="text-sm font-extrabold syne-font">' + price + '</p>
                 </div>
               </div>
+
+              <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-0.5">Evidence Signals</p>
+              <div class="flex flex-wrap gap-1.5 mb-3">' + (signals.slice(0,3).join('') || '<span class="text-xs text-[#8a7f72]">No explicit signals extracted.</span>') + '</div>
+
               <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-0.5">Provenance</p>
-              <p class="text-xs font-semibold mb-3">${provFlag}</p>
-              <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-0.5">AI Analysis</p>
-              <p class="text-xs leading-relaxed text-[#1c1814]">"${reason}"</p>
+              <p class="text-xs font-semibold mb-3">' + provFlag + '</p>
+
+              <p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font mb-0.5">Analysis</p>
+              <p class="text-xs leading-relaxed text-[#1c1814] line-clamp-3">"' + reason + '"</p>
+            </div>
+
+            <div class="flex gap-2">
+              <button onclick='openProfile(' + JSON.stringify(item.url || '') + ')'
+                class="flex-1 text-center bg-[#f5f3ee] text-[#1c1814] text-xs font-bold py-3 rounded-xl uppercase tracking-widest mono-font hover:bg-[#e4dfd4] transition-colors">
+                Intelligence Profile
+              </button>
+              <a href="' + url + '" target="_blank" rel="noopener noreferrer"
+                class="flex-1 text-center bg-[#1c1814] text-[#f5f3ee] text-xs font-bold py-3 rounded-xl uppercase tracking-widest mono-font hover:bg-[#dc2626] transition-colors">
+                Source →
+              </a>
             </div>
           </div>
-          <a href="${url}" target="_blank" rel="noopener noreferrer"
-            class="w-full text-center bg-[#1c1814] text-[#f5f3ee] text-xs font-bold py-4 uppercase tracking-widest mono-font hover:bg-[#dc2626] transition-colors">
-            Inspect Source →
-          </a>
         </div>
-      `;
+      ';
     }
+
 
     // ── PAGINATION RENDERER ──
     function renderPagination(total, pages) {
@@ -721,11 +860,15 @@
           }).addTo(map);
           const price = item.price_usd ? `$${Number(item.price_usd).toLocaleString()}` : 'TBA';
           cm.bindPopup(`
-            <div style="min-width:200px">
-              <div style="font-size:9px;font-weight:700;color:white;background:${color};display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:8px;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.05em">RISK: ${item.risk_score}/10</div>
+            <div style="min-width:220px">
+              <div style="display:flex;gap:5px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
+                <div style="font-size:9px;font-weight:700;color:white;background:${color};display:inline-block;padding:2px 8px;border-radius:4px;font-family:'DM Mono',monospace;text-transform:uppercase">EVIDENCE ${item.risk_score||0}/10</div>
+                <div style="font-size:9px;font-weight:700;color:#1c1814;background:#f5f3ee;display:inline-block;padding:2px 8px;border-radius:4px;font-family:'DM Mono',monospace;text-transform:uppercase">${sourceTypeOf(item)}</div>
+              </div>
               <h4 style="font-weight:700;font-size:13px;margin-bottom:4px;line-height:1.3">${item.original_title || 'Unknown'}</h4>
-              <p style="font-size:10px;color:#8a7f72;font-family:'DM Mono',monospace;margin-bottom:10px">${item.platform} · <b>${price}</b></p>
-              <a href="${item.url}" target="_blank" style="display:block;text-align:center;background:#1c1814;color:white;font-size:10px;padding:6px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:700;text-transform:uppercase;text-decoration:none">Open Source</a>
+              <p style="font-size:10px;color:#8a7f72;font-family:'DM Mono',monospace;margin-bottom:8px">${item.platform || 'Unknown'} · <b>${price}</b></p>
+              <p style="font-size:10px;color:#1c1814;margin-bottom:10px">${(item.risk_factors||[]).slice(0,2).join(' · ') || 'No explicit risk factors recorded.'}</p>
+              <button onclick='openProfile(' + JSON.stringify(item.url || '') + ')' style="display:block;width:100%;text-align:center;background:#1c1814;color:white;font-size:10px;padding:7px;border-radius:6px;font-family:'DM Mono',monospace;font-weight:700;text-transform:uppercase;border:none;cursor:pointer">Open Intelligence Profile</button>
             </div>
           `);
           plotted++;
@@ -803,6 +946,177 @@
       return d.innerHTML;
     }
 
+    // ── INTELLIGENCE PROFILE ──
+    function openProfile(url) {
+      const target = globalListings.find(item => (item.url || '') === url);
+      if (!target) return;
+
+      const modal = document.getElementById('profile-modal');
+      const ev = evidenceFor(target);
+      const entries = [
+        ['Market / sale signal', ev.sale_or_market_signal, 'neutral'],
+        ['Provenance gap', ev.provenance_missing_signal, 'bad'],
+        ['Trafficking / looting signal', ev.trafficking_or_looting_signal, 'bad'],
+        ['Legal / export signal', ev.export_or_legal_risk_signal, 'warn'],
+        ['Seller opacity', ev.seller_opacity_signal, 'warn'],
+        ['Authenticity claim', ev.authenticity_claim_signal, 'neutral'],
+        ['Documented provenance', ev.documented_provenance_signal, 'good'],
+        ['News / institutional context', ev.news_or_institutional_context, 'neutral']
+      ];
+
+      document.getElementById('profile-title').textContent = target.original_title || 'Unknown Artifact';
+      document.getElementById('profile-source').textContent = (target.platform || 'Unknown Source') + ' · ' + sourceTypeOf(target);
+      document.getElementById('profile-risk').textContent = (target.risk_score || 0) + '/10';
+      document.getElementById('profile-ai').textContent = target.ai_risk_score !== undefined ? target.ai_risk_score + '/10' : '—';
+      document.getElementById('profile-type').textContent = sourceTypeOf(target);
+      document.getElementById('profile-region').textContent = target.origin_region || 'Unknown';
+      document.getElementById('profile-platform').textContent = target.platform || 'Unknown';
+      document.getElementById('profile-price').textContent = target.price_usd ? '
+    function normalise(raw) {
+      if (Array.isArray(raw)) return { listings: raw, summary: {} };
+      return raw;
+    }
+
+    async function loadData() {
+      try {
+        const [dataResp, histResp] = await Promise.all([
+          fetch('data.json'),
+          fetch('history.json').catch(() => null)
+        ]);
+        const raw = await dataResp.json();
+        const { listings, summary } = normalise(raw);
+        globalListings = listings;
+
+        // Stats
+        let highCount = 0, medCount = 0, lowCount = 0, provYes = 0, provNo = 0, traffickingCount = 0;
+        const platformCounts = {};
+
+        listings.forEach(item => {
+          const score = item.risk_score || 0;
+          if (score >= 8) highCount++; else if (score >= 4) medCount++; else lowCount++;
+          if (item.provenance_flag) provYes++; else provNo++;
+          const cat = categorizePlatform(item.platform);
+          platformCounts[cat] = (platformCounts[cat] || 0) + 1;
+        });
+
+        document.getElementById('stat-total').textContent    = summary.total_listings  || listings.length;
+        document.getElementById('stat-risk').textContent     = summary.high_risk_count || highCount;
+        document.getElementById('stat-medium').textContent   = summary.medium_risk_count || medCount;
+        const sortedPlat = Object.entries(platformCounts).sort((a, b) => b[1] - a[1]);
+        document.getElementById('stat-platforms').textContent = sortedPlat.length;
+        document.getElementById('stat-signals').textContent = summary.trafficking_signal_count || traffickingCount;
+
+        if (histResp) {
+          try {
+            const hist = await histResp.json();
+            const d   = new Date(hist.last_crawl_date);
+            const str = d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+            document.getElementById('last-update-sidebar').textContent = `Last crawl: ${str}`;
+            document.getElementById('build-tag').textContent = `v6.1 · ${str}`;
+          } catch(e) {}
+        }
+
+        // Charts
+        buildCharts(highCount, medCount, lowCount, provYes, provNo, sortedPlat);
+
+        // Apply default filter (shows all, newest first)
+        applyFiltersAndRender();
+
+        // Init map lazily
+        initMap(listings);
+
+      } catch(err) {
+        console.error(err);
+        document.getElementById('cards-grid').innerHTML =
+          `<div class="col-span-full py-20 text-center text-[#dc2626] mono-font text-sm">Failed to load data.json — check console.</div>`;
+      }
+    }
+
+    function buildCharts(highCount, medCount, lowCount, provYes, provNo, sortedPlat) {
+      if (radarChartObj) radarChartObj.destroy();
+      radarChartObj = new Chart(document.getElementById('radarChart'), {
+        type: 'radar',
+        data: {
+          labels: ['High Risk', 'Med Risk', 'Low/Info', 'No Prov.', 'Verified'],
+          datasets: [{
+            label: 'Listings',
+            data: [highCount, medCount, lowCount, provNo, provYes],
+            backgroundColor: 'rgba(220,38,38,.15)',
+            borderColor: '#dc2626',
+            pointBackgroundColor: '#dc2626',
+            borderWidth: 1.5, pointRadius: 2
+          }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: { r: { angleLines: { color: '#e4dfd4' }, grid: { color: '#e4dfd4' }, pointLabels: { font: { size: 9 }, color: '#1c1814' }, ticks: { display: false } } }
+        }
+      });
+
+      const topPlat = sortedPlat.slice(0, 6);
+      if (barChartObj) barChartObj.destroy();
+      barChartObj = new Chart(document.getElementById('barChart'), {
+        type: 'bar',
+        data: {
+          labels: topPlat.map(p => p[0]),
+          datasets: [{ data: topPlat.map(p => p[1]), backgroundColor: '#1c1814', borderRadius: 4, barThickness: 10 }]
+        },
+        options: {
+          indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: { x: { display: false, grid: { display: false } }, y: { grid: { display: false }, border: { display: false }, ticks: { font: { size: 9 }, color: '#1c1814' } } }
+        }
+      });
+
+      if (provChartObj) provChartObj.destroy();
+      provChartObj = new Chart(document.getElementById('provChart'), {
+        type: 'doughnut',
+        data: {
+          labels: ['No Prov.', 'Provenanced'],
+          datasets: [{ data: [provNo, provYes], backgroundColor: ['#dc2626', '#16a34a'], borderWidth: 0, hoverOffset: 4 }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, cutout: '70%',
+          plugins: { legend: { position: 'right', labels: { boxWidth: 10, font: { size: 10 }, padding: 10 } } }
+        }
+      });
+    }
+
+    window.onload = loadData;
+  </script>
+</body>
+</html>
+ + Number(target.price_usd).toLocaleString() : 'TBA';
+      document.getElementById('profile-query').textContent = target.keyword_trigger || '—';
+      document.getElementById('profile-reason').textContent = target.reason || 'No analysis text available.';
+      document.getElementById('profile-evidence-count').textContent = entries.filter(x => x[1]).length + ' / ' + entries.length + ' signals detected';
+
+      document.getElementById('profile-evidence').innerHTML = entries.map(function(entry) {
+        const label = entry[0], value = entry[1], tone = entry[2];
+        const cls = value ? (tone === 'bad' ? 'signal-bad' : tone === 'warn' ? 'signal-warn' : 'signal-good') : 'signal-neutral';
+        return '<div class="flex items-center justify-between gap-3 p-3 rounded-xl border border-[#e4dfd4] bg-white">' +
+          '<span class="text-xs font-semibold">' + escHtml(label) + '</span>' +
+          '<span class="intel-pill ' + cls + '">' + (value ? 'Detected' : 'Not detected') + '</span>' +
+        '</div>';
+      }).join('');
+
+      const factors = Array.isArray(target.risk_factors) ? target.risk_factors : [];
+      document.getElementById('profile-factors').innerHTML = factors.length
+        ? factors.map(function(f){ return signalPill(f, 'warn'); }).join('')
+        : '<span class="text-xs text-[#8a7f72]">No explicit risk factors recorded.</span>';
+
+      document.getElementById('profile-source-link').href = target.url || '#';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeProfile() {
+      const modal = document.getElementById('profile-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
     // ── DATA LOAD ──
     function normalise(raw) {
       if (Array.isArray(raw)) return { listings: raw, summary: {} };
@@ -843,7 +1157,7 @@
             const d   = new Date(hist.last_crawl_date);
             const str = d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
             document.getElementById('last-update-sidebar').textContent = `Last crawl: ${str}`;
-            document.getElementById('build-tag').textContent = `v5.2 · ${str}`;
+            document.getElementById('build-tag').textContent = `v6.1 · ${str}`;
           } catch(e) {}
         }
 
