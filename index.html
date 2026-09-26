@@ -100,6 +100,10 @@
     .source-changed { color:#7c3aed; background:#ede9fe; border-color:#ddd6fe; }
     .source-unknown { color:#64748b; background:#f1f5f9; border-color:#e2e8f0; }
     .history-event { border-left:2px solid #e4dfd4; padding-left:12px; }
+    .timeline-wrap { position:relative; }
+    .timeline-wrap::before { content:''; position:absolute; left:9px; top:8px; bottom:8px; width:2px; background:#e4dfd4; }
+    .timeline-node { position:relative; z-index:1; width:20px; height:20px; border-radius:999px; border:4px solid #fff; box-shadow:0 0 0 1px #d6d0c4; flex:none; }
+    .timeline-card { background:#fcfbf9; border:1px solid #e4dfd4; border-radius:14px; }
   </style>
 </head>
 <body class="flex h-screen overflow-hidden">
@@ -372,12 +376,12 @@
       <div id="map" class="w-full h-full z-0"></div>
     </div>
 
-    <!-- ═══════════ SOURCE HISTORY MODAL ═══════════ -->
+    <!-- ═══════════ ARTIFACT TIMELINE MODAL ═══════════ -->
     <div id="history-modal" class="fixed inset-0 z-[2200] hidden flex items-center justify-center">
       <div class="absolute inset-0 bg-[#1c1814]/40 backdrop-blur-sm" onclick="closeHistoryModal()"></div>
       <div class="bg-white w-full max-w-3xl mx-4 rounded-2xl shadow-2xl relative z-10 flex flex-col max-h-[88vh]">
         <div class="p-6 border-b border-[#e4dfd4] flex justify-between items-start gap-4 shrink-0"><div><p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font">Source History</p><h3 id="history-title" class="text-xl font-extrabold syne-font text-[#1c1814] mt-1">—</h3><p id="history-meta" class="text-xs text-[#8a7f72] mt-1 mono-font">—</p></div><button onclick="closeHistoryModal()" class="text-[#8a7f72] hover:text-[#dc2626] transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
-        <div class="p-6 overflow-y-auto"><div class="mb-5 p-4 rounded-xl bg-[#fef3c7] border border-[#fde68a]"><p class="text-xs text-[#78350f] leading-relaxed"><b>Historical monitoring disclaimer:</b> “Removed” means the monitored URL returned HTTP 404/410 at a check time. “Unavailable” includes blocks, timeouts and server errors and does not establish deletion. A “possible content change” means the technical content signature changed; dynamic pages, ads, localisation and other legitimate updates can produce the same signal.</p></div><div id="history-events" class="space-y-4"></div></div>
+        <div class="p-6 overflow-y-auto"><div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5"><div class="timeline-card p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">First seen</p><p id="timeline-first" class="text-sm font-bold mt-1">—</p></div><div class="timeline-card p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Observations</p><p id="timeline-seen" class="text-sm font-bold mt-1">—</p></div><div class="timeline-card p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Current state</p><p id="timeline-status" class="text-sm font-bold mt-1">—</p></div><div class="timeline-card p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Latest evidence</p><p id="timeline-risk" class="text-sm font-bold mt-1">—</p></div></div><div class="mb-5 p-4 rounded-xl bg-[#fef3c7] border border-[#fde68a]"><p class="text-xs text-[#78350f] leading-relaxed"><b>Historical monitoring disclaimer:</b> “Source disappeared” means the monitored URL returned HTTP 404/410 at a check time. “Unavailable” includes blocks, timeouts and server errors and does not establish deletion. A “possible content change” means a technical content signature changed; dynamic pages, ads, localisation and other legitimate updates can produce the same signal. Risk/provenance/price changes are observations across crawls, not conclusions about intent.</p></div><div id="history-events" class="timeline-wrap space-y-4 pl-8"></div></div>
         <div class="p-5 border-t border-[#e4dfd4] bg-[#fcfbf9] shrink-0"><button onclick="closeHistoryModal()" class="w-full bg-[#1c1814] text-[#f5f3ee] py-3 rounded-xl font-bold mono-font text-xs uppercase tracking-widest hover:bg-[#8a7f72] transition-colors">Close</button></div>
       </div>
     </div>
@@ -758,7 +762,7 @@
             </div>
           </div>
           <div class="flex gap-2">
-            <button onclick="openHistoryModal('${item.record_fingerprint || ''}')" class="flex-1 text-center bg-[#f5f3ee] text-[#1c1814] text-xs font-bold py-4 rounded-xl uppercase tracking-widest mono-font hover:bg-[#e4dfd4] transition-colors">Source History</button>
+            <button onclick="openHistoryModal('${item.record_fingerprint || ''}')" class="flex-1 text-center bg-[#f5f3ee] text-[#1c1814] text-xs font-bold py-4 rounded-xl uppercase tracking-widest mono-font hover:bg-[#e4dfd4] transition-colors">Artifact Timeline</button>
             <a href="${url}" target="_blank" rel="noopener noreferrer"
               class="flex-1 text-center bg-[#1c1814] text-[#f5f3ee] text-xs font-bold py-4 rounded-xl uppercase tracking-widest mono-font hover:bg-[#dc2626] transition-colors">Inspect Source →</a>
           </div>
@@ -940,17 +944,92 @@
     function openHistoryModal(fingerprint) {
       const item = globalListings.find(function(x){ return x.record_fingerprint === fingerprint; });
       const entry = sourceHistory[fingerprint];
-      if (!item || !entry) { showToast("No source history recorded yet."); return; }
+      if (!item || !entry) { showToast("No artifact timeline recorded yet."); return; }
+
+      const observations = Array.isArray(entry.observations) ? entry.observations.slice().sort(function(a,b){
+        return new Date(a.observed_at || 0) - new Date(b.observed_at || 0);
+      }) : [];
+
+      const latest = observations.length ? observations[observations.length - 1] : null;
       document.getElementById("history-title").textContent = item.original_title || "Unknown Artifact";
-      document.getElementById("history-meta").textContent = (item.platform || "Unknown source") + " · first seen " + (entry.first_seen ? new Date(entry.first_seen).toLocaleDateString("en-GB") : "—");
-      const events = Array.isArray(entry.events) ? entry.events.slice().reverse() : [];
-      document.getElementById("history-events").innerHTML = events.length ? events.map(function(ev){
-        const tone = ev.status === "REMOVED" ? "bad" : ev.change_type === "POSSIBLE_CONTENT_CHANGE" ? "warn" : ev.status === "UNAVAILABLE" ? "warn" : ev.status === "ACTIVE" ? "good" : "neutral";
-        const label = ev.change_type === "POSSIBLE_CONTENT_CHANGE" ? "Possible content change" : ev.change_type === "SOURCE_DISAPPEARED" ? "Source disappeared" : ev.change_type === "SOURCE_RECOVERED" ? "Source recovered" : ev.change_type === "SOURCE_UNAVAILABLE" ? "Source unavailable" : ev.status || "Unknown";
-        return '<div class="history-event"><div class="flex flex-wrap items-center justify-between gap-2"><div class="text-xs font-bold">' + escHtml(label) + '</div>' + signalPill(ev.status || "UNKNOWN", tone) + '</div><p class="text-[10px] mono-font text-[#8a7f72] mt-1">' + (ev.checked_at ? new Date(ev.checked_at).toLocaleString("en-GB") : "Unknown time") + (ev.http_status ? " · HTTP " + ev.http_status : "") + '</p>' + (ev.reason ? '<p class="text-xs text-[#8a7f72] mt-1">' + escHtml(ev.reason) + '</p>' : "") + (ev.final_url && ev.final_url !== item.url ? '<p class="text-[10px] mono-font text-[#8a7f72] mt-1 truncate">→ ' + escHtml(ev.final_url) + '</p>' : "") + '</div>';
-      }).join("") : '<p class="text-xs text-[#8a7f72]">No monitoring events yet.</p>';
+      document.getElementById("history-meta").textContent =
+        (item.platform || "Unknown source") + " · " + sourceTypeOf(item) + " · " +
+        (entry.first_seen ? "first seen " + new Date(entry.first_seen).toLocaleDateString("en-GB") : "first-seen date unavailable");
+
+      document.getElementById("timeline-first").textContent =
+        entry.first_seen ? new Date(entry.first_seen).toLocaleDateString("en-GB") : "—";
+      document.getElementById("timeline-seen").textContent = observations.length || entry.events?.length || 0;
+      document.getElementById("timeline-status").textContent = latest?.source_status || item.source_status || "UNKNOWN";
+      document.getElementById("timeline-risk").textContent =
+        latest && latest.risk_score !== undefined && latest.risk_score !== null ? latest.risk_score + "/10" : "—";
+
+      let previousRisk = null;
+      let previousProv = null;
+      let previousPrice = null;
+
+      document.getElementById("history-events").innerHTML = observations.length
+        ? observations.slice().reverse().map(function(obs){
+            const risk = obs.risk_score !== undefined && obs.risk_score !== null ? Number(obs.risk_score) : null;
+            const riskDelta = previousRisk !== null && risk !== null ? risk - previousRisk : 0;
+            const riskText = risk !== null ? risk + "/10" + (riskDelta ? " (" + (riskDelta > 0 ? "+" : "") + riskDelta + ")" : "") : "—";
+            const change = obs.change_type || "UNCHANGED";
+            const status = obs.source_status || "UNKNOWN";
+            const tone = status === "REMOVED" ? "bad" :
+              status === "UNAVAILABLE" ? "warn" :
+              change === "POSSIBLE_CONTENT_CHANGE" || change === "RISK_SCORE_CHANGED" || change === "PROVENANCE_STATUS_CHANGED" || change === "PRICE_CHANGED" ? "warn" :
+              status === "ACTIVE" ? "good" : "neutral";
+            const nodeColor = status === "REMOVED" ? "#dc2626" :
+              status === "UNAVAILABLE" ? "#d97706" :
+              change !== "UNCHANGED" ? "#7c3aed" : "#16a34a";
+
+            const price = obs.price_usd !== undefined && obs.price_usd !== null && obs.price_usd !== 0
+              ? "$" + Number(obs.price_usd).toLocaleString() : "TBA";
+            const prov = obs.provenance_flag ? "Documented signal" : "No verified provenance";
+            const changeLabel = ({
+              "INITIAL_CHECK":"Initial observation",
+              "UNCHANGED":"Observation",
+              "POSSIBLE_CONTENT_CHANGE":"Possible source content change",
+              "SOURCE_DISAPPEARED":"Source disappeared",
+              "SOURCE_RECOVERED":"Source recovered",
+              "SOURCE_UNAVAILABLE":"Source unavailable",
+              "SOURCE_REDIRECTED":"Source redirected",
+              "RISK_SCORE_CHANGED":"Evidence score changed",
+              "PROVENANCE_STATUS_CHANGED":"Provenance status changed",
+              "PRICE_CHANGED":"Price changed"
+            })[change] || change.replaceAll("_"," ");
+
+            const riskBar = risk !== null
+              ? '<div class="mt-2 h-1.5 rounded-full bg-[#e4dfd4] overflow-hidden"><div class="h-full rounded-full" style="width:' + Math.max(0,Math.min(100,risk*10)) + '%;background:' + nodeColor + '"></div></div>'
+              : '';
+
+            const html = '<div class="flex items-start gap-3 relative">' +
+              '<span class="timeline-node" style="background:' + nodeColor + '"></span>' +
+              '<div class="timeline-card p-4 flex-1">' +
+                '<div class="flex flex-wrap items-center justify-between gap-2">' +
+                  '<div><p class="text-xs font-bold">' + escHtml(changeLabel) + '</p><p class="text-[10px] mono-font text-[#8a7f72] mt-1">' +
+                    (obs.observed_at ? new Date(obs.observed_at).toLocaleString("en-GB") : "Unknown time") + '</p></div>' +
+                  sourcePill(status) +
+                '</div>' +
+                '<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">' +
+                  '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Evidence</p><p class="text-xs font-bold mt-1">' + riskText + '</p>' + riskBar + '</div>' +
+                  '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Price</p><p class="text-xs font-bold mt-1">' + price + '</p></div>' +
+                  '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">Provenance</p><p class="text-xs font-bold mt-1">' + prov + '</p></div>' +
+                  '<div><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">HTTP</p><p class="text-xs font-bold mt-1">' + (entry.events && entry.events.length ? (entry.events[entry.events.length-1].http_status || "—") : "—") + '</p></div>' +
+                '</div>' +
+                (obs.title ? '<p class="text-[11px] text-[#8a7f72] mt-3">' + escHtml(obs.title) + '</p>' : '') +
+              '</div>' +
+            '</div>';
+
+            previousRisk = risk;
+            previousProv = obs.provenance_flag;
+            previousPrice = obs.price_usd;
+            return html;
+          }).join("")
+        : '<p class="text-xs text-[#8a7f72]">No monitoring observations yet. The next crawl will establish the first baseline.</p>';
+
       document.getElementById("history-modal").classList.remove("hidden");
     }
+
     function closeHistoryModal() { document.getElementById("history-modal").classList.add("hidden"); }
 
     // ── DATA LOAD ──
@@ -1002,7 +1081,7 @@
             const d   = new Date(hist.last_crawl_date);
             const str = d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
             document.getElementById('last-update-sidebar').textContent = `Last crawl: ${str}`;
-            document.getElementById('build-tag').textContent = `v6.2 · ${str}`;
+            document.getElementById('build-tag').textContent = `v6.3 · ${str}`;
           } catch(e) {}
         }
 
