@@ -1113,7 +1113,7 @@
               const d = new Date(hist.last_crawl_date);
               const str = d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
               document.getElementById('last-update-sidebar').textContent = 'Last crawl: ' + str;
-              document.getElementById('build-tag').textContent = 'v6.3 · ' + str;
+              document.getElementById('build-tag').textContent = 'v6.4 · ' + str;
             }
           } catch(e) {
             console.warn('history.json could not be parsed; continuing.', e);
