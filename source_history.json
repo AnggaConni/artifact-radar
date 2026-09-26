@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "description": "Historical source monitoring events for Artifact Radar. A missing source does not by itself establish deletion, illicit activity, or misconduct.",
-    "version": "1.0"
+    "description": "Historical source monitoring and structured snapshot events for Artifact Radar. A missing source does not by itself establish deletion, illicit activity, or misconduct.",
+    "version": "1.1"
   }
 }
