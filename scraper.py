@@ -1,9 +1,9 @@
 """
 =======================================================================
-  ARTIFACT RADAR v6.0 — Evidence-Aware Intelligence Engine
+  ARTIFACT RADAR v7.0 — Evidence Snapshot Intelligence Engine
   AI Engine : Google Gemini 2.5 Flash (Google Search Grounding)
   Mode      : Full English, Global Scope, 4-Day Interval
-  Feature   : Source Monitoring + Historical Change Detection
+  Feature   : Source Monitoring + Structured Evidence Snapshots
 =======================================================================
 """
 
