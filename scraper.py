@@ -410,7 +410,10 @@ def update_source_history(listings, source_history):
         "unavailable": 0,
         "changed": 0,
         "recovered": 0,
-        "redirected": 0
+        "redirected": 0,
+        "removed_events": 0,
+        "unavailable_events": 0,
+        "content_change_events": 0
     }
 
     monitor_targets = []
@@ -473,8 +476,13 @@ def update_source_history(listings, source_history):
 
         if change_type == "POSSIBLE_CONTENT_CHANGE":
             counters["changed"] += 1
+            counters["content_change_events"] += 1
         elif change_type == "SOURCE_RECOVERED":
             counters["recovered"] += 1
+        elif change_type == "SOURCE_DISAPPEARED":
+            counters["removed_events"] += 1
+        elif change_type == "SOURCE_UNAVAILABLE":
+            counters["unavailable_events"] += 1
 
         event = {
             "checked_at": state.get("checked_at"),
@@ -1035,10 +1043,12 @@ def main():
         db["listings"] = listings
         db["summary"] = calculate_summary(listings)
         db["summary"]["source_active_count"] = source_monitor["active"]
-        db["summary"]["source_removed_count"] = source_monitor["removed"]
-        db["summary"]["source_unavailable_count"] = source_monitor["unavailable"]
+        db["summary"]["source_current_removed_count"] = source_monitor["removed"]
+        db["summary"]["source_current_unavailable_count"] = source_monitor["unavailable"]
         db["summary"]["source_redirected_count"] = source_monitor["redirected"]
-        db["summary"]["source_changed_count"] = source_monitor["changed"]
+        db["summary"]["source_changed_count"] = source_monitor["content_change_events"]
+        db["summary"]["source_removed_count"] = source_monitor["removed_events"]
+        db["summary"]["source_unavailable_count"] = source_monitor["unavailable_events"]
         db["summary"]["source_recovered_count"] = source_monitor["recovered"]
         db["summary"]["provenanced_count"] = sum(
             1 for x in listings if x.get("provenance_flag")
@@ -1052,9 +1062,9 @@ def main():
             if x.get("evidence", {}).get("trafficking_or_looting_signal")
         )
 
-        if (count > 0 or backfill_count > 0 or source_monitor["removed"] > 0 or
-                source_monitor["changed"] > 0 or source_monitor["recovered"] > 0 or
-                source_monitor["unavailable"] > 0 or not db["summary"].get("generated_at")):
+        if (count > 0 or backfill_count > 0 or source_monitor["removed_events"] > 0 or
+                source_monitor["content_change_events"] > 0 or source_monitor["recovered"] > 0 or
+                source_monitor["unavailable_events"] > 0 or not db["summary"].get("generated_at")):
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(db, f, indent=2, ensure_ascii=False)
 
