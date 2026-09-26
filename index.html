@@ -394,6 +394,11 @@
         </div>
         <div class="p-6 overflow-y-auto text-sm text-[#1c1814] space-y-5">
           <p>Welcome to <b>Artifact Radar</b>. This system monitors the global antiquities market to identify potentially illicit trafficking of cultural artifacts.</p>
+          <div class="p-4 rounded-xl bg-[#f8fafc] border border-[#e2e8f0]">
+            <h4 class="font-bold text-[#1c1814] mono-font text-xs uppercase tracking-widest mb-2">Historical Source Monitoring</h4>
+            <p class="text-[#64748b] leading-relaxed">Artifact Radar keeps an observation history for monitorable source URLs. A record remains in the dataset even when its source later becomes unavailable, so the dashboard can show that the source was previously observed.</p>
+            <p class="text-[#64748b] leading-relaxed mt-2"><b>Important:</b> a 404/410 response is recorded as “Source disappeared”; it does not by itself prove intentional deletion, illicit activity, or wrongdoing. A 403/429/5xx response or timeout is recorded as “Unavailable”. A changed content signature is a technical signal and can be caused by legitimate edits, dynamic content, advertising, localisation, or site redesign.</p>
+          </div>
           <div>
             <h4 class="font-bold text-[#1c1814] mono-font text-xs uppercase tracking-widest">Risk Scoring Methodology</h4>
             <ul class="list-none space-y-2 mt-2">
@@ -414,7 +419,10 @@
             <pre class="bg-[#1c1814] text-[#f5f3ee] p-4 rounded-xl text-[10px] mono-font overflow-x-auto leading-relaxed shadow-inner">GitHub Actions (Daily Cron)
         │
         ▼
-  scraper.py (8-Day Interval Guard)
+  scraper.py (4-Day Crawl Guard)
+        │
+        ├──► Source Availability Monitor
+        ├──► source_history.json
         ├──► Gemini 2.5 Flash REST API + Google Search
         ├──► Microlink.io API (Screenshots)
         ▼
@@ -891,6 +899,9 @@
         lines.push(`    <dcterms:riskLevel>${xmlEscape(riskLabel)}</dcterms:riskLevel>`);
         lines.push(`    <dcterms:status>${xmlEscape(item.status || '')}</dcterms:status>`);
         lines.push(`    <dcterms:provenanceVerified>${item.provenance_flag ? 'true' : 'false'}</dcterms:provenanceVerified>`);
+        lines.push(`    <dcterms:sourceStatus>${xmlEscape(item.source_status || 'UNKNOWN')}</dcterms:sourceStatus>`);
+        lines.push(`    <dcterms:sourceCheckedAt>${xmlEscape(item.source_checked_at || '')}</dcterms:sourceCheckedAt>`);
+        lines.push(`    <dcterms:sourceChangeType>${xmlEscape(item.source_change_type || '')}</dcterms:sourceChangeType>`);
         if (item.price_usd) lines.push(`    <dcterms:estimatedValueUSD>${item.price_usd}</dcterms:estimatedValueUSD>`);
         lines.push(`  </record>`);
       });
