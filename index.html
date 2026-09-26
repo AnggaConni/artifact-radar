@@ -111,6 +111,19 @@
     .action-btn-source:hover { background:#3a322b; transform:translateY(-1px); }
     .action-btn-disabled { color:#8a7f72; background:#f5f3ee; border:1px dashed #d6d0c4; cursor:not-allowed; }
     .change-baseline { color:#6b6258; background:#faf8f3; border:1px solid #ebe6dc; }
+    .change-panel { background:linear-gradient(180deg,#fff 0%,#fcfbf9 100%); }
+    .change-stat { position:relative; overflow:hidden; min-height:92px; }
+    .change-stat::after { content:''; position:absolute; right:-18px; bottom:-18px; width:74px; height:74px; border-radius:999px; opacity:.06; }
+    .change-stat-new::after { background:#1c1814; }
+    .change-stat-content::after { background:#7c3aed; }
+    .change-stat-field::after { background:#0891b2; }
+    .change-stat-removed::after { background:#dc2626; }
+    .change-stat-unavailable::after { background:#d97706; }
+    .change-stat-recovered::after { background:#16a34a; }
+    .change-zero { font-size:2rem; line-height:1; letter-spacing:-.05em; }
+    .change-note { border-top:1px solid #ebe6dc; }
+    .change-badge { display:inline-flex; align-items:center; gap:6px; padding:4px 9px; border-radius:999px; font:700 9px/1 'DM Mono',monospace; text-transform:uppercase; letter-spacing:.08em; }
+    .change-dot { width:6px; height:6px; border-radius:50%; flex:none; }
   </style>
 </head>
 <body class="flex h-screen overflow-hidden">
@@ -234,26 +247,60 @@
         </div>
 
         <!-- ── CHANGE INTELLIGENCE ── -->
-        <div class="card rounded-2xl p-5 mb-6 bg-[#fcfbf9] border border-[#e4dfd4]">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
-            <div><p class="text-[10px] font-bold text-[#8a7f72] uppercase tracking-widest mono-font">Change Intelligence</p><h2 class="text-lg font-extrabold syne-font mt-1">What changed since the last scan?</h2></div>
-            <div class="max-w-xl text-right">
-              <p id="change-disclaimer" class="text-[10px] text-[#6b6258] leading-relaxed">Change counters are based on observations made across crawler runs. A source becoming unavailable is a technical observation, not proof of deletion, illicit activity, or misconduct.</p>
-              <p id="change-baseline" class="text-[10px] mono-font text-[#8a7f72] mt-1">V7 baseline: pending first monitoring crawl.</p>
+        <section class="card change-panel rounded-2xl mb-6 border border-[#e4dfd4] overflow-hidden">
+          <div class="px-5 pt-5 pb-4">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="change-badge bg-[#f5f3ee] text-[#6b6258]"><span class="change-dot bg-[#1c1814]"></span>Change Intelligence</span>
+                </div>
+                <h2 class="text-xl md:text-2xl font-extrabold syne-font tracking-tight">What changed since the last scan?</h2>
+              </div>
+              <div class="max-w-md text-left md:text-right">
+                <p id="change-disclaimer" class="text-[10px] leading-relaxed text-[#6b6258]">Change counters reflect observed differences across crawler runs. A source becoming unavailable does not by itself prove deletion, illicit activity, or misconduct.</p>
+                <p id="change-baseline" class="text-[10px] mono-font text-[#8a7f72] mt-1">V7 baseline: pending first monitoring crawl.</p>
+              </div>
             </div>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
-            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#8a7f72]">New</p><p id="change-new" class="text-2xl font-extrabold syne-font mt-1">0</p></div>
-            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#7c3aed]">Content Change</p><p id="change-changed" class="text-2xl font-extrabold syne-font mt-1 text-[#7c3aed]">0</p></div>
-            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#0891b2]">Field Changes</p><p id="change-field" class="text-2xl font-extrabold syne-font mt-1 text-[#0891b2]">0</p></div>
-            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#dc2626]">Disappeared</p><p id="change-removed" class="text-2xl font-extrabold syne-font mt-1 text-[#dc2626]">0</p></div>
-            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#d97706]">Unavailable</p><p id="change-unavailable" class="text-2xl font-extrabold syne-font mt-1 text-[#d97706]">0</p></div>
-            <div class="bg-white rounded-xl border border-[#e4dfd4] p-4"><p class="text-[10px] mono-font uppercase tracking-widest text-[#16a34a]">Recovered</p><p id="change-recovered" class="text-2xl font-extrabold syne-font mt-1 text-[#16a34a]">0</p></div>
+
+          <div class="px-5 pb-5">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              <div class="change-stat change-stat-new bg-white rounded-xl border border-[#e4dfd4] p-4">
+                <p class="text-[9px] mono-font font-bold uppercase tracking-widest text-[#8a7f72]">New</p>
+                <div class="flex items-end justify-between mt-2"><p id="change-new" class="change-zero font-extrabold syne-font text-[#1c1814]">0</p><span class="text-[9px] mono-font text-[#a39a90]">records</span></div>
+              </div>
+              <div class="change-stat change-stat-content bg-white rounded-xl border border-[#e4dfd4] p-4">
+                <p class="text-[9px] mono-font font-bold uppercase tracking-widest text-[#7c3aed]">Content</p>
+                <div class="flex items-end justify-between mt-2"><p id="change-changed" class="change-zero font-extrabold syne-font text-[#7c3aed]">0</p><span class="text-[9px] mono-font text-[#a39a90]">events</span></div>
+              </div>
+              <div class="change-stat change-stat-field bg-white rounded-xl border border-[#e4dfd4] p-4">
+                <p class="text-[9px] mono-font font-bold uppercase tracking-widest text-[#0891b2]">Field Changes</p>
+                <div class="flex items-end justify-between mt-2"><p id="change-field" class="change-zero font-extrabold syne-font text-[#0891b2]">0</p><span class="text-[9px] mono-font text-[#a39a90]">events</span></div>
+              </div>
+              <div class="change-stat change-stat-removed bg-white rounded-xl border border-[#e4dfd4] p-4">
+                <p class="text-[9px] mono-font font-bold uppercase tracking-widest text-[#dc2626]">Disappeared</p>
+                <div class="flex items-end justify-between mt-2"><p id="change-removed" class="change-zero font-extrabold syne-font text-[#dc2626]">0</p><span class="text-[9px] mono-font text-[#a39a90]">sources</span></div>
+              </div>
+              <div class="change-stat change-stat-unavailable bg-white rounded-xl border border-[#e4dfd4] p-4">
+                <p class="text-[9px] mono-font font-bold uppercase tracking-widest text-[#d97706]">Unavailable</p>
+                <div class="flex items-end justify-between mt-2"><p id="change-unavailable" class="change-zero font-extrabold syne-font text-[#d97706]">0</p><span class="text-[9px] mono-font text-[#a39a90]">checks</span></div>
+              </div>
+              <div class="change-stat change-stat-recovered bg-white rounded-xl border border-[#e4dfd4] p-4">
+                <p class="text-[9px] mono-font font-bold uppercase tracking-widest text-[#16a34a]">Recovered</p>
+                <div class="flex items-end justify-between mt-2"><p id="change-recovered" class="change-zero font-extrabold syne-font text-[#16a34a]">0</p><span class="text-[9px] mono-font text-[#a39a90]">sources</span></div>
+              </div>
+            </div>
+
+            <div class="change-baseline rounded-xl px-4 py-3 mt-3">
+              <div class="flex items-start gap-3">
+                <div class="w-7 h-7 rounded-lg bg-white border border-[#e4dfd4] flex items-center justify-center shrink-0">
+                  <span class="mono-font text-[11px] font-bold text-[#8a7f72]">i</span>
+                </div>
+                <p class="text-[10px] leading-relaxed text-[#6b6258]"><b>Why are these counters 0?</b> The current 292-record dataset predates the first V7 structured-snapshot run. The first V7 crawl establishes the baseline; it does not reconstruct changes that happened before monitoring began.</p>
+              </div>
+            </div>
           </div>
-          <div class="change-baseline rounded-xl px-4 py-3 mt-3">
-            <p class="text-[10px] leading-relaxed"><b>Why can these counters show 0?</b> The current 292-record dataset predates the first V7 structured-snapshot run. The first V7 crawl establishes the baseline; it does not retrospectively reconstruct changes that happened before monitoring began.</p>
-          </div>
-        </div>
+        </section>
 
         <!-- ── FILTER BAR ── -->
         <div class="bg-white border border-[#e4dfd4] rounded-2xl p-4 mb-6 space-y-3">
