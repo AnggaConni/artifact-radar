@@ -109,8 +109,43 @@
       "first_observed_at": "2026-09-26T14:54:02.738912Z",
       "last_observed_at": "2026-09-26T14:54:02.738912Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-01T05:03:19.375016Z",
+      "title": "Tang Dynasty Terracotta Pottery Statue of Civil Officer, Oxford TL Tested",
+      "page_title": "Antique Asian Ceramics - 4,466 For Sale at 1stDibs | antique chinese vases, antique chinese porcelain, antique asian pottery",
+      "page_description": "Shop antique and modern ceramics and other Asian furniture and art from top sellers and makers around the world. Global shipping available.",
+      "image_urls": [
+        "https://a.1stdibscdn.com/japanese-contemporary-blue-gold-red-white-porcelain-vase-by-master-artist-for-sale/f_27713/f_521638021790208800176/16825872_master.jpg",
+        "https://a.1stdibscdn.com/japanese-contemporary-blue-gold-red-white-porcelain-vase-by-master-artist-for-sale/f_27713/f_521638021790208800176/16825872_master.jpg?width=768",
+        "https://a.1stdibscdn.com/antique-chinese-qing-dynasty-oxblood-flambe-porcelain-vase-for-sale/f_79892/f_511455321785062946469/f_51145532_1785062946902_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/large-antique-japanese-satsuma-porcelain-vase-attributed-to-masanobu-for-sale/f_16102/f_510902921784667613464/f_51090292_1784667613614_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/chinese-figural-kraak-porcelain-charger-dish-blue-white-ming-wanli-ca-1590-for-sale/f_9903/f_507026121782222959762/f_50702612_1782222960169_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/18thc-chinese-export-blue-and-white-jar-porcelain-hand-painted-scene-qing-for-sale/f_9903/f_483514521768560744464/f_48351452_1768560744951_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/chinoiserie-large-blue-and-white-porcelain-planter-for-sale/1121189/f_491482121773153197399/49148212_datamatics.jpg?width=768",
+        "https://a.1stdibscdn.com/japanese-imari-red-white-porcelain-charger-with-garden-scene-20thc-for-sale/f_23963/f_511505621785112825160/f_51150562_1785112825272_bg_processed.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "",
+      "price_usd": 5800,
+      "provenance_flag": true,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "China",
+      "source_url": "https://www.1stdibs.com/furniture/asian-art-furniture/ceramics/tl-tested",
+      "final_url": "https://www.1stdibs.com/furniture/asian-art-furniture/ceramics",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "4fdda3b93b6ce8b20a7d0262119d591b0d582fd0ff53c23e49ba1cfb7424587f",
+      "etag": "",
+      "last_modified": "Wed, 30 Sep 2026 18:57:32 GMT",
+      "snapshot_signature": "6c9c1e96edf1cad7d8a3ab17d51f622f28d0f342bce8f4eaae44e61949c9b902",
+      "first_observed_at": "2026-10-01T05:03:19.375016Z",
+      "last_observed_at": "2026-10-01T05:03:19.375016Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-09-26T14:54:02.738912Z",
-  "snapshot_count": 3
+  "updated_at": "2026-10-01T05:03:19.375016Z",
+  "snapshot_count": 4
 }

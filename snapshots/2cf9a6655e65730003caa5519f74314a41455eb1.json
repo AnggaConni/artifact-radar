@@ -39,8 +39,43 @@
       "first_observed_at": "2026-09-26T14:42:19.346892Z",
       "last_observed_at": "2026-09-26T14:54:03.597613Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-10-01T05:03:20.349583Z",
+      "title": "Stolen Buddha statues returned to Laos - Nation Thailand",
+      "page_title": "Nation Thailand news website, thai news, thailand news, Bangkok thailand, aec, breaking news : Nation Thailand",
+      "page_description": "Thailand's most updated English news website, thai news, thailand news, Bangkok thailand, aec,newspaper english,  breaking news : The Nation",
+      "image_urls": [
+        "https://media.nationthailand.com/images/3.0/default.webp",
+        "/uploads/images/md/2026/10/sYslzd5pwlJMScAZxstl.webp",
+        "/uploads/images/md/2026/10/11LMCxMAQg84gy9nH91Z.webp",
+        "/uploads/images/md/2026/10/I8PMsiT2JBhSvGpMtKRl.webp",
+        "/uploads/images/md/2026/10/rT8IcroqX4xw3KA2j5QL.webp",
+        "/uploads/images/md/2026/10/YWxGIJb0gOYlGvGapPiw.webp",
+        "/uploads/images/md/2026/10/qBITgpX7wprNKI79E2qk.webp",
+        "/uploads/images/md/2026/10/CLqEBpYGrq8P35URti32.webp"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "d Bank meetings remain on track    October 01, 2026                Phuket pushes LTR visas and legal options to nominee ownership for Chinese villa buyers    October 01, 2026                Nene Royal’s historic AGT win sparks over 105m social engagements    Nene Royal’s historic AGT win sparks over 105m social engagements    THURSDAY, OCTOBER 01, 2026   Tha",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Laos, Luang Prabang province (Ting cave)",
+      "source_url": "https://www.nationthailand.com/international/370001880",
+      "final_url": "https://www.nationthailand.com/category/latest-news",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "58a565617da6988466a2a0bb3c6e6741d942d46ca6f61ad2ac1233ad992c1dd3",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "1e908082e3d8ac17f3d1d90acbfefe9d9a91351b3d0fdb0b702e4330ccf3de72",
+      "first_observed_at": "2026-10-01T05:03:20.349583Z",
+      "last_observed_at": "2026-10-01T05:03:20.349583Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-09-26T14:54:03.597613Z",
-  "snapshot_count": 1
+  "updated_at": "2026-10-01T05:03:20.349583Z",
+  "snapshot_count": 2
 }

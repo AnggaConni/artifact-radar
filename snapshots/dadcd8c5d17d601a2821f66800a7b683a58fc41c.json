@@ -30,8 +30,34 @@
       "first_observed_at": "2026-09-26T14:42:27.418720Z",
       "last_observed_at": "2026-09-26T14:54:10.596433Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-10-01T05:03:30.675347Z",
+      "title": "FOUR MAJAPAHIT TERRACOTTA FRAGMENTS, JAVA, INDONESIA, CIRCA 14TH CENTURY.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia, Java",
+      "source_url": "https://olympiaauctions.com/lot/257-four-majapahit-terracotta-fragments-java/",
+      "final_url": "https://www.olympiaauctions.com/lot/257-four-majapahit-terracotta-fragments-java",
+      "source_status": "ACTIVE",
+      "http_status": 202,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "4e289315e54fd068905ce0feebb1ffe082cd2851106effb1049b0b1dd1e414a9",
+      "first_observed_at": "2026-10-01T05:03:30.675347Z",
+      "last_observed_at": "2026-10-01T05:03:30.675347Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-09-26T14:54:10.596433Z",
-  "snapshot_count": 1
+  "updated_at": "2026-10-01T05:03:30.675347Z",
+  "snapshot_count": 2
 }
