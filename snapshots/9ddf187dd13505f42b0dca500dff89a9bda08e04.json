@@ -60,8 +60,36 @@
       "first_observed_at": "2026-10-01T05:03:17.019925Z",
       "last_observed_at": "2026-10-01T05:03:17.019925Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-06T05:40:39.132626Z",
+      "title": "Police investigating religious statues theft in Nadi - FBC News",
+      "page_title": "Police investigating religious statues theft in Nadi",
+      "page_description": "",
+      "image_urls": [
+        "https://www.fbcnews.com.fj/wp-content/uploads/2024/01/police-3.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " comments \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t Hermes shows airy knits and slit skirts collection \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t Big change proposed for sugar fund \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t Questions over person of interest’s departure \n\t\t\t\t\t \n",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.fbcnews.com.fj/news/police-investigating-religious-statues-theft-in-nadi",
+      "final_url": "https://www.fbcnews.com.fj/news/police-investigating-religious-statues-theft-in-nadi",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "c56651d7942e0d3e4b5b19b9712476ef0aeb10c28efcd4b7ee4ebf6d27f346c4",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "91130641259333a9b12c73131f287f769ce35b035a5351bb3d90b094ced1e6f2",
+      "first_observed_at": "2026-10-06T05:40:39.132626Z",
+      "last_observed_at": "2026-10-06T05:40:39.132626Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-01T05:03:17.019925Z",
-  "snapshot_count": 2
+  "updated_at": "2026-10-06T05:40:39.132626Z",
+  "snapshot_count": 3
 }

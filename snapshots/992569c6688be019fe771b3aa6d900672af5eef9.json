@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "992569c6688be019fe771b3aa6d900672af5eef9",
+  "observations": [
+    {
+      "observed_at": "2026-10-06T05:40:53.248191Z",
+      "title": "Antique Bronze Statue Figure Champa Kingdom 18th-19th Century Female Bust Gold Leaf Mounted Vietnam Collectible Art Southeast Asia",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 39.95,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Southeast Asia (Champa Kingdom/Vietnam)",
+      "source_url": "https://www.etsy.com/listing/1596700050/antique-bronze-statue-figure-champa",
+      "final_url": "https://www.etsy.com/listing/1596700050/antique-bronze-statue-figure-champa",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3a19a912076bb124bd73541583f661facb32b2cd6dd9ade78004c35108676e72",
+      "first_observed_at": "2026-10-06T05:40:53.248191Z",
+      "last_observed_at": "2026-10-06T05:40:53.248191Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-06T05:40:53.248191Z",
+  "snapshot_count": 1
+}

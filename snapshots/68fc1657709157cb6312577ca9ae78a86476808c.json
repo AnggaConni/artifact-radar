@@ -86,8 +86,34 @@
       "first_observed_at": "2026-10-01T05:03:16.439026Z",
       "last_observed_at": "2026-10-01T05:03:16.439026Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-06T05:40:38.927730Z",
+      "title": "War Club, Fiji | The Scholar's Feast: The Rosman Rubel Collection | 2021",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 4,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.sothebys.com/en/buy/auction/2021/the-scholars-feast-the-rosman-rubel-collection/war-club-fiji",
+      "final_url": "https://www.sothebys.com/en/buy/auction/2021/the-scholars-feast-the-rosman-rubel-collection/war-club-fiji",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "81624eada938842dfe86305e2805b06801514e377b4d46c18e2ddb7ac4c483d6",
+      "etag": "\"aqsm7tiyct5lwi\"",
+      "last_modified": "",
+      "snapshot_signature": "549d61b8ffd2cf258b3a7b645878db09bbc403d8426ffaf714ac1bddb8e85153",
+      "first_observed_at": "2026-10-06T05:40:38.927730Z",
+      "last_observed_at": "2026-10-06T05:40:38.927730Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-01T05:03:16.439026Z",
-  "snapshot_count": 3
+  "updated_at": "2026-10-06T05:40:38.927730Z",
+  "snapshot_count": 4
 }

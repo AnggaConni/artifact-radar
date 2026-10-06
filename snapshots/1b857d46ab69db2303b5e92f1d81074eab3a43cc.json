@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1b857d46ab69db2303b5e92f1d81074eab3a43cc",
+  "observations": [
+    {
+      "observed_at": "2026-10-06T05:40:53.305425Z",
+      "title": "The Cambodian art smuggling scandal that's ready to erupt",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Cambodia",
+      "source_url": "https://www.theartnewspaper.com/2013/08/31/the-cambodian-art-smuggling-scandal-thats-ready-to-erupt",
+      "final_url": "https://www.theartnewspaper.com/2013/08/31/the-cambodian-art-smuggling-scandal-thats-ready-to-erupt",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"8596a32b6c3ab79aa171735bddc1e6be\"",
+      "last_modified": "Tue, 29 Sep 2026 22:06:54 GMT",
+      "snapshot_signature": "88497873ca2cd169ad9658f8417b5669a1a983e211d0d0fa4c4bc628fee6ae0d",
+      "first_observed_at": "2026-10-06T05:40:53.305425Z",
+      "last_observed_at": "2026-10-06T05:40:53.305425Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-06T05:40:53.305425Z",
+  "snapshot_count": 1
+}

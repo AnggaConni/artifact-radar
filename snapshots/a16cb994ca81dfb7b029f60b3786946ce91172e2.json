@@ -144,8 +144,43 @@
       "first_observed_at": "2026-10-01T05:03:19.375016Z",
       "last_observed_at": "2026-10-01T05:03:19.375016Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-06T05:40:41.631936Z",
+      "title": "Tang Dynasty Terracotta Pottery Statue of Civil Officer, Oxford TL Tested",
+      "page_title": "Antique Asian Ceramics - 4,488 For Sale at 1stDibs | antique chinese vases, antique chinese porcelain, antique asian pottery",
+      "page_description": "Shop antique and modern ceramics and other Asian furniture and art from top sellers and makers around the world. Global shipping available.",
+      "image_urls": [
+        "https://a.1stdibscdn.com/japanese-contemporary-blue-gold-red-white-porcelain-vase-by-master-artist-for-sale/f_27713/f_521638021790208800176/16825872_master.jpg",
+        "https://a.1stdibscdn.com/japanese-contemporary-blue-gold-red-white-porcelain-vase-by-master-artist-for-sale/f_27713/f_521638021790208800176/16825872_master.jpg?width=768",
+        "https://a.1stdibscdn.com/large-antique-japanese-satsuma-porcelain-vase-attributed-to-masanobu-for-sale/f_16102/f_510902921784667613464/f_51090292_1784667613614_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/antique-chinese-qing-dynasty-oxblood-flambe-porcelain-vase-for-sale/f_79892/f_511455321785062946469/f_51145532_1785062946902_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_107372/f_517696721788368319140/4bf495c4-851e-439d-8dbe-9a6d5eb3ff25/set_of_four_scalloped_rim_rose_medallion_plates_19th_century_9478_bg_processed.jpeg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_92142/f_522673521790747541621/1fdc4af7-c1dd-4bdb-94c8-fea589847e5a/7ea09ca3_eac5_48e4_b53e_6be0e05ae422_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_104032/f_519333921789038657705/dc94c425-b8cc-4f20-b483-bdd7ca7ba54a/1_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/18thc-chinese-export-blue-and-white-jar-porcelain-hand-painted-scene-qing-for-sale/f_9903/f_483514521768560744464/f_48351452_1768560744951_bg_processed.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "",
+      "price_usd": 5800,
+      "provenance_flag": true,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "China",
+      "source_url": "https://www.1stdibs.com/furniture/asian-art-furniture/ceramics/tl-tested",
+      "final_url": "https://www.1stdibs.com/furniture/asian-art-furniture/ceramics",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "e62a00969d0152bc053d013d34d875f19ba17da6902aabab61b91732fac43183",
+      "etag": "",
+      "last_modified": "Mon, 05 Oct 2026 13:18:37 GMT",
+      "snapshot_signature": "85936c9c6b021986f86ec581968d02e722e09d01de056f74321f88c7c2e081bb",
+      "first_observed_at": "2026-10-06T05:40:41.631936Z",
+      "last_observed_at": "2026-10-06T05:40:41.631936Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-01T05:03:19.375016Z",
-  "snapshot_count": 4
+  "updated_at": "2026-10-06T05:40:41.631936Z",
+  "snapshot_count": 5
 }

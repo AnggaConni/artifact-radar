@@ -70,8 +70,43 @@
       "first_observed_at": "2026-10-01T05:03:23.164319Z",
       "last_observed_at": "2026-10-01T05:03:23.164319Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-06T05:40:45.722361Z",
+      "title": "A LARGE JOMON VESSEL , MIDDLE JOMON PERIOD (BC 3000-2000)",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-24465-10102026-1.jpg",
+        "/img/SaleImages/CKS-24260-10142026-1.jpg",
+        "/img/SaleImages/CKS-25228-10142026-1.jpg",
+        "/img/SaleImages/CKS-24261-10152026-1.jpg",
+        "/img/SaleImages/CKS-25229-10152026-1.jpg",
+        "/img/SaleImages/CKS-24563-10162026-1.jpg",
+        "/img/SaleImages/NYR-25248-10202026-1.jpg",
+        "/img/SaleImages/NYR-24336-10212026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "l art and objects      Auction results        Featured      Prints & Multiples | New York      Monsoon: The Peter Simon Collection | London      20th/21st Century Art | London      Collections | Global      20th/21st Century Art | Paris      Asian Art | Hong Kong      Luxury | Global      20th/21st Century Art | New York          Private Sales               ",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.christies.com/lot/lot-6140592",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "61965f814593fc605db1696322ee18a25a20d1724d2c23f80d719aa58c8dbf14",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "f642f6ed3f2105f7e99719f010b4ff25d2bcb2866f933d6c176149105a0b5ccd",
+      "first_observed_at": "2026-10-06T05:40:45.722361Z",
+      "last_observed_at": "2026-10-06T05:40:45.722361Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-01T05:03:23.164319Z",
-  "snapshot_count": 2
+  "updated_at": "2026-10-06T05:40:45.722361Z",
+  "snapshot_count": 3
 }
