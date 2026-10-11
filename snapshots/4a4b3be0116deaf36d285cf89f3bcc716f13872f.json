@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "4a4b3be0116deaf36d285cf89f3bcc716f13872f",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354218Z",
+      "title": "Dong Son Culture Ritual Bronze Drum, 4th-3rd Century BC, Vietnam For Sale",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 45000,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Vietnam",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZoW3naUWXtzzLCniTQSFJRRluvC9oA3KRpymmpf_I653_HuWMTuduudIUjPha48we_YmNN7ZFER5p0l053za1lv6lM2sfF2RpeKPZ_GWvl9Z6ijQGrc3nDTD1D3EZOIiUB7urfAdM25R-Kr8bS1gYcq0J_Hsk0DC3nU3G-Sd4yahG_qF_b-vk13ZA3aqYQ5HZg-U1hai4KSUtTRMYB-ZORLEx9X1nLYuBp57VpAVUeTKCawtFcHe6Lu-1o5YcCoS45HOairWmBg=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "ca07174b629b92c4244e979aed398f72d5373243d202e2c53ceca0c2fc48664a",
+      "first_observed_at": "2026-10-11T04:59:53.354218Z",
+      "last_observed_at": "2026-10-11T04:59:53.354218Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354218Z",
+  "snapshot_count": 1
+}

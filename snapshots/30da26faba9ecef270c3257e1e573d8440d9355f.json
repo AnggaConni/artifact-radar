@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "30da26faba9ecef270c3257e1e573d8440d9355f",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354190Z",
+      "title": "A rare and unusually large Vietnamese bronze drum, Heger type I style",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Vietnam",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmyLhmMVQwcmVNOKsU71CpaY2MbCbBCRHW0R_G5rkNCFCfaGWkYDQxrSK5oZleyK_ehZUvOf361FYtKcbyTo1ff1CUMg0q4ad47eVjw1dr-aLHSL75WAQPz3cfDORpEVLyXxGeJK4wjmx9Z5y5eVhd6LLMcBw=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a4958fce1e6f07c61b5d6e82af1f0e5b5fd0ed2e51e4aad03dc1a9a473097d6a",
+      "first_observed_at": "2026-10-11T04:59:53.354190Z",
+      "last_observed_at": "2026-10-11T04:59:53.354190Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354190Z",
+  "snapshot_count": 1
+}

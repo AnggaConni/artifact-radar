@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "0538652b8c4cae8a762e38d9e1d9105f0f2bbd42",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354166Z",
+      "title": "A LARGE AND HEAVY BRONZE RAIN DRUM, DONG SON CULTURE",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 3328.8,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Vietnam",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBsx2XNcK3EVf0bNeaWmKfJat7fZS_arPi-pvf7eD4THqLPFZPRWeK3W4KC-pr3JyNw3FzXYtJBQ0kucFwAVSfmx0JUMjqLcYbVNdpYP72yS4MbRVBjEsXUuLTF-RqcYiQbzC6LT3wF6LMWWkMXQYPcH2uRFtmauxdOCh0UR8vgcnLeGx00LMigChkGW1AVRrrsmd3gr4XISW2gUTLmtGRfAW0gt020Rmq",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "52b3c8db4a2c42f74c6a53af2f18a9d0bbd13e04d901e442f5856450ccef166e",
+      "first_observed_at": "2026-10-11T04:59:53.354166Z",
+      "last_observed_at": "2026-10-11T04:59:53.354166Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354166Z",
+  "snapshot_count": 1
+}

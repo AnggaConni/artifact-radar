@@ -56,8 +56,34 @@
       "first_observed_at": "2026-10-06T05:40:49.289554Z",
       "last_observed_at": "2026-10-06T05:40:49.289554Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-11T04:59:49.747379Z",
+      "title": "Egyptian small green glazed faience shabti figure",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 220,
+      "provenance_flag": false,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Middle East",
+      "source_url": "https://www.heliosgallery.com/egyptian_antiquities/shabtis.html",
+      "final_url": "https://www.heliosgallery.com/egyptian_antiquities/shabtis.html",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "be4e679311d31da0e0469695f1e939d887997694b0bc463a23da495a488d6c8e",
+      "first_observed_at": "2026-10-11T04:59:49.747379Z",
+      "last_observed_at": "2026-10-11T04:59:49.747379Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-06T05:40:49.289554Z",
-  "snapshot_count": 2
+  "updated_at": "2026-10-11T04:59:49.747379Z",
+  "snapshot_count": 3
 }

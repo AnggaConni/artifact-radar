@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "dbb7aeaeadcfd4f192b42a5c03c80b463f3f07c8",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354315Z",
+      "title": "Dogon statue sold for €1.4 million at Sotheby's",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 1498000,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 3,
+      "origin_region": "Eastern Mali (Dogon)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEta5RjwHkXlhxacrFveXtJ1V__xadgq9Rd2S6iXKIofX0ZWd94L3b2ShY4pEKLT-Bf8rIPObnvIiRA-JXuLcXHFMB39vsWnDgK3XEInrjDQQXYfP3kLIlzzI_pPw3gEOMucnpJ9ZH26BP68lXl7FfxtF1lw15n-0-R68dkub86aPE3zv3GfOGtMFRJS8hS53yhIJShUCAMQhcoPnWJM5vXEVYwtqMKdfE=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3be3eccc1fc80f72cfec544aa2af5a5d6edd768c33e1c1532d3d7e890f2537f0",
+      "first_observed_at": "2026-10-11T04:59:53.354315Z",
+      "last_observed_at": "2026-10-11T04:59:53.354315Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354315Z",
+  "snapshot_count": 1
+}

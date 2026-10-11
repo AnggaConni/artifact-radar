@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "6e465616a97b969296c0e314c1e32984f96cf638",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354231Z",
+      "title": "At Auction: A Vietnamese Dong Son Bronze Drum",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Vietnam",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG09HDx2tEL_CvZjMA0y7KwNQa4oF9SzKkPS75RCgdpvG9tuWUQ5RQfhh2fMKx9BP-7vB3euLleY5hqLCIFktEjShH4RPiYSjuXFIZWZubzk4arNpbDQdBCPuL23tvVnEc86P01El-3TTToZTK5FPLyaxllXlbCkopOmdXdZcuoA5aUTGBFsVLGvwYpM8v-IraO7H8R8zFPFRU5pBzm0g==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "aa5068e1119ea3c412920435d676ac070f226cd33a2336e9f995b6f177c419a6",
+      "first_observed_at": "2026-10-11T04:59:53.354231Z",
+      "last_observed_at": "2026-10-11T04:59:53.354231Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354231Z",
+  "snapshot_count": 1
+}

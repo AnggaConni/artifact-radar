@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "93be09d1bcb904a7863abe849fdb07093bb2992d",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354362Z",
+      "title": "African art Dogon figure Mali",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 3,
+      "origin_region": "Mali (Dogon)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgQ5BOtEDL9WQw5ecTcZtgiA40wbwJO3cmW35sopLIO6Jq79J2e4qDycP5TQPwmbB0prOMPbA0l49irqHDJV6hywInS8Uw_IL8_z9HBHMPHZM2p79YSRZotnObWijVQmC04iMGTGbRnSb7v0pq0t3Qinu-0fq3",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e79ba0b92c67dea38e86a500d74ea4ab53fccf4799664d0e1dbe6a15ec4c08f4",
+      "first_observed_at": "2026-10-11T04:59:53.354362Z",
+      "last_observed_at": "2026-10-11T04:59:53.354362Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354362Z",
+  "snapshot_count": 1
+}

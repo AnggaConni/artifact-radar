@@ -109,8 +109,43 @@
       "first_observed_at": "2026-10-06T05:40:42.697502Z",
       "last_observed_at": "2026-10-06T05:40:42.697502Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-11T04:59:43.057033Z",
+      "title": "Stolen Buddha statues returned to Laos - Nation Thailand",
+      "page_title": "Nation Thailand news website, thai news, thailand news, Bangkok thailand, aec, breaking news : Nation Thailand",
+      "page_description": "Thailand's most updated English news website, thai news, thailand news, Bangkok thailand, aec,newspaper english,  breaking news : The Nation",
+      "image_urls": [
+        "https://media.nationthailand.com/images/3.0/default.webp",
+        "/uploads/images/md/2026/10/aOvK8tt8CVF6Nt24Azp3.webp",
+        "/uploads/images/md/2026/10/aTzEy1HpF9A6sQKDq3Oh.webp",
+        "/uploads/images/md/2026/10/Pje0cPzq6tkZV5DwaMgI.webp",
+        "/uploads/images/md/2026/10/E2e8P1EscH5SGOFQiofC.webp",
+        "/uploads/images/md/2026/10/wuPhxxzzpSBLKV0qmRrv.webp",
+        "/uploads/images/md/2026/06/HcDYqWzF9xznACdajoQZ.webp",
+        "/uploads/images/md/2026/10/zCoQd0uCieG6h8idljaV.webp"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Laos, Luang Prabang province (Ting cave)",
+      "source_url": "https://www.nationthailand.com/international/370001880",
+      "final_url": "https://www.nationthailand.com/category/latest-news",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "92c04e43d91c3fc0029ebc47ea01ac5ca7fafcc3915c2bf94102355b04177bb5",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "40b6bd2cea1f746b7311c4d3784233b98fe61eaca889c1297c6283057cd22926",
+      "first_observed_at": "2026-10-11T04:59:43.057033Z",
+      "last_observed_at": "2026-10-11T04:59:43.057033Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-06T05:40:42.697502Z",
-  "snapshot_count": 3
+  "updated_at": "2026-10-11T04:59:43.057033Z",
+  "snapshot_count": 4
 }

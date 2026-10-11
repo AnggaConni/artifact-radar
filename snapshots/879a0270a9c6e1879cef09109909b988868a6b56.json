@@ -134,8 +134,34 @@
       "first_observed_at": "2026-10-06T05:40:48.348055Z",
       "last_observed_at": "2026-10-06T05:40:48.348055Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-11T04:59:48.852759Z",
+      "title": "Feds say ancient Cambodian statue was stolen, seek to confiscate it from Sotheby's in NYC",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 3000000,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Cambodia)",
+      "source_url": "https://khmerization.blogspot.com/2012/04/feds-say-ancient-cambodian-statue-was.html",
+      "final_url": "https://www.google.com/sorry/index?continue=https%3A%2F%2Fkhmerization.blogspot.com%2F2012%2F04%2Ffeds-say-ancient-cambodian-statue-was.html&q=EgSs1M5-GMSvrNYGIi2NOhldDqhlum-RWZDy-PaQKMVnc5_TqNiWLJk8kr4nuMO9Giv16XRRz_hdYUwyAnJSWgFD",
+      "source_status": "UNAVAILABLE",
+      "http_status": 429,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e3bd7d54393d2745354c876948b02412536d1a1ea7341f3b2698ce9eb9837a75",
+      "first_observed_at": "2026-10-11T04:59:48.852759Z",
+      "last_observed_at": "2026-10-11T04:59:48.852759Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-06T05:40:48.348055Z",
-  "snapshot_count": 5
+  "updated_at": "2026-10-11T04:59:48.852759Z",
+  "snapshot_count": 6
 }

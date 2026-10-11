@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "4177f365e4ce768084477184b33721f094e9acea",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354327Z",
+      "title": "Antique Chiwara headdress Bambara Bamana ceremonial female antelope headdress Mali West Africa",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 2,
+      "origin_region": "Mali (Bamana)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV5xCb52B8TA0XFIxSB8xYBwArDLvSxHOgLwxv4flbIVw4OvIy45imIUIbvKf7az8uljMol_63nKukBUXVe8lzOySZfJ4y8Nk5eA4nyoJgqr-BQr01djXWvLEdMtG04FYHMk0=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "50db2ff41229e2ac2c1db89ac89706f6de5b1bff73aeed7a299bed0563e78a33",
+      "first_observed_at": "2026-10-11T04:59:53.354327Z",
+      "last_observed_at": "2026-10-11T04:59:53.354327Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354327Z",
+  "snapshot_count": 1
+}

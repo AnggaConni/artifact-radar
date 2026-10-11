@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "da7f99222b4b8904766cb1ed568ae0f3a7780391",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354350Z",
+      "title": "Dogon Door. Mali.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 150,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 2,
+      "origin_region": "Mali (Dogon)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRXKmoLAvQNXrADjt98C7JIfgoJ06b7KgnYnh4ZDCJmYu_xXkQB-rTdIiBWv2YJecooKjjsGI8SbqZ8sj0fGfrrCNGU_AoDXgMb5mTD6UPO4jhB6tY8vjErgj3n6jBnZEkf0cyXg==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3ccab9185bd0e1512df6a1bcce1626a803122beb8f00bd2a71c5f5186e5d4943",
+      "first_observed_at": "2026-10-11T04:59:53.354350Z",
+      "last_observed_at": "2026-10-11T04:59:53.354350Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354350Z",
+  "snapshot_count": 1
+}

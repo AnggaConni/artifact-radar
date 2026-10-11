@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "5e08b4a41b6f64760d22a13147c826476c6ddfc6",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354254Z",
+      "title": "The U.S. Returns More Than 900 Stolen Artifacts to Mali",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 5,
+      "origin_region": "Mali, West Africa (Neolithic period, 900-1700 C.E., 1100-1400 C.E.)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIOtTHHX6kLLABN7A6xWC1INHtKDnxKsT0WPQeMJUgHqxF3PIU93IRIb4qJ9YKJmkKvQRpXsVWL4l5-77REQL6Oeb9qoLpvEkbDOZGLJYNuAH3H8g1gAK_hVl0hPZc0N2kYpsdMfUFBDrYkTMglVcHT4Ogn1GuotByg1aBcrRDiIPEUEro5ltgIOVU-F68rOak9fYk26lwg7Dg",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "b565f4eb93cc591325465adecc5a382b3baba0ce2c8b9ba4f3b7fdc2d2aadc45",
+      "first_observed_at": "2026-10-11T04:59:53.354254Z",
+      "last_observed_at": "2026-10-11T04:59:53.354254Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354254Z",
+  "snapshot_count": 1
+}

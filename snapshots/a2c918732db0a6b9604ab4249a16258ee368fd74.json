@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a2c918732db0a6b9604ab4249a16258ee368fd74",
+  "observations": [
+    {
+      "observed_at": "2026-10-11T04:59:53.354304Z",
+      "title": "Seated Figure, Middle Niger Civilization, Mali",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": 2,
+      "origin_region": "Mali, Middle Niger Civilization (Djenné-Jeno)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdNA-5zmze3jEcxZRI5VOF0_spcCjEaft9636ilUsHLWZ27iZQwdbUjl2aiAvVYKQg7MjuxhhzXw_Il5nzTqtY_qDKIqxMBZn41xSuKgWyEIajIZ-9zwejrTPd4zeIbfPCgdWe9dvTsnA3AKIuq2L6UDv5aB3Xt9sYy_KNlJEtfDHuWAVXMSCESNYFqCyN00Xm_hGiIshg1IEcGVn_z0hCws3IV9znKMGJwx5WUJW4XLqp-Ho2HRLFdfQWP0OT",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "475c61fca37e437da6c4f8281e7fe41a2ec66da9bc77c899fff2936e29e3153f",
+      "first_observed_at": "2026-10-11T04:59:53.354304Z",
+      "last_observed_at": "2026-10-11T04:59:53.354304Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-11T04:59:53.354304Z",
+  "snapshot_count": 1
+}

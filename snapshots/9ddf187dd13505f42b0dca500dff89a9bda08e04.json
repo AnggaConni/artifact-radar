@@ -88,8 +88,36 @@
       "first_observed_at": "2026-10-06T05:40:39.132626Z",
       "last_observed_at": "2026-10-06T05:40:39.132626Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-11T04:59:39.389715Z",
+      "title": "Police investigating religious statues theft in Nadi - FBC News",
+      "page_title": "Police investigating religious statues theft in Nadi",
+      "page_description": "",
+      "image_urls": [
+        "https://www.fbcnews.com.fj/wp-content/uploads/2024/01/police-3.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.fbcnews.com.fj/news/police-investigating-religious-statues-theft-in-nadi",
+      "final_url": "https://www.fbcnews.com.fj/news/police-investigating-religious-statues-theft-in-nadi",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "d5b0135b2b449a8e1837613091057eb960f2f62a5d7bbed99279e337751e8a8d",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "81b52bbddb757158ba0a27399ce12adb13e7971a41669f8903b575a8e0467bf4",
+      "first_observed_at": "2026-10-11T04:59:39.389715Z",
+      "last_observed_at": "2026-10-11T04:59:39.389715Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-06T05:40:39.132626Z",
-  "snapshot_count": 3
+  "updated_at": "2026-10-11T04:59:39.389715Z",
+  "snapshot_count": 4
 }
