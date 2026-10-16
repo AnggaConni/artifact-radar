@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "f6edf1c56db01f26d7017d2f9528ac68c6bfdc83",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:38.177788Z",
+      "title": "African Wooden Man",
+      "page_title": "Chanel Pink White Canvas Leather Cruise Line Tote | Proxibid",
+      "page_description": "Bid in a Proxibid online auction to acquire a Chanel Pink White Canvas Leather Cruise Line Tote Bag from Federal Assets Auctioneers.",
+      "image_urls": [
+        "https://images.proxibid.com/AuctionImages/11062/248112/120-1.JPG"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "operty or its value, and in no event shall be responsible for the correctness of description, genuineness, attribution, provenance, authenticity, authorship, and completeness, condition of property or estimate of value. Any appraisals, Estimates (as defined herein) or evaluations provided are solely for the convenience of the bidder and FAA makes no warranti",
+      "price_usd": 40,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Unknown",
+      "source_url": "https://www.proxibid.com/Antiques/African-Wooden-Man/lotInformation/78964344",
+      "final_url": "https://www.proxibid.com/lotinformation/78964344/chanel-pink-white-canvas-leather-cruise-line-tote-bag",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "79b5a10d8704e704e5405a2fb0bb01b90c2472378d668c14638e2f891c1bc875",
+      "etag": "\"7q7dxhyzjfck8l\"",
+      "last_modified": "",
+      "snapshot_signature": "f21b46eb2befe35b72af2af574f7d1463264bd9c816bea728ae39daac1fa652c",
+      "first_observed_at": "2026-10-16T03:54:38.177788Z",
+      "last_observed_at": "2026-10-16T03:54:38.177788Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:38.177788Z",
+  "snapshot_count": 1
+}

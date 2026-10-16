@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "548b3262a516c4e4e2a3802eb510185dd6cd3811",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.763757Z",
+      "title": "18 African and Oceanic Art Highlights",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 64800,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Nigeria",
+      "source_url": "https://www.sothebys.com/en/articles/18-african-and-oceanic-art-highlights",
+      "final_url": "https://www.sothebys.com/en/articles/18-african-and-oceanic-art-highlights",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e2e8c02527614748da926d1de049e4246b7295c35368eeb7a646bba906dd552b",
+      "first_observed_at": "2026-10-16T03:54:37.763757Z",
+      "last_observed_at": "2026-10-16T03:54:37.763757Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.763757Z",
+  "snapshot_count": 1
+}

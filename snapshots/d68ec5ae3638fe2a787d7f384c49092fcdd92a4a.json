@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d68ec5ae3638fe2a787d7f384c49092fcdd92a4a",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:38.691413Z",
+      "title": "A collection of four African tribal pipes, decorated with phalluses, D.R. Congo, L 24 cm (the largest)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 216,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Democratic Republic of Congo",
+      "source_url": "https://www.invaluable.com/auction-lot/a-collection-of-four-african-tribal-pipes-decorat-160-c-134440a97a",
+      "final_url": "https://www.invaluable.com/auction-lot/a-collection-of-four-african-tribal-pipes-decorat-160-c-134440a97a",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"117f-lyY/KiNZt2EoSKP7C1aY37gJ9vQ\"",
+      "last_modified": "",
+      "snapshot_signature": "502281cf960a210dd98c9a8edcb609bd88f63b79dbcbe005f7357536868d2664",
+      "first_observed_at": "2026-10-16T03:54:38.691413Z",
+      "last_observed_at": "2026-10-16T03:54:38.691413Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:38.691413Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8cd1bb91a323d29354d03c4f0c56868b4fa96017",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.251515Z",
+      "title": "A LACONIAN POTTERY KYLIX, ATTRIBUTED TO THE BOREAD PAINTER - GROUP B, CIRCA 570 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/CKS-24563-10162026-1.jpg",
+        "/img/SaleImages/NYR-25248-10202026-1.jpg",
+        "/img/SaleImages/NYR-24336-10212026-1.jpg",
+        "/img/SaleImages/CKS-24558-10212026-1.jpg",
+        "/img/SaleImages/PAR-25209-10222026-1.jpg",
+        "/img/SaleImages/CKS-24559-10222026-1.jpg",
+        "/img/SaleImages/PAR-24607-10222026-1.jpg",
+        "/img/SaleImages/NYR-25240-10222026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "      20th/21st Century Art | London      Modern British and Irish Art | London      20th/21st Century Art | Paris      Collections | Global      Asian Art | Hong Kong      Luxury | Global      20th/21st Century Art | New York            Private Sales               Current Exhibitions      Decorative Arts For Your Home | Online               View all        ",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Laconia (Sparta), Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294720",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "19a7a64b750ed4f8485a58fecbd717102a3fa339d3d04b02ebf45e1259453bdb",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "67816ecbd8e213337772d7f15302384d18304e15339dae4e7937c5778ce483bf",
+      "first_observed_at": "2026-10-16T03:54:37.251515Z",
+      "last_observed_at": "2026-10-16T03:54:37.251515Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.251515Z",
+  "snapshot_count": 1
+}

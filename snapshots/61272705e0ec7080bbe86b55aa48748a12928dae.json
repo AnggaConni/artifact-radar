@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "61272705e0ec7080bbe86b55aa48748a12928dae",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:38.805518Z",
+      "title": "Waning market for African artefacts? Controversial Benin bronze fails to sell at Christie's",
+      "page_title": "Waning market for African artefacts? Controversial Benin bronze fails to sell at Christie's",
+      "page_description": "Academics challenge the provenance of the Edo plaque as well as two Igbo alusi figures that sold under estimate for €212,500",
+      "image_urls": [
+        "https://cdn.sanity.io/images/cxgd3urn/production/ef5fa890e0a76c28c6eca921acb5cfff94f972a5-3200x1611.jpg?rect=259,0,2685,1611&w=1200&h=720&q=85&fit=crop&auto=format",
+        "https://cdn.sanity.io/images/cxgd3urn/production/ef5fa890e0a76c28c6eca921acb5cfff94f972a5-3200x1611.jpg?rect=795,323,1611,967&w=1200&h=720&q=85&fit=crop&auto=format"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " Waning market for African artefacts? Controversial Benin bronze fails to sell at Christie's    Academics challenge the provenance of the Edo plaque as well as two Igbo alusi figures that sold under estimate for €212,500     Gareth Harris     30 June 2020     Share           This work was described in the Christie's sale catalogue as an Edo bronze plaque mad",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Nigeria",
+      "source_url": "https://www.theartnewspaper.com/2020/06/30/waning-market-for-african-artefacts-controversial-benin-bronze-fails-to-sell-at-christies",
+      "final_url": "https://www.theartnewspaper.com/2020/06/30/waning-market-for-african-artefacts-controversial-benin-bronze-fails-to-sell-at-christies",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "40940f4db52a92808fd111225c8731c071e48df2c5c5f57476be4516dd333af2",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "06209a4244192f3326610dfaff0f66b1127a51c0e6ef34edd906f5d69f10bced",
+      "first_observed_at": "2026-10-16T03:54:38.805518Z",
+      "last_observed_at": "2026-10-16T03:54:38.805518Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:38.805518Z",
+  "snapshot_count": 1
+}

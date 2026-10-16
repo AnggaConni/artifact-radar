@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1a36a529e2394277e2908fc50ff2ab86d40ad350",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:38.991374Z",
+      "title": "Inside the illegal trade in West Africa's cultural heritage",
+      "page_title": "Inside the illegal trade in West Africa’s cultural heritage  | ENACT Africa",
+      "page_description": "Illegal trade in Malian archaeological objects drains the country of its collective history.",
+      "image_urls": [
+        "https://issafrica.s3.amazonaws.com/site/images/banners/2020-11-26-nok-teracotta-head-full.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "nternational alert of types of cultural heritage that are at risk and likely to have been looted. \r\n Archaeologists and provenance researchers argue that looted objects continue to circulate on antiquities markets with impunity. In their view, collectors and antiquities dealers don’t do enough to ensure due diligence on the objects from which they make a liv",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Mali",
+      "source_url": "https://enactafrica.org/enact-observer/inside-the-illegal-trade-in-west-africas-cultural-heritage",
+      "final_url": "https://issafrica.org/enactafrica/enact-observer/inside-the-illegal-trade-in-west-africas-cultural-heritage",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "40a1a386eb31260f62c3d6bf996f6f111dab62fec3f8bc9e34fa15a7082682e8",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "12056063ec8fc02fe13e27c1a8bd37af3a3dd9b9159d3a6e22de946de068b4e5",
+      "first_observed_at": "2026-10-16T03:54:38.991374Z",
+      "last_observed_at": "2026-10-16T03:54:38.991374Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:38.991374Z",
+  "snapshot_count": 1
+}

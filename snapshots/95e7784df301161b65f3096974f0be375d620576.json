@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "95e7784df301161b65f3096974f0be375d620576",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:38.159919Z",
+      "title": "UNESCO urges caution over fraudulent African artefacts, sold in its name",
+      "page_title": "Protect ordinary Afghans ahead of peace talks, urges UN Mission chief",
+      "page_description": "Ahead of hoped-for peace talks between Afghan Government and Taliban negotiators, UN peacekeepers in Afghanistan have urged parties to “redouble” their efforts to keep civilians safe.",
+      "image_urls": [
+        "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production+Library/30-06-20_Afghanistan_nomads.jpg/image770x420cropped.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Unknown",
+      "source_url": "https://news.un.org/en/story/2020/07/1067582",
+      "final_url": "https://news.un.org/en/story/2020/07/1067582",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "109a19bb53e3116495951647ee21c874e4f1c35de55e6ffd8f679cfbe1c58708",
+      "etag": "W/\"1792118257\"",
+      "last_modified": "Fri, 16 Oct 2026 02:37:37 GMT",
+      "snapshot_signature": "ea68601131e7c6ffdc5cdd51a4f9000c621a636ee86a2adc4b809bf2552e3b07",
+      "first_observed_at": "2026-10-16T03:54:38.159919Z",
+      "last_observed_at": "2026-10-16T03:54:38.159919Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:38.159919Z",
+  "snapshot_count": 1
+}

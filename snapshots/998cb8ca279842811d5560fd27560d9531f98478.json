@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "998cb8ca279842811d5560fd27560d9531f98478",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:34.580047Z",
+      "title": "Ancient Earthenware Pottery Jar Base Ban Chiang Culture Geometric & Curvilinear",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.etsy.com/listing/some-id/ancient-earthenware-pottery-jar-base-ban-chiang-culture-geometric-curvilinear",
+      "final_url": "https://www.etsy.com/listing/some-id/ancient-earthenware-pottery-jar-base-ban-chiang-culture-geometric-curvilinear",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e2f7f9c1ebc7f2b077c9a591bd371d616eaf2298b203c61d874a900f68257e91",
+      "first_observed_at": "2026-10-16T03:54:34.580047Z",
+      "last_observed_at": "2026-10-16T03:54:34.580047Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:34.580047Z",
+  "snapshot_count": 1
+}

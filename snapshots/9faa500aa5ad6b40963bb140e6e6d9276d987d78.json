@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "9faa500aa5ad6b40963bb140e6e6d9276d987d78",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:35.883668Z",
+      "title": "Greek Apulian Kylix, Magna Graecia, Southern Italy, 340 BC Ex- Robert Sonin",
+      "page_title": "Red Wire Cage Sculptural Pendant Light Fixture, circa 1960 at 1stDibs | what is the red wire in a ceiling light fixture, red wire light fixture, red wire in light fixture",
+      "page_description": "View this item and discover similar  for sale at 1stDibs - A beautiful example of what our shop does best, we've brought back this original midcentury 1960s wire cage pendant light fixture freshly refinished in",
+      "image_urls": [
+        "https://a.1stdibscdn.com/red-wire-cage-sculptural-pendant-light-fixture-circa-1960-for-sale/1121189/f_207455221606197983409/20745522_master.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Magna Graecia, Southern Italy",
+      "source_url": "https://www.1stdibs.com/furniture/decorative-objects/vases/greek-apulian-kylix-magna-graecia-southern-italy-340-bc-ex-robert-sonin/id-f_20745522/",
+      "final_url": "https://www.1stdibs.com/furniture/lighting/chandeliers-pendant-lights/red-wire-cage-sculptural-pendant-light-fixture-circa-1960/id-f_20745522",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "df8c689e6de891c6f8010c33d422fff5a9283fd3297ed59fd33fa272347dda78",
+      "etag": "",
+      "last_modified": "Thu, 15 Oct 2026 15:30:22 GMT",
+      "snapshot_signature": "9bec95c9622c2be6e6b85e582f343912882940d8adbabc0027c0a1d8c99f09ad",
+      "first_observed_at": "2026-10-16T03:54:35.883668Z",
+      "last_observed_at": "2026-10-16T03:54:35.883668Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:35.883668Z",
+  "snapshot_count": 1
+}

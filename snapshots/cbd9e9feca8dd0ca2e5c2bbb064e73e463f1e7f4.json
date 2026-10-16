@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "cbd9e9feca8dd0ca2e5c2bbb064e73e463f1e7f4",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:35.028605Z",
+      "title": "Ban Chiang",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.traffickingculture.org/encyclopedia/case-studies/ban-chiang/",
+      "final_url": "https://traffickingculture.org/encyclopedia/case-studies/ban-chiang",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "\"tfv9u5492\"",
+      "last_modified": "Sat, 30 May 2026 20:20:29 GMT",
+      "snapshot_signature": "517b8db0dc9324d998ef01713bd9274d300fbdba6e79b7745158539866909d67",
+      "first_observed_at": "2026-10-16T03:54:35.028605Z",
+      "last_observed_at": "2026-10-16T03:54:35.028605Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:35.028605Z",
+  "snapshot_count": 1
+}

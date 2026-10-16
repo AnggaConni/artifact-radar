@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a2ef974a3968e71d35a64b14fbdb581e6c5baea0",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.435877Z",
+      "title": "Kylix (Drinking Cup)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Ancient Greece",
+      "source_url": "https://www.artic.edu/artworks/185/kylix-drinking-cup",
+      "final_url": "https://www.artic.edu/artworks/185/kylix-drinking-cup",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "2822deae13d62fd94894a0b1331ddca1fccf83df15f0b1fbc21db997266fa355",
+      "first_observed_at": "2026-10-16T03:54:37.435877Z",
+      "last_observed_at": "2026-10-16T03:54:37.435877Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.435877Z",
+  "snapshot_count": 1
+}

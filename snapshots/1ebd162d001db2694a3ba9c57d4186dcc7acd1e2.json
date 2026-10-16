@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1ebd162d001db2694a3ba9c57d4186dcc7acd1e2",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:38.083169Z",
+      "title": "World record for African figure seals a good year for African and Oceanic Art at Sotheby's, Paris",
+      "page_title": "World record for African figure seals a good year for African and Oceanic Art at Sotheby’s, Paris",
+      "page_description": "Sotheby’s Arts d’Afrique et d’Océanie sale in Paris on 11 December 2013 confirmed the saleroom's position as the past year’s top venue for African, Oceanic and Pre-Columbian art.",
+      "image_urls": [
+        "https://cdn.sanity.io/images/x7bsynha/production/3f75ee56935d913a25416cbee40413ef789a9efe-400x497.gif?w=1200&fit=max&auto=format"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "ion ($5.1 million) yield lifted the Paris total for 2013 to €17.76 ($23.4 million).   The sale included pieces from the collection of Georges Miré (1890–1965)., which was assembled in Paris in the 1920s. When hen it was first sold at Drouot in 1931 – the first collection of African art ever to be auctioned in the French capital – it was described by the Amer",
+      "price_usd": 1990553,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Gabon",
+      "source_url": "https://www.hali.com/news/world-record-for-african-figure-seals-a-good-year-for-african-and-oceanic-art-at-sothebys-paris/",
+      "final_url": "https://www.hali.com/editorial/world-record-for-african-figure-seals-a-good-year-for-african-and-oceanic-art-at-sothebys-paris",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "59f34beb67d25cea773736506ec5fbd8c1a5dac3ffb43f78ef34829205ad0a83",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "c96b8890a345c1f76f6b10d5d691e17ebf641e77a7a5fbe43a61b8e17afb6ac1",
+      "first_observed_at": "2026-10-16T03:54:38.083169Z",
+      "last_observed_at": "2026-10-16T03:54:38.083169Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:38.083169Z",
+  "snapshot_count": 1
+}

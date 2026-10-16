@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1a89518aaae9ac75b5d11c19d3a6fba534cc4d2b",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.500169Z",
+      "title": "Bonhams Showcases South African Masterworks and Nigerian Art Highlights in March London Sale",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 250000,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "South Africa",
+      "source_url": "https://www.bonhams.com/press_release/30177/",
+      "final_url": "https://www.bonhams.com/press_release/30177",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "39d7755cd126d5445ccb8f0fad5f2e7697b8aca23b0098679589fbf5a7ab8c00",
+      "first_observed_at": "2026-10-16T03:54:37.500169Z",
+      "last_observed_at": "2026-10-16T03:54:37.500169Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.500169Z",
+  "snapshot_count": 1
+}

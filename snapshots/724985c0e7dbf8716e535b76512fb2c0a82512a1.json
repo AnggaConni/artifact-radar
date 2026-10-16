@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "724985c0e7dbf8716e535b76512fb2c0a82512a1",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:34.633332Z",
+      "title": "Ban Chiang Burnished and Incised Black Pottery Vessel, 1200-800 BC, Thailand",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.1stdibs.com/furniture/decorative-objects/vases-vessels/ban-chiang-burnished-incised-black-pottery-vessel-1200-800-bc-thailand/id-f_13500000/",
+      "final_url": "https://www.1stdibs.com/furniture/decorative-objects/vases-vessels/ban-chiang-burnished-incised-black-pottery-vessel-1200-800-bc-thailand/id-f_13500000",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e302be31ed9387ca83000821a033a55090969ddd2c24971ca959c0e5ee2dad65",
+      "first_observed_at": "2026-10-16T03:54:34.633332Z",
+      "last_observed_at": "2026-10-16T03:54:34.633332Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:34.633332Z",
+  "snapshot_count": 1
+}

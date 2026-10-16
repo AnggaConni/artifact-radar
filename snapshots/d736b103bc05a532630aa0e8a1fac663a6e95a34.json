@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d736b103bc05a532630aa0e8a1fac663a6e95a34",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:35.120660Z",
+      "title": "Ban Chiang - US legal case",
+      "page_title": "Ban Chiang - Wikipedia",
+      "page_description": "",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Ban_Chiang_Museum_Excavation.JPG/1280px-Ban_Chiang_Museum_Excavation.JPG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https:\\/\\/upload.wikimedia.org\\/wikipedia\\/commons\\/8\\/87\\/Ban_Chiang_Museum_Excavation.JPG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "ence dating of pottery was at the time an experimental technique and had been applied to Ban Chiang sherds of uncertain provenance. However, with the 1974–1975 excavation, sufficient material became available for  radiocarbon dating . Reanalysis by radiocarbon dating suggested that a more likely date for the earliest metallurgy at Ban Chiang was c. 2000–1700",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://en.wikipedia.org/wiki/Ban_Chiang#US_legal_case",
+      "final_url": "https://en.wikipedia.org/wiki/Ban_Chiang",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "4f1ed28b8c1d8b42c8f0c1c3c8437da7e355088346da7a3ce5aaa154243883ab",
+      "etag": "",
+      "last_modified": "Fri, 16 Oct 2026 02:46:10 GMT",
+      "snapshot_signature": "008fc6d96e587bdc3188f9edd94129f3542e6909db0f7e18ca2fa8274efab388",
+      "first_observed_at": "2026-10-16T03:54:35.120660Z",
+      "last_observed_at": "2026-10-16T03:54:35.120660Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:35.120660Z",
+  "snapshot_count": 1
+}

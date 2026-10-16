@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d0e19d9a401e2491ccf4cb107f46dbc3dd616cdf",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:35.695175Z",
+      "title": "The Museum That Bought Its Own Stolen Property",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 1000000,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Etruria (Italy)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFx58ZtrMQF9WKXi66zKMDggL66VykjEsct0eHceVeo7rWDc6vf2g0h5qPkEXzvPi-cPmKRJajZCAyMusXvUruhUZdSEcyaqzrFVv8u08L_DLpXwjTe4HcfXMw37GIh-jMPc-atTec=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "475668ce8bb7d1111a695646fda644fcafd81225af6b3ca371553b3f5c1df166",
+      "first_observed_at": "2026-10-16T03:54:35.695175Z",
+      "last_observed_at": "2026-10-16T03:54:35.695175Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:35.695175Z",
+  "snapshot_count": 1
+}

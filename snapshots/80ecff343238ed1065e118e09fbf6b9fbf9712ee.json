@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "80ecff343238ed1065e118e09fbf6b9fbf9712ee",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:35.252296Z",
+      "title": "Handover Ceremony of Ban Chiang Archaeological Artifacts from the United States to Thailand",
+      "page_title": "A077E561-4D7E-4C07-B244-10BA9599FA40",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.mfa.go.th/en/content/642398534838420002012023",
+      "final_url": "https://www.mfa.go.th/en/content/642398534838420002012023",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "8e15eb012600fdf9b0d977f520a9419c7f712dd81352d3021272a654d90235ee",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d4cfdd8731fcbefb2595c99ce75e9a7f4a2c1615c8e2803998f4041177d44fe5",
+      "first_observed_at": "2026-10-16T03:54:35.252296Z",
+      "last_observed_at": "2026-10-16T03:54:35.252296Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:35.252296Z",
+  "snapshot_count": 1
+}

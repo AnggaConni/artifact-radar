@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "3c62cf2c1fc769b4b847945cbfdbdd7462da930f",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:36.349675Z",
+      "title": "An Attic Red-Figured Kylix, attributed to Makron as painter, signed by Hieron as potter, circa 490/480 B.C.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.sothebys.com/en/buy/auction/2020/ancient-sculpture-and-works-of-art/an-attic-red-figured-kylix-attributed-to-makron",
+      "final_url": "https://www.sothebys.com/en/buy/auction/2020/ancient-sculpture-and-works-of-art/an-attic-red-figured-kylix-attributed-to-makron",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "\"fit8yzuidg12ug\"",
+      "last_modified": "",
+      "snapshot_signature": "6c8c89f8fe39cb05562152e6e43cf1465102adb70cd9066d6bd6bb7b23510651",
+      "first_observed_at": "2026-10-16T03:54:36.349675Z",
+      "last_observed_at": "2026-10-16T03:54:36.349675Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:36.349675Z",
+  "snapshot_count": 1
+}

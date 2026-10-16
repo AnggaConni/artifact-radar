@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c7743f0c59f3b69c4a788ed338d9603060b17da3",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:38.493944Z",
+      "title": "A collection of 4 tribal Kalasha and a Telsum phallic necklace, Konso people, Ethiopia, L 17 cm (tallest)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 216,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Ethiopia",
+      "source_url": "https://www.invaluable.com/auction-lot/a-collection-of-4-tribal-kalasha-and-a-telsum-pha-160-c-134440a97a",
+      "final_url": "https://www.invaluable.com/auction-lot/a-collection-of-4-tribal-kalasha-and-a-telsum-pha-160-c-134440a97a",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"117f-lyY/KiNZt2EoSKP7C1aY37gJ9vQ\"",
+      "last_modified": "",
+      "snapshot_signature": "7907f8b92ad562887ab4ae35af31f4207ac06706f701b245965ff936d4ba0aca",
+      "first_observed_at": "2026-10-16T03:54:38.493944Z",
+      "last_observed_at": "2026-10-16T03:54:38.493944Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:38.493944Z",
+  "snapshot_count": 1
+}

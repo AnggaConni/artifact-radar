@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "bc6c8b0917a5a63a8b3956db228e91abe5cbb819",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:36.447656Z",
+      "title": "ANCIENT GREEK BLACK GLAZED POTTERY KYLIX VESSEL",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Ancient Greece",
+      "source_url": "https://www.antiquearena.com/lot-317-ancient-greek-black-glazed-pottery-kylix-vessel",
+      "final_url": "https://antiquearena.com/lot-317-ancient-greek-black-glazed-pottery-kylix-vessel",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "4262d69a913afeaa37200d9d9539553a695ab217b8f2082bedfb76bb6c0e3663",
+      "first_observed_at": "2026-10-16T03:54:36.447656Z",
+      "last_observed_at": "2026-10-16T03:54:36.447656Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:36.447656Z",
+  "snapshot_count": 1
+}

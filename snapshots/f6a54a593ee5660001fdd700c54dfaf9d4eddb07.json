@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "f6a54a593ee5660001fdd700c54dfaf9d4eddb07",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.418100Z",
+      "title": "Brian Hernandez 'seriously damaged' a number of ancient Greek artifacts from the fifth and sixth centuries B.C.E., including a black drinking cup called a 'kylix'",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Ancient Greece",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNO800vN9xTXW0LP-JW8WaEpGtBmF9OibxS-7XSmy-n18JaPHDGaDbyw08MFMEWa8QB9kStEh3fP9LoHdcuwXE7ZD7Y2W0FSmzKg6S_sdKIOoKChLWUOLnKy_CLH2C05MG58QrK2zwpcgNM5Yjj7vZKyOflzRzQS1GIv4xSP3nGeZ7aTrIZPudzYLJxin33iFMDA7sO--E8d_2nosHyERTIaYerDpI_1bbE6xyh23S2UjgkQCvVp9E4qA8IJfPa4vf09QISvE_xJsb",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "dde3dd9951cfe8fbf6c6d0c0769d98e99f9d1364c53ccf6e66dbb66880740f6a",
+      "first_observed_at": "2026-10-16T03:54:37.418100Z",
+      "last_observed_at": "2026-10-16T03:54:37.418100Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.418100Z",
+  "snapshot_count": 1
+}

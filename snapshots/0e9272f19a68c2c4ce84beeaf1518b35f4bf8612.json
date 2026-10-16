@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "0e9272f19a68c2c4ce84beeaf1518b35f4bf8612",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:36.591984Z",
+      "title": "NY Times Highlights Experts' Distrust of Ancient Kylix Reassembled from Fragments",
+      "page_title": "NY Times Highlights Experts’ Distrust of Ancient Kylix Reassembled from Fragments - The National Herald",
+      "page_description": "NEW YORK – The remarkable story of an ancient Greek kylix (drinking cup) seized from the Metropolitan Museum of Art in New York by investigators last year and how the cup was reassembled from fragments was featured in the New York Times as experts doubted the reconstruction was merely “a product of genius.” “The first...",
+      "image_urls": [
+        "https://www.thenationalherald.com/wp-content/uploads/2023/04/Kylix-Met-returned.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "in Greece, told the Times, noting that “instead, in this case they collected all these fragments out of thin air with a provenance that had no details.” \n “At his death, von Bothmer bequeathed the Met some 16,000 fragments, some of which are on display today in one of the two galleries named for him at the museum,” the Times reported, adding that “occupying ",
+      "price_usd": 1000000,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Ancient Greece",
+      "source_url": "https://www.thenationalherald.com/ny-times-highlights-experts-distrust-of-ancient-kylix-reassembled-from-fragments/",
+      "final_url": "https://www.thenationalherald.com/ny-times-highlights-experts-distrust-of-ancient-kylix-reassembled-from-fragments",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "5126fb2eabbc42aea1a07af37cfa8180283905d996e5fa043dbb2ed6431dee28",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3102a490d95f6c49f031ec541dca0bc6417da9c2dff275c8ded79c939a3dee70",
+      "first_observed_at": "2026-10-16T03:54:36.591984Z",
+      "last_observed_at": "2026-10-16T03:54:36.591984Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:36.591984Z",
+  "snapshot_count": 1
+}

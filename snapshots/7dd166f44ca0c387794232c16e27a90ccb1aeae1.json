@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "7dd166f44ca0c387794232c16e27a90ccb1aeae1",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.418132Z",
+      "title": "Terracotta kylix (drinking cup) - Attributed to the manner of the Pistoxenos Painter",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.metmuseum.org/art/collection/search/253303",
+      "final_url": "https://www.metmuseum.org/art/collection/search/253303",
+      "source_status": "UNAVAILABLE",
+      "http_status": 429,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d78eed8fb8cd4ceea5e02ae16b8e0afbd26672cd236bad7a0689a3f8938109f7",
+      "first_observed_at": "2026-10-16T03:54:37.418132Z",
+      "last_observed_at": "2026-10-16T03:54:37.418132Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.418132Z",
+  "snapshot_count": 1
+}

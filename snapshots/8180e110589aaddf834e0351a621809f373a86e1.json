@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8180e110589aaddf834e0351a621809f373a86e1",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.493090Z",
+      "title": "Metropolitan Museum Surrenders Looted Greek Vase",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Ancient Greece",
+      "source_url": "https://hyperallergic.com/395663/metropolitan-museum-surrenders-looted-greek-vase/",
+      "final_url": "https://hyperallergic.com/metropolitan-museum-surrenders-looted-greek-vase",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"4a8-8FBlgc6dHfWg6k0Z1ggAVi1TpaE\"",
+      "last_modified": "",
+      "snapshot_signature": "5ccef109a77acff5f3c024782bcd7dac2773e776155be091336356b7eca98bb1",
+      "first_observed_at": "2026-10-16T03:54:37.493090Z",
+      "last_observed_at": "2026-10-16T03:54:37.493090Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.493090Z",
+  "snapshot_count": 1
+}

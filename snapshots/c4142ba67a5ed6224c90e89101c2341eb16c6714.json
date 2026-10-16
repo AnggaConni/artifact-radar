@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c4142ba67a5ed6224c90e89101c2341eb16c6714",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.620146Z",
+      "title": "A Group of Principled French Art Dealers Teamed Up to Buy 27 Looted African Artifacts at Auction—So They Could Return Them to Benin",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Benin",
+      "source_url": "https://news.artnet.com/art-world/french-art-dealers-buy-looted-benin-artifacts-return-1753177",
+      "final_url": "https://news.artnet.com/art-world/french-art-dealers-buy-looted-benin-artifacts-return-1753177",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "918635c0b7ecaa16f8e9cea6478b546ad36af8150a0d9ca2e832f1e4cfdc9e56",
+      "first_observed_at": "2026-10-16T03:54:37.620146Z",
+      "last_observed_at": "2026-10-16T03:54:37.620146Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.620146Z",
+  "snapshot_count": 1
+}

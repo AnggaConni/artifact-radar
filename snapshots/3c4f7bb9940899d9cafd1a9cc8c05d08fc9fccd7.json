@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "3c4f7bb9940899d9cafd1a9cc8c05d08fc9fccd7",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:39.002549Z",
+      "title": "Collecting African Tribal Art : Ten top items sold in 2022",
+      "page_title": "Collecting African Tribal Art : Ten top items sold in 2022",
+      "page_description": "It is in the roundness of the shapes and the austere tension of their curves that the artist has gifted Songye statuary with one of its most powerful interpretations.",
+      "image_urls": [
+        "https://i0.wp.com/sm76626.wordpress.com/wp-content/uploads/2023/10/songye-2022_10.jpg?fit=844%2C1200&ssl=1",
+        "https://i0.wp.com/sm76626.wordpress.com/wp-content/uploads/2023/10/songye-2022_10.jpg?fit=844%2C1200&ssl=1&w=640"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " \n\t Phemba \n\t Philip Ravenhill \n\t Picasso \n\t Pokot \n\t Politics \n\t Poverty \n\t Poverty \n\t Prejudice \n\t Progressive Tax \n\t Provenance \n\t Provenance Report \n\t Punu \n\t Pwoom Itok \n\t Quality \n\t Racism \n\t Rebozos \n\t Recession \n\t Red Cross \n\t Reincarnation \n\t Reliquary \n\t Renoir \n\t repatriation \n\t Robert Farris Thompson \n\t Rowland Abiodun \n\t Roy Sieber \n\t Salampasu ",
+      "price_usd": 4536000,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Gabon",
+      "source_url": "https://sm76626.wordpress.com/2023/10/07/collecting-african-tribal-art-ten-top-items-sold-in-2022/",
+      "final_url": "https://sm76626.wordpress.com/2023/10/07/collecting-african-tribal-art-ten-top-items-sold-in-2022",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "608314cb159bf3247c916627a21127148c43daab84d367625daf3be49c5cf3b4",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a8fc65e1c0d491ce6b587020eeaac87db9dc11404c5a2e55511e0015633c61c0",
+      "first_observed_at": "2026-10-16T03:54:39.002549Z",
+      "last_observed_at": "2026-10-16T03:54:39.002549Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:39.002549Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "7f872537459f3deb800b6b581bd909ab8fe3292b",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.983205Z",
+      "title": "RESULTS: Art of Africa Masterworks - Christie's Press",
+      "page_title": "Christie's Continues to Lead Global Art Market, 2018 Sales Total £5.3 Billion ($7 Billion) - Christie's",
+      "page_description": "Discover Christie's latest news, including auction results, standout works, and news from the art world.",
+      "image_urls": [
+        "http://www.christies.com/PresscenterImages/9290/Capture.JPG",
+        "https://press.christies.com/wp-content/themes/christies_2023/assets/img/thumbnail-logo.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "lion, an increase of 3% on 2017 ($7 billion, up 6%) and were led by the historic Rockefeller sale, the most significant collection ever sold at auction.   Global auction sales rose 3% to £4.7 billion ($6.3 billion, up 6%) with sell through rates by lot increasing to 82%, a reflection of a continued focus on carefully edited and estimated sales. Private sales",
+      "price_usd": 4215000,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Democratic Republic of Congo",
+      "source_url": "https://www.christies.com/about-us/press-archive/details?pressreleaseid=9290",
+      "final_url": "https://press.christies.com/christies-continues-to-lead-global-art-market-2018-sales-total-ps53-billion-7-billion",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "0f3b0be31f747e6ef956ffe92c87f225ece47d4836ea9faaea6d0a9bcb080dd6",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "ebc6134a44627b96cb12351c16bc831f1e6d4b0fc89b73c9d628b323103c6397",
+      "first_observed_at": "2026-10-16T03:54:37.983205Z",
+      "last_observed_at": "2026-10-16T03:54:37.983205Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.983205Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a1f279fd14aaf6d0152e2eb9228175ddd7616026",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:36.956265Z",
+      "title": "TWO ATTIC RED-FIGURED VASE FRAGMENTS, ATTRIBUTED TO EUPHRONIOS, circa 520-500 B.C.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.sothebys.com/en/buy/auction/2020/ancient-sculpture-and-works-of-art/two-attic-red-figured-vase-fragments-attributed",
+      "final_url": "https://www.sothebys.com/en/buy/auction/2020/ancient-sculpture-and-works-of-art/two-attic-red-figured-vase-fragments-attributed",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "\"fit8yzuidg12ug\"",
+      "last_modified": "",
+      "snapshot_signature": "52966e163b5492926cd2f45ebd4be8959841d52b42282dcf703a8ae3d4351bef",
+      "first_observed_at": "2026-10-16T03:54:36.956265Z",
+      "last_observed_at": "2026-10-16T03:54:36.956265Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:36.956265Z",
+  "snapshot_count": 1
+}

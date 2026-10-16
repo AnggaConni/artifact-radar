@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1b51d29b1d62707509836310d9e6ea7ab08e6d77",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.338771Z",
+      "title": "Attic Kylix",
+      "page_title": "2006.35.T, Attic Kylix",
+      "page_description": "A mid-5th century B.C.E. Attic black-gloss kylix.",
+      "image_urls": [
+        "https://www.colorado.edu/classics/sites/default/files/article-thumbnail/2006.35.t_side.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "5/11/2018   5/11/2018     • By   Megan Aikman and Debby Sneed            Catalogue Entry         This vase is one of  a collection of Greek vases  held by the CU Art Museum.  Gift to CU Classics Department  Transferred to CU Museum of Natural History  Transferred to CU Art Museum  (2006)  Height: 6.7 cm  Diameter (max.): 23.8 cm  Depth: 17.8 cm  Date: c. 450",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Athens, Greece",
+      "source_url": "https://www.colorado.edu/classics/2018/05/11/200635t-attic-kylix",
+      "final_url": "https://www.colorado.edu/classics/2018/05/11/200635t-attic-kylix",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "673fa4488e77312e75b89b070f500ba3f9570f863089f145dd7c2180c37a9039",
+      "etag": "W/\"1792103628\"",
+      "last_modified": "Thu, 15 Oct 2026 22:33:48 GMT",
+      "snapshot_signature": "a706f46261471e29ac2db2b70fa7a0c5c186c4f85fe4b48b1ecbd8e4349811f3",
+      "first_observed_at": "2026-10-16T03:54:37.338771Z",
+      "last_observed_at": "2026-10-16T03:54:37.338771Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.338771Z",
+  "snapshot_count": 1
+}

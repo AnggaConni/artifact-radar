@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "432aeb30d6b0b2fe6a931de4852a92ba36eb3734",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:36.348674Z",
+      "title": "Greek Black-Figure Ware Kylix",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Attic, Greece",
+      "source_url": "https://www.invaluable.com/auction-lot/greek-black-figure-ware-kylix-13316-258818",
+      "final_url": "https://www.invaluable.com/auction-lot/greek-black-figure-ware-kylix-13316-258818",
+      "source_status": "UNKNOWN",
+      "http_status": 400,
+      "content_hash": "",
+      "etag": "W/\"117f-lyY/KiNZt2EoSKP7C1aY37gJ9vQ\"",
+      "last_modified": "",
+      "snapshot_signature": "c01a67dc734885186f8e8223f486c4370bebd22729010edeb6323f04439c58af",
+      "first_observed_at": "2026-10-16T03:54:36.348674Z",
+      "last_observed_at": "2026-10-16T03:54:36.348674Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:36.348674Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a148945165eeb9400d4e348ec4522e9be2917c25",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:36.911318Z",
+      "title": "AN ATTIC RED-FIGURED KYLIX, ATTRIBUTED TO DOURIS AS PAINTER AND TO PYTHON AS POTTER CIRCA 480 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/CKS-24563-10162026-1.jpg",
+        "/img/SaleImages/NYR-25248-10202026-1.jpg",
+        "/img/SaleImages/NYR-24336-10212026-1.jpg",
+        "/img/SaleImages/CKS-24558-10212026-1.jpg",
+        "/img/SaleImages/PAR-25209-10222026-1.jpg",
+        "/img/SaleImages/CKS-24559-10222026-1.jpg",
+        "/img/SaleImages/PAR-24607-10222026-1.jpg",
+        "/img/SaleImages/NYR-25240-10222026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "      20th/21st Century Art | London      Modern British and Irish Art | London      20th/21st Century Art | Paris      Collections | Global      Asian Art | Hong Kong      Luxury | Global      20th/21st Century Art | New York            Private Sales               Current Exhibitions      Decorative Arts For Your Home | Online               View all        ",
+      "price_usd": 1766000,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294719",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "8df7abc83182dbe8aea0db1ad3371bb11405d2380a2b37de5fd1c41490d7c15e",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "70fd09234da748537da0c1acbd00e5f172173346e932856ff88a681ed1d4087c",
+      "first_observed_at": "2026-10-16T03:54:36.911318Z",
+      "last_observed_at": "2026-10-16T03:54:36.911318Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:36.911318Z",
+  "snapshot_count": 1
+}

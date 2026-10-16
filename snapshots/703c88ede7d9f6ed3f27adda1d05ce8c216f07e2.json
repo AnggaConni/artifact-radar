@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "703c88ede7d9f6ed3f27adda1d05ce8c216f07e2",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.330975Z",
+      "title": "Drinking cup (kylix)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Athens, Greece",
+      "source_url": "https://www.mfa.org/collections/object/drinking-cup-kylix-101000",
+      "final_url": "https://www.mfa.org/collections/object/drinking-cup-kylix-101000",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "8ba449ac6e19a31535291c7245e721113279d8e977d576380acbf34f71925ff2",
+      "first_observed_at": "2026-10-16T03:54:37.330975Z",
+      "last_observed_at": "2026-10-16T03:54:37.330975Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.330975Z",
+  "snapshot_count": 1
+}

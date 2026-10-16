@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "4113d6f22aff2de846bf65b00a5bd38baf2061a2",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:36.595758Z",
+      "title": "Authentic Ancient Greek Black Glaze Twin Handle Ceramic Bowl Kylix Dish",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 427.5,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Greek Colonies, Southern Italian Region",
+      "source_url": "https://www.ebay.com/itm/Authentic-Ancient-Greek-Black-Glaze-Twin-Handle-Ceramic-Bowl-Kylix-Dish-/266450000000",
+      "final_url": "https://www.ebay.com/itm/Authentic-Ancient-Greek-Black-Glaze-Twin-Handle-Ceramic-Bowl-Kylix-Dish-/266450000000",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "20f46f27ba18be7e31ed39c2cc76ae1be55a1931ebbc8b14f619d0d09bf870a9",
+      "first_observed_at": "2026-10-16T03:54:36.595758Z",
+      "last_observed_at": "2026-10-16T03:54:36.595758Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:36.595758Z",
+  "snapshot_count": 1
+}

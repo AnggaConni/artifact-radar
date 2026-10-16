@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "e749c4bf10d59842c6ccc2ede88f50833339d942",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.739930Z",
+      "title": "Disputed African Artifacts Sell at Auction",
+      "page_title": "Roundup Top Ten for June 12, 2020",
+      "page_description": "The week's top opinion writing by historians or about history from around the web.",
+      "image_urls": [
+        "https://www.historynewsnetwork.org/file/37759"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 238000,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Nigeria",
+      "source_url": "https://historynewsnetwork.org/article/175945",
+      "final_url": "https://www.historynewsnetwork.org/article/roundup-top-ten-for-june-12-2020",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "ed701eb1b9e8e790f78ff79567fdd7a5316afd8281d4bb3ee1b05fe81299a19d",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5ffb3f704d8c96bffbec1273510591d9d855322dc2a55f09e16c357467e55140",
+      "first_observed_at": "2026-10-16T03:54:37.739930Z",
+      "last_observed_at": "2026-10-16T03:54:37.739930Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.739930Z",
+  "snapshot_count": 1
+}

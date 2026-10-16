@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1d964e2fbda7dbf5d1b2bb650f331af63e1cb811",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.560991Z",
+      "title": "Africa's looted artifacts are being put up for sale during the global economic crisis",
+      "page_title": "Quartz",
+      "page_description": "Quartz is a guide to the new global economy for people who are excited by change. We cover business, finance, economics, technology, lifestyle, and leadership.",
+      "image_urls": [
+        "https://qz.com/cdn-cgi/image/width=1200,quality=85,format=auto/https://assets.qz.com/logos/email-logo.png"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 32400,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Ghana",
+      "source_url": "https://qz.com/africa/1879942/africas-looted-artifacts-are-being-put-up-for-sale-during-covid",
+      "final_url": "https://qz.com/africa/1879942/africas-looted-artifacts-are-being-put-up-for-sale-during-covid",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "a7a1c03616d976e3b4c96ffa15ced3b840a26318949e98cacf56059ddd3cadca",
+      "etag": "",
+      "last_modified": "Fri, 16 Oct 2026 03:54:37 GMT",
+      "snapshot_signature": "5546acc95b4521f6b1a03ada8e6af34b994b359767c2c351bdaa6de45a709426",
+      "first_observed_at": "2026-10-16T03:54:37.560991Z",
+      "last_observed_at": "2026-10-16T03:54:37.560991Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.560991Z",
+  "snapshot_count": 1
+}

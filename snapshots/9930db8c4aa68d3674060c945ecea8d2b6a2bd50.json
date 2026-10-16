@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "9930db8c4aa68d3674060c945ecea8d2b6a2bd50",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:34.990062Z",
+      "title": "Ban Chiang Pottery Painted Vessel - 26 cm",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.catawiki.com/en/l/12345678-ban-chiang-pottery-painted-vessel-26-cm",
+      "final_url": "https://www.catawiki.com/en/l/12345678-ban-chiang-pottery-painted-vessel-26-cm",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "1b4082dbd08bc6bda40b33b45d8f022a2a34e0fcf721741d6908e9e358e1c4f6",
+      "first_observed_at": "2026-10-16T03:54:34.990062Z",
+      "last_observed_at": "2026-10-16T03:54:34.990062Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:34.990062Z",
+  "snapshot_count": 1
+}

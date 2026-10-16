@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d5509f831ae93af1f0f50177c72e05e10079c038",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:36.587266Z",
+      "title": "Will this wine cup set a new auction record for a Greek vase?",
+      "page_title": "Latest stories | Christie’s",
+      "page_description": "Discover the news, views and stories behind the art. Stay up to date.",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 1200000,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.christies.com/features/Will-this-wine-cup-set-a-new-auction-record-for-a-Greek-vase-10901-1.aspx",
+      "final_url": "https://www.christies.com/en/stories/archive",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "302df6fd2bbb3fad52f71b6ab6b7ee298fc06ad0b4db8c92471534269e0f25c3",
+      "etag": "W/\"57558A2FB07C129231C286325A11A55B\"",
+      "last_modified": "",
+      "snapshot_signature": "7d5aea16d10ea07b3b8e09a5c07e77e0223246a8b45b12849b7d341245f82b9e",
+      "first_observed_at": "2026-10-16T03:54:36.587266Z",
+      "last_observed_at": "2026-10-16T03:54:36.587266Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:36.587266Z",
+  "snapshot_count": 1
+}

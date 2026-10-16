@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "b914b492ac10fde06bc4c7240defec2ab5114c38",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:36.168290Z",
+      "title": "Greek Ionian Pottery Kylix w/ Glazed Details",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Ionia, Magna Graecia",
+      "source_url": "https://www.bidsquare.com/auctions/artemis-fine-arts-22a/greek-ionian-pottery-kylix-w-glazed-details-1002019",
+      "final_url": "https://www.bidsquare.com/auctions/artemis-fine-arts-22a/greek-ionian-pottery-kylix-w-glazed-details-1002019",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e2ae9a90c232ba19d902c2a6a25370973535161f39fdb4eef4815f2111e537d2",
+      "first_observed_at": "2026-10-16T03:54:36.168290Z",
+      "last_observed_at": "2026-10-16T03:54:36.168290Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:36.168290Z",
+  "snapshot_count": 1
+}

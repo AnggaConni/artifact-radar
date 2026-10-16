@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "844da216f94ba5356aac8268bec0a5df6e270423",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:39.255455Z",
+      "title": "Looting Africa Theft, illicit sales, poverty and war are conspiring to rob a continent of its rich artistic heritage",
+      "page_title": "Numbers: Aug. 6, 2001",
+      "page_description": "31,000 Tech-job cuts announced last Thursday 777,000 Job cuts announced in the U.S. in the first six months of 2001 614,000 Job cuts in the U.S. in all of 2000 $499.99 Price of a BlackBerry...",
+      "image_urls": [
+        "https://static.time.com/v3/assets/bltea6093859af6183b/bltde093bcdab65f2d0/6988d9b9bc6cfc69913e2a3c/time-logo.jpg?branch=production"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 30,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Nigeria",
+      "source_url": "http://content.time.com/time/magazine/article/0,9171,1000494,00.html",
+      "final_url": "https://time.com/archive/6664506/numbers-aug-6-2001",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "dcf6be42821dba6132bbf10071afb69c665f80e31d3a1114ea5916083337e7d0",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "7622985b05b3d29e46ea3807a48508f15289611727ab40c229889553a1222659",
+      "first_observed_at": "2026-10-16T03:54:39.255455Z",
+      "last_observed_at": "2026-10-16T03:54:39.255455Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:39.255455Z",
+  "snapshot_count": 1
+}

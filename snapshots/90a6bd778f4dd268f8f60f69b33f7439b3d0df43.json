@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "90a6bd778f4dd268f8f60f69b33f7439b3d0df43",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.055492Z",
+      "title": "An Obscenely Humorous Sam Wide Group Kylix at the Walters Art Museum",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Corinth, Greece",
+      "source_url": "https://thewalters.org/blog/an-obscenely-humorous-sam-wide-group-kylix-at-the-walters-art-museum/",
+      "final_url": "https://thewalters.org/blog/an-obscenely-humorous-sam-wide-group-kylix-at-the-walters-art-museum",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "c61101b6c55113dc3d7bd67acd3ab0d259b9a6df29f1b78f0a886a925c0bc314",
+      "first_observed_at": "2026-10-16T03:54:37.055492Z",
+      "last_observed_at": "2026-10-16T03:54:37.055492Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.055492Z",
+  "snapshot_count": 1
+}

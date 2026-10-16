@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "41140ba306c7bea3bbd4fb55f292f245fc377b24",
+  "observations": [
+    {
+      "observed_at": "2026-10-16T03:54:37.639065Z",
+      "title": "African & Ethnographic Arts 2026-04-25 Auction - 124 Price Results - TRIBAL GATHERINGS in PA",
+      "page_title": "A Great Chinese antique acution 2023-06-17 Auction - 478 Price Results - Himalayan Auction House in CA",
+      "page_description": "See 478 prices and auction results for A Great Chinese antique acution on Jun 17, 2023 by Himalayan Auction House in CA",
+      "image_urls": [
+        "https://p1.liveauctioneers.com/8015/290370/153793866_1_x.jpg?height=512&quality=70&version=1684939433"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "r description of the physical condition, size, quality, rarity, importance, medium, material, genuineness, attribution, provenance, period, culture, source, origin, exhibitions, literature or historical significance of any lot sold.The absence of any reference to the condition of a lot does not imply that the lot is in perfect condition or completely free fr",
+      "price_usd": 400,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Unknown",
+      "source_url": "https://www.liveauctioneers.com/catalog/290370_african-and-ethnographic-arts/",
+      "final_url": "https://www.liveauctioneers.com/catalog/290370_a-great-chinese-antique-acution",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "74aaed7b82e987f0914b69fde1d04b3ce8bb437d392b25cf92a5e4d7a43c507e",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "acfbf8d39933da45e0e69fe6fa772e9f3417e9beca60529a4f2775fc853d1edf",
+      "first_observed_at": "2026-10-16T03:54:37.639065Z",
+      "last_observed_at": "2026-10-16T03:54:37.639065Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-16T03:54:37.639065Z",
+  "snapshot_count": 1
+}
