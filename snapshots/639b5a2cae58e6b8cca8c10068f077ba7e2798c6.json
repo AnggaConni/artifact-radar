@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "639b5a2cae58e6b8cca8c10068f077ba7e2798c6",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:11.576776Z",
+      "title": "Neolithic Indonesian Incised Pottery Vessel",
+      "page_title": "DAY 2 : Pre-Columbian, Ethnographic & Fine Art",
+      "page_description": "Catalog-3699:Day 2 of an important 2-dy auction featuring ancient and ethnographic art from around the world. Today's sale will feature Pre-Columbian, Native American, African / Tribal, Ethnographic, Spanish Colon",
+      "image_urls": [
+        "https://s1.img.bidsquare.com/event/main/m/3699.jpeg?t=1GtU7n"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "ommercial  \r\n\t\t  Land  \r\n\t\t  Residential  \r\n\t \r\n\t \r\n\r\n\t  View All Real Estate   \r\n\r\n\t \r\n\t  See All Categories   Explore Collections  \r\n\t \r\n\t \r\n\t \r\n\t \r\n\t\t \r\n \r\n                       \n                 \n                                   \n         \n     \n \n         \r\n         \r\n             \r\n               Home  Upcoming  DAY 2 : Pre-Columbian, Ethnographic &",
+      "price_usd": 750,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia, Neolithic Period",
+      "source_url": "https://www.bidsquare.com/auctions/artemis-gallery/day-2-pre-columbian-ethnographic-fine-art-3699",
+      "final_url": "https://www.bidsquare.com/auctions/artemis-gallery/day-2-pre-columbian-ethnographic-fine-art-3699",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "20f150b496dc4dce1c9d6df55c0599512fe6178bc74cb4ed6927d42b97d84a93",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "77ff0f93aab0151fcfec0c7fad2544bcf4fc503f78e17c14cffc0b934b49e949",
+      "first_observed_at": "2026-10-20T04:13:11.576776Z",
+      "last_observed_at": "2026-10-20T04:13:11.576776Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:11.576776Z",
+  "snapshot_count": 1
+}

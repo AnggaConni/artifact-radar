@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1dbbad883f8091de8856f014304006b1e43e818d",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:12.589507Z",
+      "title": "Greek vase 'looted' in Italy removed from sale by London gallery",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Greece",
+      "source_url": "https://www.theguardian.com/artanddesign/2025/apr/12/greek-vase-looted-italy-removed-sale-london-gallery",
+      "final_url": "https://www.theguardian.com/artanddesign/2025/apr/12/greek-vase-looted-italy-removed-sale-london-gallery",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "\"guRandomEtag1033111784-716633012\"",
+      "last_modified": "",
+      "snapshot_signature": "bfb7e48db435422d267ba544c7561db97fbbec69a97edee0577a67db4cc1a22b",
+      "first_observed_at": "2026-10-20T04:13:12.589507Z",
+      "last_observed_at": "2026-10-20T04:13:12.589507Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:12.589507Z",
+  "snapshot_count": 1
+}

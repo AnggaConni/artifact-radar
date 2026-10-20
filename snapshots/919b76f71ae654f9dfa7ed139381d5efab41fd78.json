@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "919b76f71ae654f9dfa7ed139381d5efab41fd78",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:12.091037Z",
+      "title": "U.S. Attorney Announces Return Of Two Looted 8th Century Sculptures To The Republic Of Indonesia",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia",
+      "source_url": "https://www.justice.gov/usao-sdny/pr/us-attorney-announces-return-two-looted-8th-century-sculptures-republic-indonesia",
+      "final_url": "https://www.justice.gov/usao-sdny/pr/us-attorney-announces-return-two-looted-8th-century-sculptures-republic-indonesia",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "84826aa5582c870faa47833523c1fe1ed083372c4e434d2bffb3908d4c774eca",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3bcefa88fea95b1a56faf25950ced8f6caea79514831945a6504812877cabdf7",
+      "first_observed_at": "2026-10-20T04:13:12.091037Z",
+      "last_observed_at": "2026-10-20T04:13:12.091037Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:12.091037Z",
+  "snapshot_count": 1
+}

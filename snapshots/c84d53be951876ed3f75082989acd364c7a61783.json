@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c84d53be951876ed3f75082989acd364c7a61783",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:11.788426Z",
+      "title": "Antique Indonesian Clay Pot",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia",
+      "source_url": "https://trouvailleimports.com/products/antique-indonesian-clay-pot",
+      "final_url": "https://www.trouvailleimports.com/products/antique-indonesian-clay-pot",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3fc89bfc13870522eec0c6c2ed5a56a2fbc856181310264bba41b199c034e493",
+      "first_observed_at": "2026-10-20T04:13:11.788426Z",
+      "last_observed_at": "2026-10-20T04:13:11.788426Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:11.788426Z",
+  "snapshot_count": 1
+}

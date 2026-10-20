@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "785aedde8ec02ca5ba5a612cf5701366fb41456e",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:11.788389Z",
+      "title": "Majapahit Style Terracotta Head Fragment East Java Black Display Frame",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 129.99,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "East Java (Majapahit Period)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdFK51jxS_zW4BqfkhzPrZjo8Wl6L3JuX4qzlqBonHGZw-xFizeY8jFlNISciJeoOKfh3XQ7OHxm8uRh-1HfY28jvxNJaUGAb95ZdzptloVXAao0RRdNkqwVAU4yKiq8FOpGRxPU68bikKpGpU",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "43e6233f35e4a9b72631ba795c92a2a65247636a21b47600042a02c2e1cf1040",
+      "first_observed_at": "2026-10-20T04:13:11.788389Z",
+      "last_observed_at": "2026-10-20T04:13:11.788389Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:11.788389Z",
+  "snapshot_count": 1
+}

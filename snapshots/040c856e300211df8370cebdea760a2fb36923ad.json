@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "040c856e300211df8370cebdea760a2fb36923ad",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:12.546204Z",
+      "title": "A GREEK POTTERY POMEGRANATE VASE, ATTIC, LATE GEOMETRIC PERIOD, CIRCA 730-700 B.C.",
+      "page_title": "HENRI MATISSE (1869-1954), La Belle Tahitienne | Christie's",
+      "page_description": "La Belle Tahitienne",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 10000,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Greece",
+      "source_url": "https://www.christies.com/lot/lot-6340455",
+      "final_url": "https://www.christies.com/lot/lot-6340455",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "96e316c7e98922113138ff4fd05815dee49a5d7650c3758841aced9c4e0ad95e",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "59b83d31c5ec9a67dcfbce90e6f7d8bc6a5f589621764ceeb1534e238edad8bb",
+      "first_observed_at": "2026-10-20T04:13:12.546204Z",
+      "last_observed_at": "2026-10-20T04:13:12.546204Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:12.546204Z",
+  "snapshot_count": 1
+}

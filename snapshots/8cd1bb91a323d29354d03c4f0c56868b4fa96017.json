@@ -39,8 +39,43 @@
       "first_observed_at": "2026-10-16T03:54:37.251515Z",
       "last_observed_at": "2026-10-16T03:54:37.251515Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-20T04:13:10.019629Z",
+      "title": "A LACONIAN POTTERY KYLIX, ATTRIBUTED TO THE BOREAD PAINTER - GROUP B, CIRCA 570 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/NYR-25248-10202026-1.jpg",
+        "/img/SaleImages/NYR-24336-10212026-1.jpg",
+        "/img/SaleImages/CKS-24558-10212026-1.jpg",
+        "/img/SaleImages/PAR-25209-10222026-1.jpg",
+        "/img/SaleImages/CKS-24559-10222026-1.jpg",
+        "/img/SaleImages/PAR-24607-10222026-1.jpg",
+        "/img/SaleImages/NYR-25240-10222026-1.jpg",
+        "/img/SaleImages/PAR-24608-10232026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "      20th/21st Century Art | London      Modern British and Irish Art | London      20th/21st Century Art | Paris      Collections | Global      Asian Art | Hong Kong      Luxury | Global      20th/21st Century Art | New York            Private Sales               Current Exhibitions      Decorative Arts For Your Home | Online               View all        ",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Laconia (Sparta), Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294720",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "2d322e949436330ba8c73515f58f64d12464ab074514f7814099bd382bd83028",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e7071397ecb19a83bfb364734794aa63464ead94858e1c6efa18bb00f9f880a1",
+      "first_observed_at": "2026-10-20T04:13:10.019629Z",
+      "last_observed_at": "2026-10-20T04:13:10.019629Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-16T03:54:37.251515Z",
-  "snapshot_count": 1
+  "updated_at": "2026-10-20T04:13:10.019629Z",
+  "snapshot_count": 2
 }

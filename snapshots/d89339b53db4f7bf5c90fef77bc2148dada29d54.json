@@ -179,8 +179,43 @@
       "first_observed_at": "2026-10-16T03:54:27.142939Z",
       "last_observed_at": "2026-10-16T03:54:27.142939Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-20T04:13:01.496832Z",
+      "title": "Japanese Ancient Small Pottery / Jomon Pottery Jar / 3000 Years ago / Wabi-Sabi",
+      "page_title": "Antique and Vintage Figurative Sculptures - 17,638 For Sale at 1stDibs | antique ornaments figurines, sofia artif age, niall smith antiques",
+      "page_description": "Shop vintage, mid-century, modern and antique figurative sculptures from top sellers and makers around the world. Global shipping available.",
+      "image_urls": [
+        "https://a.1stdibscdn.com/archivesE/upload/f_39981/f_520235821789532320453/2805762e-6e51-435f-9e3b-17230eaf20b8/Photoroom_20260916_061751_bg_processed.jpeg",
+        "https://a.1stdibscdn.com/archivesE/upload/f_39981/f_520235821789532320453/2805762e-6e51-435f-9e3b-17230eaf20b8/Photoroom_20260916_061751_bg_processed.jpeg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_39981/f_519989421789397078581/d4d2d67f-e11d-489f-85fc-3bb87cd1cad0/IMG_8228_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_59412/f_519291921789011626759/37fc238e-d4dd-4af5-b9f2-f6506fc2e08f/IMG_4758_2_bg_processed.jpeg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_64602/f_517741521788384396015/4669639b-bfc8-4ee1-a157-5d24783bd85d/IMG20260816104601_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_64602/f_517742721788385437196/80162d05-6b68-4911-b934-868422206ec8/IMG202608142009441_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_25253/f_522885121790859878802/92fffadf-422a-4bdd-89f2-af661694f13c/230412_0_bg_processed.JPG?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_25253/f_521022621789812639817/13af6487-d943-4a90-b430-572419625d7f/260029_0_bg_processed.JPG?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": " colored porcelain, charming expression, and unusual pig-riding motif make this a particularly delightful addition to a collection of  antique Christmas decorations ...   Category  1920s German Folk Art Vintage Figurative Sculptures    Materials  Porcelain      View Full Details                                      Vintage Carved Wood Japanese Kokeshi Doll -",
+      "price_usd": 600,
+      "provenance_flag": false,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.1stdibs.com/furniture/decorative-objects/vases-vessels/pots/japanese-ancient-small-pottery-jomon-pottery-jar-3000-years-ago-wabi-sabi/id-f_35008532",
+      "final_url": "https://www.1stdibs.com/furniture/decorative-objects/sculptures/figurative-sculptures",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "da010fb5292cc179181ef2e7173e067d38e2c384cc95d1104f9a7d4fd1106a35",
+      "etag": "",
+      "last_modified": "Fri, 16 Oct 2026 16:53:00 GMT",
+      "snapshot_signature": "ae36726759613dc2a8e17b9e1e95d627f1d5bbedf236db8343a25b5db19cb2ce",
+      "first_observed_at": "2026-10-20T04:13:01.496832Z",
+      "last_observed_at": "2026-10-20T04:13:01.496832Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-16T03:54:27.142939Z",
-  "snapshot_count": 5
+  "updated_at": "2026-10-20T04:13:01.496832Z",
+  "snapshot_count": 6
 }

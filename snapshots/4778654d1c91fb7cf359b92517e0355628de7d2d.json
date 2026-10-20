@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "4778654d1c91fb7cf359b92517e0355628de7d2d",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:12.354360Z",
+      "title": "Getty Museum announces acquisition of two superb Greek and Roman Ancient works",
+      "page_title": "Liza Lou joins Lehmann Maupin",
+      "page_description": "a href= http://www.lehmannmaupin.com  target= _blank  Lehmann Maupin /a  announces its representation of artist Liza Lou. Known for her labor-intensi",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "um, Taiwan; and ARS 01, KIASMA Museum of Contemporary Art, Helsinki. The artist’s work is also in many prominent museum collections, including The Whitney Museum of American Art, the Cleveland Museum of Art, The Brant Foundation, The Hammer Museum and The Museum of Modern Art, New York. In 2005, Lou moved to South Africa, where she established a studio with ",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Greece",
+      "source_url": "https://artdaily.cc/news/88008/Getty-Museum-announces-acquisition-of-two-superb-Greek-and-Roman-Ancient-works",
+      "final_url": "https://artdaily.cc/news/88008/Getty-Museum-announces-acquisition-of-two-superb-Greek-and-Roman-Ancient-works",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "7f4c9960ad3891d7b4d74d84e36b9060cfd5081a59aeba37cfb93478154a2cd2",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "66509f2a5227ba85adae60e6e35450696ed3d357739c70528b290582b937d941",
+      "first_observed_at": "2026-10-20T04:13:12.354360Z",
+      "last_observed_at": "2026-10-20T04:13:12.354360Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:12.354360Z",
+  "snapshot_count": 1
+}

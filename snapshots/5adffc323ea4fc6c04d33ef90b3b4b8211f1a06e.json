@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "5adffc323ea4fc6c04d33ef90b3b4b8211f1a06e",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:12.268930Z",
+      "title": "Getty Museum Announces Acquisition of Ancient Greek Vase",
+      "page_title": "Getty Museum Announces Acquisition of Ancient Greek Vase - GreekReporter.com",
+      "page_description": "Today Timothy Potts, director of the J. Paul Getty Museum in Los Angeles, enthusiastically announced the museum’s acquisition of a Geometric Greek vase dating back to 720 to 700 BC. The addition of the Geometric Greek vase will be on display at the Getty Villa following its reinstallation in 2018. Standing at 27.5 inches, the […]",
+      "image_urls": [
+        "https://greekreporter.com/wp-content/uploads/2016/06/getty-2.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "tradition in Greek art, making it an essential component of the new chronological and contextual display of the Villa’s collection that is currently in advanced planning.” \n The vase was originally in a private collection in Düsseldorf and from 1963 to 1964 the vase found itself exhibited in Kassel, Germany.     \n \n   \n\n\n  See all the  latest news  from Gree",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Greece",
+      "source_url": "https://greekreporter.com/2016/06/09/getty-museum-announces-acquisition-of-ancient-greek-vase/",
+      "final_url": "https://greekreporter.com/2016/06/09/getty-museum-announces-acquisition-of-ancient-greek-vase",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "de1efe58811082330f07222dae7fed475aaf80be4fa48cf6879a024d5db3fd6f",
+      "etag": "",
+      "last_modified": "Tue, 20 Oct 2026 03:25:39 GMT",
+      "snapshot_signature": "ff4fa96f9e25d8504b22fd988052e216b7c6565ac57ba3b7c403653a7e6fc310",
+      "first_observed_at": "2026-10-20T04:13:12.268930Z",
+      "last_observed_at": "2026-10-20T04:13:12.268930Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:12.268930Z",
+  "snapshot_count": 1
+}

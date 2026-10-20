@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "55ceffc487b518886e331c23f28bc086079b9086",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:12.076652Z",
+      "title": "TC 198 Majapahit Terracotta Kala head brick",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 4000.0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia (Majapahit terracotta)",
+      "source_url": "https://balique.com/collections/arts-of-indonesia-balique/products/tc-198-majapahit-terracotta-kala-head-brick",
+      "final_url": "https://balique.com/collections/arts-of-indonesia-balique/products/tc-198-majapahit-terracotta-kala-head-brick",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "fe9f47476777f94e9e7ecc51986d78d311e90cc2001056b3d34607dfa9943595",
+      "first_observed_at": "2026-10-20T04:13:12.076652Z",
+      "last_observed_at": "2026-10-20T04:13:12.076652Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:12.076652Z",
+  "snapshot_count": 1
+}

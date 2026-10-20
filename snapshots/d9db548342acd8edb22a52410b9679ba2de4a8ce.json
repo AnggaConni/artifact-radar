@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d9db548342acd8edb22a52410b9679ba2de4a8ce",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:12.008875Z",
+      "title": "Majapahit Era Figure, 1295-1500, Terracotta",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia (Majapahit Era, Trowulan, East Java)",
+      "source_url": "https://www.pamono.com/majapahit-era-figure-1295-1500-terracotta",
+      "final_url": "https://www.pamono.com/majapahit-era-figure-1295-1500-terracotta",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "aa23f8731ae92755809fa6bb3d8e108fd22482270e729821cd9b87c7cc9284f5",
+      "first_observed_at": "2026-10-20T04:13:12.008875Z",
+      "last_observed_at": "2026-10-20T04:13:12.008875Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:12.008875Z",
+  "snapshot_count": 1
+}

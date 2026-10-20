@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2366be14c2d3052a6d15c4cfe6ee74eed97332f1",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:11.869891Z",
+      "title": "US Returns Antiquities to Indonesia Amid Probe into Trafficking Networks",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia (Majapahit Empire for one mentioned item)",
+      "source_url": "https://jakartaglobe.id/news/us-returns-antiquities-to-indonesia-amid-probe-into-trafficking-networks",
+      "final_url": "https://jakartaglobe.id/news/us-returns-antiquities-to-indonesia-amid-probe-into-trafficking-networks",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "89adf4fa29fa7e9901a0476ed5c9d697da6fea87548c0c5a367e073e950828cb",
+      "first_observed_at": "2026-10-20T04:13:11.869891Z",
+      "last_observed_at": "2026-10-20T04:13:11.869891Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:11.869891Z",
+  "snapshot_count": 1
+}

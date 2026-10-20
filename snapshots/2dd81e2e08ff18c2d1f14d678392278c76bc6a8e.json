@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2dd81e2e08ff18c2d1f14d678392278c76bc6a8e",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:12.549909Z",
+      "title": "Stolen Greek antiquities returned to Athens from Israel",
+      "page_title": "Stolen Greek antiquities returned to Athens from Israel",
+      "page_description": "Twenty-one ancient Greek vases, some dating back 2,600 years, have been returned to Athens after being confiscated by Israeli antiquities authorities.",
+      "image_urls": [
+        "https://greekherald.com.au/wp-content/uploads/2026/10/MAIN-TEMPLATE-82.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " Most of the pottery dates to the fifth and fourth centuries BC and originates from Attic and Corinthian workshops. The collection includes drinking cups, perfume bottles and an amphora used for storing olive oil. It also contains a bronze female statuette whose authenticity remains uncertain and requires further examination. \n\n\n\n Culture Minister Lina Mendo",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Greece",
+      "source_url": "https://greekherald.com.au/news/stolen-greek-antiquities-returned-to-athens-from-israel/",
+      "final_url": "https://greekherald.com.au/news/stolen-greek-antiquities-returned-to-athens-from-israel",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "95d3b3481dff19218ef6df4275567652983f8d9cca6b5522f1510b95dec8bd19",
+      "etag": "",
+      "last_modified": "Tue, 20 Oct 2026 04:13:14 GMT",
+      "snapshot_signature": "ad385b4b71ad1b53c307d7bf93fbd34fa1ff231de5bf0bca7bd4b585fac0e52e",
+      "first_observed_at": "2026-10-20T04:13:12.549909Z",
+      "last_observed_at": "2026-10-20T04:13:12.549909Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:12.549909Z",
+  "snapshot_count": 1
+}

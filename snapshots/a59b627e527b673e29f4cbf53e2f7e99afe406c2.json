@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a59b627e527b673e29f4cbf53e2f7e99afe406c2",
+  "observations": [
+    {
+      "observed_at": "2026-10-20T04:13:12.656582Z",
+      "title": "See a Stunning Collection of Stolen Greek Artifacts, Spanning 5,000 Years, That Were Just Returned to Greece",
+      "page_title": "This Fluffy Little Anteater May Be a New Species",
+      "page_description": "The animals eke out a living in a pocket of mangroves on Brazil’s Atlantic coast",
+      "image_urls": [
+        "https://th-thumbnailer.cdn-si-edu.com/ls388uXsaCo1CIgLfnx9qOEE44M=/fit-in/1600x0/filters:focal(800x602:801x603)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/f5/4b/f54b7d01-f947-4e69-85b4-722eaff38aca/header-coastal-anteaters_web.jpg",
+        "https://th-thumbnailer.cdn-si-edu.com/9dpUzR7CEjD9A72b3Yot0mRDnoM=/fit-in/1200x0/filters:focal(800x602:801x603)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/f5/4b/f54b7d01-f947-4e69-85b4-722eaff38aca/header-coastal-anteaters_web.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Greece",
+      "source_url": "https://www.smithsonianmag.com/smart-news/stolen-greek-artifacts-returned-to-greece-180983020/",
+      "final_url": "https://www.smithsonianmag.com/science-nature/this-fluffy-little-anteater-may-be-a-new-species-180983020",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "8fc05c09fd9e04988d3710a1a12f97b1cf95e49a9b6bb74a746493f92d99dc7f",
+      "etag": "",
+      "last_modified": "Tue, 20 Oct 2026 04:13:13 GMT",
+      "snapshot_signature": "d53f6235da65412d300ff398882856a0ad28e0551078a5b0a4b15eb9f8ac6c8b",
+      "first_observed_at": "2026-10-20T04:13:12.656582Z",
+      "last_observed_at": "2026-10-20T04:13:12.656582Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-20T04:13:12.656582Z",
+  "snapshot_count": 1
+}

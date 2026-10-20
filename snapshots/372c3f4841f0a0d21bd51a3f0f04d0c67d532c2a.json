@@ -86,10 +86,10 @@
       "last_modified": "Thu, 08 Oct 2026 20:06:59 GMT",
       "snapshot_signature": "086d4d16a31e41470a252abcb64b21b1c18c1f0aa52f5a9a3db048922a24ff27",
       "first_observed_at": "2026-10-11T04:59:48.780041Z",
-      "last_observed_at": "2026-10-16T03:54:29.658157Z",
-      "observations_seen": 2
+      "last_observed_at": "2026-10-20T04:13:04.063271Z",
+      "observations_seen": 3
     }
   ],
-  "updated_at": "2026-10-16T03:54:29.658157Z",
+  "updated_at": "2026-10-20T04:13:04.063271Z",
   "snapshot_count": 3
 }
