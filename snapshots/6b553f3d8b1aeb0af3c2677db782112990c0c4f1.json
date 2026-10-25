@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "6b553f3d8b1aeb0af3c2677db782112990c0c4f1",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.468858Z",
+      "title": "Borobudur (Wikipedia) - Provenance of Buddha heads",
+      "page_title": "Borobudur - Wikipedia",
+      "page_description": "",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Pradaksina.jpg/1280px-Pradaksina.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " with 1,460 narrative relief panels on the walls and the  balustrades . Borobudur has one of the world's most extensive collections of Buddhist reliefs. \n\n Built during the reign of the  Sailendra dynasty , the temple design follows  Javanese   Buddhist architecture , which blends the  Indonesian  indigenous tradition of  ancestor worship  and the Buddhist c",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Java, Indonesia",
+      "source_url": "https://en.wikipedia.org/wiki/Borobudur",
+      "final_url": "https://en.wikipedia.org/wiki/Borobudur",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "2b2acf927b6a00b137357b8de2f89d6877b25741108b9b014858c7fe5363e269",
+      "etag": "",
+      "last_modified": "Fri, 23 Oct 2026 20:49:18 GMT",
+      "snapshot_signature": "6a34f382a639d9bc1d8380489e55e713bd876a593577366ed9f6fc14ccc7b673",
+      "first_observed_at": "2026-10-25T03:59:16.468858Z",
+      "last_observed_at": "2026-10-25T03:59:16.468858Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.468858Z",
+  "snapshot_count": 1
+}

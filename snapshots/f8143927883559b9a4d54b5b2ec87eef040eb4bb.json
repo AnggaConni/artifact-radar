@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "f8143927883559b9a4d54b5b2ec87eef040eb4bb",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.291467Z",
+      "title": "Historic Javanese Art Treasures Victims Of Looting - Borobudur affected",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Java, Indonesia",
+      "source_url": "https://www.forbes.com/2002/04/03/0403loot.html",
+      "final_url": "https://www.forbes.com/2002/04/03/0403loot.html",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"6ad986c2-bf74f\"",
+      "last_modified": "Thu, 22 Oct 2026 03:45:06 GMT",
+      "snapshot_signature": "4a66af07bbafcbf9ec4cd009d1b187f770a175f4f0a2c6dae4e46c1a06639977",
+      "first_observed_at": "2026-10-25T03:59:16.291467Z",
+      "last_observed_at": "2026-10-25T03:59:16.291467Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.291467Z",
+  "snapshot_count": 1
+}

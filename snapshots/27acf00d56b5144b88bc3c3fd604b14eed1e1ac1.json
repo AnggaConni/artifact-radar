@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "27acf00d56b5144b88bc3c3fd604b14eed1e1ac1",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.262738Z",
+      "title": "Borobudur Buddha head (from the Raffles collection)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Java, Indonesia",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaTQ11za2HEmLXUqKHeJDNH-fFPqY6UxgihyJgFXvFIwWwEtxvZ6vDKtAmFcCa1_ELHSJcsig2NbY6Xb13U7czG50nC9w14DQZcB7hp7rGzhq6ylp5WIjsf5QbnKtoXS1Ugi5uVR4fiTpj9B7yBmmfev4rDAIrGMUl1BFy9QlH2VASv9Ms9g7vQFkw",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "aa5068e1119ea3c412920435d676ac070f226cd33a2336e9f995b6f177c419a6",
+      "first_observed_at": "2026-10-25T03:59:16.262738Z",
+      "last_observed_at": "2026-10-25T03:59:16.262738Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.262738Z",
+  "snapshot_count": 1
+}

@@ -88,8 +88,36 @@
       "first_observed_at": "2026-10-11T04:59:50.659289Z",
       "last_observed_at": "2026-10-20T04:13:06.058500Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-10-25T03:59:09.109603Z",
+      "title": "Artefact, Majapahit Terracotta Expressive Head, Java, 1300 AD.",
+      "page_title": "Bulb Pendant Light by Ingo Maurer For Sale at 1stDibs | ingo maurer lamp, light bulb shaped pendant light, ingo maurer bulb lamp",
+      "page_description": "For Sale on 1stDibs - Bulb-shaped pendant with opal glass shade and painted glass shade holder. Designed in 1966 by Ingo Maurer. Manufactured for M Design. The overall drop",
+      "image_urls": [
+        "https://a.1stdibscdn.com/archivesE/upload/1121189/f_56729931476681446299/5672993_master.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "CHF",
+      "provenance_excerpt": "s of Desire Podcast  Celebrate 25 Years of 1stDibs  2025 Luxury E-Commerce Report      Editor's Picks  The Holiday Gift Collection  Iconic Jewelry Brands  The Art of Entertaining  Cabinet of Curiosities  The Print Shop  The Under $1,000 Edit                        \n    \n     \n         \n                            Items Similar to  Bulb Pendant Light by Ingo ",
+      "price_usd": 6314,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia, Java",
+      "source_url": "https://www.1stdibs.com/furniture/asian-art-furniture/majapahit-terracotta/artefact-majapahit-terracotta-expressive-head-java-1300-ad/id-f_13500352/",
+      "final_url": "https://www.1stdibs.com/furniture/lighting/chandeliers-pendant-lights/bulb-pendant-light-ingo-maurer/id-f_5672993",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "84bd6e5c14367c12950c98386f2251908f623a2cce4f4f62e593f39b2ff3a1be",
+      "etag": "",
+      "last_modified": "Wed, 21 Oct 2026 13:07:20 GMT",
+      "snapshot_signature": "3ac74f89c395b4f4fca3e0fbc197603da70bd26be72d807cf5e7922d2898c3e4",
+      "first_observed_at": "2026-10-25T03:59:09.109603Z",
+      "last_observed_at": "2026-10-25T03:59:09.109603Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:06.058500Z",
-  "snapshot_count": 3
+  "updated_at": "2026-10-25T03:59:09.109603Z",
+  "snapshot_count": 4
 }

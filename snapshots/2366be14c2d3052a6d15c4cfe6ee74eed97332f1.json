@@ -30,8 +30,37 @@
       "first_observed_at": "2026-10-20T04:13:11.869891Z",
       "last_observed_at": "2026-10-20T04:13:11.869891Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-25T03:59:15.301393Z",
+      "title": "US Returns Antiquities to Indonesia Amid Probe into Trafficking Networks",
+      "page_title": "US Returns Antiquities to Indonesia Amid Probe into Trafficking Networks",
+      "page_description": "The Indonesian antiquities include the Stone Relief, which stands out as a rare example of material culture from the Majapahit Empire.",
+      "image_urls": [
+        "https://img2.beritasatu.com/cache/jakartaglobe/960x620-w/2024/04/1714218145-697x447.webp",
+        "https://img2.beritasatu.com/cache/jakartaglobe/910x580-2/2024/04/1714218145-697x447.webp"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia (Majapahit Empire for one mentioned item)",
+      "source_url": "https://jakartaglobe.id/news/us-returns-antiquities-to-indonesia-amid-probe-into-trafficking-networks",
+      "final_url": "https://jakartaglobe.id/news/us-returns-antiquities-to-indonesia-amid-probe-into-trafficking-networks",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "70b3631ebf163551207680ff9350e1214584b7eab015efd8be59f8f8351047bc",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "ae2ee07c62a42edf51642401f7eb6488966cf94325d25f66b363f04d45ee262f",
+      "first_observed_at": "2026-10-25T03:59:15.301393Z",
+      "last_observed_at": "2026-10-25T03:59:15.301393Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:11.869891Z",
-  "snapshot_count": 1
+  "updated_at": "2026-10-25T03:59:15.301393Z",
+  "snapshot_count": 2
 }

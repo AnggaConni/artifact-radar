@@ -284,8 +284,43 @@
       "first_observed_at": "2026-10-20T04:12:58.192724Z",
       "last_observed_at": "2026-10-20T04:12:58.192724Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-25T03:59:01.590498Z",
+      "title": "Tang Dynasty Terracotta Pottery Statue of Civil Officer, Oxford TL Tested",
+      "page_title": "Antique Asian Ceramics - 4,583 For Sale at 1stDibs | antique chinese vases, antique chinese porcelain, antique asian pottery",
+      "page_description": "Shop antique and modern ceramics and other Asian furniture and art from top sellers and makers around the world. Global shipping available.",
+      "image_urls": [
+        "https://a.1stdibscdn.com/archivesE/upload/f_60752/f_522742821790787008891/4b0d9977-e0cf-4397-9322-f9ba7e8a1f74/IMG_3189_bg_processed.jpeg",
+        "https://a.1stdibscdn.com/archivesE/upload/f_60752/f_522742821790787008891/4b0d9977-e0cf-4397-9322-f9ba7e8a1f74/IMG_3189_bg_processed.jpeg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_16322/f_514610821786914475822/6dea5a4e-46c0-4647-82b2-8948765a42cd/EARTHENWARE_NANKIN_CERAMIC_VASE_Z098_1_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_107372/f_517696721788368319140/4bf495c4-851e-439d-8dbe-9a6d5eb3ff25/set_of_four_scalloped_rim_rose_medallion_plates_19th_century_9478_bg_processed.jpeg?width=768",
+        "https://a.1stdibscdn.com/18thc-chinese-export-blue-and-white-jar-porcelain-hand-painted-scene-qing-for-sale/f_9903/f_483514521768560744464/f_48351452_1768560744951_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/fine-chinese-antique-rosewood-box-with-brass-mounts-qing-dynasty-decor-for-sale/f_64602/f_488080621771009938801/f_48808062_1771009939994_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_8030/f_523911021791401542262/5549394a-e999-477f-bfbe-f6c7db3abebf/6CF7B9B1_4CCA_4C75_B33D_D8A9189937DD_1_102_o_bg_processed.jpeg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_27713/f_515102921787232993577/4e68a33f-1adb-410b-b084-524938447ffb/eae59666_65c5_49a5_b173_dfff02d37433_bg_processed.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "s of Desire Podcast  Celebrate 25 Years of 1stDibs  2025 Luxury E-Commerce Report      Editor's Picks  The Holiday Gift Collection  Iconic Jewelry Brands  The Art of Entertaining  Cabinet of Curiosities  The Print Shop  The Under $1,000 Edit                        \n    \n     \n         \n                                  Home    Furniture    Asian Art and Furn",
+      "price_usd": 5800,
+      "provenance_flag": true,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "China",
+      "source_url": "https://www.1stdibs.com/furniture/asian-art-furniture/ceramics/tl-tested",
+      "final_url": "https://www.1stdibs.com/furniture/asian-art-furniture/ceramics",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "3d6b4885a8767343a2aa56f71e19a16ffd90a9ebba06d46ca845bb0caa7400c3",
+      "etag": "",
+      "last_modified": "Wed, 21 Oct 2026 13:07:20 GMT",
+      "snapshot_signature": "e36145bcb1877b495e7c23f4e5bc94fd92d9fd2ade46a49594efed8210520fa9",
+      "first_observed_at": "2026-10-25T03:59:01.590498Z",
+      "last_observed_at": "2026-10-25T03:59:01.590498Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:12:58.192724Z",
-  "snapshot_count": 8
+  "updated_at": "2026-10-25T03:59:01.590498Z",
+  "snapshot_count": 9
 }

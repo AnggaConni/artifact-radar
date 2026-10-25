@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "17bc80ccd3034dd8d000f0415bb2b940fb4e5453",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.555976Z",
+      "title": "An Indonesian, Central Java, Borobudur Stone Buddha Head, 19th Century",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Central Java, Indonesia",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSet5ue16nmMW_7Kwy_K34T2FVycSJNSnaEXHnKrBoUdBUuSmKaDcGM96FZX0sckQy8s2-baoLc3dFA3Xg7lyISoiTQaz-OUo3c8fczqK7bfvdkZxWWaoXsGomL2a_gOzJP0oTzg1YDo1OWTw5dlIZTO6eFx5Q1g8Zyq2jE-3LejvvTCDD-rhf2tzViO4KSo9o-IuwtxInZFPcSut9b8Ab-ih1ZJYPpWbgQw==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "60dcc08ccf530c906f5600322288cab8b77d41cfd7fe25e1655cd175d5b40d9f",
+      "first_observed_at": "2026-10-25T03:59:16.555976Z",
+      "last_observed_at": "2026-10-25T03:59:16.555976Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.555976Z",
+  "snapshot_count": 1
+}

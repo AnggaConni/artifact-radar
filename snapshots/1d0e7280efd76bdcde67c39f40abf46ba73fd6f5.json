@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1d0e7280efd76bdcde67c39f40abf46ba73fd6f5",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.728707Z",
+      "title": "Corinthian Helmet",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Greece",
+      "source_url": "https://www.clevelandart.org/art/collection/search/2024.63",
+      "final_url": "https://www.clevelandart.org/art/collection/search/2024.63",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"94fjdlz9q2k7g\"",
+      "last_modified": "",
+      "snapshot_signature": "870b2b6f68ddf39e1092e9f956309d60c0226c3e528b7fe805e2d95da5f47136",
+      "first_observed_at": "2026-10-25T03:59:16.728707Z",
+      "last_observed_at": "2026-10-25T03:59:16.728707Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.728707Z",
+  "snapshot_count": 1
+}

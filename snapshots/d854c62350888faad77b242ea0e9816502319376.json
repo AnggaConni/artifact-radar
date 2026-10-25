@@ -210,8 +210,43 @@
       "first_observed_at": "2026-10-20T04:13:01.418352Z",
       "last_observed_at": "2026-10-20T04:13:01.418352Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-25T03:59:04.852754Z",
+      "title": "A LARGE JOMON VESSEL , MIDDLE JOMON PERIOD (BC 3000-2000)",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-24123-10272026-1.jpg",
+        "/img/SaleImages/HGK-24124-10282026-1.jpg",
+        "/img/SaleImages/HGK-25198-10292026-1.jpg",
+        "/img/SaleImages/HGK-24529-10292026-1.jpg",
+        "/img/SaleImages/HGK-25382-10292026-1.jpg",
+        "/img/SaleImages/HGK-21663-10292026-1.jpg",
+        "/img/SaleImages/HGK-25383-10302026-1.jpg",
+        "/img/SaleImages/HGK-24625-10302026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "iani offered in Paris      The legacy of Impressionist champion Paul Durand-Ruel      Inside Vicente Wolf’s photography collection      Barbara Hepworth: a collector’s guide      A rare glimpse into Chinese courtly art               View all        Visit      Current exhibitions      Locations      Gooding Christie’s        Artists and Makers      Salvador D",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.christies.com/lot/lot-6140592",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "ba5f85cf045746a6cde9a38202338a392cc9b93e0283f9df1dd40a5623251d27",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "85af782595701b26b5700d674914b1da3d502f9cbc345334800cf4187d8b9c70",
+      "first_observed_at": "2026-10-25T03:59:04.852754Z",
+      "last_observed_at": "2026-10-25T03:59:04.852754Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:01.418352Z",
-  "snapshot_count": 6
+  "updated_at": "2026-10-25T03:59:04.852754Z",
+  "snapshot_count": 7
 }

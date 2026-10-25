@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "be89a5a6e0e226ede0b2ab44a528171d6e05fc3f",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.262767Z",
+      "title": "Borobudur stone blocks and archaeological findings at Karmawibhangga Museum",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Central Java, Indonesia",
+      "source_url": "https://www.borobudurpark.com/temple/museumBorobudur",
+      "final_url": "https://www.borobudurpark.com/temple/museumBorobudur",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "2bab1d7461ddd86794414684706d025e03c7dd4742c339cf173e0c55be550bbe",
+      "first_observed_at": "2026-10-25T03:59:16.262767Z",
+      "last_observed_at": "2026-10-25T03:59:16.262767Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.262767Z",
+  "snapshot_count": 1
+}

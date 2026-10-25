@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "0f408c6266ce8180119d10a5899a91819fee7616",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:17.229177Z",
+      "title": "The Corinthian | Exceptional Ancient Greek Helmet Coming to Auction this May",
+      "page_title": "An Iconic Survival of the Ancient World : Exceptional Ancient Greek Corinthian Helmet",
+      "page_description": "An exceptional bronze helmet in the Corinthian style was sold in Form Through Time for £239,600 in May 2026.",
+      "image_urls": [
+        "https://motivated-card-12d34c19bf.media.strapiapp.com/Ancient_Greek_Corinthian_Helmet_890_75f7df1101.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 125000,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Ancient Greece",
+      "source_url": "https://www.lyonandturnbull.com/stories/ancient-greek-corinthian-helmet",
+      "final_url": "https://www.lyonandturnbull.com/stories/ancient-greek-corinthian-helmet",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "862cc5876457ae513ce64bcb57fcea4ea1df203080dc34d60eb84930d0378769",
+      "etag": "W/\"1quexd3vqm4i8s\"",
+      "last_modified": "",
+      "snapshot_signature": "30b7e3bc6925eab0abbb7168ff3087b013802325443f47ab234f98bbb3af403f",
+      "first_observed_at": "2026-10-25T03:59:17.229177Z",
+      "last_observed_at": "2026-10-25T03:59:17.229177Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:17.229177Z",
+  "snapshot_count": 1
+}

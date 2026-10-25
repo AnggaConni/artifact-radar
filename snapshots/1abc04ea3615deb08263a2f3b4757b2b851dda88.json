@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1abc04ea3615deb08263a2f3b4757b2b851dda88",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.835784Z",
+      "title": "Corinthian Helmet",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Greece, Corinth",
+      "source_url": "https://art.thewalters.org/detail/25304/corinthian-helmet/",
+      "final_url": "https://art.thewalters.org/detail/25304/corinthian-helmet",
+      "source_status": "UNAVAILABLE",
+      "http_status": 500,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "503406647b81ffa78d54f7181c8eddcd09d798beb2743f9d39beca0a685114bc",
+      "first_observed_at": "2026-10-25T03:59:16.835784Z",
+      "last_observed_at": "2026-10-25T03:59:16.835784Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.835784Z",
+  "snapshot_count": 1
+}

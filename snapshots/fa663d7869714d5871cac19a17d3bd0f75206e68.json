@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "fa663d7869714d5871cac19a17d3bd0f75206e68",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.291429Z",
+      "title": "High-Quality Borobudur Temple Relief - Code 1 Ba 1 - Framed volcanic stone composite (6.4",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia (Java)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXU0QzVzeWc4kRsrtmMEd-NxWnzGGoD9b0LJETJNPMGW0F-7G8mP3fvgnjyLBSAEigfP_RefzH9j8eS-wjFueTbeVQ6yW3IyOZFDPahmpcE2ky5hs3esD9Z-va5Dn0HwF-L7IEN0rNY7m8f9xwIEFfG2FduB6dPr7gchcANL8ggik9A_hruV6JS9r8-MHxlPxHkHYDdqfrfH5h_SSJqDR29D8sfhmw6ahQZ39ZiU27vQK6VwfIJkBpWj2aws8OKOkIFCTzyZwpHL-pDJETQmuLTHbE13qU9GSiTT_g8ao=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "902a9702dbec55990022b3f73d8ae11b4a7d78ce7e0a47a376426cd38842708e",
+      "first_observed_at": "2026-10-25T03:59:16.291429Z",
+      "last_observed_at": "2026-10-25T03:59:16.291429Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.291429Z",
+  "snapshot_count": 1
+}

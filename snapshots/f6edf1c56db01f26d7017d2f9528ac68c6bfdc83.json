@@ -32,8 +32,36 @@
       "first_observed_at": "2026-10-16T03:54:38.177788Z",
       "last_observed_at": "2026-10-20T04:13:11.017347Z",
       "observations_seen": 2
+    },
+    {
+      "observed_at": "2026-10-25T03:59:14.582283Z",
+      "title": "African Wooden Man",
+      "page_title": "Chanel Pink White Canvas Leather Cruise Line Tote | Proxibid",
+      "page_description": "Bid in a Proxibid online auction to acquire a Chanel Pink White Canvas Leather Cruise Line Tote Bag from Federal Assets Auctioneers.",
+      "image_urls": [
+        "https://images.proxibid.com/AuctionImages/11062/248112/120-1.JPG"
+      ],
+      "page_price_text": "$1.00",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "operty or its value, and in no event shall be responsible for the correctness of description, genuineness, attribution, provenance, authenticity, authorship, and completeness, condition of property or estimate of value. Any appraisals, Estimates (as defined herein) or evaluations provided are solely for the convenience of the bidder and FAA makes no warranti",
+      "price_usd": 40,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Unknown",
+      "source_url": "https://www.proxibid.com/Antiques/African-Wooden-Man/lotInformation/78964344",
+      "final_url": "https://www.proxibid.com/lotinformation/78964344/chanel-pink-white-canvas-leather-cruise-line-tote-bag",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "9040b69bc93ff716465147472ee9051c7fd322c98342fb08a0b8b709b444598f",
+      "etag": "\"14z07jzcen6bmvc\"",
+      "last_modified": "",
+      "snapshot_signature": "79ca020be94a196a98281c4156d769944bc3bd87be0d387e47cb8d1a2304e939",
+      "first_observed_at": "2026-10-25T03:59:14.582283Z",
+      "last_observed_at": "2026-10-25T03:59:14.582283Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:11.017347Z",
-  "snapshot_count": 1
+  "updated_at": "2026-10-25T03:59:14.582283Z",
+  "snapshot_count": 2
 }

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "bc761fa5377b077b11e306db73e862a300ad7d2d",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.556004Z",
+      "title": "The Mystery Behind the Restoration of Borobudur's Great Stupa Spire",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Borobudur, Java, Indonesia",
+      "source_url": "https://www.buddhistdoor.net/news/the-mystery-behind-the-restoration-of-borobudurs-great-stupa-spire",
+      "final_url": "https://www.buddhistdoor.net/news/the-mystery-behind-the-restoration-of-borobudurs-great-stupa-spire",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "9086933af1d5e182baf098927f024845bb4f2dc64261c6fe27fe5c8269b927ce",
+      "first_observed_at": "2026-10-25T03:59:16.556004Z",
+      "last_observed_at": "2026-10-25T03:59:16.556004Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.556004Z",
+  "snapshot_count": 1
+}

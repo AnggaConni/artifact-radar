@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "925497b7e631568aeda67436facc9b1bf4687d6f",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:17.217902Z",
+      "title": "A GREEK BRONZE CORINTHIAN HELMET, LATE ARCHAIC TO EARLY CLASSICAL PERIOD, CIRCA 525-475 B.C.",
+      "page_title": "A PAIR OF DIAMOND EAR CLIPS | Christie's",
+      "page_description": "A PAIR OF DIAMOND EAR CLIPS",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Greece",
+      "source_url": "https://www.christies.com/lot/lot-5832729",
+      "final_url": "https://www.christies.com/lot/lot-5832729",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "68f3416673be64600e8742f38542bb225b2524fa8cc03972d561c4c4ab58e813",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "bd4b2a9cdba0b1bcfeea2355a354db5e5ea1726a6db180da6885fbcc2860d9b9",
+      "first_observed_at": "2026-10-25T03:59:17.217902Z",
+      "last_observed_at": "2026-10-25T03:59:17.217902Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:17.217902Z",
+  "snapshot_count": 1
+}

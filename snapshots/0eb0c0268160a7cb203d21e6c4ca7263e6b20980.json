@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "0eb0c0268160a7cb203d21e6c4ca7263e6b20980",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.642929Z",
+      "title": "Borobudur Temple Compounds -- World Heritage Site (UNESCO)",
+      "page_title": "Borobudur Temple Compounds",
+      "page_description": "UNESCO World Heritage Centre",
+      "image_urls": [
+        "https://whc.unesco.org/uploads/thumbs/site_0592_0004-1200-630-20121115151308-q70.webp"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "\n\t\t\t\t\t\r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\tView photos from OUR PLACE the World Heritage collection \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\r\n\t\t\t\t\t \r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t \r\n\t\t\t\r\n\t\t\t\t\t \r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t  Activities   2  \r\n\t\t\t\t\t\r\n\t\t\t\t\t\t  \r\n\t\t\t\t\t\r\n\t\t\t\t\t \r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Central Java, Indonesia",
+      "source_url": "https://whc.unesco.org/en/list/592/",
+      "final_url": "https://whc.unesco.org/en/list/592",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "bc668275eb04003b679052150fcf723baf6cd7163df261eeedf7c52a5623ae89",
+      "etag": "",
+      "last_modified": "Sun, 25 Oct 2026 03:59:17 GMT",
+      "snapshot_signature": "8c79d78f0a65f025f40cceca9b70e41a07a86004f913f22b8b331bcd107f7873",
+      "first_observed_at": "2026-10-25T03:59:16.642929Z",
+      "last_observed_at": "2026-10-25T03:59:16.642929Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.642929Z",
+  "snapshot_count": 1
+}

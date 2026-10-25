@@ -74,8 +74,43 @@
       "first_observed_at": "2026-10-20T04:13:09.766916Z",
       "last_observed_at": "2026-10-20T04:13:09.766916Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-25T03:59:13.073823Z",
+      "title": "AN ATTIC RED-FIGURED KYLIX, ATTRIBUTED TO THE BRYGOS PAINTER, CIRCA 490-480 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-24123-10272026-1.jpg",
+        "/img/SaleImages/HGK-24124-10282026-1.jpg",
+        "/img/SaleImages/HGK-25198-10292026-1.jpg",
+        "/img/SaleImages/HGK-24529-10292026-1.jpg",
+        "/img/SaleImages/HGK-25382-10292026-1.jpg",
+        "/img/SaleImages/HGK-21663-10292026-1.jpg",
+        "/img/SaleImages/HGK-25383-10302026-1.jpg",
+        "/img/SaleImages/HGK-24625-10302026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "iani offered in Paris      The legacy of Impressionist champion Paul Durand-Ruel      Inside Vicente Wolf’s photography collection      Barbara Hepworth: a collector’s guide      A rare glimpse into Chinese courtly art               View all        Visit      Current exhibitions      Locations      Gooding Christie’s        Artists and Makers      Salvador D",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294718",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "ba5f85cf045746a6cde9a38202338a392cc9b93e0283f9df1dd40a5623251d27",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "4334ac8872cb2032305f9173c868ef696ede666e828e1588a26bfccb5fea1660",
+      "first_observed_at": "2026-10-25T03:59:13.073823Z",
+      "last_observed_at": "2026-10-25T03:59:13.073823Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:09.766916Z",
-  "snapshot_count": 2
+  "updated_at": "2026-10-25T03:59:13.073823Z",
+  "snapshot_count": 3
 }

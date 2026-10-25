@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2b7ffc672fb02a0f477bf7fc8cf821a7e7b1861d",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.389148Z",
+      "title": "Borobudur – A World Cultural Heritage Site at Risk (Central Java, Indonesia)",
+      "page_title": "Grundrechtsschutz in der EU",
+      "page_description": "Die Europ&auml;ische Union ist eine Werte- und Rechtsgemeinschaft. Sie gr&uuml;ndet sich auf Grundwerte wie Freiheit, Demokratie und die Wahrung der Menschenrechte.",
+      "image_urls": [
+        "https://www.auswaertiges-amt.de/resource/blob/209932/daf58a1e328481b88a6567f68c72089c/grundrechtsschutz-bild-data.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Central Java, Indonesia",
+      "source_url": "https://www.auswaertiges-amt.de/en/aussenpolitik/kulturdialog/kulturprojekte/borobudur/209930",
+      "final_url": "https://www.auswaertiges-amt.de/de/aussenpolitik/europa/grundrechtsschutz-209930?isLocal=false&isPreview=false",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "21662b0a12c1b901c9ca1a4229998b9e28ccabcec30f061e4481d4dd54d97650",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "0f78df248e20134c6747e8cb28d9fb3bd0e6ccfb72d41b0f3e00b4573aba77bc",
+      "first_observed_at": "2026-10-25T03:59:16.389148Z",
+      "last_observed_at": "2026-10-25T03:59:16.389148Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.389148Z",
+  "snapshot_count": 1
+}

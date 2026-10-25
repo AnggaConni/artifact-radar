@@ -56,8 +56,34 @@
       "first_observed_at": "2026-10-20T04:13:08.425755Z",
       "last_observed_at": "2026-10-20T04:13:08.425755Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-25T03:59:11.709422Z",
+      "title": "Prehistoric Spiraling Thai Ban Chiang Pottery Vessel | 1498460 | Zentner Collection",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.zentnercollection.com/products/prehistoric-spiraling-thai-ban-chiang-pottery-vessel-1498460",
+      "final_url": "https://zentnercollection.com/products/prehistoric-spiraling-thai-ban-chiang-pottery-vessel-1498460",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e9a88a1280ccefe6f646e66bbd1a83acd76c4c4dd7d7d730b3071e61d83a642d",
+      "first_observed_at": "2026-10-25T03:59:11.709422Z",
+      "last_observed_at": "2026-10-25T03:59:11.709422Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:08.425755Z",
-  "snapshot_count": 2
+  "updated_at": "2026-10-25T03:59:11.709422Z",
+  "snapshot_count": 3
 }

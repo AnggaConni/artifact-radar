@@ -88,8 +88,36 @@
       "first_observed_at": "2026-10-11T04:59:48.780041Z",
       "last_observed_at": "2026-10-20T04:13:04.063271Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-10-25T03:59:07.376779Z",
+      "title": "Khmer Bronze Figure of Prajnaparamita with Eleven Faces",
+      "page_title": "Distressed Vintage Handmade Turkish Rug Over-Dyed in Yellow Color For Sale at 1stDibs",
+      "page_description": "For Sale on 1stDibs - A vintage over-dyed handmade Turkish rug. Finely hand knotted, low wool pile on cotton foundation. Deep washed. Sturdy and can be used on a high traffic",
+      "image_urls": [
+        "https://a.1stdibscdn.com/distressed-vintage-handmade-turkish-rug-over-dyed-in-yellow-color-for-sale/1121189/f_229864421616180495669/22986442_master.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "s of Desire Podcast  Celebrate 25 Years of 1stDibs  2025 Luxury E-Commerce Report      Editor's Picks  The Holiday Gift Collection  Iconic Jewelry Brands  The Art of Entertaining  Cabinet of Curiosities  The Print Shop  The Under $1,000 Edit                        \n    \n     \n         \n                       Home    Furniture    Rugs and Carpets    Turkish R",
+      "price_usd": 85000,
+      "provenance_flag": false,
+      "risk_score": 7,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Cambodia)",
+      "source_url": "https://www.1stdibs.com/furniture/asian-art-furniture/sculptures/cambodian-sculptures/khmer-bronze-figure-prajnaparamita-eleven-faces/id-f_22986442",
+      "final_url": "https://www.1stdibs.com/furniture/rugs-carpets/turkish-rugs/distressed-vintage-handmade-turkish-rug-over-dyed-yellow-color/id-f_22986442",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "5bf6bbccfd24d49cf1b2fdca7bc75c126df41aee505496549c2baae08a8a6252",
+      "etag": "",
+      "last_modified": "Wed, 21 Oct 2026 13:07:20 GMT",
+      "snapshot_signature": "f2589df3322cbfbd31e55f8a935ab3aa1d888b4757e6705fa399a0f30ae6e1e1",
+      "first_observed_at": "2026-10-25T03:59:07.376779Z",
+      "last_observed_at": "2026-10-25T03:59:07.376779Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:04.063271Z",
-  "snapshot_count": 3
+  "updated_at": "2026-10-25T03:59:07.376779Z",
+  "snapshot_count": 4
 }

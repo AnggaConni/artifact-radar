@@ -60,8 +60,36 @@
       "first_observed_at": "2026-10-20T04:13:11.055126Z",
       "last_observed_at": "2026-10-20T04:13:11.055126Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-25T03:59:14.664769Z",
+      "title": "African Tribal carved wooden artifact, Dogon or Fang Styles - Approx 6 ft",
+      "page_title": "Queen Elizabeth II by Sunday B. Morning | Proxibid",
+      "page_description": "Bid in a Proxibid online auction to acquire a Queen Elizabeth II by Sunday B. Morning from Federal Assets Auctioneers.",
+      "image_urls": [
+        "https://images.proxibid.com/AuctionImages/11062/248112/126-1.JPG"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "operty or its value, and in no event shall be responsible for the correctness of description, genuineness, attribution, provenance, authenticity, authorship, and completeness, condition of property or estimate of value. Any appraisals, Estimates (as defined herein) or evaluations provided are solely for the convenience of the bidder and FAA makes no warranti",
+      "price_usd": 1,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Unknown",
+      "source_url": "https://www.proxibid.com/Art/Sculptures/African-Tribal-carved-wooden-artifact-Dogon-or-Fang-Styles-Approx-6-ft/lotInformation/78964350",
+      "final_url": "https://www.proxibid.com/lotinformation/78964350/queen-elizabeth-ii-by-sunday-b-morning",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "9f40a4ef2004cd2e0e0b1e396c1c46675ec95d60aee59fda7718f6d15ebe4661",
+      "etag": "\"m4fq0byh6vcj6p\"",
+      "last_modified": "",
+      "snapshot_signature": "1fd110ee9542f770b063417e66ad6ec97617b3a681e6078636b862bdaf15275b",
+      "first_observed_at": "2026-10-25T03:59:14.664769Z",
+      "last_observed_at": "2026-10-25T03:59:14.664769Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:11.055126Z",
-  "snapshot_count": 2
+  "updated_at": "2026-10-25T03:59:14.664769Z",
+  "snapshot_count": 3
 }

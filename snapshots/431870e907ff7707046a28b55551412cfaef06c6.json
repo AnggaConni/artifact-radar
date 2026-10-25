@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "431870e907ff7707046a28b55551412cfaef06c6",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.360039Z",
+      "title": "Borobudur Mahastupa Restoration Underway Due to Fragility and Cracks",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Central Java, Indonesia",
+      "source_url": "https://voi.id/en/news/60700/the-puncak-borobudur-is-fragile-and-cracked-the-restoration-is-targeted-to-be-completed-on-october-24",
+      "final_url": "https://voi.id/en/news/60700/the-puncak-borobudur-is-fragile-and-cracked-the-restoration-is-targeted-to-be-completed-on-october-24",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "feaee2147369f4fd51aba3dbd90e40e4d44c351e5c353e5163bb505920039899",
+      "first_observed_at": "2026-10-25T03:59:16.360039Z",
+      "last_observed_at": "2026-10-25T03:59:16.360039Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.360039Z",
+  "snapshot_count": 1
+}

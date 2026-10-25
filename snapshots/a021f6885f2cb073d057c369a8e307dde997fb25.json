@@ -284,8 +284,43 @@
       "first_observed_at": "2026-10-20T04:13:06.558072Z",
       "last_observed_at": "2026-10-20T04:13:06.558072Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-25T03:59:09.728720Z",
+      "title": "Historic Javanese Art Treasures Victims Of Looting",
+      "page_title": "British Museum Sold Benin Bronzes",
+      "page_description": "Precedent argument will be used by Nigeria.",
+      "image_urls": [
+        "https://imageio.forbes.com/specials-images/imageserve/62d6b4e84973cf4561f269bb/forbes-thumb/0x0.jpg",
+        "https://specials-images.forbesimg.com/imageserve/6a2ff99f00918e0bfc7935c3/960x0.jpg?cropX1=0&cropX2=3076&cropY1=41&cropY2=1772",
+        "https://specials-images.forbesimg.com/imageserve/69c53ae45f4878a8c7df5e0e/960x0.jpg?cropX1=107&cropX2=2789&cropY1=0&cropY2=1509",
+        "https://specials-images.forbesimg.com/imageserve/6adb6a8552a3f79c7decd95e/960x0.jpg",
+        "https://specials-images.forbesimg.com/imageserve/6adc049a5f9d16f05120c48a/960x0.jpg?cropX1=142&cropX2=1530&cropY1=172&cropY2=952",
+        "https://specials-images.forbesimg.com/imageserve/6ad9ebea5811bf8ab10d7e43/960x0.jpg",
+        "https://specials-images.forbesimg.com/imageserve/6add6661a545624f4f20cad2/960x0.jpg?cropX1=0&cropX2=1901&cropY1=0&cropY2=1070",
+        "https://specials-images.forbesimg.com/imageserve/6add0ca3f72db57260503180/0x0.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia, East Java",
+      "source_url": "https://www.forbes.com/2002/04/03/0403conn.html",
+      "final_url": "https://www.forbes.com/2002/04/03/0403conn.html",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "99c5640af1421374d635cdd6ef64ab638f5885f0edbc36a417bfcab7cb726155",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "0c3b0198674a5d7a04c8e89029ee312901531ccc5f685b013546f49866296586",
+      "first_observed_at": "2026-10-25T03:59:09.728720Z",
+      "last_observed_at": "2026-10-25T03:59:09.728720Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:06.558072Z",
-  "snapshot_count": 8
+  "updated_at": "2026-10-25T03:59:09.728720Z",
+  "snapshot_count": 9
 }

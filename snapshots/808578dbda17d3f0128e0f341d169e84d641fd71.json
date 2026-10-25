@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "808578dbda17d3f0128e0f341d169e84d641fd71",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:17.156854Z",
+      "title": "Corinthian Helmet",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Greece",
+      "source_url": "https://www.museum.ie/en-IE/Collections-Research/Collection-Item/Corinthian-Helmet",
+      "final_url": "https://www.museum.ie/en-IE/Collections-Research/Collection-Item/Corinthian-Helmet",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "f0e2d57145bbb64bc60a74217eb31c08b88efd052b500a55a8ca9aa86d0b39fb",
+      "first_observed_at": "2026-10-25T03:59:17.156854Z",
+      "last_observed_at": "2026-10-25T03:59:17.156854Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:17.156854Z",
+  "snapshot_count": 1
+}

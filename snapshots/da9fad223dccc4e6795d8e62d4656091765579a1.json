@@ -32,8 +32,36 @@
       "first_observed_at": "2026-09-26T14:42:24.261822Z",
       "last_observed_at": "2026-10-20T04:13:03.987749Z",
       "observations_seen": 8
+    },
+    {
+      "observed_at": "2026-10-25T03:59:07.286209Z",
+      "title": "Khmer Sandstone Figure of a Female Deity",
+      "page_title": "Set of 6 Dining Chairs from Drvni Kombinat \"Jasen” in Kraljevo, Reupholstered at 1stDibs",
+      "page_description": "View this item and discover similar  for sale at 1stDibs - This set of six vintage dining chairs was produced around 1960s in former Yugoslavia furniture factory Drvni Kombinat „Jasen” in Kraljevo. The chairs are",
+      "image_urls": [
+        "https://a.1stdibscdn.com/set-of-6-dining-chairs-from-drvni-kombinat-jasen-in-kraljevo-reupholstered-for-sale/1121189/f_229864221616180485591/22986422_master.jpeg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "s of Desire Podcast  Celebrate 25 Years of 1stDibs  2025 Luxury E-Commerce Report      Editor's Picks  The Holiday Gift Collection  Iconic Jewelry Brands  The Art of Entertaining  Cabinet of Curiosities  The Print Shop  The Under $1,000 Edit                        \n    \n     \n         \n                       Home    Furniture    Seating    Chairs            ",
+      "price_usd": 65000,
+      "provenance_flag": false,
+      "risk_score": 7,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Cambodia)",
+      "source_url": "https://www.1stdibs.com/furniture/asian-art-furniture/sculptures/cambodian-sculptures/khmer-sandstone-figure-female-deity/id-f_22986422",
+      "final_url": "https://www.1stdibs.com/furniture/seating/chairs/set-of-6-dining-chairs-from-drvni-kombinat-jasen-kraljevo-reupholstered/id-f_22986422",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "55049c3571e3e8b29b371023ebb61b353b053f7012fcd013e17887255c589402",
+      "etag": "",
+      "last_modified": "Wed, 21 Oct 2026 13:07:20 GMT",
+      "snapshot_signature": "60be6ef598c5ccd6ac6d8551651ce80326ae86847e876c4c8deeda3b5bf0a45e",
+      "first_observed_at": "2026-10-25T03:59:07.286209Z",
+      "last_observed_at": "2026-10-25T03:59:07.286209Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-20T04:13:03.987749Z",
-  "snapshot_count": 1
+  "updated_at": "2026-10-25T03:59:07.286209Z",
+  "snapshot_count": 2
 }

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a87e45bce658d8f3c06fbe13bca901cb184e7b92",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.642891Z",
+      "title": "Framed Borobudur Temple Museum Copy Stone Relief of Buddha's Dharma and Sutras",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEr6BWxd3Jc4QQEhRVN5fsQWq-CmF7_A8gu-zkIUldokvO2sSc3aCf30u0-pXUOel0puL9xUUnCmE81o7S3_DGHEblP9QUhrbDQVoNcy_wLHakWAJgCmKlKAWunoqY1WYqlpONdzDNmMsRcStEgLbvFNRZZrtlP2NpCfFbkN4Rb5KJockEhQ==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "902a9702dbec55990022b3f73d8ae11b4a7d78ce7e0a47a376426cd38842708e",
+      "first_observed_at": "2026-10-25T03:59:16.642891Z",
+      "last_observed_at": "2026-10-25T03:59:16.642891Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.642891Z",
+  "snapshot_count": 1
+}

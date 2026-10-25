@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a62b1ff50d2277f262770c470476adc213777e33",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.555938Z",
+      "title": "A fragmented Provenance Report regarding Four Buddha heads gifted by Artis in the NMVW and the social lives of Borobudur",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Borobudur, Java, Indonesia",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGscAbrgZkFR1ifVXywAOsaNtQkCAOvHcqm2zEDe56AHpdCsCAG7A-nBvonLOyS9fFlB_a6mIQ7T8NKVskrLt4gmEsfFwkMgwM7746LI4gWtKUDCSzNj9kaQU_KRfy9JaJdVmoCMpJZpMWt2h98v5rimbU9DQB0231KYiIbVCRm04q6IHoHBJRGkDPFbVRwR5JCe5vGQHp69XKR2Cjjhw4CiUOoGqGSLrU-yI85BveQQyfvBL1FGXkuZw==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "aa5068e1119ea3c412920435d676ac070f226cd33a2336e9f995b6f177c419a6",
+      "first_observed_at": "2026-10-25T03:59:16.555938Z",
+      "last_observed_at": "2026-10-25T03:59:16.555938Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.555938Z",
+  "snapshot_count": 1
+}

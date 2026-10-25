@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2b6f070ff768d2539c853f833700620a75079087",
+  "observations": [
+    {
+      "observed_at": "2026-10-25T03:59:16.900206Z",
+      "title": "Helmet of the Corinthian Type and Pair of Greaves",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Greek",
+      "source_url": "https://www.metmuseum.org/art/collection/search/729227",
+      "final_url": "https://www.metmuseum.org/art/collection/search/729227",
+      "source_status": "UNAVAILABLE",
+      "http_status": 429,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "b4c6c205e853d9fc5f83c77cfc6f37853cd4b84d45d076f05b1273be668ce8cc",
+      "first_observed_at": "2026-10-25T03:59:16.900206Z",
+      "last_observed_at": "2026-10-25T03:59:16.900206Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-10-25T03:59:16.900206Z",
+  "snapshot_count": 1
+}
