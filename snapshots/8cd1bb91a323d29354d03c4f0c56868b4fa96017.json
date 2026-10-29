@@ -109,8 +109,41 @@
       "first_observed_at": "2026-10-25T03:59:13.253311Z",
       "last_observed_at": "2026-10-25T03:59:13.253311Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-29T05:01:55.962126Z",
+      "title": "A LACONIAN POTTERY KYLIX, ATTRIBUTED TO THE BOREAD PAINTER - GROUP B, CIRCA 570 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-25198-10292026-1.jpg",
+        "/img/SaleImages/HGK-24529-10292026-1.jpg",
+        "/img/SaleImages/HGK-25382-10292026-1.jpg",
+        "/img/SaleImages/HGK-21663-10292026-1.jpg",
+        "/img/SaleImages/HGK-25383-10302026-1.jpg",
+        "/img/SaleImages/HGK-24625-10302026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "owse all art and objects      Auction results        Featured      Asian Art | Hong Kong      Classic Week | Paris      Collection Roger Therond | Paris      Shanghai Auctions      Luxury | Global      20th/21st Century Art | New York      Gooding Christie’s            Private Sales               Current Exhibitions      Decorative Arts For Your Home | Onlin",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Laconia (Sparta), Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294720",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "91a132909ddd829242ef3797569a1a256e4a7c3be15efe72338ad367ea23d762",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "91abce0ac5c534334fad185500f40047367852396be779ad37b027c09abc78f7",
+      "first_observed_at": "2026-10-29T05:01:55.962126Z",
+      "last_observed_at": "2026-10-29T05:01:55.962126Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:13.253311Z",
-  "snapshot_count": 3
+  "updated_at": "2026-10-29T05:01:55.962126Z",
+  "snapshot_count": 4
 }

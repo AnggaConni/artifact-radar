@@ -245,8 +245,41 @@
       "first_observed_at": "2026-10-25T03:59:04.852754Z",
       "last_observed_at": "2026-10-25T03:59:04.852754Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-29T05:01:47.433650Z",
+      "title": "A LARGE JOMON VESSEL , MIDDLE JOMON PERIOD (BC 3000-2000)",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-25198-10292026-1.jpg",
+        "/img/SaleImages/HGK-24529-10292026-1.jpg",
+        "/img/SaleImages/HGK-25382-10292026-1.jpg",
+        "/img/SaleImages/HGK-21663-10292026-1.jpg",
+        "/img/SaleImages/HGK-25383-10302026-1.jpg",
+        "/img/SaleImages/HGK-24625-10302026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "owse all art and objects      Auction results        Featured      Asian Art | Hong Kong      Classic Week | Paris      Collection Roger Therond | Paris      Shanghai Auctions      Luxury | Global      20th/21st Century Art | New York      Gooding Christie’s            Private Sales               Current Exhibitions      Decorative Arts For Your Home | Onlin",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.christies.com/lot/lot-6140592",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "14dc340adc91dc513e6c51661861ec2f23799af30ffb19fad5967b180a7076ea",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5fc62c78f542424765354579c4beb647a84a93d1b0cfa8d21a90d9acb9ab331a",
+      "first_observed_at": "2026-10-29T05:01:47.433650Z",
+      "last_observed_at": "2026-10-29T05:01:47.433650Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:04.852754Z",
-  "snapshot_count": 7
+  "updated_at": "2026-10-29T05:01:47.433650Z",
+  "snapshot_count": 8
 }

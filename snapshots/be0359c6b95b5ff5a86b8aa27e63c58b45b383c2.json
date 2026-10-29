@@ -33,8 +33,37 @@
       "first_observed_at": "2026-10-25T03:59:16.948940Z",
       "last_observed_at": "2026-10-25T03:59:16.948940Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-29T05:01:59.399095Z",
+      "title": "Stunning Greek Corinthian Hoplite Bronze Helmet",
+      "page_title": "STUNNING GREEK CORINTHIAN HOPLITE BRONZE HELMET - XRF TESTED",
+      "page_description": "Ca. 500 - 450 BC. A fantastic Greek Corinthian hoplite bronze helmet, likely cast and then hammered into shape, belongs to a type known as Corinthian, characterised by almond-shaped eye holes, large cheek-pieces, and a wide nose-guard. This type also features holes for rivets, or metal fasteners, intended to secure liners. The helmet is in perfect, not restored condition with smooth green patina. One of the best preserved specimens on the market for the last several years! For similar see: Cleveland Museum of Art, n. 1926.54; Christie's, Live Auction 19992, Antiquities, Lot. 41. Size: 260mm x 180mm; Weight: 1.2kg. Provenance: Private UK collection; previously in an English private collection since 2016; Ex. Marcus Prill collection, 2012; Ex. Wolfram Schmidt collection, 1970s. Copies of original invoices are available. This item has been cleared against the Art Loss Register database and comes with a confirmation letter. This piece comes with a full metallurgical laboratory report from the independent Belgian laboratory Hebolabo. This piece is accompanied by a historical report from Alessandro Neri, an international Cultural Heritage expert based in Florence, Italy.",
+      "image_urls": [
+        "https://images5-cdn.auctionmobility.com/is3/auctionmobility-static5/nTMZ-5-ANGDP/5-1LZNOV/110-1.jpg?width=880&height=880&resizeinbox=1&backgroundcolor=EEEEEE",
+        "https:\\/\\/images5-cdn.auctionmobility.com\\/is3\\/auctionmobility-static5\\/nTMZ-5-ANGDP\\/5-1LZNOV\\/110-1.jpg"
+      ],
+      "page_price_text": "Price",
+      "page_price_currency": "GBP",
+      "provenance_excerpt": "                                                        FINE ASIAN, TRIBAL, PRE-COLUMBIAN ART AND ANTIQUES - THE PRINCE COLLECTION                                    \t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n                                                                            FINE ISLAMIC ART & INDIAN ART - THE PRINCE COLLECTION             ",
+      "price_usd": 72000,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Ancient Greece",
+      "source_url": "https://auction.apolloauctions.com/lots/view/5-1LZNOV/stunning-greek-corinthian-hoplite-bronze-helmet-xrf-tested",
+      "final_url": "https://auction.apolloauctions.com/lots/view/5-1LZNOV/stunning-greek-corinthian-hoplite-bronze-helmet-xrf-tested",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "0d46842e5c82e40547b1c36dc31cc6cf69a2099923886c6f8fdebe1c453770ad",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "4b1cd2981a6fb5e0696aa261a1fe63b8447425f2c06c44352cd34b57ee8b51e0",
+      "first_observed_at": "2026-10-29T05:01:59.399095Z",
+      "last_observed_at": "2026-10-29T05:01:59.399095Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:16.948940Z",
-  "snapshot_count": 1
+  "updated_at": "2026-10-29T05:01:59.399095Z",
+  "snapshot_count": 2
 }

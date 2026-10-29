@@ -56,8 +56,36 @@
       "first_observed_at": "2026-10-11T04:59:47.477013Z",
       "last_observed_at": "2026-10-25T03:59:06.456043Z",
       "observations_seen": 4
+    },
+    {
+      "observed_at": "2026-10-29T05:01:49.068214Z",
+      "title": "Pottery Survives in Pristine Condition for 10,000 Years in Lake Biwa, Japan",
+      "page_title": "2,000-Year-Old Tomb Found in Tharsa Was Guarded by Bulls",
+      "page_description": "Excavations of the ancient Roman cemetery of Tharsa have found a grand tomb. The entrance is flanked by two bulls, powerful symbols staring out from eternity.",
+      "image_urls": [
+        "https://www.ancient-origins.net/sites/default/files/field/image/Tharsa-Bull-Tomb.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "ng efforts. Now known as Turuş Rock, the tombs are located near Kuyulu village on the Adıyaman-Şanlıurfa Highway.  This collection of tombs is not knew, and they are known as the Turuş Rock Tombs. Excavations started last year in 2021 in the ancient city, where a family  cemetery  is known to be located.           Belonging to the Roman Period, the Turuş Roc",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.ancient-origins.net/news-history-archaeology/jomon-pottery-0020816",
+      "final_url": "https://www.ancient-origins.net/news-history-archaeology/tharsa-bull-tomb-0020816",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "281071ef57358be60d2b42906796f56623c2094ceee46b985a6ca2da7f79871a",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d30359a9d51e68efa7240c24d8727ef73385f70832c21b552d4bff176c68f02c",
+      "first_observed_at": "2026-10-29T05:01:49.068214Z",
+      "last_observed_at": "2026-10-29T05:01:49.068214Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:06.456043Z",
-  "snapshot_count": 2
+  "updated_at": "2026-10-29T05:01:49.068214Z",
+  "snapshot_count": 3
 }

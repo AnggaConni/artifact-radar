@@ -30,8 +30,34 @@
       "first_observed_at": "2026-10-25T03:59:16.262767Z",
       "last_observed_at": "2026-10-25T03:59:16.262767Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-29T05:01:58.658396Z",
+      "title": "Borobudur stone blocks and archaeological findings at Karmawibhangga Museum",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Central Java, Indonesia",
+      "source_url": "https://www.borobudurpark.com/temple/museumBorobudur",
+      "final_url": "https://borobudurpark.com/temple/museumBorobudur",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "2912b4dcbf73236e8f80817cdae77a978d17950fd2a59aa3e3d93911a9c8fe14",
+      "first_observed_at": "2026-10-29T05:01:58.658396Z",
+      "last_observed_at": "2026-10-29T05:01:58.658396Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:16.262767Z",
-  "snapshot_count": 1
+  "updated_at": "2026-10-29T05:01:58.658396Z",
+  "snapshot_count": 2
 }

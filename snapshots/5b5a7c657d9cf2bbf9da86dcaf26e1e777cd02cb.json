@@ -319,8 +319,43 @@
       "first_observed_at": "2026-10-25T03:59:07.321016Z",
       "last_observed_at": "2026-10-25T03:59:07.321016Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-29T05:01:50.034147Z",
+      "title": "Asian Khmer Cambodia Stoned Carved Head Bust of Male Buddhist Buddha Shiva Deity",
+      "page_title": "More Carpets and Rugs - 25,504 For Sale at 1stDibs | rug, omri kuba, vintage carpets",
+      "page_description": "Shop more carpets and other antique and modern rugs from top sellers and makers around the world. Global shipping available.",
+      "image_urls": [
+        "https://a.1stdibscdn.com/28x95-light-green-ziegler-mahal-all-over-design-hand-knotted-wool-runner-rug-for-sale/0/f_509283621783606548565/f_50928362_1783606548716_bg_processed.jpg",
+        "https://a.1stdibscdn.com/28x95-light-green-ziegler-mahal-all-over-design-hand-knotted-wool-runner-rug-for-sale/0/f_509283621783606548565/f_50928362_1783606548716_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/5x5-camel-brown-undyed-wool-vertical-stripes-design-hand-loomed-round-rug-for-sale/0/f_509304021783607458464/f_50930402_1783607458627_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/42x55-pink-afghan-ersari-with-antique-caucasian-motif-hand-knotted-wool-rug-for-sale/0/f_503461821780307100246/f_50346182_1780307100425_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/27x97-red-afghan-andkhoy-with-tribal-medallions-hand-knotted-wool-runner-rug-for-sale/0/f_503476921780307694089/f_50347692_1780307694206_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/89x12-ivory-aubusson-with-botanical-repetitive-design-hand-woven-wool-rug-for-sale/0/f_503370421780303105520/f_50337042_1780303105665_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/4x1110-blue-angora-oushak-all-over-pattern-shiny-wool-hand-knotted-runner-rug-for-sale/0/f_503362621780302725104/f_50336262_1780302725277_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/118x153-brown-plain-solid-pattern-hand-knotted-hand-spun-ghazni-wool-xl-rug-for-sale/0/f_503403121780304569886/f_50340312_1780304570047_bg_processed.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "s of Desire Podcast  Celebrate 25 Years of 1stDibs  2025 Luxury E-Commerce Report      Editor's Picks  The Holiday Gift Collection  Iconic Jewelry Brands  The Art of Entertaining  Cabinet of Curiosities  The Print Shop  The Under $1,000 Edit                        \n    \n     \n         \n                                          Home    Furniture    Rugs and C",
+      "price_usd": 1495,
+      "provenance_flag": false,
+      "risk_score": 6,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Cambodia)",
+      "source_url": "https://www.1stdibs.com/furniture/asian-art-furniture/sculptures/cambodian-sculptures/asian-khmer-cambodia-stoned-carved-head-bust-male-buddhist-buddha-shiva-deity/id-f_19750052",
+      "final_url": "https://www.1stdibs.com/furniture/rugs-carpets/area-rugs-carpets",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "e9a0516fa436c2fec75a8c1230442dd9fe65afc2aeb0f8e78a79865a69b940cd",
+      "etag": "",
+      "last_modified": "Wed, 28 Oct 2026 12:25:37 GMT",
+      "snapshot_signature": "55712217333f0f2081efb3fd33fb1e534f83e4e3a59f62265e3b6c5358f3ff56",
+      "first_observed_at": "2026-10-29T05:01:50.034147Z",
+      "last_observed_at": "2026-10-29T05:01:50.034147Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:07.321016Z",
-  "snapshot_count": 9
+  "updated_at": "2026-10-29T05:01:50.034147Z",
+  "snapshot_count": 10
 }

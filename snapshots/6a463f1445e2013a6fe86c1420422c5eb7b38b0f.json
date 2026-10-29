@@ -30,8 +30,36 @@
       "first_observed_at": "2026-10-25T03:59:17.178549Z",
       "last_observed_at": "2026-10-25T03:59:17.178549Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-29T05:01:59.601793Z",
+      "title": "Customized Bronze Corinthian Helmet Found In Israeli Waters",
+      "page_title": "Myanmar Violence Spreads to Ancient Temples of Bagan",
+      "page_description": "Police in Myanmar have opened fire on protesters in Bagan, the former ancient capital, bringing destruction to one of the world’s oldest religious centers.",
+      "image_urls": [
+        "https://www.ancient-origins.net/sites/default/files/field/image/Myanmar-violence_0.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Corinth, Ancient Greece",
+      "source_url": "https://www.ancient-origins.net/news-history-archaeology/corinthian-helmet-israel-0015024",
+      "final_url": "https://www.ancient-origins.net/news-history-archaeology/myanmar-violence-0015024",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "ca686c24a39dd1591fa2c5605e2c69f7c4dd00e920cdf6730acd2f64158b3f59",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "252d6f7c5dd893449499c0c5ad0d5dfcacea8007028a433243095de4ded4d357",
+      "first_observed_at": "2026-10-29T05:01:59.601793Z",
+      "last_observed_at": "2026-10-29T05:01:59.601793Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:17.178549Z",
-  "snapshot_count": 1
+  "updated_at": "2026-10-29T05:01:59.601793Z",
+  "snapshot_count": 2
 }

@@ -238,8 +238,34 @@
       "first_observed_at": "2026-10-25T03:59:01.062030Z",
       "last_observed_at": "2026-10-25T03:59:01.062030Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-29T05:01:43.293513Z",
+      "title": "Ancient Stone In Us Native American Artifacts (Pre-1600) for sale",
+      "page_title": "Pardon Our Interruption...",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Native American (USA)",
+      "source_url": "https://www.ebay.com/b/Ancient-Stone-In-Us-Native-American-Artifacts-Pre-1600/some-id",
+      "final_url": "https://www.ebay.com/splashui/challenge?ap=1&appName=orch&iia=FjIuMjU0sj&iid=90176a1c-d152-41e0-bb92-b773b35ebe5c&iim=JMjAuNjr&iiz=gXyLjE2Ng%2A%2Asyq&ru=https%3A%2F%2Fwww.ebay.com%2Fb%2FAncient-Stone-In-Us-Native-American-Artifacts-Pre-1600%2Fsome-id",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "3376f381915d860a723913326f1cb57b4d5bf173cf3988ea12baf6db1d90ab63",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "1f112db7804ef04d3d6e6bc10c09a624de3af644c1f7da00ae29d10a32408e6b",
+      "first_observed_at": "2026-10-29T05:01:43.293513Z",
+      "last_observed_at": "2026-10-29T05:01:43.293513Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:01.062030Z",
-  "snapshot_count": 9
+  "updated_at": "2026-10-29T05:01:43.293513Z",
+  "snapshot_count": 10
 }

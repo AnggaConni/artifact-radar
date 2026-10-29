@@ -249,8 +249,43 @@
       "first_observed_at": "2026-10-25T03:59:05.007916Z",
       "last_observed_at": "2026-10-25T03:59:05.007916Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-29T05:01:48.065533Z",
+      "title": "Japanese Ancient Small Pottery / Jomon Pottery Jar / 3000 Years ago / Wabi-Sabi",
+      "page_title": "Antique and Vintage Figurative Sculptures - 17,680 For Sale at 1stDibs | antique ornaments figurines, sofia artif age, niall smith antiques",
+      "page_description": "Shop vintage, mid-century, modern and antique figurative sculptures from top sellers and makers around the world. Global shipping available.",
+      "image_urls": [
+        "https://a.1stdibscdn.com/archivesE/upload/f_39981/f_520235821789532320453/2805762e-6e51-435f-9e3b-17230eaf20b8/Photoroom_20260916_061751_bg_processed.jpeg",
+        "https://a.1stdibscdn.com/archivesE/upload/f_39981/f_520235821789532320453/2805762e-6e51-435f-9e3b-17230eaf20b8/Photoroom_20260916_061751_bg_processed.jpeg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_39981/f_519989421789397078581/d4d2d67f-e11d-489f-85fc-3bb87cd1cad0/IMG_8228_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_25253/f_521029521789819208818/acc7a8a2-6174-4af0-ae01-ee7f06e921aa/2600820_0_bg_processed.JPG?width=768",
+        "https://a.1stdibscdn.com/vintage-jade-green-marble-foo-dog-guardian-lions-hollywood-regency-chinoiserie-for-sale/f_11492/1792186680904/mobilejpegupload_35EF3512A1434A27A33BE5E3980E0759_master_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_59412/f_519291921789011626759/37fc238e-d4dd-4af5-b9f2-f6506fc2e08f/IMG_4758_2_bg_processed.jpeg?width=768",
+        "https://a.1stdibscdn.com/archivesE/upload/f_58482/f_525752321792105370585/dbb747f7-a843-487c-b13e-ec2e71cdf55b/20261004_161737_bg_processed.jpg?width=768",
+        "https://a.1stdibscdn.com/vintage-mexican-20-pesos-1959-gold-coin-pendant-in-ornate-gold-rope-bezel-for-sale/f_9366/1791163428970/mobilejpegupload_49881A4BB7404FEDA5C136BC5B1CB732_master_bg_processed.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "s of Desire Podcast  Celebrate 25 Years of 1stDibs  2025 Luxury E-Commerce Report      Editor's Picks  The Holiday Gift Collection  Iconic Jewelry Brands  The Art of Entertaining  Cabinet of Curiosities  The Print Shop  The Under $1,000 Edit                        \n    \n     \n         \n                                          Home    Furniture    Decorative",
+      "price_usd": 600,
+      "provenance_flag": false,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.1stdibs.com/furniture/decorative-objects/vases-vessels/pots/japanese-ancient-small-pottery-jomon-pottery-jar-3000-years-ago-wabi-sabi/id-f_35008532",
+      "final_url": "https://www.1stdibs.com/furniture/decorative-objects/sculptures/figurative-sculptures",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "32a684301f080e6c7ad21fc9beaaa030ac381e724761a48ef228e0486649b833",
+      "etag": "",
+      "last_modified": "Wed, 28 Oct 2026 12:25:37 GMT",
+      "snapshot_signature": "482b8209a0218a9a6eb22327f4144879439283686f88c3f03c5137ec393ac3f1",
+      "first_observed_at": "2026-10-29T05:01:48.065533Z",
+      "last_observed_at": "2026-10-29T05:01:48.065533Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:05.007916Z",
-  "snapshot_count": 7
+  "updated_at": "2026-10-29T05:01:48.065533Z",
+  "snapshot_count": 8
 }

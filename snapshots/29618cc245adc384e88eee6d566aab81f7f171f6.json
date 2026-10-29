@@ -80,10 +80,10 @@
       "last_modified": "",
       "snapshot_signature": "4163c7e13e1cf1892f0c31bc4574bc7c9db6019dfff402c0833d94b052227462",
       "first_observed_at": "2026-10-25T03:59:10.322527Z",
-      "last_observed_at": "2026-10-25T03:59:10.322527Z",
-      "observations_seen": 1
+      "last_observed_at": "2026-10-29T05:01:52.718613Z",
+      "observations_seen": 2
     }
   ],
-  "updated_at": "2026-10-25T03:59:10.322527Z",
+  "updated_at": "2026-10-29T05:01:52.718613Z",
   "snapshot_count": 3
 }

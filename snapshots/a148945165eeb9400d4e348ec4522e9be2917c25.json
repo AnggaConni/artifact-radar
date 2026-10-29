@@ -109,8 +109,41 @@
       "first_observed_at": "2026-10-25T03:59:13.110573Z",
       "last_observed_at": "2026-10-25T03:59:13.110573Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-10-29T05:01:55.758766Z",
+      "title": "AN ATTIC RED-FIGURED KYLIX, ATTRIBUTED TO DOURIS AS PAINTER AND TO PYTHON AS POTTER CIRCA 480 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-25198-10292026-1.jpg",
+        "/img/SaleImages/HGK-24529-10292026-1.jpg",
+        "/img/SaleImages/HGK-25382-10292026-1.jpg",
+        "/img/SaleImages/HGK-21663-10292026-1.jpg",
+        "/img/SaleImages/HGK-25383-10302026-1.jpg",
+        "/img/SaleImages/HGK-24625-10302026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "owse all art and objects      Auction results        Featured      Asian Art | Hong Kong      Classic Week | Paris      Collection Roger Therond | Paris      Shanghai Auctions      Luxury | Global      20th/21st Century Art | New York      Gooding Christie’s            Private Sales               Current Exhibitions      Decorative Arts For Your Home | Onlin",
+      "price_usd": 1766000,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294719",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "d66769bc68d7cd5ed6bab4bb79ee2d528ce14bdcbc82e7de22c04f2e5de06c10",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "c793c5ce52965a9bc53fc59e661258ae7a4692311e5ecb9e4f627ce8b9437755",
+      "first_observed_at": "2026-10-29T05:01:55.758766Z",
+      "last_observed_at": "2026-10-29T05:01:55.758766Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-25T03:59:13.110573Z",
-  "snapshot_count": 3
+  "updated_at": "2026-10-29T05:01:55.758766Z",
+  "snapshot_count": 4
 }
