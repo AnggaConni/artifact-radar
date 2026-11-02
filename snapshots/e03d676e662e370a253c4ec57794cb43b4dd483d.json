@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "e03d676e662e370a253c4ec57794cb43b4dd483d",
+  "observations": [
+    {
+      "observed_at": "2026-11-02T05:15:36.060802Z",
+      "title": "The al-Madhariba Hoard of Gold Aksumite and Late Roman Coins",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Yemen (discovery), Ethiopia/Eritrea (origin of Aksumite coins)",
+      "source_url": "https://www.numismatics.org.uk/wp-content/uploads/2019/07/NC_1989.pdf",
+      "final_url": "https://numismatics.org.uk/wp-content/uploads/2019/07/NC_1989.pdf",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "f296bd7841a71af218cfcbd9f8fb2dcd078f18856be4f3df4689ed1ddf42c157",
+      "first_observed_at": "2026-11-02T05:15:36.060802Z",
+      "last_observed_at": "2026-11-02T05:15:36.060802Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-02T05:15:36.060802Z",
+  "snapshot_count": 1
+}

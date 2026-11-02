@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "0dbf14d42efe9766d1e22129270150b4300e4fed",
+  "observations": [
+    {
+      "observed_at": "2026-11-02T05:15:36.105505Z",
+      "title": "The Abyan Governorate Hoard of Late Roman Solidi and Aksumite Gold Coins",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Abyan Governorate, Yemen (discovery), Ethiopia/Eritrea (origin of Aksumite coins)",
+      "source_url": "https://www.researchgate.net/publication/339294528_The_Abyan_Governorate_Hoard_of_Late_Roman_Solidi_and_Aksumite_Gold_Coins",
+      "final_url": "https://www.researchgate.net/publication/339294528_The_Abyan_Governorate_Hoard_of_Late_Roman_Solidi_and_Aksumite_Gold_Coins",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "615992431d6e7d1b21da3a82d77a7994dd5b0ce1fa7f027cda5d0e75b5acfc78",
+      "first_observed_at": "2026-11-02T05:15:36.105505Z",
+      "last_observed_at": "2026-11-02T05:15:36.105505Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-02T05:15:36.105505Z",
+  "snapshot_count": 1
+}

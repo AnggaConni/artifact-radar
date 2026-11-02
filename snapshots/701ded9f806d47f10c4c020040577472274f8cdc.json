@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "701ded9f806d47f10c4c020040577472274f8cdc",
+  "observations": [
+    {
+      "observed_at": "2026-11-02T05:15:36.206941Z",
+      "title": "Collection unlocked: The Coins of the Kingdom of Aksum from the Early 4th to the Early 7th Century A.D.",
+      "page_title": "MK-ATW-KHM | Karolinger: Karl der Große (768–814) ca. 793–812",
+      "page_description": "Munzsammlung, Kunsthistorischen Museum Wien",
+      "image_urls": [
+        "mk-edit/images/n15/15308/vs_org.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Ethiopia (Aksum), South Yemen (acquisition location for a portion)",
+      "source_url": "https://www.ikmk.at/object?id=AKSUM",
+      "final_url": "https://www.ikmk.at/object?id=AKSUM",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "e79b2b4e653917f40aa35987705d68f9f5cdab82de0051caaeb13f6ff32601cc",
+      "etag": "",
+      "last_modified": "Mon, 02 Nov 2026 05:15:37 GMT",
+      "snapshot_signature": "ceb63cfe9f48c3e6020bb0f9dba2ac6ba6ab3b15d8b1c0dc7f0877fbb289f5e9",
+      "first_observed_at": "2026-11-02T05:15:36.206941Z",
+      "last_observed_at": "2026-11-02T05:15:36.206941Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-02T05:15:36.206941Z",
+  "snapshot_count": 1
+}

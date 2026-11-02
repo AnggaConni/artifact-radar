@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "be9d5321cef19bcccca5b1e99e67af3b9694978a",
+  "observations": [
+    {
+      "observed_at": "2026-11-02T05:15:36.234408Z",
+      "title": "Ella Gabaz (c. AD 540-640). Silver Unit, 0.85g. Crowned bust of Ella Gabaz facing, monogram in left field, crown inlaid with gold. Rev. Arch supported by columns with bases and capitals, containing a square-armed voided cross inlaid with gold.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Ethiopia (Aksumite Kingdom)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhAto7fGJuUJGs2MQ_6wP54_b6p0rx9VLsTfF9IuGKMuFcH8i33l8lKWURsbot8vv4kQowXSZnISJsKT9Tgx-LI4Fx7-L3UkHcybx3cMHQdW9CSbu8erPzTXydF1-tDYFmJf00qS2-Zqep19xuUJxU9o_0vApTWGXFtVNMTkhJms3RkJM0nFytE_H_nPDqZEZS8QNrjqBYjlr6aPXSIQzLHmDH2OZ1kLdprp6egM8A6lGuqaH1F7Q8LETQqS8ZNz9YYty-Oxn0mkgwEFCKLQCrgKkxhOuHwa68Y16x4kg=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a4958fce1e6f07c61b5d6e82af1f0e5b5fd0ed2e51e4aad03dc1a9a473097d6a",
+      "first_observed_at": "2026-11-02T05:15:36.234408Z",
+      "last_observed_at": "2026-11-02T05:15:36.234408Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-02T05:15:36.234408Z",
+  "snapshot_count": 1
+}

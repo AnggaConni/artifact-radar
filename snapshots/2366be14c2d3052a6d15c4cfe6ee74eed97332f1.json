@@ -59,8 +59,37 @@
       "first_observed_at": "2026-10-25T03:59:15.301393Z",
       "last_observed_at": "2026-10-29T05:01:57.606312Z",
       "observations_seen": 2
+    },
+    {
+      "observed_at": "2026-11-02T05:15:33.392127Z",
+      "title": "US Returns Antiquities to Indonesia Amid Probe into Trafficking Networks",
+      "page_title": "US Returns Antiquities to Indonesia Amid Probe into Trafficking Networks",
+      "page_description": "The Indonesian antiquities include the Stone Relief, which stands out as a rare example of material culture from the Majapahit Empire.",
+      "image_urls": [
+        "https://img2.beritasatu.com/cache/jakartaglobe/960x620-w/2024/04/1714218145-697x447.webp",
+        "https://img2.beritasatu.com/cache/jakartaglobe/910x580-2/2024/04/1714218145-697x447.webp"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "     \n         \n             \n         \n           \n             5 \n           \n            IDX to Exclude Concentrated-Ownership Stocks From JCI Starting Monday  \n         \n       \n         \n                  \n       \n     \n   \n \n\n   \n\n \n             \n       \n       \n         \n       \n     \n         \n   \n     \n       \n           \n         Connect With Us \n ",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia (Majapahit Empire for one mentioned item)",
+      "source_url": "https://jakartaglobe.id/news/us-returns-antiquities-to-indonesia-amid-probe-into-trafficking-networks",
+      "final_url": "https://jakartaglobe.id/news/us-returns-antiquities-to-indonesia-amid-probe-into-trafficking-networks",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "165f2ef0e4a794ea4951f8ada1117b81b668c06753699c875f6c5bf63129807c",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "c8883009168c3924fb5def351423314ecf3b48a89f842b4e1abede79b07b6219",
+      "first_observed_at": "2026-11-02T05:15:33.392127Z",
+      "last_observed_at": "2026-11-02T05:15:33.392127Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-10-29T05:01:57.606312Z",
-  "snapshot_count": 2
+  "updated_at": "2026-11-02T05:15:33.392127Z",
+  "snapshot_count": 3
 }
