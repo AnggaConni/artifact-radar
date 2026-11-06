@@ -32,8 +32,36 @@
       "first_observed_at": "2026-10-25T03:59:17.229177Z",
       "last_observed_at": "2026-11-02T05:15:36.015257Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-11-06T05:52:34.405240Z",
+      "title": "The Corinthian | Exceptional Ancient Greek Helmet Coming to Auction this May",
+      "page_title": "An Iconic Survival of the Ancient World : Exceptional Ancient Greek Corinthian Helmet",
+      "page_description": "What is a Corinthian helmet? Learn about its history, bronze design and use by Greek hoplites, including an exceptional example sold for £239,600.",
+      "image_urls": [
+        "https://motivated-card-12d34c19bf.media.strapiapp.com/Ancient_Greek_Corinthian_Helmet_890_75f7df1101.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "ip:  The helmet's period, construction and artistic refinement contribute to its historical and aesthetic importance.   Provenance:  A documented ownership history and clear information concerning an object's origin and lawful movement can be essential considerations when acquiring antiquities.   Rarity and historical significance:  Well-preserved examples w",
+      "price_usd": 125000,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Ancient Greece",
+      "source_url": "https://www.lyonandturnbull.com/stories/ancient-greek-corinthian-helmet",
+      "final_url": "https://www.lyonandturnbull.com/stories/ancient-greek-corinthian-helmet",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "1bba98fde085ad457468e19d9d3cb7c88914a61232f7395140ea797a5c109a7e",
+      "etag": "W/\"ntv1d9qcag59pb\"",
+      "last_modified": "",
+      "snapshot_signature": "de533ac383405685891451f70e37ed6f009094571abd15efd320e33471b15d1e",
+      "first_observed_at": "2026-11-06T05:52:34.405240Z",
+      "last_observed_at": "2026-11-06T05:52:34.405240Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-02T05:15:36.015257Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-06T05:52:34.405240Z",
+  "snapshot_count": 2
 }

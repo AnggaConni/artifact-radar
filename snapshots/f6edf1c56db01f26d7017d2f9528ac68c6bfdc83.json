@@ -88,8 +88,36 @@
       "first_observed_at": "2026-11-02T05:15:31.859984Z",
       "last_observed_at": "2026-11-02T05:15:31.859984Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-06T05:52:30.490896Z",
+      "title": "African Wooden Man",
+      "page_title": "Chanel Pink White Canvas Leather Cruise Line Tote | Proxibid",
+      "page_description": "Bid in a Proxibid online auction to acquire a Chanel Pink White Canvas Leather Cruise Line Tote Bag from Federal Assets Auctioneers.",
+      "image_urls": [
+        "https://images.proxibid.com/AuctionImages/11062/248112/120-1.JPG"
+      ],
+      "page_price_text": "$1.00",
+      "page_price_currency": "USD",
+      "provenance_excerpt": "operty or its value, and in no event shall be responsible for the correctness of description, genuineness, attribution, provenance, authenticity, authorship, and completeness, condition of property or estimate of value. Any appraisals, Estimates (as defined herein) or evaluations provided are solely for the convenience of the bidder and FAA makes no warranti",
+      "price_usd": 40,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Unknown",
+      "source_url": "https://www.proxibid.com/Antiques/African-Wooden-Man/lotInformation/78964344",
+      "final_url": "https://www.proxibid.com/lotinformation/78964344/chanel-pink-white-canvas-leather-cruise-line-tote-bag",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "ffdddab38513a3f00180e882c605d29eeb4d388bd005c77568ba97b8d8b91f09",
+      "etag": "\"13yoav9wznqbp8i\"",
+      "last_modified": "",
+      "snapshot_signature": "79ca020be94a196a98281c4156d769944bc3bd87be0d387e47cb8d1a2304e939",
+      "first_observed_at": "2026-11-06T05:52:30.490896Z",
+      "last_observed_at": "2026-11-06T05:52:30.490896Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-02T05:15:31.859984Z",
-  "snapshot_count": 3
+  "updated_at": "2026-11-06T05:52:30.490896Z",
+  "snapshot_count": 4
 }

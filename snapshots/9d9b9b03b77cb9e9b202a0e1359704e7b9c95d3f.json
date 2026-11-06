@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "9d9b9b03b77cb9e9b202a0e1359704e7b9c95d3f",
+  "observations": [
+    {
+      "observed_at": "2026-11-06T05:52:35.402171Z",
+      "title": "Cultural property trafficking: Army says ready to help",
+      "page_title": "Cultural property trafficking: Army says ready to help - NewZimbabwe.com",
+      "page_description": "THE security services have been roped in to fight smuggling of the country’s cultural heritage which is said to be now rampant, having started under settler colonial rule. Officials say trafficking of Zimbabwe’s cultural property has been aided by weaknesses in the country’s export and import regulations as well as the lack of capacity to […]",
+      "image_urls": [
+        "https://s3-eu-west-2.amazonaws.com/newzimlive/wp-content/uploads/2018/02/06231723/50275-news.png"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 1,
+      "origin_region": "Zimbabwe",
+      "source_url": "https://www.newzimbabwe.com/cultural-property-trafficking-army-says-ready-to-help/",
+      "final_url": "https://www.newzimbabwe.com/cultural-property-trafficking-army-says-ready-to-help",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "7730253e6141943245e13ca18677d396291d349fa3da2909fad857c5d62f3a64",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "950b71609d26d854094a81b857fa2c582e0d2917aa7a718c841f236a12d87804",
+      "first_observed_at": "2026-11-06T05:52:35.402171Z",
+      "last_observed_at": "2026-11-06T05:52:35.402171Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-06T05:52:35.402171Z",
+  "snapshot_count": 1
+}

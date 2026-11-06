@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "de1591c670e92eed85bfb4c20268d256fdc33e88",
+  "observations": [
+    {
+      "observed_at": "2026-11-06T05:52:35.389055Z",
+      "title": "Chinese pottery discovered in Great Zimbabwe reveals medieval African empire's vast connections spanning thousands of miles",
+      "page_title": "Chinese pottery discovered in Great Zimbabwe reveals medieval African empire",
+      "page_description": "Archaeologists excavating a medieval African kingdom have discovered pottery from eastern China, revealing connections across continents.",
+      "image_urls": [
+        "https://cdn.mos.cms.futurecdn.net/9ZcHxWC4WiJMK7XmSU6haX-1920-80.png",
+        "https://cdn.mos.cms.futurecdn.net/9ZcHxWC4WiJMK7XmSU6haX-1200-80.png"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Great Zimbabwe, Zimbabwe",
+      "source_url": "https://www.livescience.com/archaeology/chinese-pottery-discovered-in-great-zimbabwe-reveals-medieval-african-empires-vast-connections-spanning-thousands-of-miles",
+      "final_url": "https://www.livescience.com/archaeology/chinese-pottery-discovered-in-great-zimbabwe-reveals-medieval-african-empires-vast-connections-spanning-thousands-of-miles",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "2214cfe82c788fc78994250ac38669bb17ea10f3d33e7639305c75cf8cc956ec",
+      "etag": "",
+      "last_modified": "Thu, 05 Nov 2026 19:08:23 GMT",
+      "snapshot_signature": "3f03040b8aafe190a427a075f326f1ba4aa142c7befc3b22aec0453308a228db",
+      "first_observed_at": "2026-11-06T05:52:35.389055Z",
+      "last_observed_at": "2026-11-06T05:52:35.389055Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-06T05:52:35.389055Z",
+  "snapshot_count": 1
+}

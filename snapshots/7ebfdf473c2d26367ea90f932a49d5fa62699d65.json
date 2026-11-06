@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "7ebfdf473c2d26367ea90f932a49d5fa62699d65",
+  "observations": [
+    {
+      "observed_at": "2026-11-06T05:52:35.147638Z",
+      "title": "Great Zimbabwe Soapstone Birds",
+      "page_title": "African Art Appraiser | Expert Authentication & Valuation by Richard Moss",
+      "page_description": "Professional African art appraisal, authentication, and valuation services. Masks, sculptures, bronzes, textiles, and ceremonial objects expertly assessed.",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "al                     Expert African art appraisal and authentication     \nProfessional valuation, authentication, and provenance research for collectors, estates, museums, and institutions. Every piece tells a story — we help you understand its true worth.\n       Request a free consultation   →       Explore our appraisal services   →                      ",
+      "price_usd": 45000,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Great Zimbabwe, Zimbabwe",
+      "source_url": "https://africanartappraiser.com/great-zimbabwe-soapstone-birds/",
+      "final_url": "https://africanartappraiser.com/great-zimbabwe-soapstone-birds",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "c37e6c888dcc8c0e0f894bc165b655edbf9e17674d3650aaa2cc2566770082c6",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "c30b84a38f5f287a7dcf20317370b3c53615851e9483baf9d1d6655de5ac356e",
+      "first_observed_at": "2026-11-06T05:52:35.147638Z",
+      "last_observed_at": "2026-11-06T05:52:35.147638Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-06T05:52:35.147638Z",
+  "snapshot_count": 1
+}

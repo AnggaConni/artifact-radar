@@ -116,8 +116,36 @@
       "first_observed_at": "2026-10-25T03:59:07.376779Z",
       "last_observed_at": "2026-11-02T05:15:23.792162Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-11-06T05:52:22.073211Z",
+      "title": "Khmer Bronze Figure of Prajnaparamita with Eleven Faces",
+      "page_title": "Distressed Vintage Handmade Turkish Rug Over-Dyed in Yellow Color For Sale at 1stDibs",
+      "page_description": "For Sale on 1stDibs - A vintage over-dyed handmade Turkish rug. Finely hand knotted, low wool pile on cotton foundation. Deep washed. Sturdy and can be used on a high traffic",
+      "image_urls": [
+        "https://a.1stdibscdn.com/distressed-vintage-handmade-turkish-rug-over-dyed-in-yellow-color-for-sale/1121189/f_229864421616180495669/22986442_master.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "s of Desire Podcast  Celebrate 25 Years of 1stDibs  2025 Luxury E-Commerce Report      Editor's Picks  The Holiday Gift Collection  Holiday Tastemaker Edit  Iconic Jewelry Brands  The Art of Entertaining  The Portrait Collection  The Under $1,000 Edit                        \n    \n     \n         \n                       Home    Furniture    Rugs and Carpets   ",
+      "price_usd": 85000,
+      "provenance_flag": false,
+      "risk_score": 7,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Cambodia)",
+      "source_url": "https://www.1stdibs.com/furniture/asian-art-furniture/sculptures/cambodian-sculptures/khmer-bronze-figure-prajnaparamita-eleven-faces/id-f_22986442",
+      "final_url": "https://www.1stdibs.com/furniture/rugs-carpets/turkish-rugs/distressed-vintage-handmade-turkish-rug-over-dyed-yellow-color/id-f_22986442",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "ef0207766254c973b0c5f5ab78c866b72b69c5036700c00d73efd0cd2d8e419b",
+      "etag": "",
+      "last_modified": "Wed, 04 Nov 2026 07:58:49 GMT",
+      "snapshot_signature": "19fcd5cd0e13870ff04c271aeff5b86349ef2a062835d0b6d833a94a840959ae",
+      "first_observed_at": "2026-11-06T05:52:22.073211Z",
+      "last_observed_at": "2026-11-06T05:52:22.073211Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-02T05:15:23.792162Z",
-  "snapshot_count": 4
+  "updated_at": "2026-11-06T05:52:22.073211Z",
+  "snapshot_count": 5
 }

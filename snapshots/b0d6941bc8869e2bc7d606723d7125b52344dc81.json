@@ -58,8 +58,36 @@
       "first_observed_at": "2026-11-02T05:15:18.786862Z",
       "last_observed_at": "2026-11-02T05:15:18.786862Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-06T05:52:17.800371Z",
+      "title": "17TH CENTURY LAO BUDDHA",
+      "page_title": "17TH CENTURY LAO BUDDHA - ANTIQUE BUDDHA GALLERY",
+      "page_description": "MATERIAL : BRONZE SIZE : H 50cm W 26cm Very heavy for its size Lao Buddha in very good condition for its age sitting on a high altar his eyes are made from black pearls and mother of pearl traces of gold gilding sitting in Bhumisparsha Mudra .... touching the earth!",
+      "image_urls": [
+        "https://antiquebuddhagallery.com/wp-content/uploads/2018/11/IMGP3573-1.jpg"
+      ],
+      "page_price_text": "7700",
+      "page_price_currency": "AUD",
+      "provenance_excerpt": "  \n         \n\t\t\t                \n     \n\n     \n         \n              \n         \n     \n\n \n\t\t \n\n\t   HOME  \n  CONTACT  \n  COLLECTION  \n          \n\t\t\t                       \n\t \n\n         \n\t\t\t   HOME  \n  CONTACT  \n  COLLECTION  \n                        \n\n     \n\n\n\t\n \n\n\t\t \n\n\t\t\t \n\n\t \n\t\n\t\t \n\t\t\n\t\t\t \n\t\t\t\t\n\n\t \n\t\n\t\t\n\t\t\t\t\t Home \t\t\n\t\t\n\t\t\t\t\t » \t\t\n\t\n\t\t\n\t\t\t\t\t Laos \t\t\n\t\t\n\t\t\t\t",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Laos",
+      "source_url": "https://antiquebuddhagallery.com/17th-century-lao-buddha",
+      "final_url": "https://antiquebuddhagallery.com/product/17th-century-lao-buddha",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "2caccb3f53351d6134a405dd14547e7bdd6366ca055530ccd1687ae8626d4d73",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "69ab8171c1858aa18746230c7d3cb75be420e999afcd9ef9bb81351238158fd4",
+      "first_observed_at": "2026-11-06T05:52:17.800371Z",
+      "last_observed_at": "2026-11-06T05:52:17.800371Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-02T05:15:18.786862Z",
-  "snapshot_count": 2
+  "updated_at": "2026-11-06T05:52:17.800371Z",
+  "snapshot_count": 3
 }

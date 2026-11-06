@@ -56,8 +56,34 @@
       "first_observed_at": "2026-11-02T05:15:18.727747Z",
       "last_observed_at": "2026-11-02T05:15:18.727747Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-06T05:52:17.765681Z",
+      "title": "16TH CENTURY LAO BUDDHA",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 5,
+      "ai_risk_score": null,
+      "origin_region": "Laos",
+      "source_url": "https://antiquebuddhagallery.com/16th-century-lao-buddha",
+      "final_url": "https://antiquebuddhagallery.com/16th-century-lao-buddha",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "58c2066148976b3e9a4afc31aa1de95aa3a9f7643ac6cb0bb101322e88092204",
+      "first_observed_at": "2026-11-06T05:52:17.765681Z",
+      "last_observed_at": "2026-11-06T05:52:17.765681Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-02T05:15:18.727747Z",
-  "snapshot_count": 2
+  "updated_at": "2026-11-06T05:52:17.765681Z",
+  "snapshot_count": 3
 }

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "aad8f81107f862a4153b2c4449a402505eb21c31",
+  "observations": [
+    {
+      "observed_at": "2026-11-06T05:52:34.969469Z",
+      "title": "The Bents' 'Great Zimbabwe' collection in the British Museum",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Great Zimbabwe, Zimbabwe",
+      "source_url": "https://www.zimfieldguide.com/masvingo-province/bents-great-zimbabwe-collection-british-museum",
+      "final_url": "https://www.zimfieldguide.com/masvingo-province/bents-great-zimbabwe-collection-british-museum",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"ce7155db07bee749b54d305a837dba74\"",
+      "last_modified": "Thu, 05 Nov 2026 08:55:23 GMT",
+      "snapshot_signature": "3150b71dcddc9fe219d39b61c2bf300d893be432bd4058779d4660eb41d11c0b",
+      "first_observed_at": "2026-11-06T05:52:34.969469Z",
+      "last_observed_at": "2026-11-06T05:52:34.969469Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-06T05:52:34.969469Z",
+  "snapshot_count": 1
+}

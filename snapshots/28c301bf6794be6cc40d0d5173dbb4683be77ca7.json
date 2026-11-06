@@ -30,8 +30,34 @@
       "first_observed_at": "2026-10-20T04:13:11.967454Z",
       "last_observed_at": "2026-11-02T05:15:33.410650Z",
       "observations_seen": 4
+    },
+    {
+      "observed_at": "2026-11-06T05:52:32.001886Z",
+      "title": "Collection of 14 Indonesian Majapahit Period Terracotta Fragments, 13th Century AD",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia (Majapahit Period)",
+      "source_url": "https://www.invaluable.com/auction-lot/collection-of-14-indonesian-majapahit-period-terracotta-fragments-13th-century-ad-137770-c-1377709B9B",
+      "final_url": "https://www.invaluable.com/auction-lot/collection-of-14-indonesian-majapahit-period-terracotta-fragments-13th-century-ad-137770-c-1377709B9B",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"117f-Smmrgho4j/GABX92ubpVbI2ITXA\"",
+      "last_modified": "",
+      "snapshot_signature": "9e4a0a8622d65c8065658ce605c59982f49d668bf46912a29565aa5aea77aed1",
+      "first_observed_at": "2026-11-06T05:52:32.001886Z",
+      "last_observed_at": "2026-11-06T05:52:32.001886Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-02T05:15:33.410650Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-06T05:52:32.001886Z",
+  "snapshot_count": 2
 }
