@@ -212,8 +212,43 @@
       "first_observed_at": "2026-11-06T05:52:29.511285Z",
       "last_observed_at": "2026-11-06T05:52:29.511285Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-10T06:42:19.647430Z",
+      "title": "AN ATTIC RED-FIGURED KYLIX, ATTRIBUTED TO DOURIS AS PAINTER AND TO PYTHON AS POTTER CIRCA 480 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/GNV-25174-11102026-1.jpg",
+        "/img/SaleImages/GNV-24405-11102026-1.jpg",
+        "/img/SaleImages/CKS-24424-11122026-1.jpg",
+        "/img/SaleImages/SHA-24582-11132026-1.jpg",
+        "/img/SaleImages/SHA-24583-11132026-1.jpg",
+        "/img/SaleImages/PAR-24875-09152026-1.jpg",
+        "/img/SaleImages/PAR-24876-09162026-1.jpg",
+        "/img/SaleImages/NYR-24266-11172026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "   Upcoming auctions      Current exhibitions      Browse all art and objects      Auction results        Featured      Collection Roger Therond | Paris      Shanghai Auctions      Luxury | Global      20th/21st Century Art | New York      Gooding Christie’s      Classic Week | London      Design | Global      The Blaquier-Arrieta Collection | London        ",
+      "price_usd": 1766000,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294719",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "03ece62e29bec15507e0b668faa2fd8f77fefca5488d6ed85a7e511163a7dbf2",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "6fd026b37984f98de9410bdad58d0f4345aa35e2b0ef38c53f0bcd4012b2fc43",
+      "first_observed_at": "2026-11-10T06:42:19.647430Z",
+      "last_observed_at": "2026-11-10T06:42:19.647430Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-06T05:52:29.511285Z",
-  "snapshot_count": 6
+  "updated_at": "2026-11-10T06:42:19.647430Z",
+  "snapshot_count": 7
 }

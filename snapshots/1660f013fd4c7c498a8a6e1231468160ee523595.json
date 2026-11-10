@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1660f013fd4c7c498a8a6e1231468160ee523595",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.208241Z",
+      "title": "Vintage Thai Bronze Buddha - Sukhothai Style - Original Clay Core - Traditional",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 85.0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.ebay.com/itm/196144577826",
+      "final_url": "https://www.ebay.com/itm/196144577826",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "72a5e04aff41de23ea1563766d79deeea9918c8ab56d39e511e446fdfa089e29",
+      "first_observed_at": "2026-11-10T06:42:24.208241Z",
+      "last_observed_at": "2026-11-10T06:42:24.208241Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.208241Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1b157b51bf89828a08e4291f93fabc03df5fff9d",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.964781Z",
+      "title": "Stolen fragments: black markets, bad faith, and the illicit trade in ancient artefacts",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Unknown",
+      "source_url": "https://www.sup.org/books/title/?id=35805",
+      "final_url": "https://www.sup.org/books/title?id=35805",
+      "source_status": "UNAVAILABLE",
+      "http_status": 429,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d6eda54e4b244995db13ac21d6e1fb280c59ac4c7f80eab63c780b653cbb45dd",
+      "first_observed_at": "2026-11-10T06:42:25.964781Z",
+      "last_observed_at": "2026-11-10T06:42:25.964781Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.964781Z",
+  "snapshot_count": 1
+}

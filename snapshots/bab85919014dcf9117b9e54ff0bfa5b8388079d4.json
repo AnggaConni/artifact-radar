@@ -108,8 +108,34 @@
       "first_observed_at": "2026-11-06T05:52:11.605905Z",
       "last_observed_at": "2026-11-06T05:52:11.605905Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-10T06:42:06.359620Z",
+      "title": "The Certificate of Authenticity and Prehistoric Artifact Collecting",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": null,
+      "origin_region": "Unknown",
+      "source_url": "https://www.arrowheads.com/index.php/forums/collecting-artifacts/300-the-certificate-of-authenticity-and-prehistoric-artifact-collecting",
+      "final_url": "https://www.arrowheads.com/index.php/forums/collecting-artifacts/300-the-certificate-of-authenticity-and-prehistoric-artifact-collecting",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5a6959744479e9c83f94f3d8ceab7c89e6d6fcda8d3fa744362e8f0c8d308b7a",
+      "first_observed_at": "2026-11-10T06:42:06.359620Z",
+      "last_observed_at": "2026-11-10T06:42:06.359620Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-06T05:52:11.605905Z",
-  "snapshot_count": 4
+  "updated_at": "2026-11-10T06:42:06.359620Z",
+  "snapshot_count": 5
 }

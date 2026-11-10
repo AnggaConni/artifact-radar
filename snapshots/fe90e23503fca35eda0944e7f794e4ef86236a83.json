@@ -212,8 +212,43 @@
       "first_observed_at": "2026-11-06T05:52:29.282705Z",
       "last_observed_at": "2026-11-06T05:52:29.282705Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-10T06:42:19.532141Z",
+      "title": "AN ATTIC RED-FIGURED KYLIX, ATTRIBUTED TO MAKRON AS PAINTER, SIGNED BY HIERON AS POTTER, CIRCA 490-480 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/GNV-25174-11102026-1.jpg",
+        "/img/SaleImages/GNV-24405-11102026-1.jpg",
+        "/img/SaleImages/CKS-24424-11122026-1.jpg",
+        "/img/SaleImages/SHA-24582-11132026-1.jpg",
+        "/img/SaleImages/SHA-24583-11132026-1.jpg",
+        "/img/SaleImages/PAR-24875-09152026-1.jpg",
+        "/img/SaleImages/PAR-24876-09162026-1.jpg",
+        "/img/SaleImages/NYR-24266-11172026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "   Upcoming auctions      Current exhibitions      Browse all art and objects      Auction results        Featured      Collection Roger Therond | Paris      Shanghai Auctions      Luxury | Global      20th/21st Century Art | New York      Gooding Christie’s      Classic Week | London      Design | Global      The Blaquier-Arrieta Collection | London        ",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294717",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "aac9d3e6cc257bd05bee4f03065c8854db8ab4412d2ee4ab5579e3af1601e861",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "b2e97d4443cfe6c5a089940b3264e4bc781c6bdd35b125715b2f7bf8efb292d4",
+      "first_observed_at": "2026-11-10T06:42:19.532141Z",
+      "last_observed_at": "2026-11-10T06:42:19.532141Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-06T05:52:29.282705Z",
-  "snapshot_count": 6
+  "updated_at": "2026-11-10T06:42:19.532141Z",
+  "snapshot_count": 7
 }

@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "cfb49f2c73ce4ebe1fde37082e00bb7dc8eadede",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.420635Z",
+      "title": "A marine mosaic: Wroxeter Roman City",
+      "page_title": "A marine mosaic: Wroxeter Roman City – The Past",
+      "page_description": "Stylised dolphins and fish, in contrasting hues of red, blue, and yellow, swim across a sea of white tesserae. This striking mosaic was uncovered during excavat",
+      "image_urls": [
+        "https://i0.wp.com/the-past.com/wp-content/uploads/2024/09/Mosaic-1-flipped.jpg?fit=1400%2C1043&ssl=1"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Wroxeter Roman City (ancient Viroconium), UK",
+      "source_url": "https://the-past.com/news/a-marine-mosaic-wroxeter-roman-city/",
+      "final_url": "https://the-past.com/current-archaeology/416/the-picture-desk/a-marine-mosaic-wroxeter-roman-city",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "94accbaea787798a84b340f162d2385cb6c548133153a648548b147750efcb2a",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "796011ff297f7166a1c8aca55428619724f4e6f2a4167c8548ecd3fd93487689",
+      "first_observed_at": "2026-11-10T06:42:25.420635Z",
+      "last_observed_at": "2026-11-10T06:42:25.420635Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.420635Z",
+  "snapshot_count": 1
+}

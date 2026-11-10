@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1980e26c1e07217883c5478403bf9803480d2f78",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.259443Z",
+      "title": "Thai Bronze Statue of a Standing Deity",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.neworleansauction.com/lot/thai-bronze-statue-of-a-standing-deity/78964344",
+      "final_url": "https://www.neworleansauction.com/lot/thai-bronze-statue-of-a-standing-deity/78964344",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "bd98fb23a6b985a9dbbab06b7662f657bbbd7d3a0ed950164f60c873a88fc56a",
+      "first_observed_at": "2026-11-10T06:42:24.259443Z",
+      "last_observed_at": "2026-11-10T06:42:24.259443Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.259443Z",
+  "snapshot_count": 1
+}

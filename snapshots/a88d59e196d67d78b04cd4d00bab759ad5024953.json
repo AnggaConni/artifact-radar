@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a88d59e196d67d78b04cd4d00bab759ad5024953",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.237832Z",
+      "title": "Thai gilt bronze statue of Buddha seated in Bhumisparsha mudra",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.etsy.com/listing/some-id/thai-gilt-bronze-statue-of-buddha-seated-in-bhumisparsha-mudra",
+      "final_url": "https://www.etsy.com/listing/some-id/thai-gilt-bronze-statue-of-buddha-seated-in-bhumisparsha-mudra",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "e0814371c6fee3f1a6bb4f84fa5453c87adca4ba7c7d1188bdecefbc4a17f8f0",
+      "first_observed_at": "2026-11-10T06:42:24.237832Z",
+      "last_observed_at": "2026-11-10T06:42:24.237832Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.237832Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "56fabae66287a1aaadf75e9d9b419ecfbfe789c1",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.185461Z",
+      "title": "Early 1900s Antique Thai Bronze Buddha. 17Cm High.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 163.83,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.ebay.co.uk/itm/226771608468",
+      "final_url": "https://www.ebay.co.uk/itm/226771608468",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "72d04799cdae6509ba30ec5f43bc86cd51788eedd4810c2efe25c1e908b68b08",
+      "first_observed_at": "2026-11-10T06:42:24.185461Z",
+      "last_observed_at": "2026-11-10T06:42:24.185461Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.185461Z",
+  "snapshot_count": 1
+}

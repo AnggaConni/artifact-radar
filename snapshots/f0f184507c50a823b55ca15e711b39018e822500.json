@@ -30,8 +30,36 @@
       "first_observed_at": "2026-11-02T05:15:36.124165Z",
       "last_observed_at": "2026-11-06T05:52:34.827436Z",
       "observations_seen": 2
+    },
+    {
+      "observed_at": "2026-11-10T06:42:23.622211Z",
+      "title": "An Introduction to Axumite Coinage (reporting on Leu Auction 14)",
+      "page_title": "A Coin Treasure or an Offering to the Gods? | MünzenWoche",
+      "page_description": "Detectorists found numerous medieval coins in the Netherlands. In a joint effort, amateur archaeologists and academics were able to interpret the unusual find.",
+      "image_urls": [
+        "https://coinsweekly.com/wp-content/uploads/2022/03/00-JPF01642HighRes_Springendal_JarnoPors.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "de, where the finds will be on display from 18 February until 30 October. The RMO purchased the hoards for the national collection in order to make the find available to the public since it’s considered a hoard of national importance. \n Stijn Heeren, an archaeologist at the University of Amsterdam, states: “What’s special about this find is that little was k",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Ethiopia (Aksumite Kingdom)",
+      "source_url": "https://coinsweekly.com/an-introduction-to-axumite-coinage/",
+      "final_url": "https://coinsweekly.com/a-coin-treasure-or-an-offering-to-the-gods",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "38106897670e18b33ea36c9caf8bfbb5f60cb839bcce4ae76cf17862d480de39",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "3b39c9489b9e44ec4b5c22ab974a7de67fbfaf97cba7841d59e3be8f1a706f3a",
+      "first_observed_at": "2026-11-10T06:42:23.622211Z",
+      "last_observed_at": "2026-11-10T06:42:23.622211Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-06T05:52:34.827436Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-10T06:42:23.622211Z",
+  "snapshot_count": 2
 }

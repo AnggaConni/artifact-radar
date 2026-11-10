@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "3ddce55d1a59d6fdfb1bab38776b5f42457e6101",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.222912Z",
+      "title": "Mosaic pavement depicting the drinking contest between Herakles and Dionysos",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Antioch, Turkey",
+      "source_url": "https://artmuseum.princeton.edu/collections/objects/318892",
+      "final_url": "https://artmuseum.princeton.edu/collections/objects/318892",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "babaaae8913855ebf83527b3c557862974cfba2992235071360a127b304602d6",
+      "first_observed_at": "2026-11-10T06:42:25.222912Z",
+      "last_observed_at": "2026-11-10T06:42:25.222912Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.222912Z",
+  "snapshot_count": 1
+}

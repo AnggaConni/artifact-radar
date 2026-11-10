@@ -60,8 +60,36 @@
       "first_observed_at": "2026-10-25T03:59:10.196044Z",
       "last_observed_at": "2026-11-06T05:52:26.196053Z",
       "observations_seen": 4
+    },
+    {
+      "observed_at": "2026-11-10T06:42:17.012589Z",
+      "title": "Ife-Style Yoruba Bronze Portrait Head, Nigeria",
+      "page_title": "Red Wire Cage Sculptural Pendant Light Fixture, circa 1960 at 1stDibs | what is the red wire in a ceiling light fixture, red wire light fixture, red wire in light fixture",
+      "page_description": "View this item and discover similar  for sale at 1stDibs - A beautiful example of what our shop does best, we've brought back this original midcentury 1960s wire cage pendant light fixture freshly refinished in",
+      "image_urls": [
+        "https://a.1stdibscdn.com/red-wire-cage-sculptural-pendant-light-fixture-circa-1960-for-sale/1121189/f_207455221606197983409/20745522_master.jpg?width=768"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "s of Desire Podcast  Celebrate 25 Years of 1stDibs  2025 Luxury E-Commerce Report      Editor's Picks  The Holiday Gift Collection  Holiday Tastemaker Edit  Iconic Jewelry Brands  The Art of Entertaining  The Portrait Collection  The Under $1,000 Edit                        \n    \n     \n         \n                        Home    Furniture    Lighting    Chande",
+      "price_usd": 1875,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Nigeria",
+      "source_url": "https://www.1stdibs.com/furniture/decorative-objects/sculptures/busts/ife-style-yoruba-bronze-portrait-head-nigeria/id-f_20745522/",
+      "final_url": "https://www.1stdibs.com/furniture/lighting/chandeliers-pendant-lights/red-wire-cage-sculptural-pendant-light-fixture-circa-1960/id-f_20745522",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "ed3539ce6971c7cff8af1696196e2355c888281bb9bb3e4c999fa71c32f5bd2f",
+      "etag": "",
+      "last_modified": "Wed, 04 Nov 2026 07:58:49 GMT",
+      "snapshot_signature": "b27ee9c1dd42b6f2af8152b81568977257a7a3b29e22708e5d33ddbd66a5f7c7",
+      "first_observed_at": "2026-11-10T06:42:17.012589Z",
+      "last_observed_at": "2026-11-10T06:42:17.012589Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-06T05:52:26.196053Z",
-  "snapshot_count": 2
+  "updated_at": "2026-11-10T06:42:17.012589Z",
+  "snapshot_count": 3
 }

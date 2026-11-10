@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1a6d1fb93161acb7eb18230f887033d87dee8a3f",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.839027Z",
+      "title": "Roman Tesserae Mosaic w/ Bacchanalian Seduction Scene",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Eastern Mediterranean (Roman Empire)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0el1kw2GNhRG1mWoJ2BnKPnXem1Ecpdf1cEovzMjeHs7uSD1FnMJiOOcBSZVT7DzT46a7QzHObyk_qXFa-RGN5UV5G7yTFqrnOPTxAjq6WAu9-LA4P2_2jkBEIe_54018E5zZ2a4cDP1L09setbO8HDw7oRpv0Ur8Y9jQAUSV8oiTz76Us-lDXAmSeQsSAtcvKPanOz7PkUksi4guBbDq6wkSnD_CDOBXbnGR3zXq9Qk=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a4958fce1e6f07c61b5d6e82af1f0e5b5fd0ed2e51e4aad03dc1a9a473097d6a",
+      "first_observed_at": "2026-11-10T06:42:24.839027Z",
+      "last_observed_at": "2026-11-10T06:42:24.839027Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.839027Z",
+  "snapshot_count": 1
+}

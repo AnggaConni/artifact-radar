@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "9a880d0a0711ee830a49a96d6e9eaf2c3cc19b3e",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.761942Z",
+      "title": "Vintage Gilt Bronze ? Thai Prince Deity Figure",
+      "page_title": "Online Auctions: Fine Art, Jewelry, Collectibles | BidSpirit",
+      "page_description": "Discover and bid on fine art, antiques, jewelry, and collectibles from trusted auctioneers across the U.S. with BidSpirit’s online auction platform.",
+      "image_urls": [
+        "https://bidspirit-portal-static.global.ssl.fastly.net/images/logos/bidspirit/logo.png"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.bidspirit.com/ui/lotPage/source/catalog/auction/100000000/lot/1000000000?lang=en",
+      "final_url": "https://www.bidspirit.com/ui/lotPage/source/catalog/auction/100000000/lot/1000000000?lang=en",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "d8b404b21e46a65ded1f1857877eaf0b1a104b376fe11bfaa98e54882a2df9fb",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "67438e19ff154bb31a7eedf5a591619d782a4d03bbcf53b5e686c3072c912005",
+      "first_observed_at": "2026-11-10T06:42:24.761942Z",
+      "last_observed_at": "2026-11-10T06:42:24.761942Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.761942Z",
+  "snapshot_count": 1
+}

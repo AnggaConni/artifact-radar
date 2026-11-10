@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "e3be1c200007569a23b1f6ba75f2cf2fbcf356a9",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.791745Z",
+      "title": "Roman mosaic floor fragment",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Roman Empire",
+      "source_url": "https://www.heliosgallery.com/roman-antiquities-sold/roman-mosaic-floor-fragment/",
+      "final_url": "https://www.heliosgallery.com/roman-antiquities-sold/roman-mosaic-floor-fragment",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "349865b9f88958cd4251ca3144e110da4a529713b67d41a20f0018f4ce0de006",
+      "first_observed_at": "2026-11-10T06:42:24.791745Z",
+      "last_observed_at": "2026-11-10T06:42:24.791745Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.791745Z",
+  "snapshot_count": 1
+}

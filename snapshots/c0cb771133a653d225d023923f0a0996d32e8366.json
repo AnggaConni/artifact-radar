@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c0cb771133a653d225d023923f0a0996d32e8366",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.261459Z",
+      "title": "Construction Workers Uncover Intact 1,700-Year-Old Roman Mosaic",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Eauze, Gers, France (ancient Elusa)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAHWvnAEPNkd2aFF8jj59olDovth5YG0v6zbo3J7NA2JeKjt72QIG_OJf2MQL51my7Ck4v0QcwNxteAr45K-nZhQSQjvmYiwv9yCDSrJ-DW6kKct7TeRdf-hthNJErYG3B7XM-SH460Kn3oxXlt_YgxdWnRg5QTIAseqtgISz2u163wtXnOt_-eDch0aSHEA_r-wMx",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "dde3dd9951cfe8fbf6c6d0c0769d98e99f9d1364c53ccf6e66dbb66880740f6a",
+      "first_observed_at": "2026-11-10T06:42:25.261459Z",
+      "last_observed_at": "2026-11-10T06:42:25.261459Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.261459Z",
+  "snapshot_count": 1
+}

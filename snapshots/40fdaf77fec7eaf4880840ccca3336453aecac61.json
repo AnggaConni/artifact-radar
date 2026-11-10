@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "40fdaf77fec7eaf4880840ccca3336453aecac61",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.839090Z",
+      "title": "Roman Erotic Mosaic Fragment Lower Egypt, C. 2nd Century A.D.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Lower Egypt",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoVgpTiEH6LzuzJXFYCk_2B3vZw5ZA2Y2o9CG-2BaoauXgyJModdNUk49mF-hOx9AWq6wV5E4-cZcyqD_rxQaouNj4Zdh6XthunOlhFZR3VolUgItppj4el3bSRLzZ6UgK7Kq5bTXXzaGwtSyDAbfl1G6WF09FSFTS1LuKwQf7heg=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "a4958fce1e6f07c61b5d6e82af1f0e5b5fd0ed2e51e4aad03dc1a9a473097d6a",
+      "first_observed_at": "2026-11-10T06:42:24.839090Z",
+      "last_observed_at": "2026-11-10T06:42:24.839090Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.839090Z",
+  "snapshot_count": 1
+}

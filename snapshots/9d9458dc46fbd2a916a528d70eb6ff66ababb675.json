@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "9d9458dc46fbd2a916a528d70eb6ff66ababb675",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.242672Z",
+      "title": "Authentic Bronze Buddha Statues: Timeless Elegance in Metal",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Southeast Asia",
+      "source_url": "https://www.originalbuddhas.com/authentic-bronze-buddha-statues/",
+      "final_url": "https://www.originalbuddhas.com/authentic-bronze-buddha-statues",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "0e19887d8fcc81ae3b28881a9869c8c67f6c80a8508ed2586243053ab3283ed9",
+      "first_observed_at": "2026-11-10T06:42:24.242672Z",
+      "last_observed_at": "2026-11-10T06:42:24.242672Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.242672Z",
+  "snapshot_count": 1
+}

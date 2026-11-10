@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "ecdc677af0c4dfc2ef834e1a513f4b685b06d937",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.839144Z",
+      "title": "Floor Mosaic with Partridge",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Sousse, Tunisia (North Africa)",
+      "source_url": "https://art.thewalters.org/detail/24370/floor-mosaic-with-partridge/",
+      "final_url": "https://art.thewalters.org/detail/24370/floor-mosaic-with-partridge",
+      "source_status": "UNAVAILABLE",
+      "http_status": 500,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "37407ecbc1394c5f77b4be23a343934c0d1b94da627da7ac0090e2080a370e0e",
+      "first_observed_at": "2026-11-10T06:42:24.839144Z",
+      "last_observed_at": "2026-11-10T06:42:24.839144Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.839144Z",
+  "snapshot_count": 1
+}

@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a0b86eac29e791d5226dcd96d8b6fa9c7200cc93",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.607002Z",
+      "title": "Ancient Roman Mosaic Floor Unearthed Beneath Italian Vineyard",
+      "page_title": "How Cities Plan to Keep Traffic Out When Lockdowns Lift",
+      "page_description": "Extended bike lanes and wider sidewalks are among solutions to keep car traffic down as people continue to avoid public transit",
+      "image_urls": [
+        "https://th-thumbnailer.cdn-si-edu.com/iJV_wG3Oa4OGyC_Sx9TLmrvfa6o=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/36/91/3691c5af-bd24-4f4d-9f11-dbd6fb076dac/gettyimages-1224717808.jpg",
+        "https://th-thumbnailer.cdn-si-edu.com/7slMCatIfZVKJcetYclXJbfiOUU=/fit-in/1200x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/36/91/3691c5af-bd24-4f4d-9f11-dbd6fb076dac/gettyimages-1224717808.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Negrar di Valpolicella, near Verona, Italy",
+      "source_url": "https://www.smithsonianmag.com/smart-news/ancient-roman-mosaic-floor-unearthed-beneath-italian-vineyard-180974917/",
+      "final_url": "https://www.smithsonianmag.com/smart-news/some-cities-want-keep-traffic-out-when-lockdowns-lift-180974917",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "59e776772ad19b858563b4e4a54f6775c5b6a496a560f51f6e42133faaf17a1b",
+      "etag": "",
+      "last_modified": "Tue, 10 Nov 2026 06:42:25 GMT",
+      "snapshot_signature": "b7eb66da1abf219f5d1615e7fccc54e2e11564e2e28b11de936f25d07cae1553",
+      "first_observed_at": "2026-11-10T06:42:25.607002Z",
+      "last_observed_at": "2026-11-10T06:42:25.607002Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.607002Z",
+  "snapshot_count": 1
+}

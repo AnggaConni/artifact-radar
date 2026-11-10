@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "637f7bb9eb174f4993c795cf80cc1611c034f4f2",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.997938Z",
+      "title": "Ancient Mosaic Discovered After 90 Years in North Macedonia",
+      "page_title": "Ancient Mosaic Discovered After 90 Years in North Macedonia | Arkeonews",
+      "page_description": "Archaeologists in North Macedonia discover a Late Antique mosaic, confirming records from nearly 90 years ago at the Pelenica archaeological site.",
+      "image_urls": [
+        "https://arkeonews.net/wp-content/uploads/2026/11/Ancient-Mosaic-in-North-Macedonia.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Pelenica archaeological site, near Skopje, North Macedonia",
+      "source_url": "https://arkeonews.net/ancient-mosaic-discovered-after-90-years-in-north-macedonia/",
+      "final_url": "https://arkeonews.net/ancient-mosaic-discovered-after-90-years-in-north-macedonia",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "52cb13dc27eca4a876ca57227a39af2d9431934e9ca123235db3b36ffc5fe72a",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "24816ba1d268dfae2ca8e7900518908905a4306798a60c8d8ca2ad3b25ba4f26",
+      "first_observed_at": "2026-11-10T06:42:24.997938Z",
+      "last_observed_at": "2026-11-10T06:42:24.997938Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.997938Z",
+  "snapshot_count": 1
+}

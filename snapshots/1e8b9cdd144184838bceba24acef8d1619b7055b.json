@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "1e8b9cdd144184838bceba24acef8d1619b7055b",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:24.158995Z",
+      "title": "Provenance - Asian Art Museum",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://asianart.org/about/provenance/",
+      "final_url": "https://asianart.org/about/provenance",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "4e6aa3c876f6a8bc9fe632e7a0d3114f0c911a920ac206d874626b02d79f0351",
+      "first_observed_at": "2026-11-10T06:42:24.158995Z",
+      "last_observed_at": "2026-11-10T06:42:24.158995Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:24.158995Z",
+  "snapshot_count": 1
+}

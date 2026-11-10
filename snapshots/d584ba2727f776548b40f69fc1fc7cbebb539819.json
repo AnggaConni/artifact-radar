@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d584ba2727f776548b40f69fc1fc7cbebb539819",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.619404Z",
+      "title": "Original Site of Looted Roman Mosaic Found",
+      "page_title": "News - Original Site of Looted Roman Mosaic Found - Archaeology Magazine",
+      "page_description": "NAPLES, ITALY—According to a statement released by the Archaeological Park of Pompeii, the original home […]",
+      "image_urls": [
+        "https://archaeology.org/wp-content/uploads/2026/03/News-20260310-Italy-Roman-Erotic-Mosaic-Featured.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Lazio, Marche region, Rocca di Morro, Italy",
+      "source_url": "https://archaeology.org/news/2026/03/10/original-site-of-looted-roman-mosaic-found/",
+      "final_url": "https://archaeology.org/news/2026/03/10/original-site-of-looted-roman-mosaic-found",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "5f5e37146d7fffebdc3e36efb885e536bf5b0ad4af3ead6ec25f67eb59208a86",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d4e2fad553d2ca5e9055a081d960eab45d0a0a4e45ef77578c3f3d16cdb2124e",
+      "first_observed_at": "2026-11-10T06:42:25.619404Z",
+      "last_observed_at": "2026-11-10T06:42:25.619404Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.619404Z",
+  "snapshot_count": 1
+}

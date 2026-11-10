@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "492d43de1c3611c7c6e965d56ffb072803bda409",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.964746Z",
+      "title": "Illegal excavation reveals grand Roman villa with elaborate mosaics",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Castel di Guido, near Rome, Italy",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4PgSz4_UcxW32sYPiZOE-8CIxm42y9lgvc3LWz6tQ4VvJvuHb9BqFuJ3NTPXIppSE-Ef-SfsGEJuCoNLCENQVDLRhmgBI3DsdU7DxnmkpBs6qmuGz8xK_DPtAgYrM-i1xjfpKT-J7zOlQUJTn5gUm1LRgNql0dQ61o7M6zsopeMxgTeGppzNNZQVC",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "aa5068e1119ea3c412920435d676ac070f226cd33a2336e9f995b6f177c419a6",
+      "first_observed_at": "2026-11-10T06:42:25.964746Z",
+      "last_observed_at": "2026-11-10T06:42:25.964746Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.964746Z",
+  "snapshot_count": 1
+}

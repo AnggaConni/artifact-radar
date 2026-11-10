@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a023679e68b309a39c846f6d74bc3d8a1ddc9b2c",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.212007Z",
+      "title": "Roman Mosaic Floor Fragment from Borough Hill",
+      "page_title": "Roman Mosaic Floor Fragment from Borough Hill",
+      "page_description": "One of Daventry Museum",
+      "image_urls": [
+        "https://daventrymuseum.org.uk/wp-content/uploads/2025/07/20240327_133026-600x800.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "\t\t\t   Home  \n  Visit \n \n\t  Opening times  \n\t  Schools & Groups  \n\t  Planning Your Day  \n \n \n  What’s on  \n  Learn \n \n\t  Collection  \n\t  Explore  \n\t  Virtual Tours  \n\t  The Earth Museum  \n\t  Timeline  \n\t  Resources  \n \n \n  News  \n  About us \n \n\t  History  \n\t  Services & Support  \n\t  Mission  \n \n \n \n\t\t\t\t \n\n\t\t\t \n\n\t\t \n\n\t \n\n \n\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Borough Hill, Daventry, UK (Roman Britain)",
+      "source_url": "https://www.daventrymuseum.org.uk/roman-mosaic-floor-fragment-from-borough-hill/",
+      "final_url": "https://daventrymuseum.org.uk/roman-mosaic-floor-fragment-from-borough-hill",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "ffe40bd74e18ea8243cfe8559c16040d2c9c17f48d9d2d975583edd31e1fe36a",
+      "etag": "",
+      "last_modified": "Tue, 10 Nov 2026 06:42:28 GMT",
+      "snapshot_signature": "61659f054cbbde18e73c413c5fbb8a7738f8eb7f63c0033d4186b4eea3f89ec8",
+      "first_observed_at": "2026-11-10T06:42:25.212007Z",
+      "last_observed_at": "2026-11-10T06:42:25.212007Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.212007Z",
+  "snapshot_count": 1
+}

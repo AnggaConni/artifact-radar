@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "867f9618f271f06d1fb22c3240e2af9705d5e164",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.964712Z",
+      "title": "Smugglers In Turkey Caught Trying To Steal An Ancient Roman Mosaic Because They Livestreamed Their Excavation",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Zile, Turkey",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkZRXo9Aalgb3iy8l6Fn1FT922aM4qECnYBFOVxve3Qzl9DcoOfbKgsqZphum8QYx44p1xbzYtmXQH4Bna1BBK51-k3gCKKToiMvQnPfL7XTq-KmyqC5c5wpKhBzWvpa0Gcb93lVl5GN5pS0NPQes83aUG1RqZ8cD_XG9ZYstJduJIURfD8w==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "aa5068e1119ea3c412920435d676ac070f226cd33a2336e9f995b6f177c419a6",
+      "first_observed_at": "2026-11-10T06:42:25.964712Z",
+      "last_observed_at": "2026-11-10T06:42:25.964712Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.964712Z",
+  "snapshot_count": 1
+}

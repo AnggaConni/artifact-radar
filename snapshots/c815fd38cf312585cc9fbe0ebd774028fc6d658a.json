@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "c815fd38cf312585cc9fbe0ebd774028fc6d658a",
+  "observations": [
+    {
+      "observed_at": "2026-11-10T06:42:25.799447Z",
+      "title": "Stolen during WWII, an erotic Roman mosaic returns home",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Roman (Italy), potentially near Mount Vesuvius",
+      "source_url": "https://www.popsci.com/science/stolen-roman-mosaic-returns-italy/",
+      "final_url": "https://www.popsci.com/science/stolen-roman-mosaic-returns-italy",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "f3849df30caa52168764751836edcf30cf0f36f5d11999ccdcb62edcae63b2ec",
+      "first_observed_at": "2026-11-10T06:42:25.799447Z",
+      "last_observed_at": "2026-11-10T06:42:25.799447Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-10T06:42:25.799447Z",
+  "snapshot_count": 1
+}
