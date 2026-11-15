@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "862f0def8a9929a11f4e5c8b4c6119f8f35c2aa8",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:06.251959Z",
+      "title": "Sao Chad / Cameroon Two terracotta heads in a reddish-ochre color",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 135,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Chad / Cameroon",
+      "source_url": "https://www.gazette-drouot.com/lots/14-sao-chad-cameroon-two-terracotta-heads-in-a-reddish-ochre-color",
+      "final_url": "https://www.gazette-drouot.com/lots/14-sao-chad-cameroon-two-terracotta-heads-in-a-reddish-ochre-color",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "7945fcb18ecfbb83188c70c51b3c665ab65dcdedbdf78eaeaed42f5d1db44006",
+      "first_observed_at": "2026-11-15T05:41:06.251959Z",
+      "last_observed_at": "2026-11-15T05:41:06.251959Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:06.251959Z",
+  "snapshot_count": 1
+}

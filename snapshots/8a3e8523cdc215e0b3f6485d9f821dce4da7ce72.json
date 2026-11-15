@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8a3e8523cdc215e0b3f6485d9f821dce4da7ce72",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:06.163682Z",
+      "title": "Anthropomorphic statuette, Tago site, Chad (700-1000)",
+      "page_title": "Home",
+      "page_description": "Arts & Civilizations of Africa, Asia, Oceania and the Americas | Exhibitions, Live shows, Colloquiums and Conferences.Discover Home on the website https://www.quaibranly.fr/en/, musée du quai Branly - Jacques Chirac",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": " Photography at the Museum    Collections sonores    Marc Ladreit de Lacharrière Collection       Living collections    Provenances of the collections    New display cases    CROYAN Project - the French Royal Collections from North America    Autour des collections    Loans and partnerships    News      At the museum    Exhibitions    Shows, festivals and ev",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Chad",
+      "source_url": "https://www.quaibranly.fr/en/",
+      "final_url": "https://www.quaibranly.fr/en",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "8977ab81034e3966c49dda18c77d83d7cc437f286e3a244acdd67cb49e54e743",
+      "etag": "W/\"a89925fe5e17e6d13aede1a7afa458b1\"",
+      "last_modified": "",
+      "snapshot_signature": "4d0d313d1ff70476613e94edd819b687e6393201cab4d50767f6c2ff4eaf4c8c",
+      "first_observed_at": "2026-11-15T05:41:06.163682Z",
+      "last_observed_at": "2026-11-15T05:41:06.163682Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:06.163682Z",
+  "snapshot_count": 1
+}

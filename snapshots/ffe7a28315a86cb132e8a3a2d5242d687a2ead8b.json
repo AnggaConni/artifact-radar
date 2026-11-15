@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "ffe7a28315a86cb132e8a3a2d5242d687a2ead8b",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:05.728053Z",
+      "title": "Tourist returns stolen artefacts from Pompeii 'after suffering curse'",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Italy",
+      "source_url": "https://www.theguardian.com/world/2020/oct/11/tourist-returns-stolen-artefacts-from-pompeii-after-suffering-curse",
+      "final_url": "https://www.theguardian.com/world/2020/oct/11/tourist-returns-stolen-artefacts-from-pompeii-after-suffering-curse",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "\"guRandomEtag-1613223674-38231230\"",
+      "last_modified": "",
+      "snapshot_signature": "2aaf9954f808bba6a0ca85a192597177f65d3fcc59aba2d33c785228ad4007e1",
+      "first_observed_at": "2026-11-15T05:41:05.728053Z",
+      "last_observed_at": "2026-11-15T05:41:05.728053Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:05.728053Z",
+  "snapshot_count": 1
+}

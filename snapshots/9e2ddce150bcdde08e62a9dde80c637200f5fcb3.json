@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "9e2ddce150bcdde08e62a9dde80c637200f5fcb3",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:05.607795Z",
+      "title": "Erotic Pompeii mosaic looted by Nazi officer returned to ancient site",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Italy",
+      "source_url": "https://www.theartnewspaper.com/2025/07/16/erotic-pompeii-mosaic-looted-by-nazi-officer-returned-to-ancient-site",
+      "final_url": "https://www.theartnewspaper.com/2025/07/16/erotic-pompeii-mosaic-looted-by-nazi-officer-returned-to-ancient-site",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "W/\"8596a32b6c3ab79aa171735bddc1e6be\"",
+      "last_modified": "Fri, 13 Nov 2026 07:17:34 GMT",
+      "snapshot_signature": "665f7bd973c7cd09cb1faf22e83748a360f1f9580e2724226f28ad08718d5124",
+      "first_observed_at": "2026-11-15T05:41:05.607795Z",
+      "last_observed_at": "2026-11-15T05:41:05.607795Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:05.607795Z",
+  "snapshot_count": 1
+}

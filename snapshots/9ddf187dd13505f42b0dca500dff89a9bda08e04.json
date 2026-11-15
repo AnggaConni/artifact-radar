@@ -116,8 +116,36 @@
       "first_observed_at": "2026-10-11T04:59:39.389715Z",
       "last_observed_at": "2026-11-10T06:42:07.953371Z",
       "observations_seen": 8
+    },
+    {
+      "observed_at": "2026-11-15T05:40:43.149930Z",
+      "title": "Police investigating religious statues theft in Nadi - FBC News",
+      "page_title": "Police investigating religious statues theft in Nadi",
+      "page_description": "",
+      "image_urls": [
+        "https://www.fbcnews.com.fj/wp-content/uploads/2024/01/police-3.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "ds grassroots futsal in Fiji \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t Yavusa Nakama regain ownership of land \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t Tibetan exile leader laments absence of rights in Trump China dealings \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t Dave Chappe",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.fbcnews.com.fj/news/police-investigating-religious-statues-theft-in-nadi",
+      "final_url": "https://www.fbcnews.com.fj/news/police-investigating-religious-statues-theft-in-nadi",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "a470283a8cb4944ff32f13ccc95c141d4d2c028ed1f70270a5a0b826d6fec488",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "692f7c163d3d9670d1a301844ee72e7b10b21b0e54f264c7cd8c8436670a3cb1",
+      "first_observed_at": "2026-11-15T05:40:43.149930Z",
+      "last_observed_at": "2026-11-15T05:40:43.149930Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-10T06:42:07.953371Z",
-  "snapshot_count": 4
+  "updated_at": "2026-11-15T05:40:43.149930Z",
+  "snapshot_count": 5
 }

@@ -32,8 +32,36 @@
       "first_observed_at": "2026-10-25T03:59:16.642929Z",
       "last_observed_at": "2026-11-10T06:42:22.647103Z",
       "observations_seen": 5
+    },
+    {
+      "observed_at": "2026-11-15T05:41:02.148435Z",
+      "title": "Borobudur Temple Compounds -- World Heritage Site (UNESCO)",
+      "page_title": "Borobudur Temple Compounds",
+      "page_description": "UNESCO World Heritage Centre",
+      "image_urls": [
+        "https://whc.unesco.org/uploads/thumbs/site_0592_0004-1200-630-20121115151308-q70.webp"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "hures & Info kits  \r  Resource Manuals  \r  Other materials  \r  Newsletter  \r \r \r  Review  \r  Wall Map  \r  Documents  \r  Collections  \r \r \r  Resources  \r  Search  \r  Glossary  \r  \r \r  About this Website  \r  Terms / Policies  \r  Syndication  \r  Site Map  \r  Useful Websites  \r \r \r \r \r   Search   search   \r \r  \r\n             \r\n         \r\n         \r\n             ",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Central Java, Indonesia",
+      "source_url": "https://whc.unesco.org/en/list/592/",
+      "final_url": "https://whc.unesco.org/en/list/592",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "03f2905b69b45cde1d62b007341873dd6a237444128ab01f290edd47e8e40af6",
+      "etag": "",
+      "last_modified": "Sun, 15 Nov 2026 05:41:02 GMT",
+      "snapshot_signature": "a3cf0c469c814142ac06a42b954d4c3b350c1be54e07a8d38741054e5857cf09",
+      "first_observed_at": "2026-11-15T05:41:02.148435Z",
+      "last_observed_at": "2026-11-15T05:41:02.148435Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-10T06:42:22.647103Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-15T05:41:02.148435Z",
+  "snapshot_count": 2
 }

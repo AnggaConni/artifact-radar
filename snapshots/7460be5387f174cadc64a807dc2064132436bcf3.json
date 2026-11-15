@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "7460be5387f174cadc64a807dc2064132436bcf3",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:06.017360Z",
+      "title": "Fantastic and rare large piece of wall plaster with classic 'Pompeiian red' fresco surface.",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 399,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Italy",
+      "source_url": "https://ancientresource.com/lots/ancient-roman-everyday-artifacts",
+      "final_url": "https://ancientresource.com/lots/ancient-roman-everyday-artifacts",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5b8fd3dd0dff170b6cedf7fdc0fa504f32e089aa005badba07c66da84cf31921",
+      "first_observed_at": "2026-11-15T05:41:06.017360Z",
+      "last_observed_at": "2026-11-15T05:41:06.017360Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:06.017360Z",
+  "snapshot_count": 1
+}

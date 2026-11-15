@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "10d228b0d20ccfa0df25a7ef704ac951a139614b",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:05.937142Z",
+      "title": "Plunder of Pompeii: how art police turned tide on tomb raiders",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Italy",
+      "source_url": "https://www.theguardian.com/world/2021/may/28/plunder-of-pompeii-how-art-police-turned-tide-on-tomb-raiders",
+      "final_url": "https://www.theguardian.com/world/2021/may/28/plunder-of-pompeii-how-art-police-turned-tide-on-tomb-raiders",
+      "source_status": "REMOVED",
+      "http_status": 404,
+      "content_hash": "",
+      "etag": "\"guRandomEtag-392684541-1754272323\"",
+      "last_modified": "",
+      "snapshot_signature": "575fe78325e82672295506959e46633b3a842b30293579b2b5dce25dee04bfe8",
+      "first_observed_at": "2026-11-15T05:41:05.937142Z",
+      "last_observed_at": "2026-11-15T05:41:05.937142Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:05.937142Z",
+  "snapshot_count": 1
+}

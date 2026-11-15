@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a130bfad260ac4e687c0ccdef18cd0818dfd84ea",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:05.446162Z",
+      "title": "Lao Buddha (65 x 30 cm - 26 in)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 4516.0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Laos",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFthk-jm1pUyot99L_7T-DSx5W3nFX7kRfOKgaeoHchu5sjn-VmhRBE4vMLZ1WnFrGPbahvcYI2-rSZWjpneN6mEZ18dk-WAqtA6qBtAqTmmne9VVoAT0YeRoROrPrWt5qUj7v2BFrS2zCF0bKhl_1EZqY4lWpLXyNhpeI=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "1677a9f96a5fe6dfa590a48baba9523d68b977de7acb0fda229990b4391e61e8",
+      "first_observed_at": "2026-11-15T05:41:05.446162Z",
+      "last_observed_at": "2026-11-15T05:41:05.446162Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:05.446162Z",
+  "snapshot_count": 1
+}

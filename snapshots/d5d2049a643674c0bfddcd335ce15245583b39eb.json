@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "d5d2049a643674c0bfddcd335ce15245583b39eb",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:05.446329Z",
+      "title": "Own a piece of Pompeii – rare Roman artefact from Italian city destroyed by volcano to be sold at auction",
+      "page_title": "Hansons Auctioneers",
+      "page_description": "Hansons Auctioneers | UK's leading Auction House offering specialist auctions at our 11 salerooms across the UK",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "k holds jewellery, silver, fine art and collectables auctions and valuation days as well as free home visits for larger collections. \n                                         Find out more \n                                     \n                                 \n                             \n                         \n                    \n \n\n\n                 ",
+      "price_usd": 2250,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Italy",
+      "source_url": "https://www.hansonsauctioneers.co.uk/news/own-a-piece-of-pompeii-rare-roman-artefact-from-italian-city-destroyed-by-volcano-to-be-sold-at-auction/",
+      "final_url": "https://hansonsauctioneers.co.uk/news/own-a-piece-of-pompeii-rare-roman-artefact-from-italian-city-destroyed-by-volcano-to-be-sold-at-auction",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "c74165944f3360a02fb28f78f1401d9ddb0eca7fe83b0af57c780c5e688f312d",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "188a0ffde43109840b647e5fc27f09728a05334e0688624b491b5e582d34c4c2",
+      "first_observed_at": "2026-11-15T05:41:05.446329Z",
+      "last_observed_at": "2026-11-15T05:41:05.446329Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:05.446329Z",
+  "snapshot_count": 1
+}

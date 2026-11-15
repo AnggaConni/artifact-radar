@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8ef25c19b1500a8d41baf3ea906ba59cc9636761",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:05.446238Z",
+      "title": "Khmer stone treasures (associated with Douglas Latchford's network)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Cambodia (and broader Southeast Asia)",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyDphJrExu2rAiX3TNQPyXsJIWc5Koq22BlqfgUJ689cbsoU-AxAjU0FAYCXvT0bqdJFarmvR9DLEVjHddg4NniyhzAFsTaL32hLgfHzRYrA0Iz05FID0Zv03_Esjl5VoeM-uim9wiv3tAja-6s0NnjXVPAYZtFeWbqIjDOxW7yVmh_pTxNqwmhhM1vMuVKFQD3aXmJicxRg==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "aa5068e1119ea3c412920435d676ac070f226cd33a2336e9f995b6f177c419a6",
+      "first_observed_at": "2026-11-15T05:41:05.446238Z",
+      "last_observed_at": "2026-11-15T05:41:05.446238Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:05.446238Z",
+  "snapshot_count": 1
+}

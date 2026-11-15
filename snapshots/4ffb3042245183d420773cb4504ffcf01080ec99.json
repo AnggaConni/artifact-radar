@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "4ffb3042245183d420773cb4504ffcf01080ec99",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:06.155204Z",
+      "title": "Sao terracotta",
+      "page_title": "Sao terracotta - International Council of Museums",
+      "page_description": "A global organisation of museums & museum professionals committed to the promotion and protection of cultural heritage",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Chad, Cameroon, Nigeria",
+      "source_url": "https://icom.museum/en/object/sao-terracotta-2/",
+      "final_url": "https://icom.museum/en/object/sao-terracotta-2",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "76034ec9546e889569e2c8193cc85c875abc48cbf5553679b8b994d4ffb91f83",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "d06c8f7cdf9a4e04f5928f3f949fd314e7794a7e13b0ca4fb84003af97cd6348",
+      "first_observed_at": "2026-11-15T05:41:06.155204Z",
+      "last_observed_at": "2026-11-15T05:41:06.155204Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:06.155204Z",
+  "snapshot_count": 1
+}

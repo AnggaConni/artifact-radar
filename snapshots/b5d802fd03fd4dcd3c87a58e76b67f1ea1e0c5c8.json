@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "b5d802fd03fd4dcd3c87a58e76b67f1ea1e0c5c8",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:05.446138Z",
+      "title": "Antique wooden Laotian Buddha",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 800.0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Laos",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc5i2p4m61HfWt1s6EtSHTfScOhEc3u2EC3DlOFMBUME2-RMzhy81XekfV3IbY3jvCpp1b_FnH4y6uFwnXZe_IE-ZWLKINZ3lQlCiPKDMVcze1l_Egzw5Vp0-WAFUa1iPB3ZeyGOgHXx4Lp1CmzQ==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "004dc9fc957e0e50fb58ebaa52769aa82348893ff5a480855521342fda3bcf87",
+      "first_observed_at": "2026-11-15T05:41:05.446138Z",
+      "last_observed_at": "2026-11-15T05:41:05.446138Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:05.446138Z",
+  "snapshot_count": 1
+}

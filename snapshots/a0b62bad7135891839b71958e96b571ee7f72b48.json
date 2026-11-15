@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "a0b62bad7135891839b71958e96b571ee7f72b48",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:06.229680Z",
+      "title": "Sao - Chad Anthropomorphic terracotta",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Chad",
+      "source_url": "https://www.invaluable.com/auction-lot/sao-chad-anthropomorphic-terracotta-137770-c-80a402a944",
+      "final_url": "https://www.invaluable.com/auction-lot/sao-chad-anthropomorphic-terracotta-137770-c-80a402a944",
+      "source_status": "ACTIVE",
+      "http_status": 202,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "bdef4f0183ee0acecab76fa4f8c2250b432b0df3cf7c26e139aa18c9c35fc8b8",
+      "first_observed_at": "2026-11-15T05:41:06.229680Z",
+      "last_observed_at": "2026-11-15T05:41:06.229680Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:06.229680Z",
+  "snapshot_count": 1
+}

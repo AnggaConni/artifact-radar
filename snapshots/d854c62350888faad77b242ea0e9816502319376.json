@@ -383,8 +383,43 @@
       "first_observed_at": "2026-11-10T06:42:11.826490Z",
       "last_observed_at": "2026-11-10T06:42:11.826490Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-15T05:40:48.783403Z",
+      "title": "A LARGE JOMON VESSEL , MIDDLE JOMON PERIOD (BC 3000-2000)",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/NYR-24266-11172026-1.jpg",
+        "/img/SaleImages/NYR-24500-11182026-1.jpg",
+        "/img/SaleImages/NYR-24501-11182026-1.jpg",
+        "/img/SaleImages/HGK-24468-11192026-1.jpg",
+        "/img/SaleImages/HGK-24469-11192026-1.jpg",
+        "/img/SaleImages/NYR-24499-11192026-1.jpg",
+        "/img/SaleImages/HGK-24470-11202026-1.jpg",
+        "/img/eventimages/LiveAuction-1-20261007150928.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "   Upcoming auctions      Current exhibitions      Browse all art and objects      Auction results        Featured      Collection Roger Therond | Paris      Luxury | Global      20th/21st Century Art | New York      Gooding Christie’s            Private Sales               Current Exhibitions      Decorative Arts For Your Home | Online      Thinking Italian",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.christies.com/lot/lot-6140592",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "d71566ac8d485ba925aa8707fda59e061d7ed4ec572b86b9c25882f62080abbe",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "97029070f1fffaac9473c6a340711b64d250ab9454cc074355f3ddf610ddd58d",
+      "first_observed_at": "2026-11-15T05:40:48.783403Z",
+      "last_observed_at": "2026-11-15T05:40:48.783403Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-10T06:42:11.826490Z",
-  "snapshot_count": 11
+  "updated_at": "2026-11-15T05:40:48.783403Z",
+  "snapshot_count": 12
 }

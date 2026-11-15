@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "60f0fd4c1ba645dc0efaef6e1d4959ff0806e188",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:05.802813Z",
+      "title": "Italian Police Catch Tourist Stealing Stones From the Ancient City of Pompeii",
+      "page_title": "How the Olympic Village Evolved From Makeshift Cabins to a City Within a City",
+      "page_description": "The athletes' accommodations have come a long way in the last 100 years, expanding into modern global hubs",
+      "image_urls": [
+        "https://th-thumbnailer.cdn-si-edu.com/J0DiSQQ5vQhjuVxQ_GW1uMUt1VM=/fit-in/1600x0/filters:focal(2481x1819:2482x1820)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/40/51/4051a5b7-2442-4015-8d54-44f240810f55/gettyimages-1256364392.jpg",
+        "https://th-thumbnailer.cdn-si-edu.com/QNOGjDu-EkDqrKKy0jGjbVv0mDc=/fit-in/1200x0/filters:focal(2481x1819:2482x1820)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/40/51/4051a5b7-2442-4015-8d54-44f240810f55/gettyimages-1256364392.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "Images \n             \n           \n        \n\n         The  Smithsonian’s National Museum of American History  has in its collection an object that provides entry into the very first Olympic Village: 1924 U.S. boxing team assistant manager  Ben Levine’s official Olympic ID . The simple paper badge would have gotten Levine into his Olympic accommodations, a com",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Italy",
+      "source_url": "https://www.smithsonianmag.com/smart-news/italian-police-catch-tourist-stealing-stones-from-the-ancient-city-of-pompeii-180984852/",
+      "final_url": "https://www.smithsonianmag.com/smithsonian-institution/how-the-olympic-village-evolved-from-makeshift-cabins-to-a-city-within-a-city-180984852",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "cbc1a9efd5a9c8a33d4d4475109002c519d0295e3cad7e79af0206ea06465753",
+      "etag": "",
+      "last_modified": "Sun, 15 Nov 2026 05:41:06 GMT",
+      "snapshot_signature": "8ae4a65b392d40d65e1257e1c80b4e5740ae08b98b0c09f257811852ababb9ba",
+      "first_observed_at": "2026-11-15T05:41:05.802813Z",
+      "last_observed_at": "2026-11-15T05:41:05.802813Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:05.802813Z",
+  "snapshot_count": 1
+}

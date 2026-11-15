@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "755b8ae226c0e96ef4a22562fa03a3393f95e807",
+  "observations": [
+    {
+      "observed_at": "2026-11-15T05:41:05.446213Z",
+      "title": "Ancient Asian sacred art (general trafficking report)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Unknown",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDGPTD2e_DE5hoq03xYrrljixveiNrCHyJhU6H2RmUZmwXGXUtiW5yQzoUm5ALGXo8Uo6K4hHXyhkJDcdFKKk1PeAUWEa5QTLL-cd2o1N7e8uK8MGG8PuHVBxFHvW3d2AFfFrvTNcMbEGonwFgg-ys3hC4",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5c5251bade137c81f10e598fa7a73422af6a0944d96698ce29454dbe7b86d03b",
+      "first_observed_at": "2026-11-15T05:41:05.446213Z",
+      "last_observed_at": "2026-11-15T05:41:05.446213Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-15T05:41:05.446213Z",
+  "snapshot_count": 1
+}
