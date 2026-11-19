@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "867050cdd0a69aafdcdd50133e98562ff887e806",
+  "observations": [
+    {
+      "observed_at": "2026-11-19T06:44:20.414943Z",
+      "title": "Antique Burmese Burma Gold Gilt Lacquerware Nut Box",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 100,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Burma",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYyu19HycbjLl0Bi2992cICD60Nsi-_2dWNK56ciiNPtqgnRbJgti-u4AZahJn7Q_wrGk4CI5xcLqlzr8uT7jz261v9E2jesYeydkldt3M-35pmv3k0Gt7kIWwNOdQDCzCYfU8pWGW9Wok_lSFGbvEuNiMCAs4WO7pZHLe26I=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "6ca3979dba89524310435a9f315ff52fa0288d1c16e0dffc9e7b950da739b945",
+      "first_observed_at": "2026-11-19T06:44:20.414943Z",
+      "last_observed_at": "2026-11-19T06:44:20.414943Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-19T06:44:20.414943Z",
+  "snapshot_count": 1
+}

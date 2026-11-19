@@ -56,10 +56,10 @@
       "last_modified": "",
       "snapshot_signature": "3b39c9489b9e44ec4b5c22ab974a7de67fbfaf97cba7841d59e3be8f1a706f3a",
       "first_observed_at": "2026-11-10T06:42:23.622211Z",
-      "last_observed_at": "2026-11-15T05:41:03.203623Z",
-      "observations_seen": 2
+      "last_observed_at": "2026-11-19T06:44:16.482125Z",
+      "observations_seen": 3
     }
   ],
-  "updated_at": "2026-11-15T05:41:03.203623Z",
+  "updated_at": "2026-11-19T06:44:16.482125Z",
   "snapshot_count": 2
 }

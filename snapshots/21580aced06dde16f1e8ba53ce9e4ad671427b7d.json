@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "21580aced06dde16f1e8ba53ce9e4ad671427b7d",
+  "observations": [
+    {
+      "observed_at": "2026-11-19T06:44:20.415239Z",
+      "title": "Ancient Roman - Glass unguentarium - 1st / 2nd century AD. (No reserve price)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 118.8,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Roman Empire",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ6w_8Miy5Ydg_rVrsZMhcfI_Ou1AUTdvf17eqGtaG_TeCIcjzmNwDs4QYT_0NkXrnJYeYE8j2V9CBkvKUXhN7GysyCH37HA_5BsTCxQuC6BUbH0xEu9Rf-e_ufb4PDEkuGl5C0NaBL5BYHkpj30zum33UhJKbhOfMcbskbFaBV770ShiBUMYiq45Fu9fzYvzTC0K_kb_g4fpakm3vgB2YAqGYUT1-1A==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "64f584049c2ae24ff98610b515080928fded8c86c8959aac6f89546223749546",
+      "first_observed_at": "2026-11-19T06:44:20.415239Z",
+      "last_observed_at": "2026-11-19T06:44:20.415239Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-19T06:44:20.415239Z",
+  "snapshot_count": 1
+}

@@ -32,8 +32,36 @@
       "first_observed_at": "2026-09-26T14:42:25.120188Z",
       "last_observed_at": "2026-11-15T05:40:52.262634Z",
       "observations_seen": 14
+    },
+    {
+      "observed_at": "2026-11-19T06:44:05.676444Z",
+      "title": "Khmerfigur (Khmer figure)",
+      "page_title": "One of the leading auction houses in Europe | HAMPEL Fine Art Auctions Munich",
+      "page_description": "One of the leading auction houses in Europe. Auctions of high quality art objects & collections. Safe expertise.",
+      "image_urls": [
+        "Illustration"
+      ],
+      "page_price_text": "0",
+      "page_price_currency": "EUR",
+      "provenance_excerpt": "ry auction via  livestream  from all around the world. \n\n\t\t\t Benefit from our expertise and have your art objects, your collection or  estate valued free of charge at any time . Our acquisition staff in Italy, France, the Netherlands, Spain, Monaco, Austria and the USA are always on the lookout for exquisite objects for our auctions. \n\n\t\t\t Our experts look f",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 3,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Cambodia)",
+      "source_url": "https://www.hampel-auctions.com/en/item-283-1022161.html",
+      "final_url": "https://www.hampel-auctions.com/",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "a08eee7d397c743577aeaf2f99449b32aad073eebeda9e9d0e61131de782bb07",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "7ba64f0becf4457ddc8d3b96cf90741f1723f69f34320b54390c0668a894d1bf",
+      "first_observed_at": "2026-11-19T06:44:05.676444Z",
+      "last_observed_at": "2026-11-19T06:44:05.676444Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-15T05:40:52.262634Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-19T06:44:05.676444Z",
+  "snapshot_count": 2
 }

@@ -32,8 +32,34 @@
       "first_observed_at": "2026-11-06T05:52:35.402171Z",
       "last_observed_at": "2026-11-15T05:41:03.665176Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-11-19T06:44:17.095236Z",
+      "title": "Cultural property trafficking: Army says ready to help",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 1,
+      "origin_region": "Zimbabwe",
+      "source_url": "https://www.newzimbabwe.com/cultural-property-trafficking-army-says-ready-to-help/",
+      "final_url": "https://www.newzimbabwe.com/cultural-property-trafficking-army-says-ready-to-help",
+      "source_status": "ACTIVE",
+      "http_status": 202,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "095ca86ce7913b5bf9df85684a981e4d9712286d1e3d682801d6e8f6693d3159",
+      "first_observed_at": "2026-11-19T06:44:17.095236Z",
+      "last_observed_at": "2026-11-19T06:44:17.095236Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-15T05:41:03.665176Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-19T06:44:17.095236Z",
+  "snapshot_count": 2
 }

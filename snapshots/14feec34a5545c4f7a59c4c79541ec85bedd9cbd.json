@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "14feec34a5545c4f7a59c4c79541ec85bedd9cbd",
+  "observations": [
+    {
+      "observed_at": "2026-11-19T06:44:20.415107Z",
+      "title": "Antique Shan Burmese Lacquerware Kun-It BLW55",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 325,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Burma",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEy4U4LeOHwpzTPFYlXzxXYfrNsMGxDLaRHkC4P0WMyr39MxifgDpZ5CjoBvrp0kO9aL0NXPp-r8zPhYii71C9dWlt3EL7buLSNfsx9MzHFS2bQKiYZS2PN_ZoRxKOB961pwgJ58uX_lYEZsNN_drlCPU40N7VXdochPiQeukvBxMZMl8C5C",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "63118b3326575aaa6568103ef25c60702f1a3f6014a4edea6fd7bd0256b6965a",
+      "first_observed_at": "2026-11-19T06:44:20.415107Z",
+      "last_observed_at": "2026-11-19T06:44:20.415107Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-19T06:44:20.415107Z",
+  "snapshot_count": 1
+}

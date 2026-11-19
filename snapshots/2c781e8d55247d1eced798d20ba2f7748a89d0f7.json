@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "2c781e8d55247d1eced798d20ba2f7748a89d0f7",
+  "observations": [
+    {
+      "observed_at": "2026-11-19T06:44:20.415191Z",
+      "title": "Unusually Tall Roman Glass Unguentarium",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 5500,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Roman Empire",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJImk8UzT1AyycqljFHLyfJc6COnn-z-JumtptA--EdY6LnCgUHjSgCvKbLI77X0IkZDsVEisW7V4H_705ezUcCDyo95sCyaJ_Ws08bsjXxALwoJ2AKrmbXbz_sqzr2frC2zXdfoPMn9uU",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "ec966462a80597ee6577cabc405665e13ef7eecdb0556e07fecffd590ac64d9d",
+      "first_observed_at": "2026-11-19T06:44:20.415191Z",
+      "last_observed_at": "2026-11-19T06:44:20.415191Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-19T06:44:20.415191Z",
+  "snapshot_count": 1
+}

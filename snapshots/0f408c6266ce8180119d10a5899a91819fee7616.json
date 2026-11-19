@@ -60,8 +60,34 @@
       "first_observed_at": "2026-11-06T05:52:34.405240Z",
       "last_observed_at": "2026-11-15T05:41:02.951013Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-11-19T06:44:16.285848Z",
+      "title": "The Corinthian | Exceptional Ancient Greek Helmet Coming to Auction this May",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 125000,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Ancient Greece",
+      "source_url": "https://www.lyonandturnbull.com/stories/ancient-greek-corinthian-helmet",
+      "final_url": "https://www.lyonandturnbull.com/stories/ancient-greek-corinthian-helmet",
+      "source_status": "UNAVAILABLE",
+      "http_status": 429,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "5dd5a6b24c0c1284606498c80c4b526bd91e2b040ebc710e7c02b1fe6aabf21e",
+      "first_observed_at": "2026-11-19T06:44:16.285848Z",
+      "last_observed_at": "2026-11-19T06:44:16.285848Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-15T05:41:02.951013Z",
-  "snapshot_count": 2
+  "updated_at": "2026-11-19T06:44:16.285848Z",
+  "snapshot_count": 3
 }

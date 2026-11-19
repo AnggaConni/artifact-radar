@@ -282,8 +282,43 @@
       "first_observed_at": "2026-11-15T05:40:58.253217Z",
       "last_observed_at": "2026-11-15T05:40:58.253217Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-19T06:44:11.359888Z",
+      "title": "AN ATTIC RED-FIGURED KYLIX, ATTRIBUTED TO THE BRYGOS PAINTER, CIRCA 490-480 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-24468-11192026-1.jpg",
+        "/img/SaleImages/HGK-24469-11192026-1.jpg",
+        "/img/SaleImages/NYR-24499-11192026-1.jpg",
+        "/img/SaleImages/HGK-24470-11202026-1.jpg",
+        "/img/eventimages/LiveAuction-1-20261007150928.jpg",
+        "/img/SaleImages/NYR-24268-11202026-1.jpg",
+        "/img/SaleImages/NYG-25352-11202026-1.jpg",
+        "/img/SaleImages/HGK-24052-11232026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "y artists and designers love bronze      Susan Casden’s Hermès masterpieces in Hong Kong      Pierre Chen: from private collection to public legacy               View all        Visit      Current exhibitions      Locations      Gooding Christie’s        Artists and Makers      Salvador Dalí      Hermès Birkin 25      Alexander Calder      Patek Philippe Nau",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294718",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "327e4cc9dfa98c8f04580bbb7e0891bd35319cbeb047c5ec7d1b0b812292908e",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "4313297c4d0550e0230c3561384f37940e0bf69517993ed3d0de991d8847352c",
+      "first_observed_at": "2026-11-19T06:44:11.359888Z",
+      "last_observed_at": "2026-11-19T06:44:11.359888Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-15T05:40:58.253217Z",
-  "snapshot_count": 8
+  "updated_at": "2026-11-19T06:44:11.359888Z",
+  "snapshot_count": 9
 }

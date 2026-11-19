@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8e819fcb7f7715aad3aa53ef0075da9a7b40071f",
+  "observations": [
+    {
+      "observed_at": "2026-11-19T06:44:20.415033Z",
+      "title": "Antique Burmese Lacquerware Buddha Statue from Burma",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 3163,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Burma",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFn-wavnEBLLOoJY8-bcwQHAR_R3gdu9qeHU8mV1f3fEG919uBmAnERmDkHqDqsxPRkBlCnMGoamBXGQiKhl82ouKtC8BWP1Q4PIOJYVgXqa7gr7JoKokqnHpWNv-EqhsRpF7gHjo2r1Dk=",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "556e829a94fa3f8d9a7024f2c55cd0255c009806a1bfee638c54ba479b60d889",
+      "first_observed_at": "2026-11-19T06:44:20.415033Z",
+      "last_observed_at": "2026-11-19T06:44:20.415033Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-19T06:44:20.415033Z",
+  "snapshot_count": 1
+}

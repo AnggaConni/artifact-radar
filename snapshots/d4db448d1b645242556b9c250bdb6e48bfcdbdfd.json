@@ -30,8 +30,34 @@
       "first_observed_at": "2026-11-10T06:42:24.423662Z",
       "last_observed_at": "2026-11-15T05:41:03.936480Z",
       "observations_seen": 2
+    },
+    {
+      "observed_at": "2026-11-19T06:44:17.583237Z",
+      "title": "Four Bronze deity figures two from Thailand and two from India",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.ryedaleauctioneers.com/auction-lot/four-bronze-deity-figures-two-from-thailand-and-two-from-india_21C8B4C833",
+      "final_url": "https://www.ryedaleauctioneers.com/auction-lot/four-bronze-deity-figures-two-from-thailand-and-two-from-india_21C8B4C833",
+      "source_status": "UNAVAILABLE",
+      "http_status": 403,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "bbc3281144a6811f4f985820a16a18d857ffae2b4bca46cbc20c03c4e2c9b128",
+      "first_observed_at": "2026-11-19T06:44:17.583237Z",
+      "last_observed_at": "2026-11-19T06:44:17.583237Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-15T05:41:03.936480Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-19T06:44:17.583237Z",
+  "snapshot_count": 2
 }

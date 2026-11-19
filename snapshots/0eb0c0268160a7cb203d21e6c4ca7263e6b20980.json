@@ -58,10 +58,10 @@
       "last_modified": "Sun, 15 Nov 2026 05:41:02 GMT",
       "snapshot_signature": "a3cf0c469c814142ac06a42b954d4c3b350c1be54e07a8d38741054e5857cf09",
       "first_observed_at": "2026-11-15T05:41:02.148435Z",
-      "last_observed_at": "2026-11-15T05:41:02.148435Z",
-      "observations_seen": 1
+      "last_observed_at": "2026-11-19T06:44:15.397759Z",
+      "observations_seen": 2
     }
   ],
-  "updated_at": "2026-11-15T05:41:02.148435Z",
+  "updated_at": "2026-11-19T06:44:15.397759Z",
   "snapshot_count": 2
 }

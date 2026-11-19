@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Structured observation snapshots for Artifact Radar. Snapshots record observed page metadata and do not establish intent or wrongdoing."
+  },
+  "fingerprint": "8405f475e90f426b9e6c207e09c1c86ab34cba01",
+  "observations": [
+    {
+      "observed_at": "2026-11-19T06:44:20.415057Z",
+      "title": "077 Set A Burmese Red Lacquerware Plates And Bowls With Dish",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 1.25,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Myanmar",
+      "source_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxA6MNN9-dgtFATTjb03jxNhPAZiVSCNCY1YldmUTlLd2cuCZIuZxpvV30k2Rtn04HusvQD-sZj2uNHpkKOEbjavWnSpMmDIxpSYRTuPujg3mmyJNVzpJQZO5OEK6B-0OAoo44OVm0WP1kxNccmkv3gqXMgPQ_Vw==",
+      "final_url": "",
+      "source_status": "UNKNOWN",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "6d023d1546703f9dcf4738a1728b61b890f39ca50e3b2d59c39767822a20b300",
+      "first_observed_at": "2026-11-19T06:44:20.415057Z",
+      "last_observed_at": "2026-11-19T06:44:20.415057Z",
+      "observations_seen": 1
+    }
+  ],
+  "updated_at": "2026-11-19T06:44:20.415057Z",
+  "snapshot_count": 1
+}

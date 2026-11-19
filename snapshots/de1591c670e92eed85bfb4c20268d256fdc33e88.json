@@ -33,8 +33,40 @@
       "first_observed_at": "2026-11-06T05:52:35.389055Z",
       "last_observed_at": "2026-11-15T05:41:03.591837Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-11-19T06:44:17.066929Z",
+      "title": "Chinese pottery discovered in Great Zimbabwe reveals medieval African empire's vast connections spanning thousands of miles",
+      "page_title": "Chinese pottery discovered in Great Zimbabwe reveals medieval African empire",
+      "page_description": "Archaeologists excavating a medieval African kingdom have discovered pottery from eastern China, revealing connections across continents.",
+      "image_urls": [
+        "https://cdn.mos.cms.futurecdn.net/9ZcHxWC4WiJMK7XmSU6haX-1920-80.png",
+        "https://cdn.mos.cms.futurecdn.net/9ZcHxWC4WiJMK7XmSU6haX-1200-80.png",
+        "https:\\/\\/cdn.mos.cms.futurecdn.net\\/flexiimages\\/ldveeug6uy1764928312.png",
+        "https:\\/\\/cdn.mos.cms.futurecdn.net\\/flexiimages\\/fefncqzrso1764928339.png",
+        "https:\\/\\/cdn.mos.cms.futurecdn.net\\/flexiimages\\/wd3zozfyq61764928349.png"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Great Zimbabwe, Zimbabwe",
+      "source_url": "https://www.livescience.com/archaeology/chinese-pottery-discovered-in-great-zimbabwe-reveals-medieval-african-empires-vast-connections-spanning-thousands-of-miles",
+      "final_url": "https://www.livescience.com/archaeology/chinese-pottery-discovered-in-great-zimbabwe-reveals-medieval-african-empires-vast-connections-spanning-thousands-of-miles",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "230d92f0e758b50ce0e246a31e173eb116c1dcf377792003ed6b60ab9b549121",
+      "etag": "",
+      "last_modified": "Wed, 18 Nov 2026 20:54:17 GMT",
+      "snapshot_signature": "4f79173d20e035737b60043e4cd10f226967be791dc3cf537e3b26b6a34ab8f1",
+      "first_observed_at": "2026-11-19T06:44:17.066929Z",
+      "last_observed_at": "2026-11-19T06:44:17.066929Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-15T05:41:03.591837Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-19T06:44:17.066929Z",
+  "snapshot_count": 2
 }

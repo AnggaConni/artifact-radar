@@ -144,8 +144,36 @@
       "first_observed_at": "2026-11-15T05:40:43.149930Z",
       "last_observed_at": "2026-11-15T05:40:43.149930Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-19T06:43:57.193259Z",
+      "title": "Police investigating religious statues theft in Nadi - FBC News",
+      "page_title": "Police investigating religious statues theft in Nadi",
+      "page_description": "",
+      "image_urls": [
+        "https://www.fbcnews.com.fj/wp-content/uploads/2024/01/police-3.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "rug exhibits \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t Return and Earn records 17.7 miilion collections \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t Cabinet approves reopening of Fiji’s Embassy in Seoul \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t\n\t\t\t  \n\t\t \n\t\t          \"> \n\t\t\t \n\t\t\t\t  \n\t\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t\t \n\t",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 9,
+      "ai_risk_score": null,
+      "origin_region": "Fiji",
+      "source_url": "https://www.fbcnews.com.fj/news/police-investigating-religious-statues-theft-in-nadi",
+      "final_url": "https://www.fbcnews.com.fj/news/police-investigating-religious-statues-theft-in-nadi",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "56f7c758a6f4fc01a2539031cdefa42c20b541d7e4107298277295e107f26025",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "efc96a519562f9f24715896ffa3c0a20c28cb0ad00911526731b934b5ee6afe9",
+      "first_observed_at": "2026-11-19T06:43:57.193259Z",
+      "last_observed_at": "2026-11-19T06:43:57.193259Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-15T05:40:43.149930Z",
-  "snapshot_count": 5
+  "updated_at": "2026-11-19T06:43:57.193259Z",
+  "snapshot_count": 6
 }
