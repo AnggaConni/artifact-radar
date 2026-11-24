@@ -82,8 +82,34 @@
       "first_observed_at": "2026-11-19T06:44:10.190766Z",
       "last_observed_at": "2026-11-19T06:44:10.190766Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-24T09:09:35.685266Z",
+      "title": "A pot unearthed; a legacy restored: U.S. returns Ban Chiang artifacts",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 1,
+      "ai_risk_score": 0,
+      "origin_region": "Thailand",
+      "source_url": "https://www.unesco.org/en/articles/pot-unearthed-legacy-restored-us-returns-ban-chiang-artifacts",
+      "final_url": "",
+      "source_status": "UNAVAILABLE",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "22181fc62920179c65d4a8b349775d5237fdc7bb99b9b70446b1a297d4d4549e",
+      "first_observed_at": "2026-11-24T09:09:35.685266Z",
+      "last_observed_at": "2026-11-24T09:09:35.685266Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:44:10.190766Z",
-  "snapshot_count": 3
+  "updated_at": "2026-11-24T09:09:35.685266Z",
+  "snapshot_count": 4
 }

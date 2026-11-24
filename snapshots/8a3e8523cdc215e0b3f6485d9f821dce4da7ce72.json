@@ -56,8 +56,34 @@
       "first_observed_at": "2026-11-19T06:44:20.300122Z",
       "last_observed_at": "2026-11-19T06:44:20.300122Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-24T09:09:44.699602Z",
+      "title": "Anthropomorphic statuette, Tago site, Chad (700-1000)",
+      "page_title": "Accueil | Quai Branly",
+      "page_description": "Arts and Civilizations of Africa, Asia, Oceania and the Americas | Exhibitions, Live shows, Colloquiums and Conferences.",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "                 \n                          \n              \n              \n              \n\n\n\n\n \n                        Collections \n              \n    \n  \n    \n  \n    \n    \n           \n    \n  \n \n     \n                     \n                                                         \n                       Collections \n                       \n\n\n                ",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Chad",
+      "source_url": "https://www.quaibranly.fr/en/",
+      "final_url": "https://www.quaibranly.fr/en",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "6667ec8040b40f943a4f33027994cda41f0474db2a99bfd1de731e57e8d8f23c",
+      "etag": "W/\"1795507821\"",
+      "last_modified": "Tue, 24 Nov 2026 08:10:21 GMT",
+      "snapshot_signature": "4c93c4e115020455d17cac50f9bfceb4a8cf5e3207f65bb0217ac9af36ed406d",
+      "first_observed_at": "2026-11-24T09:09:44.699602Z",
+      "last_observed_at": "2026-11-24T09:09:44.699602Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:44:20.300122Z",
-  "snapshot_count": 2
+  "updated_at": "2026-11-24T09:09:44.699602Z",
+  "snapshot_count": 3
 }

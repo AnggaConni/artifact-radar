@@ -30,8 +30,34 @@
       "first_observed_at": "2026-09-26T14:42:16.579771Z",
       "last_observed_at": "2026-11-19T06:43:58.730084Z",
       "observations_seen": 15
+    },
+    {
+      "observed_at": "2026-11-24T09:09:20.963150Z",
+      "title": "EASY WAY SMART device, metals, and cavities detector",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 3750,
+      "provenance_flag": false,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "N/A (product for finding objects)",
+      "source_url": "https://uigdetectors.com/product/easy-way-smart-device-metals-and-cavities-detector",
+      "final_url": "",
+      "source_status": "UNAVAILABLE",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "c9366c33dafd7dc579fe9167e1cec465c577ae3ca7ce7ce974389dad88590f29",
+      "first_observed_at": "2026-11-24T09:09:20.963150Z",
+      "last_observed_at": "2026-11-24T09:09:20.963150Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:43:58.730084Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-24T09:09:20.963150Z",
+  "snapshot_count": 2
 }

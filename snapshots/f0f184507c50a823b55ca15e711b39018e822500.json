@@ -58,8 +58,34 @@
       "first_observed_at": "2026-11-10T06:42:23.622211Z",
       "last_observed_at": "2026-11-19T06:44:16.482125Z",
       "observations_seen": 3
+    },
+    {
+      "observed_at": "2026-11-24T09:09:42.060848Z",
+      "title": "An Introduction to Axumite Coinage (reporting on Leu Auction 14)",
+      "page_title": "",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Ethiopia (Aksumite Kingdom)",
+      "source_url": "https://coinsweekly.com/an-introduction-to-axumite-coinage/",
+      "final_url": "",
+      "source_status": "UNAVAILABLE",
+      "http_status": null,
+      "content_hash": "",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "cc38532ca98d3231e08416fabae0ad60dc145a02249b2110a797b8993742b8d8",
+      "first_observed_at": "2026-11-24T09:09:42.060848Z",
+      "last_observed_at": "2026-11-24T09:09:42.060848Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:44:16.482125Z",
-  "snapshot_count": 2
+  "updated_at": "2026-11-24T09:09:42.060848Z",
+  "snapshot_count": 3
 }

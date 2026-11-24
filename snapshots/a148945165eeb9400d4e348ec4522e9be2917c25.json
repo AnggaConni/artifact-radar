@@ -317,8 +317,39 @@
       "first_observed_at": "2026-11-19T06:44:11.475716Z",
       "last_observed_at": "2026-11-19T06:44:11.475716Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-24T09:09:36.680146Z",
+      "title": "AN ATTIC RED-FIGURED KYLIX, ATTRIBUTED TO DOURIS AS PAINTER AND TO PYTHON AS POTTER CIRCA 480 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-24473-11242026-1.jpg",
+        "/img/SaleImages/PAR-24615-11242026-1.jpg",
+        "/img/SaleImages/HGK-25299-11252026-1.jpg",
+        "/img/SaleImages/HGK-24478-11262026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "      Happening now       Special Exhibition    18–29 NOV 2026    Modern South Asian Art: Highlights from the Dabriwala Collection             Hong Kong        Explore                                Footer              © Christie's 2026                                                                                                                            ",
+      "price_usd": 1766000,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294719",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "b87d43f3b8a3063e0843eab0a90bc5ff239cf0ea88ff30c2f84f7cf65347a512",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "bd7a144a3cc52ee10ee7f3d13e740ed4700974a25834d10285318a716f5b979a",
+      "first_observed_at": "2026-11-24T09:09:36.680146Z",
+      "last_observed_at": "2026-11-24T09:09:36.680146Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:44:11.475716Z",
-  "snapshot_count": 9
+  "updated_at": "2026-11-24T09:09:36.680146Z",
+  "snapshot_count": 10
 }

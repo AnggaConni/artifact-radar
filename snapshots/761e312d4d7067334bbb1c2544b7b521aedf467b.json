@@ -317,8 +317,39 @@
       "first_observed_at": "2026-11-19T06:44:11.359888Z",
       "last_observed_at": "2026-11-19T06:44:11.359888Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-24T09:09:36.629639Z",
+      "title": "AN ATTIC RED-FIGURED KYLIX, ATTRIBUTED TO THE BRYGOS PAINTER, CIRCA 490-480 B.C.",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-24473-11242026-1.jpg",
+        "/img/SaleImages/PAR-24615-11242026-1.jpg",
+        "/img/SaleImages/HGK-25299-11252026-1.jpg",
+        "/img/SaleImages/HGK-24478-11262026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "      Happening now       Special Exhibition    18–29 NOV 2026    Modern South Asian Art: Highlights from the Dabriwala Collection             Hong Kong        Explore                                Footer              © Christie's 2026                                                                                                                            ",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Attica, Greece",
+      "source_url": "https://www.christies.com/lot/lot-6294718",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "b87d43f3b8a3063e0843eab0a90bc5ff239cf0ea88ff30c2f84f7cf65347a512",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "c459af6278bf27ddd4c9017bb179d5396af4ab4f1a957a21c83cbf7ce6dda2a8",
+      "first_observed_at": "2026-11-24T09:09:36.629639Z",
+      "last_observed_at": "2026-11-24T09:09:36.629639Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:44:11.359888Z",
-  "snapshot_count": 9
+  "updated_at": "2026-11-24T09:09:36.629639Z",
+  "snapshot_count": 10
 }

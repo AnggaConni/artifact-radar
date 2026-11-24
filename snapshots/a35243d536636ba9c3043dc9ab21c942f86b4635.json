@@ -30,8 +30,36 @@
       "first_observed_at": "2026-10-20T04:13:12.072126Z",
       "last_observed_at": "2026-11-19T06:44:14.021413Z",
       "observations_seen": 8
+    },
+    {
+      "observed_at": "2026-11-24T09:09:39.767942Z",
+      "title": "TC 223 Gajah Mada portrait",
+      "page_title": "Balique",
+      "page_description": "Balique is the pro-age community of positive women who love to wear the best version of themselves.",
+      "image_urls": [
+        "http://balique.com/cdn/shop/files/Shot.jpg?v=1678463203"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 350.0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia (Majapahit terracotta implied)",
+      "source_url": "https://balique.com/collections/arts-of-indonesia-balique/products/tc-223-gajah-mada-portrait",
+      "final_url": "https://balique.com/password",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "a5e2d482a8decc70e87a9717a4651c8bdc69b6a5d63af79a3a58db42615c5dff",
+      "etag": "W/\"page_cache:49034133663:PasswordController:b37791e32574d278806b1bbcbc1e3f19:3cb50496e69b87701c27cccf4ef638f2\"",
+      "last_modified": "",
+      "snapshot_signature": "4b68c8c2959ca6430668a9b7720bc4a083a575cc7fe679ab80b9c72bd48479bf",
+      "first_observed_at": "2026-11-24T09:09:39.767942Z",
+      "last_observed_at": "2026-11-24T09:09:39.767942Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:44:14.021413Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-24T09:09:39.767942Z",
+  "snapshot_count": 2
 }

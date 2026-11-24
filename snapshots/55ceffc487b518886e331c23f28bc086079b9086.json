@@ -30,8 +30,36 @@
       "first_observed_at": "2026-10-20T04:13:12.076652Z",
       "last_observed_at": "2026-11-19T06:44:14.039497Z",
       "observations_seen": 8
+    },
+    {
+      "observed_at": "2026-11-24T09:09:39.774638Z",
+      "title": "TC 198 Majapahit Terracotta Kala head brick",
+      "page_title": "Balique",
+      "page_description": "Balique is the pro-age community of positive women who love to wear the best version of themselves.",
+      "image_urls": [
+        "http://balique.com/cdn/shop/files/Shot.jpg?v=1678463203"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 4000.0,
+      "provenance_flag": false,
+      "risk_score": 0,
+      "ai_risk_score": 0,
+      "origin_region": "Indonesia (Majapahit terracotta)",
+      "source_url": "https://balique.com/collections/arts-of-indonesia-balique/products/tc-198-majapahit-terracotta-kala-head-brick",
+      "final_url": "https://balique.com/password",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "b1bcf25f421a0eb844a9bef5c08e84aac42614dcc98c9b331b148947c715fb90",
+      "etag": "W/\"page_cache:49034133663:PasswordController:b37791e32574d278806b1bbcbc1e3f19:37c98112aebd3167b8eeab8dedb6ab0a\"",
+      "last_modified": "",
+      "snapshot_signature": "c0f1655261722c9e1788b9cd25f0c6d603f618293f37b1d9b89bcea7124af4b0",
+      "first_observed_at": "2026-11-24T09:09:39.774638Z",
+      "last_observed_at": "2026-11-24T09:09:39.774638Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:44:14.039497Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-24T09:09:39.774638Z",
+  "snapshot_count": 2
 }

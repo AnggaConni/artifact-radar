@@ -30,8 +30,34 @@
       "first_observed_at": "2026-09-26T14:42:23.860049Z",
       "last_observed_at": "2026-11-19T06:44:04.588200Z",
       "observations_seen": 15
+    },
+    {
+      "observed_at": "2026-11-24T09:09:28.870737Z",
+      "title": "The Looting of Cambodian Antiquities (video)",
+      "page_title": "Client Challenge",
+      "page_description": "",
+      "image_urls": [],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "",
+      "price_usd": 0,
+      "provenance_flag": false,
+      "risk_score": 8,
+      "ai_risk_score": null,
+      "origin_region": "Southeast Asia (Cambodia)",
+      "source_url": "https://www.khanacademy.org/humanities/ap-art-history/south-east-asia/a/the-looting-of-cambodian-antiquities",
+      "final_url": "https://www.khanacademy.org/humanities/ap-art-history/south-east-asia/a/the-looting-of-cambodian-antiquities",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "9b1592add22f37efe1b5d5cd84e5b64aadee725dfa532b7db4c7c0bbe81b97b3",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "7637bf271f8477cddccaf20b3b7e3aeed18b9a0a1509d425501369a37b849626",
+      "first_observed_at": "2026-11-24T09:09:28.870737Z",
+      "last_observed_at": "2026-11-24T09:09:28.870737Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:44:04.588200Z",
-  "snapshot_count": 1
+  "updated_at": "2026-11-24T09:09:28.870737Z",
+  "snapshot_count": 2
 }

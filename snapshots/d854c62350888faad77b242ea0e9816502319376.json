@@ -6,41 +6,6 @@
   "fingerprint": "d854c62350888faad77b242ea0e9816502319376",
   "observations": [
     {
-      "observed_at": "2026-10-01T05:03:23.164319Z",
-      "title": "A LARGE JOMON VESSEL , MIDDLE JOMON PERIOD (BC 3000-2000)",
-      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
-      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
-      "image_urls": [
-        "/img/SaleImages/NYR-24264-10012026-1.jpg",
-        "/img/SaleImages/HGK-24465-10102026-1.jpg",
-        "/img/SaleImages/CKS-24260-10142026-1.jpg",
-        "/img/SaleImages/CKS-25228-10142026-1.jpg",
-        "/img/SaleImages/CKS-24261-10152026-1.jpg",
-        "/img/SaleImages/CKS-25229-10152026-1.jpg",
-        "/img/SaleImages/CKS-24563-10162026-1.jpg",
-        "/img/SaleImages/NYR-25248-10202026-1.jpg"
-      ],
-      "page_price_text": "",
-      "page_price_currency": "",
-      "provenance_excerpt": "t and objects      Auction results        Featured      20th/21st Century Art | Hong Kong      Monsoon: The Peter Simon Collection | London      Contemporary New York      Collections | Global      Luxury | Global      20th/21st Century Art | Global          Private Sales               Current Exhibitions      Decorative Arts For Your Home | Online      Drea",
-      "price_usd": 0,
-      "provenance_flag": true,
-      "risk_score": 2,
-      "ai_risk_score": null,
-      "origin_region": "Japan",
-      "source_url": "https://www.christies.com/lot/lot-6140592",
-      "final_url": "https://www.christies.com/en/calendar",
-      "source_status": "ACTIVE",
-      "http_status": 200,
-      "content_hash": "8f28bf7afa44fbb3cd78b8c53cce30052aa52f57495d7d975eb3ffb12494ddda",
-      "etag": "",
-      "last_modified": "",
-      "snapshot_signature": "8d617483d0125b255238001947a8ef43dfba10aff529045c8b660afd491ae49b",
-      "first_observed_at": "2026-10-01T05:03:23.164319Z",
-      "last_observed_at": "2026-10-01T05:03:23.164319Z",
-      "observations_seen": 1
-    },
-    {
       "observed_at": "2026-10-06T05:40:45.722361Z",
       "title": "A LARGE JOMON VESSEL , MIDDLE JOMON PERIOD (BC 3000-2000)",
       "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
@@ -422,8 +387,39 @@
       "first_observed_at": "2026-11-19T06:44:02.128590Z",
       "last_observed_at": "2026-11-19T06:44:02.128590Z",
       "observations_seen": 1
+    },
+    {
+      "observed_at": "2026-11-24T09:09:25.029520Z",
+      "title": "A LARGE JOMON VESSEL , MIDDLE JOMON PERIOD (BC 3000-2000)",
+      "page_title": "Christie's Auction Calendar: Upcoming Auctions & Events",
+      "page_description": "Explore upcoming auctions and events at Christie’s. Browse a global calendar of fine art, luxury collectibles, and jewellery available live and online.",
+      "image_urls": [
+        "/img/SaleImages/HGK-24473-11242026-1.jpg",
+        "/img/SaleImages/PAR-24615-11242026-1.jpg",
+        "/img/SaleImages/HGK-25299-11252026-1.jpg",
+        "/img/SaleImages/HGK-24478-11262026-1.jpg"
+      ],
+      "page_price_text": "",
+      "page_price_currency": "",
+      "provenance_excerpt": "      Happening now       Special Exhibition    18–29 NOV 2026    Modern South Asian Art: Highlights from the Dabriwala Collection             Hong Kong        Explore                                Footer              © Christie's 2026                                                                                                                            ",
+      "price_usd": 0,
+      "provenance_flag": true,
+      "risk_score": 2,
+      "ai_risk_score": null,
+      "origin_region": "Japan",
+      "source_url": "https://www.christies.com/lot/lot-6140592",
+      "final_url": "https://www.christies.com/en/calendar",
+      "source_status": "ACTIVE",
+      "http_status": 200,
+      "content_hash": "b87d43f3b8a3063e0843eab0a90bc5ff239cf0ea88ff30c2f84f7cf65347a512",
+      "etag": "",
+      "last_modified": "",
+      "snapshot_signature": "6c2eee9a322640263f7b89b153a0d9453b8a538d9749953bbbc60cc1b2c68963",
+      "first_observed_at": "2026-11-24T09:09:25.029520Z",
+      "last_observed_at": "2026-11-24T09:09:25.029520Z",
+      "observations_seen": 1
     }
   ],
-  "updated_at": "2026-11-19T06:44:02.128590Z",
+  "updated_at": "2026-11-24T09:09:25.029520Z",
   "snapshot_count": 12
 }
